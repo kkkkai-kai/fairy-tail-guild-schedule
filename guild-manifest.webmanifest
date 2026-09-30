@@ -1,0 +1,16 @@
+{
+  "name": "妖精的尾巴·公会日程",
+  "short_name": "妖尾公会",
+  "description": "妖精的尾巴公会每日委托与成长记录",
+  "start_url": "./每日日程表.html?pwa=1",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f3ea",
+  "theme_color": "#8b3a2b",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "guild-icon-192.png?v=fticon20260927", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "guild-icon-512.png?v=fticon20260927", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

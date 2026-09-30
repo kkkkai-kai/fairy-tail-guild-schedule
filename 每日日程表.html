@@ -1,0 +1,437 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>妖精的尾巴 · 我的任务公会</title><link rel="manifest" href="guild-manifest.webmanifest"><link rel="icon" href="guild-icon-192.png" type="image/png"><link rel="apple-touch-icon" href="guild-icon-192.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="theme-color" content="#8b3a2b"><style>
+/* === 基础重置与排版 === */
+*{box-sizing:border-box}
+body{margin:0;background:#fff7ec;color:#342536;font:16px 'Microsoft YaHei',sans-serif;background-image:radial-gradient(ellipse at 90% 0%,#ffd29390,transparent 48%),radial-gradient(ellipse at 0% 55%,#ffe0ef90,transparent 50%);position:relative;isolation:isolate;min-height:100vh}
+html{min-height:100%;background:#fff7ec}
+main{max-width:1000px;margin:auto;padding:48px 24px;opacity:0;transition:opacity .35s ease}
+h1{font-size:40px;margin:15px 0}
+h2{font-size:21px}
+p{line-height:1.8}
+small,.muted,footer{color:#655361}
+a,button{color:#9b411e;background:#fff4db;border:1px solid #efbb87;border-radius:10px;padding:11px 16px;text-decoration:none;cursor:pointer;font:inherit;box-shadow:0 3px 9px #bd793012}
+button:hover,a:hover{background:#ffe0ad}
+footer{margin-top:26px;font-size:13px}
+summary{cursor:pointer;font-weight:600;line-height:1.6}
+
+/* === 头部布局 === */
+header{border-bottom:1px solid #e6baaa;background:#fff8eed9;padding:24px}
+.tag{color:#c65c20;letter-spacing:3px;font-size:12px;font-weight:700}
+.hero{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.hero>div:first-child{flex:1;min-width:0}
+.header-line{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.top-total{margin-left:auto;text-align:right;background:#fff0d8;border:1px solid #eac38e;border-radius:14px;padding:12px 18px;color:#713a22}
+.top-total strong{display:block;font-size:25px;margin:4px 0}
+.top-total small{font-size:12px}
+#topTotal{display:flex;gap:12px}
+.top-total div{min-width:88px}
+
+/* === 工具栏 === */
+.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:24px 0}
+
+/* === 网格与卡片 === */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:rgba(255,253,248,.97);border:1px solid #e6cfbd;border-radius:18px;padding:24px;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);box-shadow:0 8px 24px #b77b4610}
+.card h2{display:flex;align-items:center;gap:14px;font-size:19px;line-height:1.5;margin-top:0;color:#a64b2a}
+.wide{grid-column:1/-1}
+
+/* === 行与进度 === */
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #bc865522;flex-wrap:wrap}
+.row label{flex:1;cursor:pointer;line-height:1.6;min-width:140px}
+.row input{accent-color:#f47735;width:19px;height:19px}
+.row:has(input:checked) label{text-decoration:line-through;color:#736574}
+.row select{margin-left:31px;font-size:12px;padding:6px}
+.remove{border:0;background:none;padding:3px 7px;color:#a57880}
+.progress{height:7px;background:#eddbd0;border-radius:9px;margin:14px 0 6px;overflow:hidden}
+.bar{height:100%;background:linear-gradient(90deg,#ff7048,#ffb23d,#ffcf70);transition:width .3s}
+
+/* === 表单输入控件 === */
+input[type=date],input[type=time],input[type=datetime-local],input[type=text]{background:#fffdf8;border:1px solid #e9bbab;color:#593544;border-radius:8px;padding:12px;font:inherit;color-scheme:light}
+select,input[type=number],input[type=time],input[type=datetime-local]{background:#fffdf8;border:1px solid #d6b99e;border-radius:8px;padding:9px;color:#493044;font:inherit;max-width:100%;color-scheme:light}
+
+/* === 通用水印背景 === */
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 12% 18%,#ffc77f55,transparent 50%),radial-gradient(ellipse at 88% 45%,#ffaacb44,transparent 50%),radial-gradient(ellipse at 45% 95%,#a9dfff55,transparent 55%),#fff7ec}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none}
+
+/* === 通用表单行 === */
+.add{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.add input{flex:1;min-width:0;width:150px}
+.add label input{display:block;margin-top:8px}
+
+/* === 响应式 · 基础 === */
+@media(max-width:650px){
+  .grid{grid-template-columns:1fr}
+  h1{font-size:29px}
+  main{padding:28px 16px}
+  body::after{opacity:.065;background-size:auto 100%}
+  .card{padding:18px;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+  #walletStats{grid-template-columns:1fr 1fr}
+  .add button{flex-basis:100%}
+  .hero{flex-wrap:wrap}
+  .hero>div:first-child{flex-basis:100%}
+  #topTotal{width:100%;justify-content:space-between}
+}
+</style><style id="collapse-style">
+.collapsible-card .card-content{display:block}.collapsible-card.collapsed .card-content{display:none}.collapse-toggle{display:inline-block;transition:transform .2s;font-size:10px}
+</style><style id="guild-full-page-background">
+/* 由 Block 1 统一管理 body::before / body::after，此处仅保留 JS 可能切换的备用规则 */
+</style><style id="guild-header-photo">
+header{position:relative;isolation:isolate;overflow:hidden;border-radius:22px;background:#fff4df;padding:28px;min-height:430px;box-shadow:0 8px 28px #a66b2212}
+header::before{content:"";position:absolute;inset:0;z-index:-2;background:url('guild-group-banner.jpg') center 35% / cover no-repeat;opacity:.65}
+header::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,249,239,.89),rgba(255,249,239,.66) 60%,rgba(255,249,239,.28))}
+header h1{font-size:clamp(28px,3.5vw,40px);text-shadow:0 2px 8px #fff9ef;color:#883329}header .muted,header #quoteSource,header #quoteOriginal{color:#493a48!important;text-shadow:0 1px 5px #fff9ef}header .top-total{background:#fff4e6f2}header>a{display:inline-block;background:#fff5e8ee}header .tag{color:#963d19;text-shadow:0 1px 4px #fff9ef}
+@media(max-width:650px){header{padding:20px;min-height:460px}header::before{background-position:center top}header::after{background:rgba(255,249,239,.76)}}
+</style><style>
+/* === 组件：金库与钱包 === */
+.treasury{margin:20px 0 24px}
+.treasury h3{font-size:18px}
+#walletStats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+#walletStats div{border-radius:12px;background:#fff1d9;padding:16px}
+#walletStats strong{display:block;margin-top:8px;font-size:24px;color:#9d421b}
+.history-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #e8d6c8}
+.history-row button{font-size:12px;flex-shrink:0}
+.import{display:inline-block;margin:18px 0 0 10px;vertical-align:top;position:relative}
+.import input{display:none!important}
+
+/* === 组件：角色头像 === */
+.portrait{display:inline-block;width:66px;height:66px;flex:0 0 66px;background-image:url('character-portraits.png');background-size:200% 200%;border-radius:50%;border:2px solid #f4cf98;box-shadow:0 3px 9px #c8812820}
+.p0{background-position:0 0}.p1{background-position:100% 0}.p2{background-position:0 100%}.p3{background-position:100% 100%}
+
+/* === 组件：仪表盘 === */
+.dashboard{margin:18px 0}
+.deadline{padding:10px;border-bottom:1px solid #e8d6c8}
+.deadline.urgent{background:#fff0cf;color:#9a361e;font-weight:700;border-radius:8px}
+.backlog-row{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #e8d6c8}
+.backlog-row span{flex:1}
+
+/* === 组件：项目卡片 === */
+.project-card{margin:14px 0;padding:16px;border-radius:13px;border:1px solid #e6cfbd;background:#fff9f0}
+.project-card h3{margin:0 0 8px}
+
+/* === 组件：奖励商店 === */
+.reward-shop{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0}
+.reward-item{border:1px solid #ead1b4;background:linear-gradient(135deg,#fffaf0,#fff1df);padding:18px;border-radius:14px;display:flex;flex-direction:column;gap:9px}
+.reward-item h4{margin:0;font-size:17px}
+.reward-item p{margin:0;font-size:13px;color:#655361;flex:1}
+.reward-item strong{color:#a24a24}
+.reward-item button{background:#ffdfaa}
+.reward-item button:disabled{opacity:.55;cursor:not-allowed}
+
+/* === 组件：奖励分组与货架 === */
+.reward-group{margin:12px 0;border:1px solid #ead1b4;border-radius:14px;overflow:hidden}
+.reward-head{width:100%;display:flex;align-items:center;justify-content:space-between;text-align:left;border:0;border-radius:0;background:#fff1db;color:#843d23;font-weight:700}
+.reward-shelf[hidden]{display:none!important}
+.reward-shelf{display:flex!important;flex-wrap:nowrap!important;gap:14px;padding:16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;background:#fffaf2;scrollbar-color:#e5b575 transparent;scrollbar-width:thin}
+.reward-shelf::-webkit-scrollbar{height:8px}
+.reward-shelf::-webkit-scrollbar-thumb{background:#e5b575;border-radius:20px}
+.reward-item{box-sizing:border-box;flex:0 0 225px;height:196px;padding:16px;border-radius:12px;background:#fff;border:1px solid #efdfce;display:flex;flex-direction:column;gap:9px;scroll-snap-align:start;transition:transform .16s ease,box-shadow .16s ease}
+.reward-item:hover{transform:translateY(-3px);box-shadow:0 9px 20px #9b5b2820}
+.reward-item h4{margin:0;line-height:1.45;min-height:46px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.reward-item button{margin-top:auto}
+.reward-theme-0 .reward-head,.reward-theme-0 .reward-shelf{background:#fff3dd}
+.reward-theme-1 .reward-head,.reward-theme-1 .reward-shelf{background:#eaf7ff}
+.reward-theme-2 .reward-head,.reward-theme-2 .reward-shelf{background:#fff0f5}
+.reward-theme-3 .reward-head,.reward-theme-3 .reward-shelf{background:#fff0df}
+.reward-theme-4 .reward-head,.reward-theme-4 .reward-shelf{background:#f5edff}
+
+/* === 组件：离线状态指示器 === */
+.guild-connection-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:600;border:1px solid #d6b99e;background:#fff8ee;color:#714f67;transition:all .3s ease}
+.guild-connection-badge .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;transition:background .3s}
+.guild-connection-badge.online .dot{background:#4caf50;box-shadow:0 0 6px #4caf5088}
+.guild-connection-badge.offline .dot{background:#bbb;box-shadow:none}
+.guild-connection-badge.offline{background:#f5f0eb;color:#8a7b85;border-color:#d8cfc8}
+.guild-connection-badge.syncing .dot{background:#f0a23a;box-shadow:0 0 6px #f0a23a88;animation:guildBadgePulse 1.2s ease-in-out infinite}
+@keyframes guildBadgePulse{0%,100%{opacity:1}50%{opacity:.45}}
+.guild-connection-badge.syncing{background:#fff6e4;color:#8a5a22;border-color:#eac88f}
+.guild-sync-toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);z-index:9998;background:#fff4e6;border:1px solid #e5b575;padding:14px 24px;border-radius:14px;box-shadow:0 8px 25px #7b491c25;font-size:13px;color:#714f67;opacity:0;transition:all .4s ease;pointer-events:none}
+.guild-sync-toast.visible{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* === 响应式 · 组件 === */
+@media(max-width:650px){
+  .reward-shop{grid-template-columns:1fr 1fr}
+  .reward-shelf{padding:12px;gap:12px}
+  .reward-item{flex-basis:180px;height:188px}
+  .portrait{width:56px;height:56px;flex-basis:56px}
+  .backlog-row{flex-wrap:wrap}
+  .guild-connection-badge{font-size:10px;padding:3px 8px}
+  .guild-connection-badge .label-text{display:none}
+}
+@media(max-width:420px){
+  .reward-shop{grid-template-columns:1fr}
+}
+</style><style>
+/* === 表单排版 · 登记表单 === */
+#form.add{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+#form.add input,#form.add select{width:auto}
+#form.add input[type=text]{flex:1 1 240px;min-width:200px;min-height:42px}
+#form.add select{min-height:42px;padding:8px 10px;border:1px solid #d6b99e;border-radius:8px;background:#fffdf8;color:#493044;font-size:13px}
+#form.add input[type=date],#form.add input[type=time],#form.add input[type=datetime-local]{min-height:42px;min-width:134px;padding:8px 10px;border:1px solid #d6b99e;border-radius:8px;background:#fffdf8;color:#493044;font-size:13px;color-scheme:light}
+#form.add>button{min-height:42px;padding:8px 18px;border:1px solid #dd6130;border-radius:8px;background:#f47735;color:#fff;font-size:13px;font-weight:600;box-shadow:0 3px 9px #bd793033}
+#form.add>button:hover{background:#ef7135}
+
+/* === 表单排版 · 快速录入 === */
+.quick-intake input{min-height:42px;padding:8px 12px;border:1px solid #d6b99e;border-radius:8px;background:#fffdf8;color:#493044;font-size:13px}
+.quick-intake button{min-height:42px!important;padding:8px 16px!important;border:1px solid #dd6130!important;border-radius:8px!important;background:#f47735!important;color:#fff!important;font-size:13px!important;font-weight:600!important}
+.quick-intake button:hover{background:#ef7135!important}
+.quick-intake-result button,.quick-time-actions button{min-height:30px;padding:5px 10px;font-size:12px;border:1px solid #e7a362;border-radius:7px;background:#fff0dd;color:#9d421b}
+.quick-intake-result button:hover{background:#ffe0ad}
+.form-type-hint,.form-summary,.auto-reward-note{display:block;width:100%;font-size:12px;color:#655361;line-height:1.6}
+
+/* === 响应式 · 表单 === */
+@media(max-width:650px){
+  #form.add input[type=date],#form.add input[type=time],#form.add input[type=datetime-local]{min-width:0;flex:1 1 46%}
+  #form.add select{flex:1 1 46%}
+  #form.add>button{flex:1 1 100%}
+}
+</style><style id="growth-styles">
+.growth-card{padding:18px}.growth-card h2{font-size:18px}.growth-card strong{color:#a64b2a;font-size:21px}.growth-card p{font-size:13px}.growth-card progress{width:100%;height:12px;accent-color:#e59140}.growth-card small{display:block;line-height:1.6;margin:10px 0}.growth-card button{font-size:12px;padding:6px 8px}
+.guild-content #upcomingList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.guild-content #upcomingList .deadline{cursor:pointer;border:1px solid #efc898;border-radius:12px;padding:14px;line-height:1.7;overflow-wrap:anywhere}.deadline:focus-visible{outline:3px solid #e59140}.quest-status{font-size:12px;color:#836178}.once-quests{margin:18px 0}.growth-toast{position:fixed;bottom:28px;right:28px;z-index:9999;background:#fff0cf;border:1px solid #d9a257;padding:16px 24px;border-radius:14px;box-shadow:0 8px 25px #7b491c25}@media(max-width:650px){.guild-content #upcomingList{grid-template-columns:1fr}.growth-toast{left:16px;right:16px}}
+.guild-hall-stage{transition:opacity .18s ease,filter .18s ease}.guild-hall-stage.is-room-transition{opacity:.86;filter:brightness(.96) saturate(1.04)}.guild-hall-stage.is-room-transition::after{font-size:12px!important;line-height:1.6!important;padding:12px 16px!important;background:#5b2f18c7!important;color:#fff4dd!important}.guild-quest-celebration{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:28px;background:rgba(45,25,25,.72);backdrop-filter:blur(3px)}.guild-celebration-scene{position:relative;width:min(760px,88vw);aspect-ratio:561/701;max-height:88vh;overflow:hidden;border:3px solid #f2c56f;border-radius:18px;background-repeat:no-repeat;background-size:200% 200%;box-shadow:0 18px 70px #24120dcc}.guild-celebration-members{position:absolute;inset:0;z-index:2}.guild-celebration-members img{position:absolute;width:auto;height:clamp(48px,8vw,84px);transform:translate(-50%,-100%);object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 3px 2px #43251388)}.guild-celebration-copy{position:absolute;z-index:3;left:6%;right:6%;bottom:5%;padding:14px 16px;border:1px solid #f2cb80;border-radius:12px;background:#fff8e9ec;color:#633f3a;text-align:center;box-shadow:0 8px 22px #3b1d1455}.guild-celebration-copy strong{display:block;color:#a34424;font-size:20px}.guild-celebration-copy p{margin:7px 0;line-height:1.6}.guild-celebration-copy small{display:block;margin-bottom:9px}.guild-celebration-copy button{border-color:#d9843e;background:#f26d32;color:#fff}.project-final-actions,.project-card .project-actions,.project-fold-actions,.project-stage-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:7px}.project-stage-row{display:grid;grid-template-columns:38px minmax(0,1fr) max-content;align-items:center;gap:10px;min-height:58px;padding:9px 0;border-top:1px solid #eadbcf}.project-card .project-stage-row>*{position:static}.project-stage-avatar{width:34px!important;height:34px!important;flex:0 0 34px!important}.project-stage-avatar .completion-avatar-clip{width:34px;height:34px}.project-stage-copy{display:grid;min-width:0;gap:3px}.project-stage-copy strong{position:static;margin:0;color:#9d421b;font-size:13px;line-height:1.4;overflow-wrap:anywhere}.project-stage-copy small{position:static;margin:0;color:#756576;font-size:11px;line-height:1.45}.project-stage-actions{display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-end!important;gap:7px!important;min-width:max-content;margin:0}.project-stage-actions .quest-note-control{display:flex!important;flex:0 0 auto!important;width:auto!important;margin:0!important}.project-stage-actions button{position:static!important;flex:0 0 auto!important;width:auto!important;margin:0!important;white-space:nowrap!important}.project-stage-undo{border-color:#d7b694!important;background:#fff9ef!important;color:#7b5e55!important}.project-stage-undo:hover,.project-stage-undo:focus-visible{border-color:#d9843e!important;background:#fff0dc!important;color:#9d421b!important}.project-actions button,.project-stage-actions button,.project-fold-actions button{position:static;flex:0 0 auto;white-space:nowrap}.project-card.is-folded .project-actions{margin-top:8px}.project-card .quest-note-panel{grid-column:2/4;width:100%;margin-top:5px}.project-final-complete{border-color:#d95f31!important;background:#ef7135!important;color:#fff!important;font-weight:700}.project-card .project-final-complete{min-height:34px;padding:7px 12px}.project-card.is-folded .project-stage-row{display:none}.guild-hall-stage[data-scene-id="missionBoard"] .guild-hall-background-image{object-fit:contain!important;object-position:center top!important;background:#6f4228}.guild-hall-stage[data-scene-id="missionBoard"]{min-height:0!important;max-height:none!important;height:auto!important;aspect-ratio:1366/1151!important;background:#6f4228}.daily-quote-actions{display:inline-flex;gap:5px;margin-left:8px;vertical-align:middle}.daily-quote-actions button{padding:3px 7px;font-size:10px;border-radius:999px}.guild-quote-archive{margin:18px 0 8px;padding:10px 12px;border:1px solid #e9cba5;border-radius:12px;background:#fffaf2}.guild-quote-archive summary{cursor:pointer;color:#9d421b;font-weight:700}.guild-quote-archive summary small{margin-left:8px;color:#806574;font-weight:400}.guild-quote-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}.guild-quote-tools input[type=search]{min-width:260px;flex:1}.guild-quote-audit{font-size:11px;color:#806574}.guild-quote-results{display:grid;gap:8px;max-height:430px;overflow:auto}.guild-quote-results article{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:9px 10px;border:1px solid #f0dfcc;border-radius:9px;background:#fff}.guild-quote-results blockquote{grid-column:1/3;margin:0;color:#4f3b48;line-height:1.55}.guild-quote-results small{align-self:center;color:#806574}.guild-quote-results button{padding:4px 8px;font-size:11px}</style><main role="main"><header role="banner"><div class="header-line"><div class="tag">FAIRY TAIL · DAILY QUEST BOARD</div><div id="connectionBadge" class="guild-connection-badge syncing" aria-live="polite" aria-label="公会连接状态" title="单击=打开公会面板；双击=切换自动刷新"><span class="dot"></span><span class="label-text">云端：连接中…</span></div><div id="topTotal" class="top-total" aria-live="polite"></div></div><div class="hero"><div><h1 id="dailyQuote">今天，也向梦想前进一步。</h1><p id="quoteOriginal" lang="en" style="display:none;margin:0 0 12px;font-size:18px;line-height:1.6;color:#806574;max-width:720px"></p><small id="quoteSource"></small><p class="muted">妖精的尾巴 · 我的任务公会<br>学习、实验与生活，都是值得认真完成的委托。</p></div></div><a href="codex://threads/01a09f2f-cfaf-7de1-8345-14c5bcc735c7">回到公会大厅 · 调整日程与提醒 ↗</a></header><section class="card dashboard" role="region" aria-labelledby="dash-upcoming"><h2 id="dash-upcoming">✦ 公会紧急告示 · 七日委托</h2><div id="upcomingList" role="list"></div></section><section class="card dashboard" role="region" aria-labelledby="dash-backlog"><h2 id="dash-backlog">✦ 待处理委托</h2><div id="backlogList" role="list"></div></section><section class="card dashboard" role="region" aria-labelledby="dash-review"><h2 id="dash-review">✦ 公会报到簿</h2><p id="weeklyReview"></p></section><div class="toolbar"><input type="date" id="day"><button id="today">回到今天</button><span class="muted">☀ 10:00 早间计划　☾ 20:30 晚间复盘</span></div><div class="card" style="margin-bottom:18px"><span id="count"></span><div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressWrap"><div class="bar" id="bar"></div></div><small>每完成一项委托，都为今天积攒一点魔力。</small></div><section class="card"><h2>✦ 纳兹的长期远征</h2><div id="projects"></div></section><div class="grid" id="cards"></div><div class="card" style="margin-top:18px"><h2>✦ 公会留言板 · 登记委托</h2><form class="add" id="form" role="form" aria-label="登记新委托"><input id="newTask" type="text" placeholder="写下新的任务，例如 11:00 收 IFA 制片" required maxlength="180"><select id="newType" aria-label="任务类型"><option value="daily">公会日课</option><option value="once">单次委托</option><option value="project">长期远征</option></select><select id="newCategory" aria-label="任务分类"><option>学习</option><option>实验</option><option>生活</option></select><input id="newDue" type="date" aria-label="截止日期"><input id="newDueTime" type="time" aria-label="截止时间"><input id="newReminder" type="datetime-local" aria-label="提醒时间，仅记录需求"><select id="newDifficulty" aria-label="新任务难度"><option value="20">D · 轻量 · 20 J</option><option value="50" selected>C · 标准 · 50 J</option><option value="100">B · 挑战 · 100 J</option><option value="200">A · 重大 · 200 J</option></select><button>登记委托</button></form></div><section class="card treasury" role="region" aria-labelledby="dash-treasury"><h2 id="dash-treasury">✦ 公会金库 · 给努力一点回响</h2><div id="walletStats"></div><p id="budgetNote"></p><details><summary>奖励规则与兑换约定</summary><p>轻量 D：20 J（约 5—15 分钟） · 标准 C：50 J（约 15—40 分钟） · 挑战 B：100 J（约 40—90 分钟） · 重大 A：200 J（约 90 分钟以上或关键里程碑）。这是参考标准，可在完成前按实际投入调整。</p><p>默认 100 J＝1 元，完成全部日常模板约 6 元；每月奖励上限 300 元。基础照顾也值得奖励，无需为了积分增加任务。未来日期不能提前领奖；取消勾选会扣回 J。旧的已完成记录按默认难度计入。</p><form id="settings" class="add"><label>每 1 元需要的 J<input id="rate" type="number" min="1" max="100000" step="1" required></label><label>每月奖励预算（元）<input id="cap" type="number" min="0" max="100000" step="0.01" required></label><button>保存约定</button></form><p id="settingsStatus" role="status"></p></details><h3>🎁 公会奖励兑换库</h3><p class="muted">选一份你期待的小奖励。以下金额是自设预算，按当前兑换比例换算；实际价格由你选择。正常饮食与休息无需兑换。</p><div id="rewardShop" class="reward-shop"></div><p id="shopStatus" role="status"></p><h3>自定义奖励</h3><p class="muted">例如 500 J 留给小零食，2000 J 留给一杯喜欢的饮料，10000 J 积攒一份心愿礼物。金额按你设置的比例计算。</p><form id="redeem" class="add"><input id="rewardName" type="text" placeholder="奖励名称" maxlength="80" required><input id="redeemJ" type="number" placeholder="兑换 J 数" min="1" step="1" required><button>登记兑换</button></form><small>这是个人奖励记账，不会转账或购买；金额向下取到分。实际奖励由你自己安排。</small><details style="margin-top:18px"><summary>查看兑换记录</summary><div id="history"></div></details><button id="backup" style="margin-top:18px">导出日程与奖励备份</button><button id="backupV4" style="margin-top:18px;margin-left:8px">导出公会档案（完整世界状态）</button><label class="import">导入备份<input id="restoreFile" type="file" accept="application/json"></label><label class="import"><input id="restoreV4File" type="file" accept="application/json" style="margin-top:4px">导入公会档案</label>
+<div id="guildSyncToast" class="guild-sync-toast" role="status" aria-live="polite"></div></section><footer>勾选与新增委托保存在当前魔导终端中，按日期分别记录。新增委托不会自动设置提醒；需要提醒时请回到公会告诉我。<br>同人主题设计 · 火焰、星灵与公会委托灵感。<br>顶部合影：<a style="padding:0;border:0;background:none" href="https://wallpapers.com/picture/fairy-tail-pictures-u74iqlvu9odo1m4a.html" target="_blank" rel="noopener">Wallpapers.com · dneeht2</a></footer></main><script src="quotes.js?v=guild-v82-local-20261001-0008"></script>
+<script src="guild-history-recovery-v65.js?v=guild-v82-local-20261001-0008"></script>
+<script src="growth.js?v=guild-v82-local-20261001-0008"></script>
+<script src="v4.js?v=guild-v82-local-20261001-0008"></script>
+<script src="guild-cloud-sync.js?v=guild-v82-local-20261001-0008"></script>
+<script src="schedule.js?v=guild-v82-local-20261001-0008"></script>
+<script src="guild-features-v64.js?v=guild-v82-local-20261001-0008"></script>
+<script src="guild-dock-panel.js?v=guild-v82-local-20261001-0008"></script>
+<script id="scheduleAutoRefresh">
+// Reload the local page periodically while keeping saved checklist state.
+// 页面不再定时重载，避免浏览中出现整页闪烁；任务状态仍在操作时即时保存。
+</script>
+<script>
+// 公会徽章·一键入册：仅在 http(s) 环境下注册 Service Worker；file:// 直开静默跳过。
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  navigator.serviceWorker.register('guild-sw.js').catch(function () {});
+}
+</script>
+<script id="guildOfflineIndicator">
+(function(){
+  var toast=document.getElementById('guildSyncToast');
+  var toastTimer=null;
+  function showToast(msg,duration){
+    if(!toast)return;
+    toast.textContent=msg;
+    toast.classList.add('visible');
+    clearTimeout(toastTimer);
+    toastTimer=setTimeout(function(){toast.classList.remove('visible')},duration||4000);
+  }
+  // 顶部状态标识（connectionBadge）的文本与颜色由 guild-cloud-sync.js 按真实云端同步状态统一驱动，
+  // 此脚本只负责浏览器网络事件的行文提示，不再覆盖标识内容。
+  var wasOffline=false;
+  window.addEventListener('online',function(){
+    if(wasOffline){showToast('网络已恢复，数据将自动同步',4000);wasOffline=false}
+  });
+  window.addEventListener('offline',function(){
+    wasOffline=true;
+    showToast('当前处于离线状态，操作仍会保存在本地',5000);
+  });
+})();
+</script>
+<script id="guildWeeklyReport">
+(function(){
+  var host=document.getElementById('weeklyReview');
+  if(!host)return;
+  var KEY_SCHEDULE='fairytail-schedule-v1',KEY_TASKS='fairytail-tasks-v2',KEY_ATTENDANCE='fairytail-attendance-v1',KEY_REPORTS='fairytail-weekly-reports-v1',MAX_WEEKS=8;
+  function bjNow(){return new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Shanghai'}))}
+  function dateKey(d){var y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),dd=String(d.getDate()).padStart(2,'0');return y+'-'+m+'-'+dd}
+  function getMonday(d){var day=d.getDay(),diff=d.getDate()-day+(day===0?-6:1);var mon=new Date(d);mon.setDate(diff);mon.setHours(0,0,0,0);return mon}
+  function parseLocalDate(s){var p=s.split('-');return new Date(Number(p[0]),Number(p[1])-1,Number(p[2]))}
+  function lsGet(k,d){try{return JSON.parse(localStorage.getItem(k)||'null')||d}catch(e){return d}}
+  function generateReport(weekStartStr){
+    var mon=parseLocalDate(weekStartStr),sun=new Date(mon);sun.setDate(mon.getDate()+6);
+    var monStr=dateKey(mon),sunStr=dateKey(sun);
+    var schedule=lsGet(KEY_SCHEDULE,{}),tasks=lsGet(KEY_TASKS,[]),attendance=lsGet(KEY_ATTENDANCE,{days:[]});
+    var completed=0,totalJ=0,grades={D:0,C:0,B:0,A:0},categories={},projectSteps=0,dailyDone=0,onceDone=0;
+    for(var d=new Date(mon);d<=sun;d.setDate(d.getDate()+1)){
+      var dk=dateKey(d),slot=schedule[dk];
+      if(!slot||!slot.checked)continue;
+      for(var id in slot.checked){
+        if(!slot.checked[id])continue;
+        completed++;
+        var reward=slot.rewards&&slot.rewards[id]||50;
+        totalJ+=reward;
+        if(reward<=20)grades.D++;else if(reward<=50)grades.C++;else if(reward<=100)grades.B++;else grades.A++;
+      }
+    }
+    tasks.forEach(function(t){
+      if(!t.done&&!t.completedAt)return;
+      var doneDate=t.completedAt?t.completedAt.slice(0,10):(t.due||'');
+      if(doneDate>=monStr&&doneDate<=sunStr){
+        if(t.category)categories[t.category]=(categories[t.category]||0)+1;
+        if(t.type==='daily')dailyDone++;
+        if(t.type==='once')onceDone++;
+        if(t.type==='project'&&t.steps)t.steps.forEach(function(s){if(s.done)projectSteps++});
+      }
+    });
+    var streak=attendance.streak||0;
+    var topCat=Object.entries(categories).sort(function(a,b){return b[1]-a[1]})[0];
+    var total=completed||1;
+    return{weekStart:weekStartStr,weekEnd:sunStr,completed:completed,totalJ:totalJ,grades:grades,categories:categories,topCategory:topCat?topCat[0]:'—',topCategoryCount:topCat?topCat[1]:0,streak: streak,projectSteps:projectSteps,dailyDone:dailyDone,onceDone:onceDone,generatedAt:new Date().toISOString()}
+  }
+  function renderReport(r){
+    var details=document.createElement('details'),summary=document.createElement('summary'),content=document.createElement('div');
+    details.className='guild-weekly-report';details.open=false;
+    summary.textContent='周报 · '+r.weekStart+' 至 '+r.weekEnd;
+    var rate=r.completed>0?Math.round(r.completed/(r.completed+5)*100):0;
+    var lines=[
+      '完成委托：'+r.completed+' 项',
+      '获得 J：'+r.totalJ+' J（D:'+r.grades.D+' C:'+r.grades.C+' B:'+r.grades.B+' A:'+r.grades.A+'）',
+      '连续签到：'+r.streak+' 天',
+      '最活跃分类：'+r.topCategory+(r.topCategoryCount?' ('+r.topCategoryCount+' 项)':''),
+      '日课完成：'+r.dailyDone+' · 单次委托：'+r.onceDone+' · 远征步骤：'+r.projectSteps
+    ];
+    lines.forEach(function(text){var p=document.createElement('p');p.textContent=text;p.style.margin='4px 0';p.style.fontSize='13px';content.appendChild(p)});
+    details.append(summary,content);return details;
+  }
+  function init(){
+    var now=bjNow(),thisMon=getMonday(now),thisMonStr=dateKey(thisMon);
+    var reports=lsGet(KEY_REPORTS,{});
+    if(!reports[thisMonStr]){
+      reports[thisMonStr]=generateReport(thisMonStr);
+      var keys=Object.keys(reports).sort();
+      while(keys.length>MAX_WEEKS){delete reports[keys.shift()]}
+      try{localStorage.setItem(KEY_REPORTS,JSON.stringify(reports))}catch(e){}
+    }
+    var card=document.createElement('div');
+    card.className='card';card.style.marginTop='14px';
+    var h2=document.createElement('h2');h2.textContent='✦ 公会周报';h2.style.marginTop='0';
+    card.append(h2);
+    var weeks=Object.keys(reports).sort().reverse();
+    if(!weeks.length){var p=document.createElement('p');p.textContent='暂无周报数据';card.appendChild(p)}
+    else{weeks.forEach(function(wk){card.appendChild(renderReport(reports[wk]))})}
+    var refreshBtn=document.createElement('button');
+    refreshBtn.textContent='刷新本周数据';refreshBtn.style.marginTop='8px';refreshBtn.style.fontSize='12px';
+    refreshBtn.onclick=function(){
+      reports[thisMonStr]=generateReport(thisMonStr);
+      try{localStorage.setItem(KEY_REPORTS,JSON.stringify(reports))}catch(e){}
+      card.querySelectorAll('.guild-weekly-report').forEach(function(el){el.remove()});
+      Object.keys(reports).sort().reverse().forEach(function(wk){card.appendChild(renderReport(reports[wk]))});
+    };
+    card.appendChild(refreshBtn);
+    host.insertAdjacentElement('afterend',card);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else setTimeout(init,100);
+})();
+</script>
+<script id="guildQuickEnhance">
+(function(){
+  /* 扩展 naturalTime：下午→14:00, 晚上→20:00, 晚间→20:30 作为独立时间默认值 */
+  if(typeof naturalTime==='function'){
+    var _origNT=naturalTime;
+    naturalTime=function(raw){
+      var r=_origNT(raw);
+      if(r&&!r.time&&!r.ambiguous){
+        if(/晚上|晚间/.test(raw)&&!/点|时|半/.test(raw)){r.time='20:00';r.label=r.label||'晚上'}
+        else if(/下午/.test(raw)&&!/点|时|半|午/.test(raw)){r.time='14:00';r.label=r.label||'下午'}
+      }
+      return r;
+    };
+  }
+  /* 快捷登记实时预览增强 */
+  var input=document.querySelector('#quickIntake input[type=text]');
+  if(!input||input.dataset.enhanced==='1')return;
+  input.dataset.enhanced='1';
+  var preview=document.createElement('div');
+  preview.className='quick-intake-live-preview';
+  preview.style.cssText='font-size:11px;color:#806574;padding:4px 8px;min-height:18px;line-height:1.5';
+  input.insertAdjacentElement('afterend',preview);
+  var timer=null;
+  function updatePreview(){
+    var raw=input.value.trim();
+    if(!raw){preview.textContent='';return}
+    var hints=[];
+    /* 重复模式检测 */
+    if(/^每天|^每日/.test(raw))hints.push('识别为：公会日课');
+    else if(/^工作日/.test(raw))hints.push('识别为：工作日日课（周一至周五）');
+    else if(/^每周/.test(raw))hints.push('识别为：每周委托');
+    /* 相对时间检测 */
+    var timeMatch=raw.match(/(午饭后|午后|下午|傍晚|晚饭前|晚上|晚间|睡前)/);
+    if(timeMatch){
+      var timeMap={'午饭后':'13:00','午后':'14:00','下午':'14:00','傍晚':'17:30','晚饭前':'17:30','晚上':'20:00','晚间':'20:30','睡前':'22:30'};
+      hints.push('时间：'+timeMap[timeMatch[1]]);
+    }
+    /* 相对日期检测 */
+    if(/大后天/.test(raw))hints.push('日期：后天+1');
+    else if(/后天/.test(raw))hints.push('日期：今天+2');
+    else if(/明天|明早|明晚/.test(raw))hints.push('日期：明天');
+    if(hints.length)preview.textContent='💡 '+hints.join(' · ');
+    else preview.textContent='';
+  }
+  input.addEventListener('input',function(){
+    clearTimeout(timer);
+    timer=setTimeout(updatePreview,200);
+  });
+})();
+</script>
+<script id="guildV4ExportImport">
+(function(){
+  var btnExport=document.getElementById('backupV4');
+  var fileImport=document.getElementById('restoreV4File');
+  if(!btnExport&&!fileImport)return;
+  function getV4Data(){
+    try{
+      var g=JSON.parse(localStorage.getItem('fairytail-growth-v1')||'{}');
+      return g&&g.v4?g.v4:null;
+    }catch(e){return null}
+  }
+  function setV4Data(v4){
+    try{
+      var g=JSON.parse(localStorage.getItem('fairytail-growth-v1')||'{}');
+      g.v4=v4;
+      localStorage.setItem('fairytail-growth-v1',JSON.stringify(g));
+      return true;
+    }catch(e){console.warn('[guild-v4] import save failed',e);return false}
+  }
+  if(btnExport)btnExport.addEventListener('click',function(){
+    var v4=getV4Data();
+    if(!v4){alert('当前没有完整世界数据可导出');return}
+    var payload={__type:'guild-v4-world-state',exportedAt:new Date().toISOString(),version:1,data:v4};
+    var blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+    var url=URL.createObjectURL(blob);
+    var a=document.createElement('a');
+    a.href=url;
+    a.download='guild-v4-world-'+new Date().toISOString().slice(0,10)+'.json';
+    document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(url);a.remove()},1000);
+  });
+  if(fileImport)fileImport.addEventListener('change',function(e){
+    var file=e.target.files&&e.target.files[0];
+    if(!file)return;
+    var reader=new FileReader();
+    reader.onload=function(ev){
+      try{
+        var obj=JSON.parse(ev.target.result);
+        if(!obj||obj.__type!=='guild-v4-world-state'||!obj.data){
+          alert('文件格式不正确，请选择完整世界状态导出的 JSON 文件');return;
+        }
+        if(!confirm('导入将覆盖当前完整世界数据（公会等级、羁绊、道具等），确定继续？'))return;
+        if(setV4Data(obj.data)){
+          alert('公会档案已导入，页面将刷新以加载新数据');
+          location.reload();
+        }else{alert('导入失败，请查看控制台日志')}
+      }catch(err){alert('文件解析失败：'+err.message)}
+    };
+    reader.readAsText(file);
+    fileImport.value='';
+  });
+})();
+</script><script>
+// 页面渲染完成后淡入主内容，消除加载闪烁
+(function(){var m=document.querySelector('main');if(m)m.style.opacity='1'})();
+</script></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+{
+  "version": 65,
+  "sourceSnapshot": "2026-09-26T18:36:51.691+08:00",
+  "sourceReason": "启程前 · 抗体共享登记",
+  "before": {
+    "browserTasks": 2,
+    "cloudTaskRecords": 4,
+    "cloudUniqueTaskIds": 3
+  },
+  "after": {
+    "tasks": 77,
+    "done": 62,
+    "projects": 3,
+    "stages": 12,
+    "scheduleDates": 14,
+    "growthEntries": 163,
+    "redemptions": 12
+  },
+  "addedAfterSnapshot": [
+    "mobile-sync-test-20260927"
+  ],
+  "preservedLevelNames": true,
+  "rewardRecalculation": false
+}

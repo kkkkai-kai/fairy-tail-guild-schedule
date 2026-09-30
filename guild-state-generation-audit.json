@@ -1,0 +1,5047 @@
+{
+  "sheets": [
+    {
+      "file": "exec-ef334d57-aa05-4d99-ba5d-1d05035e2797.png",
+      "size": [
+        1774,
+        887
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-7f5dcbd7-161c-470a-a4b6-8451f93b7181.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-f2055412-4cf7-48b8-ae0e-cedc9026429b.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-f4ff23b7-9832-4376-8c92-aeeeda3579b6.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-ceb314d4-a3ac-4c5c-a5ca-10e79507d07e.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-c5ff8ed9-7a90-4171-a880-3a957d696014.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-8441c6f2-3e28-4971-b4aa-9be83d3b733e.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-ac225f44-de06-4412-b6d9-a6bc823b1edb.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-a77d32a9-6534-4983-9b98-38764f2131ff.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-b790ab50-37f9-4f8c-9aa9-032f9e167890.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-b73ba192-95e7-4906-b80c-05cbb653fe63.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-bb1c0637-0e7b-428a-9d88-29ea2d524bff.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-404a70fc-6644-4ab1-b7ad-811451004270.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-17a7c4cc-baa4-4575-a1a4-e3576dc96f2e.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    }
+  ],
+  "files": [
+    {
+      "file": "guild-state-makarov-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        65,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-makarov-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-makarov-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        201,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-makarov-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        29,
+        24,
+        226,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-makarov-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        30,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-makarov-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        50,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-elfman-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-elfman-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        32,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-elfman-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        29,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-elfman-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        30,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-elfman-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        24,
+        237,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-elfman-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        25,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-lily-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-lily-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        38,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-lily-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        40,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-lily-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        22,
+        24,
+        233,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-lily-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        25,
+        24,
+        231,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-lily-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        31,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-carla-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        64,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-carla-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        36,
+        24,
+        220,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-carla-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-carla-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-carla-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-carla-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-loke-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        171,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-loke-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-loke-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        71,
+        24,
+        185,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-loke-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-loke-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-loke-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-freed-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        177,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-freed-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-freed-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-freed-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-freed-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-freed-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        243
+      ]
+    },
+    {
+      "file": "guild-state-bickslow-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bickslow-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bickslow-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bickslow-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bickslow-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-bickslow-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-evergreen-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-evergreen-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-evergreen-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-evergreen-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-evergreen-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-evergreen-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        212,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mystogan-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mystogan-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mystogan-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mystogan-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mystogan-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-mystogan-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-macao-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-macao-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        201,
+        243
+      ]
+    },
+    {
+      "file": "guild-state-macao-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-macao-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-macao-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-macao-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        25,
+        24,
+        230,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-wakaba-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-wakaba-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        58,
+        24,
+        197,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-wakaba-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-wakaba-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        51,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-wakaba-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-wakaba-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        27,
+        25,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-laki-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        170,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-laki-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        196,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-laki-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-laki-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-laki-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-laki-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        25,
+        24,
+        230,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-nab-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        195,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-nab-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-nab-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-nab-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-nab-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        57,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-nab-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        27,
+        24,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-jet-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        184,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-jet-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        56,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-jet-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        59,
+        24,
+        197,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-jet-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-jet-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-jet-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-droy-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        56,
+        24,
+        200,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-droy-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-droy-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-droy-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-droy-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-droy-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-alzack-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        76,
+        24,
+        179,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-alzack-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        66,
+        24,
+        189,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-alzack-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-alzack-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        30,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-alzack-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        51,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-alzack-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        33,
+        25,
+        223,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bisca-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bisca-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bisca-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bisca-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-bisca-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-bisca-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-romeo-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        174,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-romeo-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-romeo-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-romeo-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-romeo-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-romeo-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        212,
+        243
+      ]
+    },
+    {
+      "file": "guild-state-warren-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        89,
+        24,
+        167,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-warren-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        75,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-warren-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        81,
+        24,
+        175,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-warren-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-warren-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        73,
+        24,
+        182,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-warren-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-max-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        177,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-max-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        196,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-max-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        57,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-max-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        32,
+        24,
+        223,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-max-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        75,
+        24,
+        180,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-max-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        200,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-reedus-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-reedus-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-reedus-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-reedus-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        222,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-reedus-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-reedus-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mest-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        182,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mest-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mest-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        65,
+        24,
+        190,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mest-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-mest-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        57,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-mest-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-kinana-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-kinana-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        200,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-kinana-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        201,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-kinana-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-kinana-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-kinana-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sting-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        183,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sting-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        184,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sting-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sting-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sting-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-sting-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-rogue-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        81,
+        24,
+        174,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-rogue-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        24,
+        189,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-rogue-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        75,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-rogue-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        221,
+        243
+      ]
+    },
+    {
+      "file": "guild-state-rogue-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-rogue-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-yukino-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        77,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-yukino-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        182,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-yukino-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        77,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-yukino-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-yukino-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        56,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-yukino-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-minerva-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-minerva-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-minerva-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        65,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-minerva-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-minerva-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-minerva-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        243
+      ]
+    },
+    {
+      "file": "guild-state-ultear-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        185,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-ultear-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        62,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-ultear-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-ultear-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-ultear-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-ultear-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-meredy-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-meredy-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        59,
+        24,
+        197,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-meredy-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        80,
+        24,
+        176,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-meredy-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        51,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-meredy-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-meredy-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        212,
+        243
+      ]
+    },
+    {
+      "file": "guild-state-azuma-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-azuma-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        28,
+        24,
+        228,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-azuma-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-azuma-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-azuma-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-azuma-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        35,
+        24,
+        221,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-brandish-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        64,
+        24,
+        192,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-brandish-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-brandish-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-brandish-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        35,
+        24,
+        220,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-brandish-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        36,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-brandish-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        224,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aries-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        171,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aries-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aries-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        76,
+        24,
+        179,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aries-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aries-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        174,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-aries-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-taurus-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-taurus-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-taurus-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        212,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-taurus-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-taurus-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-taurus-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        224,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-gemini-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        24,
+        24,
+        232,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-gemini-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        28,
+        24,
+        228,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-gemini-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        28,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-gemini-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        24,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-gemini-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        26,
+        24,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-gemini-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        26,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-cancer-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        173,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-cancer-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        66,
+        24,
+        190,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-cancer-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        183,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-cancer-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        195,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-cancer-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        62,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-cancer-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        58,
+        24,
+        198,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-virgo-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        173,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-virgo-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        79,
+        24,
+        177,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-virgo-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-virgo-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-virgo-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-virgo-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-libra-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        58,
+        24,
+        198,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-libra-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-libra-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-libra-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-libra-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        212,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-libra-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        23,
+        24,
+        233,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-scorpio-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        196,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-scorpio-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-scorpio-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        22,
+        24,
+        234,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-scorpio-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-scorpio-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        222,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-scorpio-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        27,
+        24,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sagittarius-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sagittarius-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        25,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sagittarius-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sagittarius-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-sagittarius-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-sagittarius-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        29,
+        24,
+        227,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-capricorn-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        170,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-capricorn-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-capricorn-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-capricorn-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-capricorn-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-capricorn-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aquarius-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        64,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aquarius-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aquarius-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aquarius-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        221,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-aquarius-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-aquarius-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-pisces-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        32,
+        24,
+        224,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-pisces-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-pisces-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        22,
+        24,
+        234,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-pisces-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        25,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-state-pisces-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        29,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "guild-portrait-pisces-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    }
+  ],
+  "errors": []
+}

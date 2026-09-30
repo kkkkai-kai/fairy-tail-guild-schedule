@@ -1,0 +1,8 @@
+{
+  "envId": "fairytail-guild-d4f1qjyd1c3ba45b",
+  "gateway": {
+    "routes": [
+      { "path": "/sync", "target": "function:syncfn", "enableSafeDomain": false, "enableAuth": false }
+    ]
+  }
+}
