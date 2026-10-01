@@ -470,6 +470,24 @@
       merged.bonus = mergeRecordArrays(local.bonus, remote.bonus, preferLocal);
     } else if (key === 'fairytail-growth-v1') {
       merged.entries = Object.assign({}, preferLocal ? remote.entries : local.entries, preferLocal ? local.entries : remote.entries);
+      var primary = preferLocal ? local : remote, secondary = preferLocal ? remote : local;
+      if (primary.v4 && secondary.v4) {
+        merged.v4 = JSON.parse(JSON.stringify(primary.v4));
+        var ledger = merged.v4.eventLedger || (merged.v4.eventLedger = {});
+        var sources = new Set(Object.keys(ledger).map(function (id) { return ledger[id].sourceKey || id; }));
+        Object.keys(secondary.v4.eventLedger || {}).forEach(function (id) {
+          var entry = secondary.v4.eventLedger[id], source = entry.sourceKey || id;
+          if (Object.prototype.hasOwnProperty.call(ledger, id) || sources.has(source)) return;
+          ledger[id] = entry; sources.add(source);
+          if (entry.reversedAt || entry.active === false) return;
+          if (merged.v4.levelTrack) merged.v4.levelTrack.exp = (Number(merged.v4.levelTrack.exp) || 0) + (Number(entry.levelExp) || 0);
+          Object.keys(entry.affinities || {}).forEach(function (affinity) {
+            if (merged.v4.affinities && merged.v4.affinities[affinity]) merged.v4.affinities[affinity].exp = (Number(merged.v4.affinities[affinity].exp) || 0) + (Number(entry.affinities[affinity]) || 0);
+          });
+          if (entry.drop && !entry.consumed && merged.v4.inventory && merged.v4.inventory.items) merged.v4.inventory.items[entry.drop] = (Number(merged.v4.inventory.items[entry.drop]) || 0) + 1;
+        });
+        if (merged.v4.inventory && secondary.v4.inventory) merged.v4.inventory.ledger = mergeRecordArrays(primary.v4.inventory.ledger, secondary.v4.inventory.ledger, preferLocal);
+      } else if (!primary.v4 && secondary.v4) merged.v4 = secondary.v4;
     } else if (key === 'fairytail-warehouse-v1') {
       merged.items = mergeRecordArrays(local.items, remote.items, preferLocal);
     } else if (key === 'fairytail-schedule-v1') {
