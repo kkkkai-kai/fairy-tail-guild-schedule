@@ -45,7 +45,8 @@
 | 文件 | 说明 |
 |---|---|
 | `guild-dock-icon.png` | 右下角码头按钮图标（妖尾公会徽章风格） |
-| `guild-icon-192.png` | PWA 图标 |
+| `guild-icon-192.png` | PWA 图标（192x192） |
+| `guild-icon-512.png` | PWA 图标（512x512） |
 | `celestial-portrait-*.png` | 星灵肖像图（12 星座） |
 | `celestial-sprite-*-pixel-v1.png` | 星灵像素图（12 星座） |
 
@@ -94,20 +95,20 @@ supabaseTable: 'guildcloudsync',
 
 ### 4.1 版本号管理（每次部署必做）
 
-部署前必须同步更新以下三处版本号，格式 `guild-v{N}-{描述}-{日期}`：
+部署前必须更新以下两处版本号（两者独立，可以不同，但各自必须更新）：
 
-1. **`guild-sw.js`** 第 5 行：
+1. **`guild-sw.js`** 第 5 行（控制 Service Worker 缓存刷新）：
    ```javascript
    var CACHE_VER = 'guild-v{N}-{描述}-{日期}';
    ```
 
-2. **`index.html`** 所有 8 个 `<script>` 标签的 `?v=` 参数：
+2. **`index.html` + `每日日程表.html`** 所有 8 个 `<script>` 标签的 `?v=` 参数（控制浏览器缓存失效）：
    ```html
    <script src="quotes.js?v=guild-v{N}-{描述}-{日期}"></script>
-   <!-- 以下 7 个 script 标签同理，全部保持一致 -->
+   <!-- 以下 7 个 script 标签同理，两个 HTML 必须完全一致 -->
    ```
 
-3. **`每日日程表.html`** 与 index.html 完全一致的 8 个 `?v=` 参数
+**说明**：SW 版本和 HTML `?v=` 版本可以不同——`?v=` 让浏览器重新拉取 JS 文件，`CACHE_VER` 让 SW 重建缓存。关键是两个 HTML 的 `?v=` 必须一致，且 SW 版本在需要清除 SW 缓存时更新。
 
 **注意**：两个 HTML 文件必须保持完全一致，每次改动都要同步修改两边。
 
@@ -186,7 +187,7 @@ COMMIT_SHA=$("$GH" api repos/$REPO/git/commits" --input /tmp/commit.json --jq '.
 
 每次部署前，逐项确认：
 
-- [ ] `guild-sw.js` 的 `CACHE_VER` 已更新
+- [ ] `guild-sw.js` 的 `CACHE_VER` 已更新（如需清除 SW 缓存）
 - [ ] `index.html` 的 8 个 `?v=` 已更新
 - [ ] `每日日程表.html` 的 8 个 `?v=` 已更新（与 index.html 一致）
 - [ ] 所有修改的文件已 `git add`
@@ -199,7 +200,7 @@ COMMIT_SHA=$("$GH" api repos/$REPO/git/commits" --input /tmp/commit.json --jq '.
 
 1. **禁止出现任何腾讯云 / CloudBase 代码**。用户明确要求彻底清除，代码中不得出现 `cloudbase`、`CloudBase`、`腾讯云`、`cb*` 前缀（已统一为 `supa*`）。
 2. **两个 HTML 必须同步修改**。`index.html` 和 `每日日程表.html` 内容始终一致。
-3. **版本号三处同步**。SW 缓存版本 + 两个 HTML 的 `?v=` 必须同版本。
+3. **版本号两处各自更新**。两个 HTML 的 `?v=` 必须一致；`guild-sw.js` 的 `CACHE_VER` 在需要清除 SW 缓存时更新（两者可以不同）。
 4. **不改动 Supabase 凭据**。anon key 已配好，不要替换或移除。
 5. **不改动 `schedule.js` 的数据结构**。云同步通过 hook localStorage 实现，不侵入业务代码。
 6. **部署前确认额度**。Supabase 免费层 500MB，当前使用 <1%，无需担心。
@@ -225,7 +226,7 @@ A: 检查版本号是否更新。必须同时更新 `guild-sw.js` 的 `CACHE_VER
 A: 使用 4.3 节的 gh API 备用方案。`gh` CLI 走 api.github.com，通常不受影响。推送后记得在本地执行 `git fetch origin && git reset --soft origin/main` 同步本地状态。
 
 ### Q: 新增了一个 JS 文件需要加入部署？
-A: 在两个 HTML 中添加 `<script src="新文件.js?v=当前版本号"></script>`，同时更新 `guild-sw.js` 的 `CORE_URLS` 数组（让 SW 缓存新文件）。
+A: 在两个 HTML 中添加 `<script src="新文件.js?v=当前版本号"></script>`，同时更新 `guild-sw.js` 的 `CORE_URLS` 数组（让 SW 缓存新文件），并更新 `CACHE_VER` 触发 SW 重建缓存。
 
 ### Q: 如何新增一个需要同步的 localStorage key？
 A: 在 `guild-cloud-sync.js` 的 `CONFIG.syncKeys` 数组中添加新 key。所有参与云同步的数据 key 都在这里声明。
