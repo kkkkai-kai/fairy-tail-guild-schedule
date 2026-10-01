@@ -54,7 +54,7 @@
   var lastPullAt = 0;
   var online = false;
   var hookInstalled = false;
-  var cbWriteQueue = Promise.resolve();
+  var supaWriteQueue = Promise.resolve();
   // 方案 A（省额度）：轮询从 60s 放宽到 5 分钟，且仅页面可见时轮询；
   // 打开页面 / 回到前台 / 点击浮标时立即拉一次，切后台或离开页面前立即 flush 推送。
   var PULL_INTERVAL = 5 * 60 * 1000;
@@ -133,9 +133,10 @@
     if (top.getAttribute('data-cloud-bound') !== '1') {
       top.setAttribute('data-cloud-bound', '1');
       top.style.cursor = 'pointer';
-      top.title = '单击=打开公会面板；双击=切换自动刷新';
+      top.title = '单击=打开菜单；双击=切换自动刷新';
       top.onclick = function () {
-        if (typeof document.dispatchEvent === 'function') document.dispatchEvent(new CustomEvent('guildDockToggle'));
+        var floater = document.getElementById('guildCloudBadge');
+        if (floater) showDockMenu(floater);
       };
       top.ondblclick = function (ev) { ev.stopPropagation(); toggleAutoRefresh(); };
     }
@@ -143,14 +144,42 @@
       var b = document.createElement('div');
       b.id = 'guildCloudBadge';
       b.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:99999;width:52px;height:52px;border-radius:50%;background:#fff8ee url(guild-dock-icon.png) center/76% no-repeat;border:3px solid #e7a362;box-shadow:0 3px 12px rgba(0,0,0,.22);transition:border-color .3s,box-shadow .3s;cursor:pointer;user-select:none;';
-      b.title = '单击=打开公会面板；双击=切换自动刷新';
-      b.onclick = function () {
-        if (typeof document.dispatchEvent === 'function') document.dispatchEvent(new CustomEvent('guildDockToggle'));
-      };
+      b.title = '单击=打开菜单；双击=切换自动刷新';
+      b.onclick = function () { showDockMenu(b); };
       b.ondblclick = function (ev) { ev.stopPropagation(); toggleAutoRefresh(); };
       document.body.appendChild(b);
     }
     setBadge('云端：连接中…', null);
+  }
+  // ---------- 融合菜单：单击右下角按钮弹出两个选项 ----------
+  function showDockMenu(anchor) {
+    var old = document.getElementById('guildDockMenu');
+    if (old) { old.remove(); return; }
+    var m = document.createElement('div');
+    m.id = 'guildDockMenu';
+    m.style.cssText = 'position:fixed;right:14px;bottom:74px;z-index:999999;display:flex;gap:10px;background:rgba(255,250,242,.98);border:1px solid #e4c49a;border-radius:16px;padding:10px 14px;box-shadow:0 8px 28px rgba(80,40,10,.28);backdrop-filter:blur(8px)';
+    var items = [
+      { icon: '🏠', label: '码头', action: function () { document.dispatchEvent(new CustomEvent('guildDockToggle')); } },
+      { icon: '✦', label: '功能', action: function () {
+        if (typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle();
+      }}
+    ];
+    items.forEach(function (it) {
+      var d = document.createElement('div');
+      d.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:6px 10px;border-radius:10px;transition:background .2s;user-select:none;min-width:52px';
+      d.innerHTML = '<span style="font-size:22px;line-height:1">' + it.icon + '</span><span style="font-size:11px;color:#5d3b2b">' + it.label + '</span>';
+      d.onmouseenter = function () { d.style.background = '#f4e6d0'; };
+      d.onmouseleave = function () { d.style.background = 'transparent'; };
+      d.onclick = function (e) { e.stopPropagation(); it.action(); m.remove(); };
+      m.appendChild(d);
+    });
+    document.body.appendChild(m);
+    setTimeout(function () {
+      function close(ev) { if (!m.contains(ev.target) && ev.target !== anchor) { m.remove(); cleanup(); } }
+      function cleanup() { document.removeEventListener('click', close); document.removeEventListener('scroll', cleanup, true); }
+      document.addEventListener('click', close);
+      document.addEventListener('scroll', cleanup, true);
+    }, 10);
   }
   function toggleAutoRefresh() {
     var off = (localStorage.getItem('guildAutoRefresh') || 'on') === 'off';
@@ -170,12 +199,12 @@
       else if (ok === false) cls += ' offline';
       else cls += ' syncing';
       top.className = cls;
-      top.title = '单击=打开公会面板；双击=切换自动刷新';
+      top.title = '单击=打开菜单；双击=切换自动刷新';
     }
     if (floater) {
       floater.style.borderColor = ok === true ? '#4caf50' : ok === false ? '#d9603b' : '#e7a362';
       floater.style.boxShadow = ok === true ? '0 0 10px #4caf5088' : ok === false ? '0 0 10px #d9603b66' : '0 3px 12px rgba(0,0,0,.22)';
-      floater.title = '单击=打开公会面板；双击=切换自动刷新';
+      floater.title = '单击=打开菜单；双击=切换自动刷新';
     }
     var dockStatus = document.getElementById('guildDockStatus');
     if (dockStatus) {
@@ -228,11 +257,11 @@
     var url, headers = { 'Content-Type': 'application/json' };
 
     if (CONFIG.mode === 'supabase' && CONFIG.supabaseAnonKey) {
-      cbPush(entries)
+      supaPush(entries)
         .then(function () { online = true; setBadge('云端：已同步', true); })
         .catch(function () {
-          // 降级：先拉后推失败（通常是 cbPull 网络波动），跳过合并直接推
-          cb_pushNow(entries.slice())
+          // 降级：先拉后推失败（通常是 supaPull 网络波动），跳过合并直接推
+          supaPushNow(entries.slice())
             .then(function () { online = true; setBadge('云端：已同步（降级直推）', true); })
             .catch(function () { retryEntries(entries); });
         });
@@ -255,7 +284,7 @@
     var headers = {};
 
     if (CONFIG.mode === 'supabase' && CONFIG.supabaseAnonKey) {
-      return cbPull()
+      return supaPull()
         .then(function (list) {
           applyRemote(list);
           return list;
@@ -300,7 +329,7 @@
       catch (e) { throw new Error(label + '返回了无效 JSON'); }
     });
   }
-  function cb_pushNow(entries) {
+  function supaPushNow(entries) {
     if (!entries || !entries.length) return Promise.resolve({ list: [] });
     var rows = entries.map(function (e) { return { key: e.key, value: e.value, updated_at: Number(e.updatedAt) || Date.now() }; });
     return fetch(supaRestUrl(), {
@@ -308,7 +337,7 @@
       headers: supaHeaders({ 'Prefer': 'return=representation,resolution=merge-duplicates' }),
       body: JSON.stringify(rows)
     }).then(function (r) { return checkedJson(r, '云端写入'); })
-      .then(function () { return cbPull(); })
+      .then(function () { return supaPull(); })
       .then(function (list) {
         entries.forEach(function (entry) {
           var matches = list.filter(function (item) { return item.key === entry.key; });
@@ -319,12 +348,12 @@
         return { list: list };
       });
   }
-  function cbPush(entries) {
+  function supaPush(entries) {
     var snapshot = (entries || []).map(function (entry) {
       return { key: entry.key, value: entry.value, updatedAt: entry.updatedAt };
     });
     var run = function () {
-      return cbPull().then(function (remoteList) {
+      return supaPull().then(function (remoteList) {
         var remoteByKey = {}, remoteTasks = null;
         (remoteList || []).forEach(function (item) {
           remoteByKey[item.key] = item;
@@ -348,13 +377,13 @@
           Storage.prototype.setItem.call(localStorage, entry.key, mergedRaw);
           markLocalWrite(entry.key, entry.updatedAt);
         });
-        return cb_pushNow(snapshot);
+        return supaPushNow(snapshot);
       });
     };
-    cbWriteQueue = cbWriteQueue.then(run, run);
-    return cbWriteQueue;
+    supaWriteQueue = supaWriteQueue.then(run, run);
+    return supaWriteQueue;
   }
-  function cbPull() {
+  function supaPull() {
     return fetch(supaRestUrl('select=key,value,updated_at&t=' + Date.now()), {
       headers: supaHeaders(),
       cache: 'no-store'
@@ -367,7 +396,7 @@
   }
 
   // ---------- 方案 B：轻量时间戳探测（~1KB，替代全量轮询） ----------
-  function cbMeta() {
+  function supaMeta() {
     return fetch(supaRestUrl('select=key,updated_at&t=' + Date.now()), {
       headers: supaHeaders(),
       cache: 'no-store'
@@ -393,9 +422,9 @@
   // 懒轮询：先 meta 探测，云端确有更新才发起全量拉取；无更新则零流量
   function pullLazy(retryCount) {
     retryCount = retryCount || 0;
-    return cbMeta().then(function (meta) {
+    return supaMeta().then(function (meta) {
       if (metaNeedsPull(meta)) {
-        return cbPull().then(function (list) {
+        return supaPull().then(function (list) {
           applyRemote(list);
           return list;
         });
@@ -611,7 +640,7 @@
       }
     });
     if (pushed.length) {
-      cbPush(pushed).then(function () { online = true; setBadge('云端：已同步', true); })
+      supaPush(pushed).then(function () { online = true; setBadge('云端：已同步', true); })
         .catch(function () { retryEntries(pushed); });
     }
   }
@@ -705,7 +734,7 @@
         var entries = [];
         CONFIG.syncKeys.forEach(function (k) { var v = localStorage.getItem(k); if (v !== null) entries.push({ key: k, value: v, updatedAt: localTimeOf(k) }); });
         if (entries.length) {
-          cbPush(entries).then(function () { online = true; setBadge('云端：已同步', true); })
+          supaPush(entries).then(function () { online = true; setBadge('云端：已同步', true); })
             .catch(function () { retryEntries(entries); });
         }
       }));
@@ -781,7 +810,7 @@
               markLocalWrite(r.key, Date.now());
               changed = true; taskChanged = true;
               var protectedEntry = { key: r.key, value: JSON.stringify(pMerged), updatedAt: Date.now() };
-              cbPush([protectedEntry])
+              supaPush([protectedEntry])
                 .then(function () { online = true; setBadge('云端：已同步', true); })
                 .catch(function () { retryEntries([protectedEntry]); });
               return; // 跳过常规整包覆盖
@@ -838,7 +867,7 @@
   // ---------- 全量推送（首次上云/启动兜底） ----------
   var _fullPushTimeout = null;
   function fullPush() {
-    // 全量推送走 cbWriteQueue 串行化，避免与增量 cbPush 并发交错
+    // 全量推送走 supaWriteQueue 串行化，避免与增量 supaPush 并发交错
     var run = function () {
     var entries = [];
     CONFIG.syncKeys.forEach(function (k) {
@@ -852,7 +881,7 @@
       // 智能：先拉云端，只推送云端缺失或本地更新的 key，避免无谓抬时间戳。
       // 2026-09-30 修复：委托数据（tasks-v2）强制按"本地为准 + 合并云端"推送——
       // 旧代码时代本地时间戳停滞导致云端始终收不到本地完成记录，两端数据长期不一致。
-      return cbPull().then(function (remoteList) {
+      return supaPull().then(function (remoteList) {
         var remoteMap = {};
         var remoteTasks = null;
         (remoteList || []).forEach(function (r) {
@@ -883,7 +912,7 @@
           }
         });
         if (!need.length) { online = true; setBadge('云端：已同步', true); return; }
-        return cbPush(need)
+        return supaPush(need)
           .then(function () { online = true; setBadge('云端：已同步', true); })
           .catch(function () { retryEntries(need); });
       }).catch(function () {
@@ -903,9 +932,9 @@
       .catch(function () { online = false; setBadge('云端：离线（本地模式）', false); });
     };
     // 超时保护：15 秒后强制解锁
-    cbWriteQueue = cbWriteQueue.then(run, run);
+    supaWriteQueue = supaWriteQueue.then(run, run);
     _fullPushTimeout = setTimeout(function () { _fullPushTimeout = null; }, 15000);
-    return cbWriteQueue;
+    return supaWriteQueue;
   }
 
   // ---------- 启动 ----------
