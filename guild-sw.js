@@ -2,12 +2,13 @@
    策略：stale-while-revalidate —— 命中先返回缓存，后台重新拉取更新。
    升级版本号时，同步修改 HTML 中的 ?v= 与下方 CACHE_VER。 */
 'use strict';
-var CACHE_VER = 'guild-v79-merge-btn-20261001';
+var CACHE_VER = 'guild-v84-sw-fix-20261001';
 var CACHE_NAME = 'guild-core-' + CACHE_VER;
 
 var CORE_URLS = [
   './每日日程表.html?pwa=1',
   './每日日程表.html',
+  './index.html',
   './quotes.js',
   './growth.js',
   './v4.js',
@@ -15,8 +16,10 @@ var CORE_URLS = [
   './guild-cloud-sync.js',
   './schedule.js',
   './guild-features-v64.js',
+  './guild-dock-panel.js',
   './guild-icon-192.png',
-  './guild-icon-512.png'
+  './guild-icon-512.png',
+  './guild-dock-icon.png'
 ];
 
 self.addEventListener('install', function (event) {
