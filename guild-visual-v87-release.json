@@ -1,0 +1,15 @@
+{
+  "commit": "eb8d8c935a88cbf9136a1ea10ab0c223ceb757cd",
+  "verifiedFiles": 337,
+  "mismatches": [],
+  "browser": {
+    "roles": 57,
+    "version": [
+      "https://kkkkai-kai.github.io/fairy-tail-guild-schedule/schedule.js?v=guild-v87-cast-20261002"
+    ],
+    "hallCount": 1,
+    "overflow": false,
+    "brokenImages": []
+  },
+  "errors": []
+}
