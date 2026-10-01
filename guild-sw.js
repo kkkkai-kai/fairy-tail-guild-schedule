@@ -2,7 +2,7 @@
    策略：stale-while-revalidate —— 命中先返回缓存，后台重新拉取更新。
    升级版本号时，同步修改 HTML 中的 ?v= 与下方 CACHE_VER。 */
 'use strict';
-var CACHE_VER = 'guild-v84-sw-fix-20261001';
+var CACHE_VER = 'guild-v85-audit-20261001';
 var CACHE_NAME = 'guild-core-' + CACHE_VER;
 
 var CORE_URLS = [
@@ -36,7 +36,7 @@ self.addEventListener('activate', function (event) {
   event.waitUntil(
     caches.keys().then(function (keys) {
       return Promise.all(
-        keys.filter(function (key) { return key !== CACHE_NAME; })
+        keys.filter(function (key) { return key.indexOf('guild-core-') === 0 && key !== CACHE_NAME; })
             .map(function (key) { return caches.delete(key); })
       );
     }).then(function () { return self.clients.claim(); })
@@ -81,5 +81,4 @@ self.addEventListener('fetch', function (event) {
     })
   );
 });
-
 
