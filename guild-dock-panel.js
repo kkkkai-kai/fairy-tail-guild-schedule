@@ -104,10 +104,10 @@
     var style = document.createElement('style');
     style.id = 'guildDockStyles';
     style.textContent =
-      '#guildDockPanel{position:fixed;right:14px;bottom:76px;z-index:99998;width:min(340px,92vw);max-height:min(76vh,680px);display:flex;flex-direction:column;background:#fffaf1;border:1px solid #e4c49a;border-radius:16px;box-shadow:0 14px 40px #55301e44;overflow:hidden;font-family:"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;color:#5d3b2b}' +
+      '#guildDockPanel{position:fixed;right:14px;bottom:76px;z-index:99998;width:min(340px,92vw);max-height:min(76vh,680px);display:flex;flex-direction:column;background:#fff8e9;border:2px solid #bfa27a;border-radius:6px;box-shadow:0 8px 26px #55301e33;overflow:hidden;font-family:"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;color:#5d3b2b}' +
       '#guildDockPanel[hidden]{display:none}' +
-      '.guild-dock-head{display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(135deg,#f7e3c4,#f2d3a8);border-bottom:1px solid #e8cdab}' +
-      '.guild-dock-head strong{font-size:14px;color:#7a4a26;white-space:nowrap}' +
+      '.guild-dock-head{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#654632;border-bottom:1px solid #b3986e}' +
+      '.guild-dock-head strong{font-size:14px;color:#fff3dd;white-space:nowrap}' +
       '.guild-dock-status{flex:1;min-width:0;text-align:right;font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:3px 8px;border-radius:999px;background:#f4ead9;color:#8a5a22}' +
       '.guild-dock-status.ok{background:#e8f6e4;color:#2f6b2f}' +
       '.guild-dock-status.fail{background:#ffe3e0;color:#a33}' +
