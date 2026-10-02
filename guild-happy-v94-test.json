@@ -1,0 +1,34 @@
+[
+  {
+    "width": 1366,
+    "before": true,
+    "once": 94.671875,
+    "stage": 58,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 1366,
+    "before": false,
+    "once": 82.671875,
+    "stage": 50.125,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "before": false,
+    "once": 82.671875,
+    "stage": 50.125,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "before": false,
+    "once": 185,
+    "stage": 94.125,
+    "overflow": false,
+    "errors": []
+  }
+]
