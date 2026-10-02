@@ -259,12 +259,7 @@
     if (CONFIG.mode === 'supabase' && CONFIG.supabaseAnonKey) {
       supaPush(entries)
         .then(function () { online = true; setBadge('云端：已同步', true); })
-        .catch(function () {
-          // 降级：先拉后推失败（通常是 supaPull 网络波动），跳过合并直接推
-          supaPushNow(entries.slice())
-            .then(function () { online = true; setBadge('云端：已同步（降级直推）', true); })
-            .catch(function () { retryEntries(entries); });
-        });
+        .catch(function () { retryEntries(entries); });
       return;
     }
 
@@ -360,6 +355,12 @@
           if (item.key === 'fairytail-tasks-v2') remoteTasks = item;
         });
         snapshot.forEach(function (entry) {
+          var latestRaw = localStorage.getItem(entry.key);
+          if (latestRaw && latestRaw !== entry.value) {
+            entry.value = entry.key === 'fairytail-tasks-v2'
+              ? JSON.stringify(mergeTaskArrays(parseJsonSafe(latestRaw, []), parseJsonSafe(entry.value, []), true))
+              : mergeProtectedValue(entry.key, latestRaw, entry.value, true);
+          }
           var remote = remoteByKey[entry.key];
           if (!remote) return;
           var mergedRaw = entry.value;
@@ -377,6 +378,7 @@
           Storage.prototype.setItem.call(localStorage, entry.key, mergedRaw);
           markLocalWrite(entry.key, entry.updatedAt);
         });
+        if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
         return supaPushNow(snapshot);
       });
     };
@@ -384,7 +386,7 @@
     return supaWriteQueue;
   }
   function supaPull() {
-    return fetch(supaRestUrl('select=key,value,updated_at&t=' + Date.now()), {
+    return fetch(supaRestUrl('select=key,value,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
     }).then(function (r) { return checkedJson(r, '云端读取'); })
@@ -397,7 +399,7 @@
 
   // ---------- 方案 B：轻量时间戳探测（~1KB，替代全量轮询） ----------
   function supaMeta() {
-    return fetch(supaRestUrl('select=key,updated_at&t=' + Date.now()), {
+    return fetch(supaRestUrl('select=key,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
     }).then(function (r) { return checkedJson(r, '云端元数据'); })
@@ -463,6 +465,7 @@
   }
   function mergeProtectedValue(key, localRaw, remoteRaw, preferLocal) {
     var local = parseJsonSafe(localRaw, null), remote = parseJsonSafe(remoteRaw, null);
+    if (!local) return remoteRaw;
     if (!local || !remote || Array.isArray(local) || Array.isArray(remote)) return localRaw;
     var merged = Object.assign({}, preferLocal ? remote : local, preferLocal ? local : remote);
     if (key === 'fairytail-wallet-v1') {
@@ -789,6 +792,7 @@
   // 后台静默刷新：云端数据已写入 localStorage，直接重绘页面，避免整页 reload 白屏闪烁
   function silentRefresh() {
     try {
+      if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
       if (typeof all === 'function') {
         all();
         setBadge('云端：已同步', true);
@@ -836,7 +840,13 @@
           }
         }
         if (!changed) backupLocalToStorage();
-        origSet.call(localStorage, r.key, r.value);
+        var nextValue = r.value;
+        if (r.key === 'fairytail-tasks-v2') {
+          nextValue = JSON.stringify(mergeTaskArrays(parseJsonSafe(localStorage.getItem(r.key), []), parseJsonSafe(r.value, []), false));
+        } else {
+          nextValue = mergeProtectedValue(r.key, localStorage.getItem(r.key), r.value, false);
+        }
+        origSet.call(localStorage, r.key, nextValue);
         markLocalWrite(r.key, Number(r.updatedAt));
         changed = true;
         if (r.key === 'fairytail-tasks-v2') taskChanged = true;
@@ -845,6 +855,7 @@
     online = true;
     setBadge('云端：已同步', true);
     if (changed) {
+      if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
       var now = Date.now();
       var autoRefresh = (localStorage.getItem('guildAutoRefresh') || 'on') !== 'off';
       // 只有委托数据（fairytail-tasks-v2）变化才整页自动刷新（15 秒防抖、输入中不刷新）；

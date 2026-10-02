@@ -1,0 +1,42 @@
+[
+  {
+    "width": 1366,
+    "taskCount": 8,
+    "errors": [],
+    "overflow": false,
+    "passed": [
+      "default-once",
+      "no-date-visible",
+      "near-date-visible",
+      "far-date-visible",
+      "project-S",
+      "rapid-register",
+      "delayed-cloud-response",
+      "manual-grade",
+      "quick-title-consistent",
+      "saved-location-receipt",
+      "daily-explicit",
+      "reload-persists"
+    ]
+  },
+  {
+    "width": 390,
+    "taskCount": 8,
+    "errors": [],
+    "overflow": false,
+    "passed": [
+      "default-once",
+      "no-date-visible",
+      "near-date-visible",
+      "far-date-visible",
+      "project-S",
+      "rapid-register",
+      "delayed-cloud-response",
+      "manual-grade",
+      "quick-title-consistent",
+      "saved-location-receipt",
+      "daily-explicit",
+      "reload-persists"
+    ]
+  }
+]

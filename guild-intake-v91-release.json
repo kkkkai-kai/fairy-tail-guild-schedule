@@ -1,0 +1,37 @@
+{
+  "version": "guild-v91-intake-20261002",
+  "commit": "3cc95cc0e3c9040e7084c16a7643659594362824",
+  "backup": "C:\\Users\\ASUS\\Documents\\Codex\\2026-09-14\\wo\\outputs\\backup-before-v91-intake-20261002-212057",
+  "hashes": [
+    {
+      "file": "schedule.js",
+      "sha256": "57feda899bc8cf150e2d2f5f638826a9004b390eca03db81e61b4c8fa54047fb",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-cloud-sync.js",
+      "sha256": "10ccd7af1d730baf4809978bb8a8a96f1c946cffa4195b17630fa69aaafe9f2e",
+      "syncMatches": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "6180ab92c760f990938541d822a11e15bf906c6abb11cf867e06d6a5db0db5f3",
+      "syncMatches": true
+    },
+    {
+      "file": "每日日程表.html",
+      "sha256": "6180ab92c760f990938541d822a11e15bf906c6abb11cf867e06d6a5db0db5f3",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-sw.js",
+      "sha256": "b2b43edfe0fd908708f2fb963f97100ed8b6a49e258177c667b16adcf7f77067",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-intake-v91-test.json",
+      "sha256": "e9c3be62462726c50d097aa8f9f097a06ac09a0d7fbf5d64cd8edd6cf1ee18a5",
+      "syncMatches": true
+    }
+  ]
+}
