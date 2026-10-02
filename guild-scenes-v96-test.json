@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "errors": [],
+  "outcomes": {
+    "none": 396,
+    "carla": 144,
+    "lily": 150,
+    "frosch": 157,
+    "lector": 153
+  },
+  "earned": [
+    "happy",
+    "carla",
+    "lily",
+    "lector"
+  ],
+  "unearned": [
+    "happy",
+    "lector"
+  ],
+  "backgrounds": [
+    {
+      "id": "intelCorner",
+      "hour": 6,
+      "file": "guild-intel-dawn-v96.png"
+    },
+    {
+      "id": "intelCorner",
+      "hour": 12,
+      "file": "guild-intel-day-v96.png"
+    },
+    {
+      "id": "intelCorner",
+      "hour": 18,
+      "file": "guild-intel-sunset-v96.png"
+    },
+    {
+      "id": "intelCorner",
+      "hour": 22,
+      "file": "guild-intel-night-v96.png"
+    },
+    {
+      "id": "happyNook",
+      "hour": 6,
+      "file": "guild-happy-nook-dawn-v96.png"
+    },
+    {
+      "id": "happyNook",
+      "hour": 12,
+      "file": "guild-happy-nook-v94.png"
+    },
+    {
+      "id": "happyNook",
+      "hour": 18,
+      "file": "guild-happy-nook-sunset-v96.png"
+    },
+    {
+      "id": "happyNook",
+      "hour": 22,
+      "file": "guild-happy-nook-night-v96.png"
+    },
+    {
+      "id": "mainHall",
+      "hour": 6,
+      "file": "guild-hall-main-canon-dawn-v1.png"
+    },
+    {
+      "id": "mainHall",
+      "hour": 12,
+      "file": "guild-hall-main-canon-v1.png"
+    },
+    {
+      "id": "mainHall",
+      "hour": 18,
+      "file": "guild-hall-main-canon-sunset-v1.png"
+    },
+    {
+      "id": "mainHall",
+      "hour": 22,
+      "file": "guild-hall-main-canon-night-v1.png"
+    },
+    {
+      "id": "researchRoom",
+      "hour": 6,
+      "file": "guild-room-research-canon-dawn-v1.png"
+    },
+    {
+      "id": "researchRoom",
+      "hour": 12,
+      "file": "guild-room-research-canon-v1.png"
+    },
+    {
+      "id": "researchRoom",
+      "hour": 18,
+      "file": "guild-room-research-canon-sunset-v1.png"
+    },
+    {
+      "id": "researchRoom",
+      "hour": 22,
+      "file": "guild-room-research-canon-night-v1.png"
+    },
+    {
+      "id": "archiveRoom",
+      "hour": 6,
+      "file": "guild-room-archive-canon-dawn-v1.png"
+    },
+    {
+      "id": "archiveRoom",
+      "hour": 12,
+      "file": "guild-room-archive-canon-v1.png"
+    },
+    {
+      "id": "archiveRoom",
+      "hour": 18,
+      "file": "guild-room-archive-canon-sunset-v1.png"
+    },
+    {
+      "id": "archiveRoom",
+      "hour": 22,
+      "file": "guild-room-archive-canon-night-v1.png"
+    },
+    {
+      "id": "missionBoard",
+      "hour": 6,
+      "file": "guild-room-board-canon-dawn-v1.png"
+    },
+    {
+      "id": "missionBoard",
+      "hour": 12,
+      "file": "guild-room-board-canon-v1.png"
+    },
+    {
+      "id": "missionBoard",
+      "hour": 18,
+      "file": "guild-room-board-canon-sunset-v1.png"
+    },
+    {
+      "id": "missionBoard",
+      "hour": 22,
+      "file": "guild-room-board-canon-night-v1.png"
+    },
+    {
+      "id": "guildTavern",
+      "hour": 6,
+      "file": "guild-room-tavern-canon-dawn-v1.png"
+    },
+    {
+      "id": "guildTavern",
+      "hour": 12,
+      "file": "guild-room-tavern-canon-v1.png"
+    },
+    {
+      "id": "guildTavern",
+      "hour": 18,
+      "file": "guild-room-tavern-canon-sunset-v1.png"
+    },
+    {
+      "id": "guildTavern",
+      "hour": 22,
+      "file": "guild-room-tavern-canon-night-v1.png"
+    }
+  ],
+  "routes": true,
+  "checks": [
+    "1000-day stable 0/1 guest",
+    "completion-triggered visits",
+    "all 28 time backgrounds exist",
+    "all scene routes valid",
+    "glow clears after handling",
+    "no below-scene intel buttons",
+    "hover and tap dialogue",
+    "supply opens care",
+    "door switches scene",
+    "mobile no horizontal overflow",
+    "automatic dawn-day change"
+  ]
+}
