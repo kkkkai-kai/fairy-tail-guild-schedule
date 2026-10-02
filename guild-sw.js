@@ -2,7 +2,7 @@
    策略：stale-while-revalidate —— 命中先返回缓存，后台重新拉取更新。
    升级版本号时，同步修改 HTML 中的 ?v= 与下方 CACHE_VER。 */
 'use strict';
-var CACHE_VER = 'guild-v90-history-20261002';
+var CACHE_VER = 'guild-v91-intake-20261002';
 var CACHE_NAME = 'guild-core-' + CACHE_VER;
 
 var CORE_URLS = [
