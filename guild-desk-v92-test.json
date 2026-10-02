@@ -1,0 +1,42 @@
+[
+  {
+    "width": 1366,
+    "productionTasksRead": 81,
+    "originalMissingAssignees": 0,
+    "taskCount": 82,
+    "missingFiles": [],
+    "missingIdentity": [],
+    "avatarPlaceholders": 0,
+    "brokenImages": [],
+    "backlog": [
+      {
+        "id": "extra1789631640040",
+        "avatars": 1
+      }
+    ],
+    "overflow": false,
+    "errors": [],
+    "quickInsideRegistration": true,
+    "postSaveGradeAndPortrait": true
+  },
+  {
+    "width": 390,
+    "productionTasksRead": 81,
+    "originalMissingAssignees": 0,
+    "taskCount": 82,
+    "missingFiles": [],
+    "missingIdentity": [],
+    "avatarPlaceholders": 0,
+    "brokenImages": [],
+    "backlog": [
+      {
+        "id": "extra1789631640040",
+        "avatars": 1
+      }
+    ],
+    "overflow": false,
+    "errors": [],
+    "quickInsideRegistration": true,
+    "postSaveGradeAndPortrait": true
+  }
+]
