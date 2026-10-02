@@ -384,7 +384,7 @@
     return supaWriteQueue;
   }
   function supaPull() {
-    return fetch(supaRestUrl('select=key,value,updated_at&t=' + Date.now()), {
+    return fetch(supaRestUrl('select=key,value,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
     }).then(function (r) { return checkedJson(r, '云端读取'); })
@@ -397,7 +397,7 @@
 
   // ---------- 方案 B：轻量时间戳探测（~1KB，替代全量轮询） ----------
   function supaMeta() {
-    return fetch(supaRestUrl('select=key,updated_at&t=' + Date.now()), {
+    return fetch(supaRestUrl('select=key,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
     }).then(function (r) { return checkedJson(r, '云端元数据'); })
