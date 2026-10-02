@@ -1,0 +1,47 @@
+{
+  "version": "guild-v93-layout-20261002",
+  "commit": "f5451295a0efea0ce0d52f0770c37c9e76b63015",
+  "backup": "C:\\Users\\ASUS\\Documents\\Codex\\2026-09-14\\wo\\outputs\\backup-before-v93-layout-20261002-215859",
+  "hashes": [
+    {
+      "file": "schedule.js",
+      "sha256": "acb394b076982631959a3a57a819b7604b8cf870d4fb10f0d6db2fc0edcf4f1d",
+      "syncMatches": true
+    },
+    {
+      "file": "index.html",
+      "sha256": "a54d5cb156479bfc40cd7861d32bbfd705b35375622d28056473e00e7112f766",
+      "syncMatches": true
+    },
+    {
+      "file": "每日日程表.html",
+      "sha256": "a54d5cb156479bfc40cd7861d32bbfd705b35375622d28056473e00e7112f766",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-sw.js",
+      "sha256": "48824f3c432ea37fbe38eeaee215abd890d43fccb15675f6a4470aa8504a5470",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-desk-v93-test.json",
+      "sha256": "b1cdfba0ca3c756f0fb8c624568a5a895fb3f5a5c31c3e10ae5b7e3a1fbed833",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-desk-v93-notes.md",
+      "sha256": "dede0bc78a248d2f314b523f319fe6710ad3cec743c5ce89245861951db5687e",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-desk-v93-empty-1366.png",
+      "sha256": "62de326ed29f9c132936e53c7f8d1ae8ad527a94e36e14d2e93f91d286794228",
+      "syncMatches": true
+    },
+    {
+      "file": "guild-desk-v93-preview-1366.png",
+      "sha256": "f07fc84a90fb21c7a844a793264dd23b8443421314da8f0d8d5afb8b7b93ac47",
+      "syncMatches": true
+    }
+  ]
+}

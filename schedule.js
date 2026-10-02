@@ -408,7 +408,12 @@ function captureGuildViewState(anchorTaskId=''){
  document.querySelectorAll('.task-scroll-list').forEach((node,index)=>scrollAreas['taskList'+index]=node.scrollTop);
  return{windowScrollX:window.scrollX,windowScrollY:window.scrollY,sidebarScrollTop:sidebar?.scrollTop??0,taskId:anchorTaskId||focused?.dataset.taskId||'',hallOpen:document.querySelector('#guildHallScene')?.open??true,profileOpen:document.querySelector('.growth-more')?.open||false,openV4Sections:[...document.querySelectorAll('.v4-section[open]')].map(node=>node.dataset.section).filter(Boolean),scrollAreas}
 }
-function placeQuickIntakeAtRegistration(){const form=document.querySelector('#form'),quick=document.querySelector('#quickIntake');if(form&&quick&&form.firstElementChild!==quick){form.prepend(quick);quick.style.cssText='flex:1 0 100%;width:100%;position:static;margin:0 0 12px;padding:12px;border-bottom:1px solid #d9c19d';}}
+function placeQuickIntakeAtRegistration(){
+ const form=document.querySelector('#form'),quick=document.querySelector('#quickIntake');if(!form||!quick)return;
+ if(form.firstElementChild!==quick)form.prepend(quick);quick.removeAttribute('style');
+ const fields=[['newTask','委托名称','title'],['newType','委托类型','type'],['newCategory','任务分类','category'],['newDue','截止日期（可选）','due'],['newDueTime','截止时刻（可选）','time'],['newReminder','提醒记录（可选）','reminder'],['newGrade','委托评级','grade'],['newTheme','公会主题','theme']];
+ for(const[id,title,kind]of fields){const control=document.getElementById(id);if(!control||control.closest('.registration-field'))continue;const label=document.createElement('label'),caption=document.createElement('span');label.className='registration-field registration-field--'+kind;caption.textContent=title;control.before(label);label.append(caption,control);}
+}
 function restoreGuildViewState(view){
  placeQuickIntakeAtRegistration();
  if(!view)return;
@@ -816,7 +821,7 @@ function installRegistrationPreview(form){
  // 日课仍可主动选择；普通登记默认是单次委托，表单重置也保持此默认。
  [...type.options].forEach(option=>option.defaultSelected=option.value==='once');type.value='once';
  [...grade.options].forEach(option=>option.defaultSelected=option.value==='B');grade.value='B';
- const preview=document.createElement('small');preview.className='form-grade-preview';preview.setAttribute('role','status');preview.style.cssText='display:block;flex-basis:100%;width:100%;padding:9px 12px;border-left:3px solid #a64b2a;background:#fff3dc;line-height:1.6;color:#754e43';const submit=form.querySelector('button[type="submit"],button:not([type])');if(submit)submit.before(preview);else form.append(preview);
+ const preview=document.createElement('small');preview.className='form-grade-preview';preview.setAttribute('role','status');const submit=form.querySelector('button[type="submit"],button:not([type])');if(submit)submit.before(preview);else form.append(preview);
  const update=event=>{
   if(event?.target===grade&&event.isTrusted)grade.dataset.userEdited='1';
   const text=title.value.trim();if(!text){preview.textContent='';return;}
