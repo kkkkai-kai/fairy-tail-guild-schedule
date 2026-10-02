@@ -1,0 +1,42 @@
+{
+  "version": "guild-v88-ui-20261002",
+  "checkedAt": "2026-10-02T00:29:20.473Z",
+  "files": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "match": true,
+      "sha256": "dac0433f02be377eeb3d7d6c4310a393c861c57890bbbf813e7c877f4c61e877"
+    },
+    {
+      "file": "每日日程表.html",
+      "status": 200,
+      "match": true,
+      "sha256": "dac0433f02be377eeb3d7d6c4310a393c861c57890bbbf813e7c877f4c61e877"
+    },
+    {
+      "file": "schedule.js",
+      "status": 200,
+      "match": true,
+      "sha256": "d6dc61eabb50c6e1f9f0055089463cf6a9a57f6e8a2e1e23a8295efdbad76c6d"
+    },
+    {
+      "file": "v4.js",
+      "status": 200,
+      "match": true,
+      "sha256": "3437701206cad6387a4a5ac9e9ee5d1694dce9f3fc74290c3583114078a15bed"
+    },
+    {
+      "file": "guild-features-v64.js",
+      "status": 200,
+      "match": true,
+      "sha256": "81a9c01f007bd34a01c0e41404b835927e5237f3a6727b711774572e6d97350b"
+    },
+    {
+      "file": "guild-sw.js",
+      "status": 200,
+      "match": true,
+      "sha256": "d8d7a53f058e81f1e253af115591145034deaa46e31dfbb00b0de7b361b8cf5d"
+    }
+  ]
+}
