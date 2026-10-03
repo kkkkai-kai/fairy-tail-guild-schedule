@@ -614,7 +614,14 @@
         var key = (step && (step.id || step.title)) || ('#' + index);
         if (!seen[key]) combined.push(step);
       });
-      task.steps = combined;
+      // 阶段删除复用成长事件账本；旧端的未完成阶段不能复活，已完成阶段继续保护。
+      var growthState = parseJsonSafe(localStorage.getItem('fairytail-growth-v1'), {});
+      var deletedStages = {};
+      Object.keys((growthState.v4 || {}).eventLedger || {}).forEach(function (id) {
+        var record = growthState.v4.eventLedger[id];
+        if (record && record.type === 'stage-delete' && !record.reversedAt && record.taskId === task.id) deletedStages[record.stageId] = true;
+      });
+      task.steps = combined.filter(function (step) { return task.done || step.done || !deletedStages[step.id]; });
     });
     return merged;
   }
