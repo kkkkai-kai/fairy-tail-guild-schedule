@@ -1,6 +1,6 @@
 /* Interface cache is versioned; filename-versioned images keep a separate cache. */
 'use strict';
-var CACHE_VER='guild-v101-loading-20261003';
+var CACHE_VER='guild-v102-design-20261003';
 var CACHE_NAME='guild-core-'+CACHE_VER;
 var MEDIA_CACHE_NAME='guild-media-v1';
 var CORE_URLS=['./index.html','./每日日程表.html','./quotes.js','./growth.js','./v4.js','./guild-history-recovery-v65.js','./guild-cloud-sync.js','./schedule.js','./guild-features-v64.js','./guild-dock-panel.js','./guild-ui-v99.css','./guild-icon-192.png','./guild-icon-512.png'];
