@@ -2,7 +2,7 @@
    策略：stale-while-revalidate —— 命中先返回缓存，后台重新拉取更新。
    升级版本号时，同步修改 HTML 中的 ?v= 与下方 CACHE_VER。 */
 'use strict';
-var CACHE_VER = 'guild-v99-ui-20261003';
+var CACHE_VER = 'guild-v100-scenes-20261003';
 var CACHE_NAME = 'guild-core-' + CACHE_VER;
 
 var CORE_URLS = [
@@ -21,7 +21,8 @@ var CORE_URLS = [
   './guild-icon-512.png',
   './guild-dock-icon.png',
   './fairy-tail-guild-silhouette.png',
-  './guild-happy-nook-v94.png',
+  './guild-ui-v99.css',
+  './guild-happy-nook-v94-fast-v100.webp',
   './guild-exceed-happy-idle-v95.png',
   './guild-exceed-carla-idle-v95.png',
   './guild-exceed-lily-idle-v95.png',
