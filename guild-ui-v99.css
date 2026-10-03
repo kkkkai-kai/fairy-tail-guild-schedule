@@ -1,0 +1,31 @@
+/* Readable guild navigation; decorative assets have transparent interiors. */
+html #guildHallScene .guild-floor-map{display:block!important;position:relative;overflow:visible!important;padding:0!important;background:transparent;border:0}
+html #guildHallScene .guild-scene-picker{width:100%;min-height:38px;display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border:1px solid #a87948;background:#fff7e7;color:#653c28;font-size:14px;font-weight:700;border-radius:5px}
+html #guildHallScene .guild-room-menu{position:absolute;left:0;right:0;top:43px;z-index:20;background:#fff8eb;border:1px solid #aa7848;border-radius:6px;padding:10px;box-shadow:0 6px 18px #3b201b38}
+html #guildHallScene .guild-room-menu[hidden]{display:none!important}
+html #guildHallScene .guild-room-group{margin:0 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:5px}
+html #guildHallScene .guild-room-group:last-child{margin-bottom:0}
+html #guildHallScene .guild-room-group>strong{grid-column:1/-1;font-size:12px;color:#896548;line-height:1.5}
+html #guildHallScene .guild-room-node{display:flex!important;flex:none;grid-area:auto!important;align-items:center;justify-content:flex-start;gap:7px;width:100%;height:auto!important;min-height:36px!important;padding:7px 8px!important;font-size:13px!important;line-height:1.4!important;white-space:nowrap!important;border:1px solid #cba67b!important;border-radius:4px!important;color:#633d28!important;background:#fffdf6!important}
+html #guildHallScene .guild-room-label{white-space:nowrap;min-width:0;font-size:13px}
+html #guildHallScene .guild-room-icon{flex:0 0 18px;width:18px;height:18px}
+html #guildHallScene .guild-room-node[aria-pressed=true]{background:#874931!important;color:#fff9e9!important;border-color:#ad743c!important}
+html #guildHallScene .guild-room-node:hover{box-shadow:inset 0 0 0 1px #bb8b54!important}
+html .guild-scene-caption,html .guild-hall-rotation-status{font-size:12px!important;line-height:1.55!important}
+html .guild-hall-stage.is-room-transition{opacity:1!important;filter:none!important}
+html .guild-hall-stage.is-room-transition::after{font-size:13px!important;line-height:1.5;background:#57361cdb!important}
+html .guild-scene-load-notice{background:#57361cd9!important;color:#fff4d9!important;font-size:14px;line-height:1.5}
+html .guild-scene-load-notice::before{content:'';width:76px;height:76px;margin:auto;background:url('guild-magic-circle-v99.png') center/contain no-repeat}
+html .growth-card,html #guildHallScene,html .priority-board,html #guildCompendium,html .treasury{border:10px solid transparent!important;border-image:url('guild-frame-wood-v99.png') 18% / 13px / 0 stretch!important;border-radius:0!important;box-shadow:0 3px 12px #6e442b14!important}
+html .card:has(#newTask),html .card:has(#projects),html .card:has(#upcomingList),html .guild-scene-journal,html #guildMemberInteraction{border:10px solid transparent!important;border-image:url('guild-frame-scroll-v99.png') 22% / 14px / 0 stretch!important;border-radius:0!important}
+html .growth-card{background-image:none}
+html #guildHallScene .guild-scene-picker::before{content:'';flex:0 0 22px;width:22px;height:22px;margin-right:7px;background:url('guild-magic-circle-v99.png') center/contain no-repeat}
+html #guildHallScene>summary{font-size:14px!important;line-height:1.5!important}
+html .growth-card::after{display:none}
+html .card h2,html .priority-board h2{font-size:18px!important;line-height:1.4!important}
+html .growth-level{font-size:18px!important;line-height:1.45!important}.growth-rank{font-size:14px!important;line-height:1.5!important}.growth-exp,.growth-latest{font-size:13px!important;line-height:1.55!important}
+html .card input,html .card select,html .card textarea,html .stage-manager input{font-family:inherit;font-size:14px!important;line-height:1.5!important}
+html .card .task-actions button,html .card form button,html .stage-manager button,html .stage-actions button,html .guild-scene-journal button,html #guildMemberInteraction button{font-size:13px!important;line-height:1.4!important;min-height:34px;padding:7px 11px;color:#743c27;border-color:#b99065;background:#fff8ec}
+html .card button:focus-visible,html .guild-room-node:focus-visible{outline:2px solid #ad673c;outline-offset:2px}
+html #guildHallScene button:disabled{opacity:.65}
+@media(prefers-reduced-motion:reduce){.guild-hall-stage,.guild-hall-background-image{transition:none!important}}
