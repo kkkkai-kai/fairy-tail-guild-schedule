@@ -143,7 +143,7 @@
     if (!els.floater) {
       var b = document.createElement('div');
       b.id = 'guildCloudBadge';
-      b.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:99999;width:52px;height:52px;border-radius:50%;background:#fff8ee url(guild-dock-icon.png) center/76% no-repeat;border:3px solid #e7a362;box-shadow:0 3px 12px rgba(0,0,0,.22);transition:border-color .3s,box-shadow .3s;cursor:pointer;user-select:none;';
+      b.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:99999;width:52px;height:52px;border-radius:50%;background:#fff8ee url(guild-dock-icon-fast-v101.webp) center/76% no-repeat;border:3px solid #e7a362;box-shadow:0 3px 12px rgba(0,0,0,.22);transition:border-color .3s,box-shadow .3s;cursor:pointer;user-select:none;';
       b.title = '单击=打开菜单；双击=切换自动刷新';
       b.onclick = function () { showDockMenu(b); };
       b.ondblclick = function (ev) { ev.stopPropagation(); toggleAutoRefresh(); };
