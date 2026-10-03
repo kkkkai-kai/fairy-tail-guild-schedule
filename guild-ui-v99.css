@@ -1,12 +1,21 @@
 /* Readable guild navigation; decorative assets have transparent interiors. */
-html #guildHallScene .guild-floor-map{display:block!important;position:relative;overflow:visible!important;padding:0!important;background:transparent;border:0}
+html #guildHallScene .guild-floor-map{display:grid!important;grid-template-columns:1fr .92fr 1fr;grid-template-rows:repeat(3,34px);gap:5px!important;position:relative;overflow:visible!important;padding:0!important;background:transparent;border:0}
 html #guildHallScene .guild-scene-picker{width:100%;min-height:38px;display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border:1px solid #a87948;background:#fff7e7;color:#653c28;font-size:14px;font-weight:700;border-radius:5px}
 html #guildHallScene .guild-room-menu{position:absolute;left:0;right:0;top:43px;z-index:20;background:#fff8eb;border:1px solid #aa7848;border-radius:6px;padding:10px;box-shadow:0 6px 18px #3b201b38}
 html #guildHallScene .guild-room-menu[hidden]{display:none!important}
 html #guildHallScene .guild-room-group{margin:0 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:5px}
 html #guildHallScene .guild-room-group:last-child{margin-bottom:0}
 html #guildHallScene .guild-room-group>strong{grid-column:1/-1;font-size:12px;color:#896548;line-height:1.5}
-html #guildHallScene .guild-room-node{display:flex!important;flex:none;grid-area:auto!important;align-items:center;justify-content:flex-start;gap:7px;width:100%;height:auto!important;min-height:36px!important;padding:7px 8px!important;font-size:13px!important;line-height:1.4!important;white-space:nowrap!important;border:1px solid #cba67b!important;border-radius:4px!important;color:#633d28!important;background:#fffdf6!important}
+html #guildHallScene .guild-room-node{display:flex!important;flex:none;align-items:center;justify-content:center;gap:0;width:100%;height:34px!important;min-height:34px!important;padding:5px 3px!important;font-size:13px!important;line-height:1.4!important;white-space:nowrap!important;border:1px solid #cba67b!important;border-radius:5px!important;color:#633d28!important;background:linear-gradient(#fffdf7,#f5e9d5)!important;box-shadow:0 2px 3px #72422515!important}
+html #guildHallScene .guild-room-node.scene-mainHall{grid-column:2!important;grid-row:1/4!important;height:112px!important;background:linear-gradient(#fbe0ae,#edc388)!important;border:2px solid #b27b37!important}
+html #guildHallScene .scene-mainHall .guild-room-label{font-size:16px;font-weight:700}
+html #guildHallScene .guild-room-node.scene-mainHall::before{content:'';position:absolute;top:15px;width:25px;height:25px;background:url('guild-magic-circle-v99-fast-v100.webp') center/contain no-repeat}
+html #guildHallScene .guild-room-node.scene-missionBoard{grid-column:1!important;grid-row:1!important}
+html #guildHallScene .guild-room-node.scene-intelCorner{grid-column:3!important;grid-row:1!important}
+html #guildHallScene .guild-room-node.scene-archiveRoom{grid-column:1!important;grid-row:2!important}
+html #guildHallScene .guild-room-node.scene-researchRoom{grid-column:3!important;grid-row:2!important}
+html #guildHallScene .guild-room-node.scene-guildTavern{grid-column:1!important;grid-row:3!important}
+html #guildHallScene .guild-room-node.scene-happyNook{grid-column:3!important;grid-row:3!important}
 html #guildHallScene .guild-room-label{white-space:nowrap;min-width:0;font-size:13px}
 html #guildHallScene .guild-room-icon{flex:0 0 18px;width:18px;height:18px}
 html #guildHallScene .guild-room-node[aria-pressed=true]{background:#874931!important;color:#fff9e9!important;border-color:#ad743c!important}
@@ -15,13 +24,24 @@ html .guild-scene-caption,html .guild-hall-rotation-status{font-size:12px!import
 html .guild-hall-stage.is-room-transition{opacity:1!important;filter:none!important}
 html .guild-hall-stage.is-room-transition::after{font-size:13px!important;line-height:1.5;background:#57361cdb!important}
 html .guild-scene-load-notice{background:#57361cd9!important;color:#fff4d9!important;font-size:14px;line-height:1.5}
-html .guild-scene-load-notice::before{content:'';width:76px;height:76px;margin:auto;background:url('guild-magic-circle-v99.png') center/contain no-repeat}
-html .growth-card,html #guildHallScene,html .priority-board,html #guildCompendium,html .treasury{border:10px solid transparent!important;border-image:url('guild-frame-wood-v99.png') 18% / 13px / 0 stretch!important;border-radius:0!important;box-shadow:0 3px 12px #6e442b14!important}
-html .card:has(#newTask),html .card:has(#projects),html .card:has(#upcomingList),html .guild-scene-journal,html #guildMemberInteraction{border:10px solid transparent!important;border-image:url('guild-frame-scroll-v99.png') 22% / 14px / 0 stretch!important;border-radius:0!important}
+html .guild-scene-load-notice::before{content:'';width:76px;height:76px;margin:auto;background:url('guild-magic-circle-v99-fast-v100.webp') center/contain no-repeat}
+html .growth-card,html #guildHallScene,html .priority-board,html #guildCompendium,html .treasury{border:16px solid transparent!important;border-image:url('guild-frame-wood-v99-fast-v100.webp') 18% / 26px / 0 stretch!important;border-radius:0!important;box-shadow:0 3px 12px #6e442b24!important}
+html .card:has(#newTask),html .card:has(#projects),html .card:has(#upcomingList),html .guild-scene-journal,html #guildMemberInteraction{border:16px solid transparent!important;border-image:url('guild-frame-scroll-v99-fast-v100.webp') 22% / 27px / 0 stretch!important;border-radius:0!important}
 html .growth-card{background-image:none}
-html #guildHallScene .guild-scene-picker::before{content:'';flex:0 0 22px;width:22px;height:22px;margin-right:7px;background:url('guild-magic-circle-v99.png') center/contain no-repeat}
-html #guildHallScene>summary{font-size:14px!important;line-height:1.5!important}
+html #guildHallScene .guild-scene-picker::before{content:'';flex:0 0 22px;width:22px;height:22px;margin-right:7px;background:url('guild-magic-circle-v99-fast-v100.webp') center/contain no-repeat}
+html #guildHallScene>summary{font-size:14px!important;line-height:1.5!important;display:block!important;white-space:normal!important;padding:3px 0 6px!important}
+html #guildHallScene>summary::before{display:none!important}
+html .guild-scene-heading{display:block;font-size:15px;font-weight:700;line-height:1.5;color:#623a27}
+html .guild-scene-attendance{display:block;font-size:12px;line-height:1.5;color:#8a6750;margin-top:2px}
+html .guild-magic-ambient{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+html .guild-magic-ambient span{position:absolute;width:36%;aspect-ratio:1;left:32%;top:67%;background:url('guild-magic-circle-v99-fast-v100.webp') center/contain no-repeat;opacity:.22;transform:scaleY(.45);transform-origin:center}
+html .guild-magic-ambient span+span{width:18%;left:73%;top:47%;opacity:.10;transform:scaleY(.65)}
+html .guild-hall-stage[data-scene-id=researchRoom] .guild-magic-ambient span{left:24%;top:58%;opacity:.28;filter:hue-rotate(135deg)}
+html .guild-hall-stage[data-scene-id=intelCorner] .guild-magic-ambient span{width:26%;left:33%;top:42%;opacity:.25}
+html .guild-hall-stage[data-scene-id=happyNook] .guild-magic-ambient span{width:22%;left:12%;top:68%;opacity:.16}
+html .guild-hall-stage[data-celebration-mode] .guild-magic-ambient{display:none}
 html .growth-card::after{display:none}
+html .growth-exp span{display:inline-block;white-space:nowrap;margin-right:7px}
 html .card h2,html .priority-board h2{font-size:18px!important;line-height:1.4!important}
 html .growth-level{font-size:18px!important;line-height:1.45!important}.growth-rank{font-size:14px!important;line-height:1.5!important}.growth-exp,.growth-latest{font-size:13px!important;line-height:1.55!important}
 html .card input,html .card select,html .card textarea,html .stage-manager input{font-family:inherit;font-size:14px!important;line-height:1.5!important}
