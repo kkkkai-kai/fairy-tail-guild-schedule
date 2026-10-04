@@ -10,7 +10,7 @@
   "theme_color": "#8b3a2b",
   "lang": "zh-CN",
   "icons": [
-    { "src": "guild-icon-192.png?v=fticon20260927", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "guild-icon-512.png?v=fticon20260927", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    { "src": "素材/界面/站点标识/guild-icon-192.png?v=fticon20260927", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "素材/界面/站点标识/guild-icon-512.png?v=fticon20260927", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ]
 }

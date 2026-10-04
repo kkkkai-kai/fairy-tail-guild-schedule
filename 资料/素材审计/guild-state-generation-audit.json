@@ -1,0 +1,5047 @@
+{
+  "sheets": [
+    {
+      "file": "exec-ef334d57-aa05-4d99-ba5d-1d05035e2797.png",
+      "size": [
+        1774,
+        887
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-7f5dcbd7-161c-470a-a4b6-8451f93b7181.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-f2055412-4cf7-48b8-ae0e-cedc9026429b.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-f4ff23b7-9832-4376-8c92-aeeeda3579b6.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-ceb314d4-a3ac-4c5c-a5ca-10e79507d07e.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-c5ff8ed9-7a90-4171-a880-3a957d696014.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-8441c6f2-3e28-4971-b4aa-9be83d3b733e.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-ac225f44-de06-4412-b6d9-a6bc823b1edb.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-a77d32a9-6534-4983-9b98-38764f2131ff.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-b790ab50-37f9-4f8c-9aa9-032f9e167890.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-b73ba192-95e7-4906-b80c-05cbb653fe63.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-bb1c0637-0e7b-428a-9d88-29ea2d524bff.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-404a70fc-6644-4ab1-b7ad-811451004270.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    },
+    {
+      "file": "exec-17a7c4cc-baa4-4575-a1a4-e3576dc96f2e.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "alpha": [
+        0,
+        254
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "ok": true
+    }
+  ],
+  "files": [
+    {
+      "file": "素材/人物/makarov-马卡洛夫/状态图/guild-state-makarov-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        65,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/状态图/guild-state-makarov-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/状态图/guild-state-makarov-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        201,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/状态图/guild-state-makarov-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        29,
+        24,
+        226,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/状态图/guild-state-makarov-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        30,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/头像/guild-portrait-makarov-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        50,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/状态图/guild-state-elfman-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/状态图/guild-state-elfman-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        32,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/状态图/guild-state-elfman-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        29,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/状态图/guild-state-elfman-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        30,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/状态图/guild-state-elfman-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        24,
+        237,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/头像/guild-portrait-elfman-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        25,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/lily-利利/状态图/guild-state-lily-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/lily-利利/状态图/guild-state-lily-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        38,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/lily-利利/状态图/guild-state-lily-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        40,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/lily-利利/状态图/guild-state-lily-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        22,
+        24,
+        233,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/lily-利利/状态图/guild-state-lily-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        25,
+        24,
+        231,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/lily-利利/头像/guild-portrait-lily-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        31,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/carla-夏露露/状态图/guild-state-carla-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        64,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/carla-夏露露/状态图/guild-state-carla-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        36,
+        24,
+        220,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/carla-夏露露/状态图/guild-state-carla-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/carla-夏露露/状态图/guild-state-carla-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/carla-夏露露/状态图/guild-state-carla-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/carla-夏露露/头像/guild-portrait-carla-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/loke-洛基/状态图/guild-state-loke-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        171,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/loke-洛基/状态图/guild-state-loke-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/loke-洛基/状态图/guild-state-loke-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        71,
+        24,
+        185,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/loke-洛基/状态图/guild-state-loke-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/loke-洛基/状态图/guild-state-loke-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/loke-洛基/头像/guild-portrait-loke-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/freed-菲利德/状态图/guild-state-freed-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        177,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/freed-菲利德/状态图/guild-state-freed-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/freed-菲利德/状态图/guild-state-freed-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/freed-菲利德/状态图/guild-state-freed-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/freed-菲利德/状态图/guild-state-freed-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/freed-菲利德/头像/guild-portrait-freed-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        243
+      ]
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/状态图/guild-state-bickslow-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/状态图/guild-state-bickslow-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/状态图/guild-state-bickslow-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/状态图/guild-state-bickslow-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/状态图/guild-state-bickslow-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/头像/guild-portrait-bickslow-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/状态图/guild-state-evergreen-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/状态图/guild-state-evergreen-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/状态图/guild-state-evergreen-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/状态图/guild-state-evergreen-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/状态图/guild-state-evergreen-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/头像/guild-portrait-evergreen-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        212,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/状态图/guild-state-mystogan-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/状态图/guild-state-mystogan-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/状态图/guild-state-mystogan-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/状态图/guild-state-mystogan-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/状态图/guild-state-mystogan-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/头像/guild-portrait-mystogan-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/状态图/guild-state-macao-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/状态图/guild-state-macao-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        201,
+        243
+      ]
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/状态图/guild-state-macao-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/状态图/guild-state-macao-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/状态图/guild-state-macao-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/头像/guild-portrait-macao-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        25,
+        24,
+        230,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/状态图/guild-state-wakaba-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/状态图/guild-state-wakaba-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        58,
+        24,
+        197,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/状态图/guild-state-wakaba-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/状态图/guild-state-wakaba-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        51,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/状态图/guild-state-wakaba-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/头像/guild-portrait-wakaba-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        27,
+        25,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/laki-拉奇/状态图/guild-state-laki-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        170,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/laki-拉奇/状态图/guild-state-laki-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        196,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/laki-拉奇/状态图/guild-state-laki-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/laki-拉奇/状态图/guild-state-laki-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/laki-拉奇/状态图/guild-state-laki-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/laki-拉奇/头像/guild-portrait-laki-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        25,
+        24,
+        230,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/nab-纳布/状态图/guild-state-nab-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        195,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/nab-纳布/状态图/guild-state-nab-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/nab-纳布/状态图/guild-state-nab-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/nab-纳布/状态图/guild-state-nab-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/nab-纳布/状态图/guild-state-nab-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        57,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/nab-纳布/头像/guild-portrait-nab-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        27,
+        24,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/jet-杰特/状态图/guild-state-jet-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        184,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/jet-杰特/状态图/guild-state-jet-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        56,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/jet-杰特/状态图/guild-state-jet-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        59,
+        24,
+        197,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/jet-杰特/状态图/guild-state-jet-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/jet-杰特/状态图/guild-state-jet-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/jet-杰特/头像/guild-portrait-jet-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/状态图/guild-state-droy-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        56,
+        24,
+        200,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/状态图/guild-state-droy-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/状态图/guild-state-droy-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/状态图/guild-state-droy-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/状态图/guild-state-droy-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/头像/guild-portrait-droy-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/状态图/guild-state-alzack-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        76,
+        24,
+        179,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/状态图/guild-state-alzack-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        66,
+        24,
+        189,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/状态图/guild-state-alzack-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/状态图/guild-state-alzack-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        30,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/状态图/guild-state-alzack-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        51,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/头像/guild-portrait-alzack-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        33,
+        25,
+        223,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/状态图/guild-state-bisca-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/状态图/guild-state-bisca-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/状态图/guild-state-bisca-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/状态图/guild-state-bisca-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/状态图/guild-state-bisca-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/头像/guild-portrait-bisca-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/状态图/guild-state-romeo-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        174,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/状态图/guild-state-romeo-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/状态图/guild-state-romeo-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/状态图/guild-state-romeo-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/状态图/guild-state-romeo-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/头像/guild-portrait-romeo-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        212,
+        243
+      ]
+    },
+    {
+      "file": "素材/人物/warren-沃伦/状态图/guild-state-warren-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        89,
+        24,
+        167,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/warren-沃伦/状态图/guild-state-warren-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        75,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/warren-沃伦/状态图/guild-state-warren-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        81,
+        24,
+        175,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/warren-沃伦/状态图/guild-state-warren-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/warren-沃伦/状态图/guild-state-warren-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        73,
+        24,
+        182,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/warren-沃伦/头像/guild-portrait-warren-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/max-马克斯/状态图/guild-state-max-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        177,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/max-马克斯/状态图/guild-state-max-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        196,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/max-马克斯/状态图/guild-state-max-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        57,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/max-马克斯/状态图/guild-state-max-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        32,
+        24,
+        223,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/max-马克斯/状态图/guild-state-max-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        75,
+        24,
+        180,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/max-马克斯/头像/guild-portrait-max-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        200,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/reedus-里达素/状态图/guild-state-reedus-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/reedus-里达素/状态图/guild-state-reedus-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/reedus-里达素/状态图/guild-state-reedus-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/reedus-里达素/状态图/guild-state-reedus-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        222,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/reedus-里达素/状态图/guild-state-reedus-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/reedus-里达素/头像/guild-portrait-reedus-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/状态图/guild-state-mest-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        182,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/状态图/guild-state-mest-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/状态图/guild-state-mest-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        65,
+        24,
+        190,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/状态图/guild-state-mest-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/状态图/guild-state-mest-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        57,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/头像/guild-portrait-mest-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/kinana-金卡/状态图/guild-state-kinana-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/kinana-金卡/状态图/guild-state-kinana-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        200,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/kinana-金卡/状态图/guild-state-kinana-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        201,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/kinana-金卡/状态图/guild-state-kinana-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/kinana-金卡/状态图/guild-state-kinana-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/kinana-金卡/头像/guild-portrait-kinana-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sting-斯汀/状态图/guild-state-sting-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        183,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sting-斯汀/状态图/guild-state-sting-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        184,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sting-斯汀/状态图/guild-state-sting-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sting-斯汀/状态图/guild-state-sting-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sting-斯汀/状态图/guild-state-sting-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sting-斯汀/头像/guild-portrait-sting-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        37,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/rogue-罗格/状态图/guild-state-rogue-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        81,
+        24,
+        174,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/rogue-罗格/状态图/guild-state-rogue-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        24,
+        189,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/rogue-罗格/状态图/guild-state-rogue-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        75,
+        24,
+        181,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/rogue-罗格/状态图/guild-state-rogue-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        221,
+        243
+      ]
+    },
+    {
+      "file": "素材/人物/rogue-罗格/状态图/guild-state-rogue-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/rogue-罗格/头像/guild-portrait-rogue-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/状态图/guild-state-yukino-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        77,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/状态图/guild-state-yukino-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        74,
+        24,
+        182,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/状态图/guild-state-yukino-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        77,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/状态图/guild-state-yukino-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/状态图/guild-state-yukino-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        56,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/头像/guild-portrait-yukino-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        42,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/状态图/guild-state-minerva-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/状态图/guild-state-minerva-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/状态图/guild-state-minerva-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        65,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/状态图/guild-state-minerva-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/状态图/guild-state-minerva-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/头像/guild-portrait-minerva-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        243
+      ]
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/状态图/guild-state-ultear-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        185,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/状态图/guild-state-ultear-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        62,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/状态图/guild-state-ultear-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/状态图/guild-state-ultear-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/状态图/guild-state-ultear-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        52,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/头像/guild-portrait-ultear-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/状态图/guild-state-meredy-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        70,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/状态图/guild-state-meredy-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        59,
+        24,
+        197,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/状态图/guild-state-meredy-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        80,
+        24,
+        176,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/状态图/guild-state-meredy-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        51,
+        24,
+        205,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/状态图/guild-state-meredy-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/头像/guild-portrait-meredy-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        212,
+        243
+      ]
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/状态图/guild-state-azuma-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/状态图/guild-state-azuma-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        28,
+        24,
+        228,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/状态图/guild-state-azuma-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/状态图/guild-state-azuma-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/状态图/guild-state-azuma-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/头像/guild-portrait-azuma-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        35,
+        24,
+        221,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/状态图/guild-state-brandish-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        64,
+        24,
+        192,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/状态图/guild-state-brandish-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/状态图/guild-state-brandish-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/状态图/guild-state-brandish-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        35,
+        24,
+        220,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/状态图/guild-state-brandish-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        36,
+        24,
+        219,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/头像/guild-portrait-brandish-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        224,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aries-白羊座/状态图/guild-state-aries-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        171,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aries-白羊座/状态图/guild-state-aries-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        78,
+        24,
+        178,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aries-白羊座/状态图/guild-state-aries-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        76,
+        24,
+        179,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aries-白羊座/状态图/guild-state-aries-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aries-白羊座/状态图/guild-state-aries-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        174,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aries-白羊座/头像/guild-portrait-aries-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/状态图/guild-state-taurus-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        48,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/状态图/guild-state-taurus-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/状态图/guild-state-taurus-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        212,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/状态图/guild-state-taurus-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        217,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/状态图/guild-state-taurus-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/头像/guild-portrait-taurus-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        224,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/gemini-双子座/状态图/guild-state-gemini-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        24,
+        24,
+        232,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/gemini-双子座/状态图/guild-state-gemini-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        28,
+        24,
+        228,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/gemini-双子座/状态图/guild-state-gemini-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        28,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/gemini-双子座/状态图/guild-state-gemini-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        24,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/gemini-双子座/状态图/guild-state-gemini-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        26,
+        24,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/gemini-双子座/头像/guild-portrait-gemini-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        26,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/状态图/guild-state-cancer-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        173,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/状态图/guild-state-cancer-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        66,
+        24,
+        190,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/状态图/guild-state-cancer-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        72,
+        24,
+        183,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/状态图/guild-state-cancer-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        195,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/状态图/guild-state-cancer-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        62,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/头像/guild-portrait-cancer-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        58,
+        24,
+        198,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/virgo-处女座/状态图/guild-state-virgo-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        82,
+        24,
+        173,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/virgo-处女座/状态图/guild-state-virgo-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        79,
+        24,
+        177,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/virgo-处女座/状态图/guild-state-virgo-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        53,
+        24,
+        203,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/virgo-处女座/状态图/guild-state-virgo-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/virgo-处女座/状态图/guild-state-virgo-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        55,
+        24,
+        199,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/virgo-处女座/头像/guild-portrait-virgo-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        50,
+        24,
+        204,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/libra-天秤座/状态图/guild-state-libra-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        58,
+        24,
+        198,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/libra-天秤座/状态图/guild-state-libra-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        208,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/libra-天秤座/状态图/guild-state-libra-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        46,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/libra-天秤座/状态图/guild-state-libra-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        38,
+        24,
+        218,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/libra-天秤座/状态图/guild-state-libra-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        212,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/libra-天秤座/头像/guild-portrait-libra-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        23,
+        24,
+        233,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/状态图/guild-state-scorpio-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        60,
+        24,
+        196,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/状态图/guild-state-scorpio-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        47,
+        24,
+        209,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/状态图/guild-state-scorpio-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        22,
+        24,
+        234,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/状态图/guild-state-scorpio-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        40,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/状态图/guild-state-scorpio-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        222,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/头像/guild-portrait-scorpio-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        27,
+        24,
+        229,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/状态图/guild-state-sagittarius-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        187,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/状态图/guild-state-sagittarius-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        67,
+        25,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/状态图/guild-state-sagittarius-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        69,
+        24,
+        186,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/状态图/guild-state-sagittarius-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        206,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/状态图/guild-state-sagittarius-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        214,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/头像/guild-portrait-sagittarius-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        29,
+        24,
+        227,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/状态图/guild-state-capricorn-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        85,
+        24,
+        170,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/状态图/guild-state-capricorn-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        24,
+        194,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/状态图/guild-state-capricorn-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        68,
+        24,
+        188,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/状态图/guild-state-capricorn-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        41,
+        24,
+        215,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/状态图/guild-state-capricorn-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        49,
+        24,
+        207,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/头像/guild-portrait-capricorn-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        43,
+        24,
+        213,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/状态图/guild-state-aquarius-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        64,
+        24,
+        191,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/状态图/guild-state-aquarius-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        54,
+        24,
+        202,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/状态图/guild-state-aquarius-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        63,
+        24,
+        193,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/状态图/guild-state-aquarius-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        34,
+        24,
+        221,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/状态图/guild-state-aquarius-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        44,
+        24,
+        211,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/头像/guild-portrait-aquarius-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        39,
+        24,
+        216,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/状态图/guild-state-pisces-normal-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        32,
+        24,
+        224,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/状态图/guild-state-pisces-working-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        31,
+        24,
+        225,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/状态图/guild-state-pisces-study-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        22,
+        24,
+        234,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/状态图/guild-state-pisces-critical-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        25,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/状态图/guild-state-pisces-celebration-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        18,
+        29,
+        238,
+        244
+      ]
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/头像/guild-portrait-pisces-state-v1.png",
+      "alpha": [
+        0,
+        255
+      ],
+      "corners": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        24,
+        210,
+        244
+      ]
+    }
+  ],
+  "errors": []
+}
