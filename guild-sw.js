@@ -1,9 +1,9 @@
 /* Interface cache is versioned; filename-versioned images keep a separate cache. */
 'use strict';
-var CACHE_VER='guild-v105-frames-cleanup-20261004';
+var CACHE_VER='guild-v106-cast-frames-20261004';
 var CACHE_NAME='guild-core-'+CACHE_VER;
 var MEDIA_CACHE_NAME='guild-media-v1';
-var CORE_URLS=['./index.html','./每日日程表.html','./quotes.js','./growth.js','./v4.js','./guild-history-recovery-v65.js','./guild-cloud-sync.js','./schedule.js','./guild-features-v64.js','./guild-dock-panel.js','./guild-ui-v105.css','./guild-icon-192.png','./guild-icon-512.png'];
+var CORE_URLS=['./index.html','./每日日程表.html','./quotes.js','./growth.js','./v4.js','./guild-history-recovery-v65.js','./guild-cloud-sync.js','./schedule.js','./guild-features-v64.js','./guild-dock-panel.js','./guild-ui-v106.css','./guild-icon-192.png','./guild-icon-512.png'];
 self.addEventListener('install',function(event){event.waitUntil(caches.open(CACHE_NAME).then(function(cache){return Promise.all(CORE_URLS.map(function(url){var request=new Request(new URL(url,self.location.href),{cache:'reload'});return fetch(request).then(function(response){if(!response.ok)throw new Error('Core cache unavailable: '+url);return cache.put(url,response)})}))}).then(function(){return self.skipWaiting()}))});
 self.addEventListener('activate',function(event){event.waitUntil(caches.keys().then(function(keys){return Promise.all(keys.filter(function(key){return key.indexOf('guild-core-')===0&&key!==CACHE_NAME}).map(function(key){return caches.delete(key)}))}).then(function(){return self.clients.claim()}))});
 function saveResponse(cache,req,res){if(res&&res.ok)return cache.put(req,res.clone()).then(function(){return res},function(){return res});return Promise.resolve(res)}

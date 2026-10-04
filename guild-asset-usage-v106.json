@@ -1,0 +1,22 @@
+{
+  "version": "guild-v106-cast-frames-20261004",
+  "design": "不对称主角饰、不同次角饰与简洁收口；纳兹、露西原款保留；原作兼容同人UI，并非官方边框",
+  "frames": {
+    "gray": {"file":"guild-frame-gray-v106.webp","use":["日常附加任务模块","格雷互动面板"]},
+    "erza": {"file":"guild-frame-erza-v106.webp","use":["艾露莎执行委托模块","艾露莎互动面板"]},
+    "wendy": {"file":"guild-frame-wendy-v106.webp","use":["温蒂互动面板"]},
+    "happy": {"file":"guild-frame-happy-v106.webp","use":["哈比补给任务模块","伙伴小窝互动卷宗"]},
+    "carla": {"file":"guild-frame-carla-v106.webp","use":["夏露露互动面板"]},
+    "mirajane": {"file":"guild-frame-mirajane-v106.webp","use":["米拉公会收尾模块","米拉互动面板"]}
+  },
+  "cleanup": {
+    "codeBackupLimit":5,
+    "compression":false,
+    "sourceCodeBackups":4,
+    "mirrorCodeBackups":5,
+    "deletedBytesSource":5010962,
+    "deletedBytesMirror":44822474,
+    "protected":"真实任务导出、云历史恢复快照、动态人物素材、5代代码所需图片；未读取或修改生产存档",
+    "review":"待人工确认素材中的超越者原始表用于重新裁切，不是当前运行入口；D盘历史待核对梅比斯素材保留待人工处理；移动不计释放空间"
+  }
+}
