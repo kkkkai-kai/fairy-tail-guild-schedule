@@ -19,7 +19,7 @@ const guildStateSpriteFiles={natsu:'素材/人物/natsu-纳兹/状态表/ft-nats
 const guildStateKeys=[['normal','正常协助'],['research','专注研究'],['study','学习记录'],['filing','整理资料'],['critical','推进关键任务'],['completed','完成委托'],['rest','鼓励休息'],['waiting','等待新委托'],['expedition','远征进行'],['celebration','公会庆祝']];
 const guildMemberRegistry=Object.freeze(Object.fromEntries([...new Set([...coreMemberIds,...historicalMemberIds,...guestAllyIds,...celestialIds])].map(id=>{
  const celestial=celestialIds.includes(id)&&id!=='loke',roleType=celestial?'celestial-spirit':historicalMemberIds.includes(id)?'historical-member':guestAllyIds.includes(id)?'visitor-ally':'fairy-tail-member',stateSheet=guildStateSpriteFiles[id],reuseV86=['natsu','lucy','erza','happy'].includes(id);
- const hallFile=pose=>guildAssetPath('guild-sprite-'+id+'-'+pose+'-'+(reuseV86?'v86':'v87')+'.png'),portraitFile=pose=>guildAssetPath('guild-portrait-'+id+'-'+pose+'-v87.png');
+ const hallFile=pose=>guildAssetPath('guild-sprite-'+id+'-'+pose+'-'+((['natsu','erza','wendy','happy'].includes(id)||(['gray','lucy'].includes(id)&&pose==='rest'))?'v109':reuseV86?'v86':'v87')+'.png'),portraitFile=pose=>guildAssetPath('guild-portrait-'+id+'-'+pose+'-v87.png');
  const states=stateSheet?Object.fromEntries(guildStateKeys.map(([key,label],index)=>[key,{sheet:stateSheet,index,label}])):Object.fromEntries(guildStateKeys.map(([key,label])=>[key,{file:portraitFile(['completed','celebration'].includes(key)?'celebration':['rest','waiting','normal'].includes(key)?'rest':'return'),label}]));
  return[id,{assigneeId:id,name:FTNames[id],hallSprite:hallFile('rest'),hallStates:Object.freeze({normal:hallFile('rest'),return:hallFile('return'),rest:hallFile('rest'),completed:hallFile('return'),celebration:hallFile('celebration')}),portrait:portraitFile('return'),portraits:Object.freeze(['return','rest','celebration'].map(portraitFile)),fallbackPortrait:portraitFile('rest'),states,alt:FTNames[id]+'的全身像素小人',roleType,ownerId:celestial?(['libra','pisces'].includes(id)?'yukino':'lucy'):undefined,assignable:!guestAllyIds.includes(id),verified:true,alphaVerified:true,identityVerified:true,sceneScale:['happy','carla'].includes(id)?'exceed':id==='makarov'||id==='mavis'?'small':['gajeel','laxus','elfman','lily','gildarts','azuma','taurus','capricorn'].includes(id)?'large':celestial?'celestial':'normal'}]
 }))),guildHallMembers=guildMemberRegistry;
@@ -1339,7 +1339,7 @@ function openHappyNook(){
  runWithGuildViewPreserved(()=>{localStorage.setItem('fairytail-guild-hall-active-scene','happyNook');const hall=document.querySelector('#guildHallScene');if(hall)hall.open=true;renderGuildHallScene()})
 }
 const guildExceedCompanions=[
- {id:'happy',name:'哈比',identity:'妖精的尾巴 · 纳兹的伙伴',sprite:'素材/人物/happy-哈比/像素小人/guild-exceed-happy-idle-v95.png',x:27,y:51,scale:54,line:'爱！休息一下，再一起出发吧。'},
+ {id:'happy',name:'哈比',identity:'妖精的尾巴 · 纳兹的伙伴',sprite:'素材/人物/happy-哈比/像素小人/guild-sprite-happy-rest-v109.png',x:27,y:51,scale:54,line:'爱！休息一下，再一起出发吧。'},
  {id:'carla',name:'夏露露',identity:'妖精的尾巴 · 温蒂的伙伴',sprite:'素材/人物/carla-夏露露/像素小人/guild-exceed-carla-idle-v95.png',x:48,y:70,scale:50,line:'先把需要的东西准备好，别太勉强自己。'},
  {id:'lily',name:'潘萨·利利',identity:'妖精的尾巴 · 加吉鲁的伙伴',sprite:'素材/人物/lily-利利/像素小人/guild-exceed-lily-idle-v95.png',x:69,y:63,scale:62,line:'这里很安稳。把体力留给下一次行动。'},
  {id:'frosch',name:'弗罗修',identity:'剑咬之虎来访 · 罗格的伙伴',sprite:'素材/人物/frosch-弗洛修/像素小人/guild-exceed-frosch-idle-v95.png',x:38,y:84,scale:50,line:'一起在这里休息，好开心。'},
