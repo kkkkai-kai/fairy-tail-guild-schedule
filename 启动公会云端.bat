@@ -4,7 +4,7 @@ title 妖精的尾巴 · 公会云端启动器
 cd /d "C:\Users\ASUS\Documents\Codex\2026-09-14\wo\outputs"
 
 echo 正在启动本地门户服务器（云端同步依赖它）...
-start "" /min cmd /c "node cloud-server.js"
+start "" /min cmd /c "node "工具/旧版门户/cloud-server.js""
 timeout /t 2 >nul
 
 echo 正在打开每日日程表...

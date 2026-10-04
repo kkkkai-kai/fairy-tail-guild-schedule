@@ -1,0 +1,247 @@
+{
+  "version": "guild-v86-world-20261002",
+  "assets": [
+    {
+      "file": "素材/场景/庆典/guild-celebration-hall-0-v86.png",
+      "width": 555,
+      "height": 695,
+      "type": "opaque-background",
+      "edgeNonzero": 2496,
+      "paddingNonzero": 29424
+    },
+    {
+      "file": "素材/场景/庆典/guild-celebration-hall-1-v86.png",
+      "width": 556,
+      "height": 695,
+      "type": "opaque-background",
+      "edgeNonzero": 2498,
+      "paddingNonzero": 29448
+    },
+    {
+      "file": "素材/场景/庆典/guild-celebration-hall-2-v86.png",
+      "width": 555,
+      "height": 697,
+      "type": "opaque-background",
+      "edgeNonzero": 2500,
+      "paddingNonzero": 29472
+    },
+    {
+      "file": "素材/场景/庆典/guild-celebration-hall-3-v86.png",
+      "width": 556,
+      "height": 697,
+      "type": "opaque-background",
+      "edgeNonzero": 2502,
+      "paddingNonzero": 29496
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-book-v86.png",
+      "width": 331,
+      "height": 303,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-chest-v86.png",
+      "width": 337,
+      "height": 289,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-fish-v86.png",
+      "width": 333,
+      "height": 208,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-letter-v86.png",
+      "width": 350,
+      "height": 266,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-open-book-v86.png",
+      "width": 391,
+      "height": 256,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-papers-v86.png",
+      "width": 355,
+      "height": 282,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-pennant-v86.png",
+      "width": 189,
+      "height": 346,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-pouch-v86.png",
+      "width": 317,
+      "height": 318,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-quill-v86.png",
+      "width": 254,
+      "height": 358,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-report-v86.png",
+      "width": 305,
+      "height": 304,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-scroll-v86.png",
+      "width": 328,
+      "height": 267,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/道具/情报物件/guild-record-toast-v86.png",
+      "width": 381,
+      "height": 302,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-celebration-v86.png",
+      "width": 301,
+      "height": 377,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-rest-v86.png",
+      "width": 264,
+      "height": 375,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-return-v86.png",
+      "width": 314,
+      "height": 375,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-celebration-v86.png",
+      "width": 301,
+      "height": 254,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-rest-v86.png",
+      "width": 226,
+      "height": 241,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-return-v86.png",
+      "width": 206,
+      "height": 250,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-celebration-v86.png",
+      "width": 253,
+      "height": 371,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-rest-v86.png",
+      "width": 318,
+      "height": 385,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-return-v86.png",
+      "width": 248,
+      "height": 377,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-celebration-v86.png",
+      "width": 278,
+      "height": 379,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-rest-v86.png",
+      "width": 247,
+      "height": 389,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-return-v86.png",
+      "width": 265,
+      "height": 395,
+      "type": "transparent",
+      "edgeNonzero": 0,
+      "paddingNonzero": 0
+    }
+  ],
+  "validation": "24 transparent sprites/props: alpha0 across all edges and 12px blank padding; 4 intentionally opaque hall backgrounds",
+  "characterIds": [
+    "natsu",
+    "lucy",
+    "erza",
+    "happy"
+  ],
+  "states": [
+    "return",
+    "rest",
+    "celebration"
+  ],
+  "sources": [
+    "https://fairytail100yq.com/character/lucy-heartfilia.html",
+    "https://fairytail100yq.com/character/happy.html",
+    "https://fairytail100yq.com/news/detail.php?id=1115738",
+    "https://www.koeitecmoamerica.com/manual/fairytail/en/4200.html"
+  ]
+}

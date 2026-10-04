@@ -1,0 +1,11 @@
+# Private recovery data and local-only tools must not become public site assets.
+/备份/
+/待人工确认素材/
+/密钥/
+/.cloud-data.json
+/backup-before-*/
+/backup-cloud-history-*/
+/工具/compare-four-sources.html
+/工具/migrate-to-supabase.html
+/工具/旧版门户/
+/资料/素材审计/guild-exceeds-v95-audit.json

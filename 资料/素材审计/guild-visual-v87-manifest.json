@@ -1,0 +1,5410 @@
+{
+  "roles": 57,
+  "hallSprites": 171,
+  "portraits": 171,
+  "newFiles": 330,
+  "files": [
+    {
+      "file": "素材/人物/mavis-梅比斯/像素小人/guild-sprite-mavis-return-v87.png",
+      "width": 215,
+      "height": 304,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4803855569155447,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mavis-梅比斯/头像/guild-portrait-mavis-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5623523156899811,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mavis-梅比斯/像素小人/guild-sprite-mavis-rest-v87.png",
+      "width": 216,
+      "height": 310,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.47749402628434884,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mavis-梅比斯/头像/guild-portrait-mavis-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5723653119092628,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mavis-梅比斯/像素小人/guild-sprite-mavis-celebration-v87.png",
+      "width": 251,
+      "height": 307,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.47894415822053804,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mavis-梅比斯/头像/guild-portrait-mavis-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.46697778827977315,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gray-格雷/像素小人/guild-sprite-gray-return-v87.png",
+      "width": 198,
+      "height": 344,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5417253934695795,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gray-格雷/头像/guild-portrait-gray-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6399751890359168,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gray-格雷/像素小人/guild-sprite-gray-rest-v87.png",
+      "width": 171,
+      "height": 331,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49882510909701244,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gray-格雷/头像/guild-portrait-gray-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6684191871455577,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gray-格雷/像素小人/guild-sprite-gray-celebration-v87.png",
+      "width": 231,
+      "height": 309,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.544655991257933,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gray-格雷/头像/guild-portrait-gray-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5538456994328923,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wendy-温蒂/像素小人/guild-sprite-wendy-return-v87.png",
+      "width": 265,
+      "height": 279,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5675390545749645,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wendy-温蒂/头像/guild-portrait-wendy-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.46086365784499056,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wendy-温蒂/像素小人/guild-sprite-wendy-rest-v87.png",
+      "width": 246,
+      "height": 293,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5528871500319099,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wendy-温蒂/头像/guild-portrait-wendy-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.46697778827977315,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wendy-温蒂/像素小人/guild-sprite-wendy-celebration-v87.png",
+      "width": 286,
+      "height": 275,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5885187539732994,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wendy-温蒂/头像/guild-portrait-wendy-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5272920604914934,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laxus-拉克萨斯/像素小人/guild-sprite-laxus-return-v87.png",
+      "width": 248,
+      "height": 363,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48256020616724427,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laxus-拉克萨斯/头像/guild-portrait-laxus-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5634747164461248,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laxus-拉克萨斯/像素小人/guild-sprite-laxus-rest-v87.png",
+      "width": 231,
+      "height": 344,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45080791301721534,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laxus-拉克萨斯/头像/guild-portrait-laxus-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5619092627599244,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laxus-拉克萨斯/像素小人/guild-sprite-laxus-celebration-v87.png",
+      "width": 298,
+      "height": 323,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.483179919795541,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laxus-拉克萨斯/头像/guild-portrait-laxus-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.434132797731569,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/levy-蕾比/像素小人/guild-sprite-levy-return-v87.png",
+      "width": 178,
+      "height": 359,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5945353823041533,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/levy-蕾比/头像/guild-portrait-levy-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.7122223534971645,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/levy-蕾比/像素小人/guild-sprite-levy-rest-v87.png",
+      "width": 143,
+      "height": 343,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5214989092540113,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/levy-蕾比/头像/guild-portrait-levy-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.7376535916824196,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/levy-蕾比/像素小人/guild-sprite-levy-celebration-v87.png",
+      "width": 166,
+      "height": 332,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5600595151691101,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/levy-蕾比/头像/guild-portrait-levy-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6834829867674859,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gajeel-加吉鲁/像素小人/guild-sprite-gajeel-return-v87.png",
+      "width": 231,
+      "height": 382,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.47586183450057795,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gajeel-加吉鲁/头像/guild-portrait-gajeel-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5881084593572778,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gajeel-加吉鲁/像素小人/guild-sprite-gajeel-rest-v87.png",
+      "width": 204,
+      "height": 371,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45909307119074044,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gajeel-加吉鲁/头像/guild-portrait-gajeel-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6340382797731569,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gajeel-加吉鲁/像素小人/guild-sprite-gajeel-celebration-v87.png",
+      "width": 243,
+      "height": 341,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4703184774869363,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gajeel-加吉鲁/头像/guild-portrait-gajeel-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5403473534971645,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mirajane-米拉/像素小人/guild-sprite-mirajane-return-v87.png",
+      "width": 195,
+      "height": 359,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4807370902078423,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mirajane-米拉/头像/guild-portrait-mirajane-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6690099243856332,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mirajane-米拉/像素小人/guild-sprite-mirajane-rest-v87.png",
+      "width": 190,
+      "height": 371,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5127110228401192,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mirajane-米拉/头像/guild-portrait-mirajane-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.7188681474480151,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mirajane-米拉/像素小人/guild-sprite-mirajane-celebration-v87.png",
+      "width": 257,
+      "height": 335,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5801962947906383,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mirajane-米拉/头像/guild-portrait-mirajane-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5959652646502835,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/juvia-朱毕亚/像素小人/guild-sprite-juvia-return-v87.png",
+      "width": 212,
+      "height": 358,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5401602192473912,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/juvia-朱毕亚/头像/guild-portrait-juvia-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6354265122873346,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/juvia-朱毕亚/像素小人/guild-sprite-juvia-rest-v87.png",
+      "width": 167,
+      "height": 345,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.47708062136596374,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/juvia-朱毕亚/头像/guild-portrait-juvia-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6731450850661626,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/juvia-朱毕亚/像素小人/guild-sprite-juvia-celebration-v87.png",
+      "width": 182,
+      "height": 332,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5119819939097048,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/juvia-朱毕亚/头像/guild-portrait-juvia-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6363716918714556,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cana-卡娜/像素小人/guild-sprite-cana-return-v87.png",
+      "width": 173,
+      "height": 261,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5447257103625451,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cana-卡娜/头像/guild-portrait-cana-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5774456521739131,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cana-卡娜/像素小人/guild-sprite-cana-rest-v87.png",
+      "width": 213,
+      "height": 208,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5175379198266522,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cana-卡娜/头像/guild-portrait-cana-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5392544896030246,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cana-卡娜/像素小人/guild-sprite-cana-celebration-v87.png",
+      "width": 190,
+      "height": 249,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5861340097231029,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cana-卡娜/头像/guild-portrait-cana-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5281781663516069,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/像素小人/guild-sprite-elfman-return-v87.png",
+      "width": 211,
+      "height": 283,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5282266843065999,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/头像/guild-portrait-elfman-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5520439508506616,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/像素小人/guild-sprite-elfman-rest-v87.png",
+      "width": 204,
+      "height": 224,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4788165266106443,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/头像/guild-portrait-elfman-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.43023393194706994,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/像素小人/guild-sprite-elfman-celebration-v87.png",
+      "width": 217,
+      "height": 248,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5278355879292403,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/elfman-艾尔夫曼/头像/guild-portrait-elfman-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4808010396975425,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lily-利利/像素小人/guild-sprite-lily-return-v87.png",
+      "width": 178,
+      "height": 213,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5372685551511315,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lily-利利/头像/guild-portrait-lily-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4742438563327032,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lily-利利/像素小人/guild-sprite-lily-rest-v87.png",
+      "width": 177,
+      "height": 182,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5432110262618737,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lily-利利/头像/guild-portrait-lily-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4815985349716446,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lily-利利/像素小人/guild-sprite-lily-celebration-v87.png",
+      "width": 204,
+      "height": 223,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5801459597291831,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lily-利利/头像/guild-portrait-lily-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4481923440453686,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/carla-夏露露/像素小人/guild-sprite-carla-return-v87.png",
+      "width": 169,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5786596346797016,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/carla-夏露露/头像/guild-portrait-carla-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4429643194706994,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/carla-夏露露/像素小人/guild-sprite-carla-rest-v87.png",
+      "width": 161,
+      "height": 163,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5316465343139123,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/carla-夏露露/头像/guild-portrait-carla-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49063681474480153,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/carla-夏露露/像素小人/guild-sprite-carla-celebration-v87.png",
+      "width": 172,
+      "height": 186,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5933670917729432,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/carla-夏露露/头像/guild-portrait-carla-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4341623345935728,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/像素小人/guild-sprite-makarov-return-v87.png",
+      "width": 131,
+      "height": 168,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5232642675390767,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/头像/guild-portrait-makarov-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4714969281663516,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/像素小人/guild-sprite-makarov-rest-v87.png",
+      "width": 110,
+      "height": 171,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4693248272195641,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/头像/guild-portrait-makarov-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5387228260869565,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/像素小人/guild-sprite-makarov-celebration-v87.png",
+      "width": 168,
+      "height": 196,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5278486394557823,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/makarov-马卡洛夫/头像/guild-portrait-makarov-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.3958234877126654,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/freed-菲利德/像素小人/guild-sprite-freed-return-v87.png",
+      "width": 157,
+      "height": 273,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5502204801567859,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/freed-菲利德/头像/guild-portrait-freed-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.680499763705104,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/freed-菲利德/像素小人/guild-sprite-freed-rest-v87.png",
+      "width": 165,
+      "height": 277,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5781643146264085,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/freed-菲利德/头像/guild-portrait-freed-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.691398865784499,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/freed-菲利德/像素小人/guild-sprite-freed-celebration-v87.png",
+      "width": 200,
+      "height": 284,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5562852112676057,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/freed-菲利德/头像/guild-portrait-freed-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6022861531190926,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/像素小人/guild-sprite-bickslow-return-v87.png",
+      "width": 202,
+      "height": 257,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6085063759294217,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/头像/guild-portrait-bickslow-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6072778827977315,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/像素小人/guild-sprite-bickslow-rest-v87.png",
+      "width": 185,
+      "height": 260,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5734511434511435,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/头像/guild-portrait-bickslow-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6174385633270322,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/像素小人/guild-sprite-bickslow-celebration-v87.png",
+      "width": 222,
+      "height": 266,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5803867777551988,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bickslow-毕可斯罗/头像/guild-portrait-bickslow-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5515122873345936,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/像素小人/guild-sprite-evergreen-return-v87.png",
+      "width": 196,
+      "height": 248,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5680546412113232,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/头像/guild-portrait-evergreen-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5172199905482041,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/像素小人/guild-sprite-evergreen-rest-v87.png",
+      "width": 163,
+      "height": 253,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5277771041974829,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/头像/guild-portrait-evergreen-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.582437381852552,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/像素小人/guild-sprite-evergreen-celebration-v87.png",
+      "width": 219,
+      "height": 272,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5954371474617244,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/evergreen-艾芭葛琳/头像/guild-portrait-evergreen-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5451027882797732,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gildarts-吉尔达兹/像素小人/guild-sprite-gildarts-return-v87.png",
+      "width": 253,
+      "height": 351,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4876749659358355,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gildarts-吉尔达兹/头像/guild-portrait-gildarts-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5347648865784499,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gildarts-吉尔达兹/像素小人/guild-sprite-gildarts-rest-v87.png",
+      "width": 320,
+      "height": 261,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49571360153256705,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gildarts-吉尔达兹/头像/guild-portrait-gildarts-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6357218809073724,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gildarts-吉尔达兹/像素小人/guild-sprite-gildarts-celebration-v87.png",
+      "width": 294,
+      "height": 343,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5414708157315404,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gildarts-吉尔达兹/头像/guild-portrait-gildarts-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45350897920604916,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/像素小人/guild-sprite-mystogan-return-v87.png",
+      "width": 258,
+      "height": 313,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5323822968521683,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/头像/guild-portrait-mystogan-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5326973062381852,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/像素小人/guild-sprite-mystogan-rest-v87.png",
+      "width": 297,
+      "height": 220,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5651974288337924,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/头像/guild-portrait-mystogan-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.7294128071833649,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/像素小人/guild-sprite-mystogan-celebration-v87.png",
+      "width": 307,
+      "height": 343,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5779717191669594,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mystogan-密斯特岗/头像/guild-portrait-mystogan-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5093336483931947,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/loke-洛基/像素小人/guild-sprite-loke-return-v87.png",
+      "width": 175,
+      "height": 325,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5705670329670329,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/loke-洛基/头像/guild-portrait-loke-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.7047495274102079,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/loke-洛基/像素小人/guild-sprite-loke-rest-v87.png",
+      "width": 279,
+      "height": 226,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5735718590414566,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/loke-洛基/头像/guild-portrait-loke-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.691133034026465,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/loke-洛基/像素小人/guild-sprite-loke-celebration-v87.png",
+      "width": 209,
+      "height": 318,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5908489061418555,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/loke-洛基/头像/guild-portrait-loke-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6304052457466919,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jellal-杰拉尔/像素小人/guild-sprite-jellal-return-v87.png",
+      "width": 181,
+      "height": 326,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5152696335965834,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jellal-杰拉尔/头像/guild-portrait-jellal-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6814154064272212,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jellal-杰拉尔/像素小人/guild-sprite-jellal-rest-v87.png",
+      "width": 263,
+      "height": 252,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5696179612529423,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jellal-杰拉尔/头像/guild-portrait-jellal-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6313208884688091,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jellal-杰拉尔/像素小人/guild-sprite-jellal-celebration-v87.png",
+      "width": 229,
+      "height": 337,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5831184481619219,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jellal-杰拉尔/头像/guild-portrait-jellal-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6576382325141777,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/像素小人/guild-sprite-macao-return-v87.png",
+      "width": 213,
+      "height": 322,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.42599072697051876,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/头像/guild-portrait-macao-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5495628544423441,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/像素小人/guild-sprite-macao-rest-v87.png",
+      "width": 186,
+      "height": 321,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.3912672093256959,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/头像/guild-portrait-macao-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5886991965973535,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/像素小人/guild-sprite-macao-celebration-v87.png",
+      "width": 297,
+      "height": 326,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5046373758030199,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/macao-马卡欧/头像/guild-portrait-macao-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48026937618147447,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/像素小人/guild-sprite-wakaba-return-v87.png",
+      "width": 223,
+      "height": 340,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4378659984173041,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/头像/guild-portrait-wakaba-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5648629489603024,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/像素小人/guild-sprite-wakaba-rest-v87.png",
+      "width": 210,
+      "height": 329,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4484440584744536,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/头像/guild-portrait-wakaba-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5899102079395085,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/像素小人/guild-sprite-wakaba-celebration-v87.png",
+      "width": 296,
+      "height": 332,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5181842233800065,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/wakaba-瓦卡巴/头像/guild-portrait-wakaba-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.42657136105860116,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laki-拉奇/像素小人/guild-sprite-laki-return-v87.png",
+      "width": 232,
+      "height": 299,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.511777764963672,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laki-拉奇/头像/guild-portrait-laki-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4845522211720227,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laki-拉奇/像素小人/guild-sprite-laki-rest-v87.png",
+      "width": 169,
+      "height": 301,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4521810926104307,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laki-拉奇/头像/guild-portrait-laki-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6091387051039697,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laki-拉奇/像素小人/guild-sprite-laki-celebration-v87.png",
+      "width": 251,
+      "height": 324,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5444395258472283,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/laki-拉奇/头像/guild-portrait-laki-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4943584593572779,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jet-杰特/像素小人/guild-sprite-jet-return-v87.png",
+      "width": 214,
+      "height": 362,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.423607166830175,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jet-杰特/头像/guild-portrait-jet-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6118560964083176,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jet-杰特/像素小人/guild-sprite-jet-rest-v87.png",
+      "width": 283,
+      "height": 303,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49236725792720615,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jet-杰特/头像/guild-portrait-jet-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5062618147448015,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jet-杰特/像素小人/guild-sprite-jet-celebration-v87.png",
+      "width": 261,
+      "height": 360,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5166028097062579,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/jet-杰特/头像/guild-portrait-jet-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5268194706994329,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/像素小人/guild-sprite-droy-return-v87.png",
+      "width": 193,
+      "height": 337,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5308343967651173,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/头像/guild-portrait-droy-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6781663516068053,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/像素小人/guild-sprite-droy-rest-v87.png",
+      "width": 192,
+      "height": 269,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4611601610904585,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/头像/guild-portrait-droy-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5753189981096408,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/像素小人/guild-sprite-droy-celebration-v87.png",
+      "width": 231,
+      "height": 317,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5690933672006228,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/droy-德洛伊/头像/guild-portrait-droy-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5537275519848771,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/像素小人/guild-sprite-alzack-return-v87.png",
+      "width": 220,
+      "height": 337,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4819395737793364,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/头像/guild-portrait-alzack-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5585420604914934,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/像素小人/guild-sprite-alzack-rest-v87.png",
+      "width": 274,
+      "height": 274,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49832170067664766,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/头像/guild-portrait-alzack-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5418537334593573,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/像素小人/guild-sprite-alzack-celebration-v87.png",
+      "width": 239,
+      "height": 374,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5230684894726243,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/alzack-阿尔札克/头像/guild-portrait-alzack-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6456758034026465,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/像素小人/guild-sprite-bisca-return-v87.png",
+      "width": 221,
+      "height": 336,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.47711969403145876,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/头像/guild-portrait-bisca-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.54203095463138,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/像素小人/guild-sprite-bisca-rest-v87.png",
+      "width": 266,
+      "height": 282,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.47049805364475017,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/头像/guild-portrait-bisca-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.468070652173913,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/像素小人/guild-sprite-bisca-celebration-v87.png",
+      "width": 238,
+      "height": 384,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5746673669467787,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/bisca-比丝卡/头像/guild-portrait-bisca-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.662984404536862,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/像素小人/guild-sprite-romeo-return-v87.png",
+      "width": 242,
+      "height": 301,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5362428269405014,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/头像/guild-portrait-romeo-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.496632797731569,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/像素小人/guild-sprite-romeo-rest-v87.png",
+      "width": 232,
+      "height": 251,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5020092045610661,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/头像/guild-portrait-romeo-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4857927693761815,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/像素小人/guild-sprite-romeo-celebration-v87.png",
+      "width": 242,
+      "height": 301,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5505203042200928,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/romeo-罗密欧/头像/guild-portrait-romeo-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4779655009451796,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/warren-沃伦/像素小人/guild-sprite-warren-return-v87.png",
+      "width": 253,
+      "height": 354,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5339429668832764,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/warren-沃伦/头像/guild-portrait-warren-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5548499527410208,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/warren-沃伦/像素小人/guild-sprite-warren-rest-v87.png",
+      "width": 258,
+      "height": 279,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4766052624267178,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/warren-沃伦/头像/guild-portrait-warren-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.43903591682419657,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/warren-沃伦/像素小人/guild-sprite-warren-celebration-v87.png",
+      "width": 237,
+      "height": 324,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5013413554201177,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/warren-沃伦/头像/guild-portrait-warren-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5210007088846881,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/max-马克斯/像素小人/guild-sprite-max-return-v87.png",
+      "width": 196,
+      "height": 311,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5033302710151585,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/max-马克斯/头像/guild-portrait-max-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6007206994328923,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/max-马克斯/像素小人/guild-sprite-max-rest-v87.png",
+      "width": 217,
+      "height": 259,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45269825454157253,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/max-马克斯/头像/guild-portrait-max-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4772566162570889,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/max-马克斯/像素小人/guild-sprite-max-celebration-v87.png",
+      "width": 220,
+      "height": 305,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5566467958271237,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/max-马克斯/头像/guild-portrait-max-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5555883742911153,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/reedus-里达素/像素小人/guild-sprite-reedus-return-v87.png",
+      "width": 311,
+      "height": 395,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5487891245064919,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/reedus-里达素/头像/guild-portrait-reedus-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5302457466918714,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/reedus-里达素/像素小人/guild-sprite-reedus-rest-v87.png",
+      "width": 283,
+      "height": 332,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.43197879858657245,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/reedus-里达素/头像/guild-portrait-reedus-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4597117202268431,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/reedus-里达素/像素小人/guild-sprite-reedus-celebration-v87.png",
+      "width": 329,
+      "height": 341,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5487258109083778,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/reedus-里达素/头像/guild-portrait-reedus-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4630789224952741,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/像素小人/guild-sprite-mest-return-v87.png",
+      "width": 267,
+      "height": 371,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.471152972530967,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/头像/guild-portrait-mest-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5438917769376181,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/像素小人/guild-sprite-mest-rest-v87.png",
+      "width": 348,
+      "height": 320,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5343211206896552,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/头像/guild-portrait-mest-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6379076086956522,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/像素小人/guild-sprite-mest-celebration-v87.png",
+      "width": 289,
+      "height": 358,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4376486052850322,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/mest-梅斯特/头像/guild-portrait-mest-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.42624645557655955,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/kinana-金卡/像素小人/guild-sprite-kinana-return-v87.png",
+      "width": 229,
+      "height": 357,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.40541631499761477,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/kinana-金卡/头像/guild-portrait-kinana-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5373936672967864,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/kinana-金卡/像素小人/guild-sprite-kinana-rest-v87.png",
+      "width": 270,
+      "height": 310,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.445221027479092,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/kinana-金卡/头像/guild-portrait-kinana-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.44751299621928164,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/kinana-金卡/像素小人/guild-sprite-kinana-celebration-v87.png",
+      "width": 244,
+      "height": 353,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45538243626062325,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/kinana-金卡/头像/guild-portrait-kinana-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5328745274102079,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sting-斯汀/像素小人/guild-sprite-sting-return-v87.png",
+      "width": 216,
+      "height": 373,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.456161255088869,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sting-斯汀/头像/guild-portrait-sting-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.61179702268431,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sting-斯汀/像素小人/guild-sprite-sting-rest-v87.png",
+      "width": 285,
+      "height": 325,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4789311740890688,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sting-斯汀/头像/guild-portrait-sting-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4784085538752363,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sting-斯汀/像素小人/guild-sprite-sting-celebration-v87.png",
+      "width": 279,
+      "height": 364,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5412186379928315,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sting-斯汀/头像/guild-portrait-sting-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5337901701323251,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/像素小人/guild-sprite-yukino-return-v87.png",
+      "width": 192,
+      "height": 346,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45663234585741813,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/头像/guild-portrait-yukino-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6163456994328923,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/像素小人/guild-sprite-yukino-rest-v87.png",
+      "width": 175,
+      "height": 354,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4450524616626311,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/头像/guild-portrait-yukino-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6654359640831758,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/像素小人/guild-sprite-yukino-celebration-v87.png",
+      "width": 226,
+      "height": 357,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5172777075431942,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/yukino-雪乃/头像/guild-portrait-yukino-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5848003308128544,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/像素小人/guild-sprite-minerva-return-v87.png",
+      "width": 264,
+      "height": 366,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4513888888888889,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/头像/guild-portrait-minerva-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49090264650283555,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/像素小人/guild-sprite-minerva-rest-v87.png",
+      "width": 260,
+      "height": 364,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45191251056635673,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/头像/guild-portrait-minerva-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48924858223062384,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/像素小人/guild-sprite-minerva-celebration-v87.png",
+      "width": 284,
+      "height": 371,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4990604001366691,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/minerva-米涅芭/头像/guild-portrait-minerva-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.44896030245746693,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/像素小人/guild-sprite-ultear-return-v87.png",
+      "width": 229,
+      "height": 354,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.3985764685564848,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/头像/guild-portrait-ultear-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5411743856332704,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/像素小人/guild-sprite-ultear-rest-v87.png",
+      "width": 230,
+      "height": 358,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.39517852805440856,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/头像/guild-portrait-ultear-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5450141776937618,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/像素小人/guild-sprite-ultear-celebration-v87.png",
+      "width": 310,
+      "height": 364,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45056717476072317,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/ultear-乌鲁蒂亚/头像/guild-portrait-ultear-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.41889177693761814,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/像素小人/guild-sprite-meredy-return-v87.png",
+      "width": 256,
+      "height": 346,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5009370484104047,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/头像/guild-portrait-meredy-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49232041587901704,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/像素小人/guild-sprite-meredy-rest-v87.png",
+      "width": 250,
+      "height": 361,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48173961218836564,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/头像/guild-portrait-meredy-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5230387523629489,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/像素小人/guild-sprite-meredy-celebration-v87.png",
+      "width": 271,
+      "height": 357,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5027029261889258,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/meredy-梅尔蒂/头像/guild-portrait-meredy-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4551039697542533,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/像素小人/guild-sprite-brandish-return-v87.png",
+      "width": 212,
+      "height": 323,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4631257666919797,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/头像/guild-portrait-brandish-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5473180529300568,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/像素小人/guild-sprite-brandish-rest-v87.png",
+      "width": 208,
+      "height": 328,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.44661702626641653,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/头像/guild-portrait-brandish-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5761460302457467,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/像素小人/guild-sprite-brandish-celebration-v87.png",
+      "width": 230,
+      "height": 321,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4506704591629419,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/brandish-布兰迪什/头像/guild-portrait-brandish-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48124409262759926,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aries-白羊座/像素小人/guild-sprite-aries-return-v87.png",
+      "width": 180,
+      "height": 300,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5423333333333333,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aries-白羊座/头像/guild-portrait-aries-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6205103969754253,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aries-白羊座/像素小人/guild-sprite-aries-rest-v87.png",
+      "width": 180,
+      "height": 301,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5284422296050203,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aries-白羊座/头像/guild-portrait-aries-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6193584593572778,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aries-白羊座/像素小人/guild-sprite-aries-celebration-v87.png",
+      "width": 189,
+      "height": 297,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5427110612295798,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aries-白羊座/头像/guild-portrait-aries-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5805174858223062,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/像素小人/guild-sprite-taurus-return-v87.png",
+      "width": 350,
+      "height": 406,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48663617171006335,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/头像/guild-portrait-taurus-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49273393194706994,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/像素小人/guild-sprite-taurus-rest-v87.png",
+      "width": 307,
+      "height": 365,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4586229976350899,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/头像/guild-portrait-taurus-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4455931001890359,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/像素小人/guild-sprite-taurus-celebration-v87.png",
+      "width": 325,
+      "height": 352,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45005244755244755,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/taurus-金牛座/头像/guild-portrait-taurus-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4183601134215501,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gemini-双子座/像素小人/guild-sprite-gemini-return-v87.png",
+      "width": 301,
+      "height": 283,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4477771386309475,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gemini-双子座/头像/guild-portrait-gemini-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5370096880907372,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gemini-双子座/像素小人/guild-sprite-gemini-rest-v87.png",
+      "width": 284,
+      "height": 276,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.39397070830781794,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gemini-双子座/头像/guild-portrait-gemini-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4689272211720227,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gemini-双子座/像素小人/guild-sprite-gemini-celebration-v87.png",
+      "width": 354,
+      "height": 276,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49712396626545485,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/gemini-双子座/头像/guild-portrait-gemini-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6588787807183365,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/像素小人/guild-sprite-cancer-return-v87.png",
+      "width": 352,
+      "height": 354,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.44790061633281975,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/头像/guild-portrait-cancer-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4685432419659735,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/像素小人/guild-sprite-cancer-rest-v87.png",
+      "width": 303,
+      "height": 342,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.44313203250149574,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/头像/guild-portrait-cancer-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.41608577504725897,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/像素小人/guild-sprite-cancer-celebration-v87.png",
+      "width": 321,
+      "height": 337,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45862798931380977,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/cancer-巨蟹座/头像/guild-portrait-cancer-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.41921668241965976,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/像素小人/guild-sprite-scorpio-return-v87.png",
+      "width": 221,
+      "height": 297,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5227082285905815,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/头像/guild-portrait-scorpio-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5513941398865785,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/像素小人/guild-sprite-scorpio-rest-v87.png",
+      "width": 193,
+      "height": 295,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5091946957056293,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/头像/guild-portrait-scorpio-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6263882325141777,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/像素小人/guild-sprite-scorpio-celebration-v87.png",
+      "width": 217,
+      "height": 282,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.498235121090303,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/scorpio-天蝎座/头像/guild-portrait-scorpio-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5078568052930057,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/像素小人/guild-sprite-capricorn-return-v87.png",
+      "width": 205,
+      "height": 305,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5619512195121952,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/头像/guild-portrait-capricorn-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5809900756143668,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/像素小人/guild-sprite-capricorn-rest-v87.png",
+      "width": 184,
+      "height": 303,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.535783469651313,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/头像/guild-portrait-capricorn-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6240252835538752,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/像素小人/guild-sprite-capricorn-celebration-v87.png",
+      "width": 239,
+      "height": 294,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5793982865112572,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/capricorn-摩羯座/头像/guild-portrait-capricorn-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5037216446124764,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/像素小人/guild-sprite-aquarius-return-v87.png",
+      "width": 271,
+      "height": 298,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5177072240521063,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/头像/guild-portrait-aquarius-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.47905836483931946,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/像素小人/guild-sprite-aquarius-rest-v87.png",
+      "width": 242,
+      "height": 287,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.42953609583321334,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/头像/guild-portrait-aquarius-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45687618147448017,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/像素小人/guild-sprite-aquarius-celebration-v87.png",
+      "width": 260,
+      "height": 290,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48683023872679043,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/aquarius-水瓶座/头像/guild-portrait-aquarius-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.38102551984877125,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/rogue-罗格/像素小人/guild-sprite-rogue-return-v87.png",
+      "width": 201,
+      "height": 309,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4808481862532,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/rogue-罗格/头像/guild-portrait-rogue-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5822306238185255,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/rogue-罗格/像素小人/guild-sprite-rogue-rest-v87.png",
+      "width": 226,
+      "height": 270,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4280563749590298,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/rogue-罗格/头像/guild-portrait-rogue-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.436820652173913,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/rogue-罗格/像素小人/guild-sprite-rogue-celebration-v87.png",
+      "width": 259,
+      "height": 294,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5367583326767,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/rogue-罗格/头像/guild-portrait-rogue-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4706994328922495,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/nab-纳布/像素小人/guild-sprite-nab-return-v87.png",
+      "width": 312,
+      "height": 334,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4537559496391832,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/nab-纳布/头像/guild-portrait-nab-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.42857986767485823,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/nab-纳布/像素小人/guild-sprite-nab-rest-v87.png",
+      "width": 306,
+      "height": 311,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.40166656158712144,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/nab-纳布/头像/guild-portrait-nab-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.447601606805293,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/nab-纳布/像素小人/guild-sprite-nab-celebration-v87.png",
+      "width": 348,
+      "height": 336,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45415982484948003,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/nab-纳布/头像/guild-portrait-nab-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49940926275992437,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/像素小人/guild-sprite-azuma-return-v87.png",
+      "width": 268,
+      "height": 351,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4994472084024323,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/头像/guild-portrait-azuma-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5200259924385633,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/像素小人/guild-sprite-azuma-rest-v87.png",
+      "width": 284,
+      "height": 311,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.41930845523300575,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/头像/guild-portrait-azuma-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4228497164461248,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/像素小人/guild-sprite-azuma-celebration-v87.png",
+      "width": 279,
+      "height": 324,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4878976945882561,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/azuma-阿兹玛/头像/guild-portrait-azuma-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.44919659735349715,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/像素小人/guild-sprite-pisces-return-v87.png",
+      "width": 457,
+      "height": 411,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.49343811060177717,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/头像/guild-portrait-pisces-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6164933837429112,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/像素小人/guild-sprite-pisces-rest-v87.png",
+      "width": 441,
+      "height": 340,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4377951180472189,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/头像/guild-portrait-pisces-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6338315217391305,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/像素小人/guild-sprite-pisces-celebration-v87.png",
+      "width": 472,
+      "height": 404,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5224450411142809,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/pisces-双鱼座/头像/guild-portrait-pisces-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6563090737240076,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/像素小人/guild-sprite-sagittarius-return-v87.png",
+      "width": 230,
+      "height": 297,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5048309178743962,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/头像/guild-portrait-sagittarius-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5194352551984878,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/像素小人/guild-sprite-sagittarius-rest-v87.png",
+      "width": 205,
+      "height": 314,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4715395370514215,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/头像/guild-portrait-sagittarius-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5789520321361059,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/像素小人/guild-sprite-sagittarius-celebration-v87.png",
+      "width": 265,
+      "height": 293,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5686650782407109,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/sagittarius-射手座/头像/guild-portrait-sagittarius-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.46526465028355385,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/libra-天秤座/像素小人/guild-sprite-libra-return-v87.png",
+      "width": 247,
+      "height": 302,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5688661286430544,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/libra-天秤座/头像/guild-portrait-libra-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5168655482041588,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/libra-天秤座/像素小人/guild-sprite-libra-rest-v87.png",
+      "width": 250,
+      "height": 318,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5864779874213837,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/libra-天秤座/头像/guild-portrait-libra-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5625886105860114,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/libra-天秤座/像素小人/guild-sprite-libra-celebration-v87.png",
+      "width": 274,
+      "height": 315,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5817981693894103,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/libra-天秤座/头像/guild-portrait-libra-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.43714555765595464,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/virgo-处女座/像素小人/guild-sprite-virgo-return-v87.png",
+      "width": 387,
+      "height": 625,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6301726098191215,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/virgo-处女座/头像/guild-portrait-virgo-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6806474480151229,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/virgo-处女座/像素小人/guild-sprite-virgo-rest-v87.png",
+      "width": 247,
+      "height": 629,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5122262057246577,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/virgo-处女座/头像/guild-portrait-virgo-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.7349952741020794,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/virgo-处女座/像素小人/guild-sprite-virgo-celebration-v87.png",
+      "width": 392,
+      "height": 643,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6261267337417082,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/virgo-处女座/头像/guild-portrait-virgo-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6738835066162571,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-return-v86.png",
+      "width": 265,
+      "height": 395,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4790351086696919,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/头像/guild-portrait-natsu-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5332880434782609,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-rest-v86.png",
+      "width": 247,
+      "height": 389,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.472216729286138,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/头像/guild-portrait-natsu-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5295663988657845,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-celebration-v86.png",
+      "width": 278,
+      "height": 379,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.46568971735540327,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/natsu-纳兹/头像/guild-portrait-natsu-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5234522684310019,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-return-v86.png",
+      "width": 248,
+      "height": 377,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4867267048857705,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lucy-露西/头像/guild-portrait-lucy-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.45844163516068054,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-rest-v86.png",
+      "width": 318,
+      "height": 385,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.599616107163277,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lucy-露西/头像/guild-portrait-lucy-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5121987240075614,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-celebration-v86.png",
+      "width": 253,
+      "height": 371,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.48913842515155065,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/lucy-露西/头像/guild-portrait-lucy-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.44308246691871456,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-return-v86.png",
+      "width": 314,
+      "height": 375,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5351422505307856,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/头像/guild-portrait-erza-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4800921550094518,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-rest-v86.png",
+      "width": 264,
+      "height": 375,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4634242424242424,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/头像/guild-portrait-erza-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4737712665406427,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-celebration-v86.png",
+      "width": 301,
+      "height": 377,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4866536831252148,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/erza-艾露莎/头像/guild-portrait-erza-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5613480623818525,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-return-v86.png",
+      "width": 206,
+      "height": 250,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4941747572815534,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/happy-哈比/头像/guild-portrait-happy-return-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5531368147448015,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-rest-v86.png",
+      "width": 226,
+      "height": 241,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4826130062791466,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/happy-哈比/头像/guild-portrait-happy-rest-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.5880198487712666,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-celebration-v86.png",
+      "width": 301,
+      "height": 254,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.4590734297747665,
+      "pass": true
+    },
+    {
+      "file": "素材/人物/happy-哈比/头像/guild-portrait-happy-celebration-v87.png",
+      "width": 184,
+      "height": 184,
+      "edgeNonzero": 0,
+      "paddingNonzero": 0,
+      "transparentRatio": 0.6756852551984878,
+      "pass": true
+    }
+  ],
+  "records": [
+    {
+      "id": "mavis",
+      "pose": "return",
+      "sprite": "素材/人物/mavis-梅比斯/像素小人/guild-sprite-mavis-return-v87.png",
+      "portrait": "素材/人物/mavis-梅比斯/头像/guild-portrait-mavis-return-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 5992,
+      "bounds": {
+        "x": 84,
+        "y": 93,
+        "width": 191,
+        "height": 280
+      }
+    },
+    {
+      "id": "mavis",
+      "pose": "rest",
+      "sprite": "素材/人物/mavis-梅比斯/像素小人/guild-sprite-mavis-rest-v87.png",
+      "portrait": "素材/人物/mavis-梅比斯/头像/guild-portrait-mavis-rest-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 5933,
+      "bounds": {
+        "x": 87,
+        "y": 71,
+        "width": 192,
+        "height": 286
+      }
+    },
+    {
+      "id": "mavis",
+      "pose": "celebration",
+      "sprite": "素材/人物/mavis-梅比斯/像素小人/guild-sprite-mavis-celebration-v87.png",
+      "portrait": "素材/人物/mavis-梅比斯/头像/guild-portrait-mavis-celebration-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 7422,
+      "bounds": {
+        "x": 62,
+        "y": 44,
+        "width": 227,
+        "height": 283
+      }
+    },
+    {
+      "id": "gray",
+      "pose": "return",
+      "sprite": "素材/人物/gray-格雷/像素小人/guild-sprite-gray-return-v87.png",
+      "portrait": "素材/人物/gray-格雷/头像/guild-portrait-gray-return-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 5406,
+      "bounds": {
+        "x": 101,
+        "y": 53,
+        "width": 174,
+        "height": 320
+      }
+    },
+    {
+      "id": "gray",
+      "pose": "rest",
+      "sprite": "素材/人物/gray-格雷/像素小人/guild-sprite-gray-rest-v87.png",
+      "portrait": "素材/人物/gray-格雷/头像/guild-portrait-gray-rest-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 5663,
+      "bounds": {
+        "x": 123,
+        "y": 52,
+        "width": 147,
+        "height": 307
+      }
+    },
+    {
+      "id": "gray",
+      "pose": "celebration",
+      "sprite": "素材/人物/gray-格雷/像素小人/guild-sprite-gray-celebration-v87.png",
+      "portrait": "素材/人物/gray-格雷/头像/guild-portrait-gray-celebration-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 7626,
+      "bounds": {
+        "x": 82,
+        "y": 40,
+        "width": 207,
+        "height": 285
+      }
+    },
+    {
+      "id": "wendy",
+      "pose": "return",
+      "sprite": "素材/人物/wendy-温蒂/像素小人/guild-sprite-wendy-return-v87.png",
+      "portrait": "素材/人物/wendy-温蒂/头像/guild-portrait-wendy-return-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 8057,
+      "bounds": {
+        "x": 36,
+        "y": 121,
+        "width": 241,
+        "height": 255
+      }
+    },
+    {
+      "id": "wendy",
+      "pose": "rest",
+      "sprite": "素材/人物/wendy-温蒂/像素小人/guild-sprite-wendy-rest-v87.png",
+      "portrait": "素材/人物/wendy-温蒂/头像/guild-portrait-wendy-rest-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 6682,
+      "bounds": {
+        "x": 48,
+        "y": 89,
+        "width": 222,
+        "height": 269
+      }
+    },
+    {
+      "id": "wendy",
+      "pose": "celebration",
+      "sprite": "素材/人物/wendy-温蒂/像素小人/guild-sprite-wendy-celebration-v87.png",
+      "portrait": "素材/人物/wendy-温蒂/头像/guild-portrait-wendy-celebration-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 10314,
+      "bounds": {
+        "x": 34,
+        "y": 72,
+        "width": 262,
+        "height": 251
+      }
+    },
+    {
+      "id": "laxus",
+      "pose": "return",
+      "sprite": "素材/人物/laxus-拉克萨斯/像素小人/guild-sprite-laxus-return-v87.png",
+      "portrait": "素材/人物/laxus-拉克萨斯/头像/guild-portrait-laxus-return-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 6421,
+      "bounds": {
+        "x": 73,
+        "y": 34,
+        "width": 224,
+        "height": 339
+      }
+    },
+    {
+      "id": "laxus",
+      "pose": "rest",
+      "sprite": "素材/人物/laxus-拉克萨斯/像素小人/guild-sprite-laxus-rest-v87.png",
+      "portrait": "素材/人物/laxus-拉克萨斯/头像/guild-portrait-laxus-rest-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 4921,
+      "bounds": {
+        "x": 87,
+        "y": 37,
+        "width": 207,
+        "height": 320
+      }
+    },
+    {
+      "id": "laxus",
+      "pose": "celebration",
+      "sprite": "素材/人物/laxus-拉克萨斯/像素小人/guild-sprite-laxus-celebration-v87.png",
+      "portrait": "素材/人物/laxus-拉克萨斯/头像/guild-portrait-laxus-celebration-v87.png",
+      "source": "exec-90288c5d-2448-4971-aede-53cbd9a3deeb.png",
+      "lowAlphaRemoved": 7651,
+      "bounds": {
+        "x": 54,
+        "y": 28,
+        "width": 274,
+        "height": 299
+      }
+    },
+    {
+      "id": "levy",
+      "pose": "return",
+      "sprite": "素材/人物/levy-蕾比/像素小人/guild-sprite-levy-return-v87.png",
+      "portrait": "素材/人物/levy-蕾比/头像/guild-portrait-levy-return-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 7022,
+      "bounds": {
+        "x": 107,
+        "y": 40,
+        "width": 154,
+        "height": 335
+      }
+    },
+    {
+      "id": "levy",
+      "pose": "rest",
+      "sprite": "素材/人物/levy-蕾比/像素小人/guild-sprite-levy-rest-v87.png",
+      "portrait": "素材/人物/levy-蕾比/头像/guild-portrait-levy-rest-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 6286,
+      "bounds": {
+        "x": 128,
+        "y": 44,
+        "width": 119,
+        "height": 319
+      }
+    },
+    {
+      "id": "levy",
+      "pose": "celebration",
+      "sprite": "素材/人物/levy-蕾比/像素小人/guild-sprite-levy-celebration-v87.png",
+      "portrait": "素材/人物/levy-蕾比/头像/guild-portrait-levy-celebration-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 6767,
+      "bounds": {
+        "x": 114,
+        "y": 31,
+        "width": 142,
+        "height": 308
+      }
+    },
+    {
+      "id": "gajeel",
+      "pose": "return",
+      "sprite": "素材/人物/gajeel-加吉鲁/像素小人/guild-sprite-gajeel-return-v87.png",
+      "portrait": "素材/人物/gajeel-加吉鲁/头像/guild-portrait-gajeel-return-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 6835,
+      "bounds": {
+        "x": 78,
+        "y": 17,
+        "width": 207,
+        "height": 358
+      }
+    },
+    {
+      "id": "gajeel",
+      "pose": "rest",
+      "sprite": "素材/人物/gajeel-加吉鲁/像素小人/guild-sprite-gajeel-rest-v87.png",
+      "portrait": "素材/人物/gajeel-加吉鲁/头像/guild-portrait-gajeel-rest-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 7088,
+      "bounds": {
+        "x": 86,
+        "y": 19,
+        "width": 180,
+        "height": 347
+      }
+    },
+    {
+      "id": "gajeel",
+      "pose": "celebration",
+      "sprite": "素材/人物/gajeel-加吉鲁/像素小人/guild-sprite-gajeel-celebration-v87.png",
+      "portrait": "素材/人物/gajeel-加吉鲁/头像/guild-portrait-gajeel-celebration-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 10369,
+      "bounds": {
+        "x": 76,
+        "y": 18,
+        "width": 219,
+        "height": 317
+      }
+    },
+    {
+      "id": "mirajane",
+      "pose": "return",
+      "sprite": "素材/人物/mirajane-米拉/像素小人/guild-sprite-mirajane-return-v87.png",
+      "portrait": "素材/人物/mirajane-米拉/头像/guild-portrait-mirajane-return-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 8113,
+      "bounds": {
+        "x": 97,
+        "y": 40,
+        "width": 171,
+        "height": 335
+      }
+    },
+    {
+      "id": "mirajane",
+      "pose": "rest",
+      "sprite": "素材/人物/mirajane-米拉/像素小人/guild-sprite-mirajane-rest-v87.png",
+      "portrait": "素材/人物/mirajane-米拉/头像/guild-portrait-mirajane-rest-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 7472,
+      "bounds": {
+        "x": 96,
+        "y": 22,
+        "width": 166,
+        "height": 347
+      }
+    },
+    {
+      "id": "mirajane",
+      "pose": "celebration",
+      "sprite": "素材/人物/mirajane-米拉/像素小人/guild-sprite-mirajane-celebration-v87.png",
+      "portrait": "素材/人物/mirajane-米拉/头像/guild-portrait-mirajane-celebration-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 9634,
+      "bounds": {
+        "x": 79,
+        "y": 22,
+        "width": 233,
+        "height": 311
+      }
+    },
+    {
+      "id": "juvia",
+      "pose": "return",
+      "sprite": "素材/人物/juvia-朱毕亚/像素小人/guild-sprite-juvia-return-v87.png",
+      "portrait": "素材/人物/juvia-朱毕亚/头像/guild-portrait-juvia-return-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 7390,
+      "bounds": {
+        "x": 86,
+        "y": 44,
+        "width": 188,
+        "height": 334
+      }
+    },
+    {
+      "id": "juvia",
+      "pose": "rest",
+      "sprite": "素材/人物/juvia-朱毕亚/像素小人/guild-sprite-juvia-rest-v87.png",
+      "portrait": "素材/人物/juvia-朱毕亚/头像/guild-portrait-juvia-rest-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 5472,
+      "bounds": {
+        "x": 123,
+        "y": 44,
+        "width": 143,
+        "height": 321
+      }
+    },
+    {
+      "id": "juvia",
+      "pose": "celebration",
+      "sprite": "素材/人物/juvia-朱毕亚/像素小人/guild-sprite-juvia-celebration-v87.png",
+      "portrait": "素材/人物/juvia-朱毕亚/头像/guild-portrait-juvia-celebration-v87.png",
+      "source": "exec-9efbdccd-0402-4d4f-834e-3131423fef58.png",
+      "lowAlphaRemoved": 6703,
+      "bounds": {
+        "x": 116,
+        "y": 26,
+        "width": 158,
+        "height": 308
+      }
+    },
+    {
+      "id": "cana",
+      "pose": "return",
+      "sprite": "素材/人物/cana-卡娜/像素小人/guild-sprite-cana-return-v87.png",
+      "portrait": "素材/人物/cana-卡娜/头像/guild-portrait-cana-return-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 3131,
+      "bounds": {
+        "x": 139,
+        "y": 102,
+        "width": 149,
+        "height": 237
+      }
+    },
+    {
+      "id": "cana",
+      "pose": "rest",
+      "sprite": "素材/人物/cana-卡娜/像素小人/guild-sprite-cana-rest-v87.png",
+      "portrait": "素材/人物/cana-卡娜/头像/guild-portrait-cana-rest-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 2351,
+      "bounds": {
+        "x": 140,
+        "y": 120,
+        "width": 189,
+        "height": 184
+      }
+    },
+    {
+      "id": "cana",
+      "pose": "celebration",
+      "sprite": "素材/人物/cana-卡娜/像素小人/guild-sprite-cana-celebration-v87.png",
+      "portrait": "素材/人物/cana-卡娜/头像/guild-portrait-cana-celebration-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 3328,
+      "bounds": {
+        "x": 145,
+        "y": 54,
+        "width": 166,
+        "height": 225
+      }
+    },
+    {
+      "id": "elfman",
+      "pose": "return",
+      "sprite": "素材/人物/elfman-艾尔夫曼/像素小人/guild-sprite-elfman-return-v87.png",
+      "portrait": "素材/人物/elfman-艾尔夫曼/头像/guild-portrait-elfman-return-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 4645,
+      "bounds": {
+        "x": 118,
+        "y": 80,
+        "width": 187,
+        "height": 259
+      }
+    },
+    {
+      "id": "elfman",
+      "pose": "rest",
+      "sprite": "素材/人物/elfman-艾尔夫曼/像素小人/guild-sprite-elfman-rest-v87.png",
+      "portrait": "素材/人物/elfman-艾尔夫曼/头像/guild-portrait-elfman-rest-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 3121,
+      "bounds": {
+        "x": 125,
+        "y": 109,
+        "width": 180,
+        "height": 200
+      }
+    },
+    {
+      "id": "elfman",
+      "pose": "celebration",
+      "sprite": "素材/人物/elfman-艾尔夫曼/像素小人/guild-sprite-elfman-celebration-v87.png",
+      "portrait": "素材/人物/elfman-艾尔夫曼/头像/guild-portrait-elfman-celebration-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 5537,
+      "bounds": {
+        "x": 119,
+        "y": 55,
+        "width": 193,
+        "height": 224
+      }
+    },
+    {
+      "id": "lily",
+      "pose": "return",
+      "sprite": "素材/人物/lily-利利/像素小人/guild-sprite-lily-return-v87.png",
+      "portrait": "素材/人物/lily-利利/头像/guild-portrait-lily-return-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 2889,
+      "bounds": {
+        "x": 117,
+        "y": 149,
+        "width": 154,
+        "height": 189
+      }
+    },
+    {
+      "id": "lily",
+      "pose": "rest",
+      "sprite": "素材/人物/lily-利利/像素小人/guild-sprite-lily-rest-v87.png",
+      "portrait": "素材/人物/lily-利利/头像/guild-portrait-lily-rest-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 2650,
+      "bounds": {
+        "x": 134,
+        "y": 150,
+        "width": 153,
+        "height": 158
+      }
+    },
+    {
+      "id": "lily",
+      "pose": "celebration",
+      "sprite": "素材/人物/lily-利利/像素小人/guild-sprite-lily-celebration-v87.png",
+      "portrait": "素材/人物/lily-利利/头像/guild-portrait-lily-celebration-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 3229,
+      "bounds": {
+        "x": 119,
+        "y": 81,
+        "width": 180,
+        "height": 199
+      }
+    },
+    {
+      "id": "carla",
+      "pose": "return",
+      "sprite": "素材/人物/carla-夏露露/像素小人/guild-sprite-carla-return-v87.png",
+      "portrait": "素材/人物/carla-夏露露/头像/guild-portrait-carla-return-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 3125,
+      "bounds": {
+        "x": 110,
+        "y": 178,
+        "width": 145,
+        "height": 160
+      }
+    },
+    {
+      "id": "carla",
+      "pose": "rest",
+      "sprite": "素材/人物/carla-夏露露/像素小人/guild-sprite-carla-rest-v87.png",
+      "portrait": "素材/人物/carla-夏露露/头像/guild-portrait-carla-rest-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 3828,
+      "bounds": {
+        "x": 121,
+        "y": 170,
+        "width": 137,
+        "height": 139
+      }
+    },
+    {
+      "id": "carla",
+      "pose": "celebration",
+      "sprite": "素材/人物/carla-夏露露/像素小人/guild-sprite-carla-celebration-v87.png",
+      "portrait": "素材/人物/carla-夏露露/头像/guild-portrait-carla-celebration-v87.png",
+      "source": "exec-2bcd4ac8-cebd-40a3-a842-61f454b76d45.png",
+      "lowAlphaRemoved": 3680,
+      "bounds": {
+        "x": 109,
+        "y": 112,
+        "width": 148,
+        "height": 162
+      }
+    },
+    {
+      "id": "makarov",
+      "pose": "return",
+      "sprite": "素材/人物/makarov-马卡洛夫/像素小人/guild-sprite-makarov-return-v87.png",
+      "portrait": "素材/人物/makarov-马卡洛夫/头像/guild-portrait-makarov-return-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 2307,
+      "bounds": {
+        "x": 135,
+        "y": 182,
+        "width": 107,
+        "height": 144
+      }
+    },
+    {
+      "id": "makarov",
+      "pose": "rest",
+      "sprite": "素材/人物/makarov-马卡洛夫/像素小人/guild-sprite-makarov-rest-v87.png",
+      "portrait": "素材/人物/makarov-马卡洛夫/头像/guild-portrait-makarov-rest-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 2868,
+      "bounds": {
+        "x": 153,
+        "y": 164,
+        "width": 86,
+        "height": 147
+      }
+    },
+    {
+      "id": "makarov",
+      "pose": "celebration",
+      "sprite": "素材/人物/makarov-马卡洛夫/像素小人/guild-sprite-makarov-celebration-v87.png",
+      "portrait": "素材/人物/makarov-马卡洛夫/头像/guild-portrait-makarov-celebration-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 2895,
+      "bounds": {
+        "x": 124,
+        "y": 114,
+        "width": 144,
+        "height": 172
+      }
+    },
+    {
+      "id": "freed",
+      "pose": "return",
+      "sprite": "素材/人物/freed-菲利德/像素小人/guild-sprite-freed-return-v87.png",
+      "portrait": "素材/人物/freed-菲利德/头像/guild-portrait-freed-return-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 6028,
+      "bounds": {
+        "x": 126,
+        "y": 80,
+        "width": 133,
+        "height": 249
+      }
+    },
+    {
+      "id": "freed",
+      "pose": "rest",
+      "sprite": "素材/人物/freed-菲利德/像素小人/guild-sprite-freed-rest-v87.png",
+      "portrait": "素材/人物/freed-菲利德/头像/guild-portrait-freed-rest-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 4943,
+      "bounds": {
+        "x": 126,
+        "y": 58,
+        "width": 141,
+        "height": 253
+      }
+    },
+    {
+      "id": "freed",
+      "pose": "celebration",
+      "sprite": "素材/人物/freed-菲利德/像素小人/guild-sprite-freed-celebration-v87.png",
+      "portrait": "素材/人物/freed-菲利德/头像/guild-portrait-freed-celebration-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 6538,
+      "bounds": {
+        "x": 118,
+        "y": 29,
+        "width": 176,
+        "height": 260
+      }
+    },
+    {
+      "id": "bickslow",
+      "pose": "return",
+      "sprite": "素材/人物/bickslow-毕可斯罗/像素小人/guild-sprite-bickslow-return-v87.png",
+      "portrait": "素材/人物/bickslow-毕可斯罗/头像/guild-portrait-bickslow-return-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 5549,
+      "bounds": {
+        "x": 101,
+        "y": 96,
+        "width": 178,
+        "height": 233
+      }
+    },
+    {
+      "id": "bickslow",
+      "pose": "rest",
+      "sprite": "素材/人物/bickslow-毕可斯罗/像素小人/guild-sprite-bickslow-rest-v87.png",
+      "portrait": "素材/人物/bickslow-毕可斯罗/头像/guild-portrait-bickslow-rest-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 5343,
+      "bounds": {
+        "x": 126,
+        "y": 75,
+        "width": 161,
+        "height": 236
+      }
+    },
+    {
+      "id": "bickslow",
+      "pose": "celebration",
+      "sprite": "素材/人物/bickslow-毕可斯罗/像素小人/guild-sprite-bickslow-celebration-v87.png",
+      "portrait": "素材/人物/bickslow-毕可斯罗/头像/guild-portrait-bickslow-celebration-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 6117,
+      "bounds": {
+        "x": 107,
+        "y": 54,
+        "width": 198,
+        "height": 242
+      }
+    },
+    {
+      "id": "evergreen",
+      "pose": "return",
+      "sprite": "素材/人物/evergreen-艾芭葛琳/像素小人/guild-sprite-evergreen-return-v87.png",
+      "portrait": "素材/人物/evergreen-艾芭葛琳/头像/guild-portrait-evergreen-return-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 3705,
+      "bounds": {
+        "x": 102,
+        "y": 106,
+        "width": 172,
+        "height": 224
+      }
+    },
+    {
+      "id": "evergreen",
+      "pose": "rest",
+      "sprite": "素材/人物/evergreen-艾芭葛琳/像素小人/guild-sprite-evergreen-rest-v87.png",
+      "portrait": "素材/人物/evergreen-艾芭葛琳/头像/guild-portrait-evergreen-rest-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 3144,
+      "bounds": {
+        "x": 104,
+        "y": 83,
+        "width": 139,
+        "height": 229
+      }
+    },
+    {
+      "id": "evergreen",
+      "pose": "celebration",
+      "sprite": "素材/人物/evergreen-艾芭葛琳/像素小人/guild-sprite-evergreen-celebration-v87.png",
+      "portrait": "素材/人物/evergreen-艾芭葛琳/头像/guild-portrait-evergreen-celebration-v87.png",
+      "source": "exec-d227dcb4-6188-483b-ad00-68b302095f83.png",
+      "lowAlphaRemoved": 5763,
+      "bounds": {
+        "x": 82,
+        "y": 47,
+        "width": 195,
+        "height": 248
+      }
+    },
+    {
+      "id": "gildarts",
+      "pose": "return",
+      "sprite": "素材/人物/gildarts-吉尔达兹/像素小人/guild-sprite-gildarts-return-v87.png",
+      "portrait": "素材/人物/gildarts-吉尔达兹/头像/guild-portrait-gildarts-return-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 7827,
+      "bounds": {
+        "x": 53,
+        "y": 57,
+        "width": 229,
+        "height": 327
+      }
+    },
+    {
+      "id": "gildarts",
+      "pose": "rest",
+      "sprite": "素材/人物/gildarts-吉尔达兹/像素小人/guild-sprite-gildarts-rest-v87.png",
+      "portrait": "素材/人物/gildarts-吉尔达兹/头像/guild-portrait-gildarts-rest-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 5919,
+      "bounds": {
+        "x": 34,
+        "y": 72,
+        "width": 296,
+        "height": 237
+      }
+    },
+    {
+      "id": "gildarts",
+      "pose": "celebration",
+      "sprite": "素材/人物/gildarts-吉尔达兹/像素小人/guild-sprite-gildarts-celebration-v87.png",
+      "portrait": "素材/人物/gildarts-吉尔达兹/头像/guild-portrait-gildarts-celebration-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 9659,
+      "bounds": {
+        "x": 34,
+        "y": 6,
+        "width": 270,
+        "height": 319
+      }
+    },
+    {
+      "id": "mystogan",
+      "pose": "return",
+      "sprite": "素材/人物/mystogan-密斯特岗/像素小人/guild-sprite-mystogan-return-v87.png",
+      "portrait": "素材/人物/mystogan-密斯特岗/头像/guild-portrait-mystogan-return-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 7750,
+      "bounds": {
+        "x": 51,
+        "y": 95,
+        "width": 234,
+        "height": 289
+      }
+    },
+    {
+      "id": "mystogan",
+      "pose": "rest",
+      "sprite": "素材/人物/mystogan-密斯特岗/像素小人/guild-sprite-mystogan-rest-v87.png",
+      "portrait": "素材/人物/mystogan-密斯特岗/头像/guild-portrait-mystogan-rest-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 6301,
+      "bounds": {
+        "x": 61,
+        "y": 108,
+        "width": 273,
+        "height": 196
+      }
+    },
+    {
+      "id": "mystogan",
+      "pose": "celebration",
+      "sprite": "素材/人物/mystogan-密斯特岗/像素小人/guild-sprite-mystogan-celebration-v87.png",
+      "portrait": "素材/人物/mystogan-密斯特岗/头像/guild-portrait-mystogan-celebration-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 11341,
+      "bounds": {
+        "x": 52,
+        "y": 6,
+        "width": 283,
+        "height": 319
+      }
+    },
+    {
+      "id": "loke",
+      "pose": "return",
+      "sprite": "素材/人物/loke-洛基/像素小人/guild-sprite-loke-return-v87.png",
+      "portrait": "素材/人物/loke-洛基/头像/guild-portrait-loke-return-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 7263,
+      "bounds": {
+        "x": 130,
+        "y": 86,
+        "width": 151,
+        "height": 301
+      }
+    },
+    {
+      "id": "loke",
+      "pose": "rest",
+      "sprite": "素材/人物/loke-洛基/像素小人/guild-sprite-loke-rest-v87.png",
+      "portrait": "素材/人物/loke-洛基/头像/guild-portrait-loke-rest-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 5714,
+      "bounds": {
+        "x": 83,
+        "y": 104,
+        "width": 255,
+        "height": 202
+      }
+    },
+    {
+      "id": "loke",
+      "pose": "celebration",
+      "sprite": "素材/人物/loke-洛基/像素小人/guild-sprite-loke-celebration-v87.png",
+      "portrait": "素材/人物/loke-洛基/头像/guild-portrait-loke-celebration-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 8799,
+      "bounds": {
+        "x": 106,
+        "y": 33,
+        "width": 185,
+        "height": 294
+      }
+    },
+    {
+      "id": "jellal",
+      "pose": "return",
+      "sprite": "素材/人物/jellal-杰拉尔/像素小人/guild-sprite-jellal-return-v87.png",
+      "portrait": "素材/人物/jellal-杰拉尔/头像/guild-portrait-jellal-return-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 8108,
+      "bounds": {
+        "x": 109,
+        "y": 85,
+        "width": 157,
+        "height": 302
+      }
+    },
+    {
+      "id": "jellal",
+      "pose": "rest",
+      "sprite": "素材/人物/jellal-杰拉尔/像素小人/guild-sprite-jellal-rest-v87.png",
+      "portrait": "素材/人物/jellal-杰拉尔/头像/guild-portrait-jellal-rest-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 5408,
+      "bounds": {
+        "x": 91,
+        "y": 80,
+        "width": 239,
+        "height": 228
+      }
+    },
+    {
+      "id": "jellal",
+      "pose": "celebration",
+      "sprite": "素材/人物/jellal-杰拉尔/像素小人/guild-sprite-jellal-celebration-v87.png",
+      "portrait": "素材/人物/jellal-杰拉尔/头像/guild-portrait-jellal-celebration-v87.png",
+      "source": "exec-9b46abee-130a-443a-bae7-15d5eb2f49ea.png",
+      "lowAlphaRemoved": 8662,
+      "bounds": {
+        "x": 109,
+        "y": 14,
+        "width": 205,
+        "height": 313
+      }
+    },
+    {
+      "id": "macao",
+      "pose": "return",
+      "sprite": "素材/人物/macao-马卡欧/像素小人/guild-sprite-macao-return-v87.png",
+      "portrait": "素材/人物/macao-马卡欧/头像/guild-portrait-macao-return-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 6259,
+      "bounds": {
+        "x": 92,
+        "y": 46,
+        "width": 189,
+        "height": 298
+      }
+    },
+    {
+      "id": "macao",
+      "pose": "rest",
+      "sprite": "素材/人物/macao-马卡欧/像素小人/guild-sprite-macao-rest-v87.png",
+      "portrait": "素材/人物/macao-马卡欧/头像/guild-portrait-macao-rest-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 7318,
+      "bounds": {
+        "x": 109,
+        "y": 35,
+        "width": 162,
+        "height": 297
+      }
+    },
+    {
+      "id": "macao",
+      "pose": "celebration",
+      "sprite": "素材/人物/macao-马卡欧/像素小人/guild-sprite-macao-celebration-v87.png",
+      "portrait": "素材/人物/macao-马卡欧/头像/guild-portrait-macao-celebration-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 10048,
+      "bounds": {
+        "x": 48,
+        "y": 8,
+        "width": 273,
+        "height": 302
+      }
+    },
+    {
+      "id": "wakaba",
+      "pose": "return",
+      "sprite": "素材/人物/wakaba-瓦卡巴/像素小人/guild-sprite-wakaba-return-v87.png",
+      "portrait": "素材/人物/wakaba-瓦卡巴/头像/guild-portrait-wakaba-return-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 7016,
+      "bounds": {
+        "x": 104,
+        "y": 37,
+        "width": 199,
+        "height": 316
+      }
+    },
+    {
+      "id": "wakaba",
+      "pose": "rest",
+      "sprite": "素材/人物/wakaba-瓦卡巴/像素小人/guild-sprite-wakaba-rest-v87.png",
+      "portrait": "素材/人物/wakaba-瓦卡巴/头像/guild-portrait-wakaba-rest-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 7352,
+      "bounds": {
+        "x": 104,
+        "y": 20,
+        "width": 186,
+        "height": 305
+      }
+    },
+    {
+      "id": "wakaba",
+      "pose": "celebration",
+      "sprite": "素材/人物/wakaba-瓦卡巴/像素小人/guild-sprite-wakaba-celebration-v87.png",
+      "portrait": "素材/人物/wakaba-瓦卡巴/头像/guild-portrait-wakaba-celebration-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 10688,
+      "bounds": {
+        "x": 63,
+        "y": 8,
+        "width": 272,
+        "height": 308
+      }
+    },
+    {
+      "id": "laki",
+      "pose": "return",
+      "sprite": "素材/人物/laki-拉奇/像素小人/guild-sprite-laki-return-v87.png",
+      "portrait": "素材/人物/laki-拉奇/头像/guild-portrait-laki-return-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 6363,
+      "bounds": {
+        "x": 78,
+        "y": 78,
+        "width": 208,
+        "height": 275
+      }
+    },
+    {
+      "id": "laki",
+      "pose": "rest",
+      "sprite": "素材/人物/laki-拉奇/像素小人/guild-sprite-laki-rest-v87.png",
+      "portrait": "素材/人物/laki-拉奇/头像/guild-portrait-laki-rest-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 5868,
+      "bounds": {
+        "x": 126,
+        "y": 49,
+        "width": 145,
+        "height": 277
+      }
+    },
+    {
+      "id": "laki",
+      "pose": "celebration",
+      "sprite": "素材/人物/laki-拉奇/像素小人/guild-sprite-laki-celebration-v87.png",
+      "portrait": "素材/人物/laki-拉奇/头像/guild-portrait-laki-celebration-v87.png",
+      "source": "exec-4610dc3d-b64b-470d-a293-6cdd5235cb0b.png",
+      "lowAlphaRemoved": 8653,
+      "bounds": {
+        "x": 78,
+        "y": 18,
+        "width": 227,
+        "height": 300
+      }
+    },
+    {
+      "id": "jet",
+      "pose": "return",
+      "sprite": "素材/人物/jet-杰特/像素小人/guild-sprite-jet-return-v87.png",
+      "portrait": "素材/人物/jet-杰特/头像/guild-portrait-jet-return-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 7849,
+      "bounds": {
+        "x": 70,
+        "y": 24,
+        "width": 190,
+        "height": 338
+      }
+    },
+    {
+      "id": "jet",
+      "pose": "rest",
+      "sprite": "素材/人物/jet-杰特/像素小人/guild-sprite-jet-rest-v87.png",
+      "portrait": "素材/人物/jet-杰特/头像/guild-portrait-jet-rest-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 7147,
+      "bounds": {
+        "x": 49,
+        "y": 69,
+        "width": 259,
+        "height": 279
+      }
+    },
+    {
+      "id": "jet",
+      "pose": "celebration",
+      "sprite": "素材/人物/jet-杰特/像素小人/guild-sprite-jet-celebration-v87.png",
+      "portrait": "素材/人物/jet-杰特/头像/guild-portrait-jet-celebration-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 9460,
+      "bounds": {
+        "x": 79,
+        "y": 12,
+        "width": 237,
+        "height": 336
+      }
+    },
+    {
+      "id": "droy",
+      "pose": "return",
+      "sprite": "素材/人物/droy-德洛伊/像素小人/guild-sprite-droy-return-v87.png",
+      "portrait": "素材/人物/droy-德洛伊/头像/guild-portrait-droy-return-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 6404,
+      "bounds": {
+        "x": 120,
+        "y": 49,
+        "width": 169,
+        "height": 313
+      }
+    },
+    {
+      "id": "droy",
+      "pose": "rest",
+      "sprite": "素材/人物/droy-德洛伊/像素小人/guild-sprite-droy-rest-v87.png",
+      "portrait": "素材/人物/droy-德洛伊/头像/guild-portrait-droy-rest-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 6618,
+      "bounds": {
+        "x": 113,
+        "y": 100,
+        "width": 168,
+        "height": 245
+      }
+    },
+    {
+      "id": "droy",
+      "pose": "celebration",
+      "sprite": "素材/人物/droy-德洛伊/像素小人/guild-sprite-droy-celebration-v87.png",
+      "portrait": "素材/人物/droy-德洛伊/头像/guild-portrait-droy-celebration-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 7532,
+      "bounds": {
+        "x": 96,
+        "y": 45,
+        "width": 207,
+        "height": 293
+      }
+    },
+    {
+      "id": "alzack",
+      "pose": "return",
+      "sprite": "素材/人物/alzack-阿尔札克/像素小人/guild-sprite-alzack-return-v87.png",
+      "portrait": "素材/人物/alzack-阿尔札克/头像/guild-portrait-alzack-return-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 6454,
+      "bounds": {
+        "x": 93,
+        "y": 49,
+        "width": 196,
+        "height": 313
+      }
+    },
+    {
+      "id": "alzack",
+      "pose": "rest",
+      "sprite": "素材/人物/alzack-阿尔札克/像素小人/guild-sprite-alzack-rest-v87.png",
+      "portrait": "素材/人物/alzack-阿尔札克/头像/guild-portrait-alzack-rest-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 8714,
+      "bounds": {
+        "x": 84,
+        "y": 100,
+        "width": 250,
+        "height": 250
+      }
+    },
+    {
+      "id": "alzack",
+      "pose": "celebration",
+      "sprite": "素材/人物/alzack-阿尔札克/像素小人/guild-sprite-alzack-celebration-v87.png",
+      "portrait": "素材/人物/alzack-阿尔札克/头像/guild-portrait-alzack-celebration-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 8433,
+      "bounds": {
+        "x": 91,
+        "y": 2,
+        "width": 215,
+        "height": 350
+      }
+    },
+    {
+      "id": "bisca",
+      "pose": "return",
+      "sprite": "素材/人物/bisca-比丝卡/像素小人/guild-sprite-bisca-return-v87.png",
+      "portrait": "素材/人物/bisca-比丝卡/头像/guild-portrait-bisca-return-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 7704,
+      "bounds": {
+        "x": 100,
+        "y": 50,
+        "width": 197,
+        "height": 312
+      }
+    },
+    {
+      "id": "bisca",
+      "pose": "rest",
+      "sprite": "素材/人物/bisca-比丝卡/像素小人/guild-sprite-bisca-rest-v87.png",
+      "portrait": "素材/人物/bisca-比丝卡/头像/guild-portrait-bisca-rest-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 6343,
+      "bounds": {
+        "x": 73,
+        "y": 92,
+        "width": 242,
+        "height": 258
+      }
+    },
+    {
+      "id": "bisca",
+      "pose": "celebration",
+      "sprite": "素材/人物/bisca-比丝卡/像素小人/guild-sprite-bisca-celebration-v87.png",
+      "portrait": "素材/人物/bisca-比丝卡/头像/guild-portrait-bisca-celebration-v87.png",
+      "source": "exec-17d49f76-4022-47cf-aaa5-2751e99e8556.png",
+      "lowAlphaRemoved": 8507,
+      "bounds": {
+        "x": 77,
+        "y": 2,
+        "width": 214,
+        "height": 360
+      }
+    },
+    {
+      "id": "romeo",
+      "pose": "return",
+      "sprite": "素材/人物/romeo-罗密欧/像素小人/guild-sprite-romeo-return-v87.png",
+      "portrait": "素材/人物/romeo-罗密欧/头像/guild-portrait-romeo-return-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 7066,
+      "bounds": {
+        "x": 81,
+        "y": 126,
+        "width": 218,
+        "height": 277
+      }
+    },
+    {
+      "id": "romeo",
+      "pose": "rest",
+      "sprite": "素材/人物/romeo-罗密欧/像素小人/guild-sprite-romeo-rest-v87.png",
+      "portrait": "素材/人物/romeo-罗密欧/头像/guild-portrait-romeo-rest-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 5405,
+      "bounds": {
+        "x": 70,
+        "y": 99,
+        "width": 208,
+        "height": 227
+      }
+    },
+    {
+      "id": "romeo",
+      "pose": "celebration",
+      "sprite": "素材/人物/romeo-罗密欧/像素小人/guild-sprite-romeo-celebration-v87.png",
+      "portrait": "素材/人物/romeo-罗密欧/头像/guild-portrait-romeo-celebration-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 6692,
+      "bounds": {
+        "x": 81,
+        "y": 53,
+        "width": 218,
+        "height": 277
+      }
+    },
+    {
+      "id": "warren",
+      "pose": "return",
+      "sprite": "素材/人物/warren-沃伦/像素小人/guild-sprite-warren-return-v87.png",
+      "portrait": "素材/人物/warren-沃伦/头像/guild-portrait-warren-return-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 7399,
+      "bounds": {
+        "x": 66,
+        "y": 74,
+        "width": 229,
+        "height": 330
+      }
+    },
+    {
+      "id": "warren",
+      "pose": "rest",
+      "sprite": "素材/人物/warren-沃伦/像素小人/guild-sprite-warren-rest-v87.png",
+      "portrait": "素材/人物/warren-沃伦/头像/guild-portrait-warren-rest-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 4948,
+      "bounds": {
+        "x": 78,
+        "y": 65,
+        "width": 234,
+        "height": 255
+      }
+    },
+    {
+      "id": "warren",
+      "pose": "celebration",
+      "sprite": "素材/人物/warren-沃伦/像素小人/guild-sprite-warren-celebration-v87.png",
+      "portrait": "素材/人物/warren-沃伦/头像/guild-portrait-warren-celebration-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 9294,
+      "bounds": {
+        "x": 94,
+        "y": 36,
+        "width": 213,
+        "height": 300
+      }
+    },
+    {
+      "id": "max",
+      "pose": "return",
+      "sprite": "素材/人物/max-马克斯/像素小人/guild-sprite-max-return-v87.png",
+      "portrait": "素材/人物/max-马克斯/头像/guild-portrait-max-return-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 5784,
+      "bounds": {
+        "x": 71,
+        "y": 117,
+        "width": 172,
+        "height": 287
+      }
+    },
+    {
+      "id": "max",
+      "pose": "rest",
+      "sprite": "素材/人物/max-马克斯/像素小人/guild-sprite-max-rest-v87.png",
+      "portrait": "素材/人物/max-马克斯/头像/guild-portrait-max-rest-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 4812,
+      "bounds": {
+        "x": 82,
+        "y": 90,
+        "width": 193,
+        "height": 235
+      }
+    },
+    {
+      "id": "max",
+      "pose": "celebration",
+      "sprite": "素材/人物/max-马克斯/像素小人/guild-sprite-max-celebration-v87.png",
+      "portrait": "素材/人物/max-马克斯/头像/guild-portrait-max-celebration-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 6115,
+      "bounds": {
+        "x": 82,
+        "y": 52,
+        "width": 196,
+        "height": 281
+      }
+    },
+    {
+      "id": "reedus",
+      "pose": "return",
+      "sprite": "素材/人物/reedus-里达素/像素小人/guild-sprite-reedus-return-v87.png",
+      "portrait": "素材/人物/reedus-里达素/头像/guild-portrait-reedus-return-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 9818,
+      "bounds": {
+        "x": 33,
+        "y": 32,
+        "width": 287,
+        "height": 371
+      }
+    },
+    {
+      "id": "reedus",
+      "pose": "rest",
+      "sprite": "素材/人物/reedus-里达素/像素小人/guild-sprite-reedus-rest-v87.png",
+      "portrait": "素材/人物/reedus-里达素/头像/guild-portrait-reedus-rest-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 7837,
+      "bounds": {
+        "x": 42,
+        "y": 18,
+        "width": 259,
+        "height": 308
+      }
+    },
+    {
+      "id": "reedus",
+      "pose": "celebration",
+      "sprite": "素材/人物/reedus-里达素/像素小人/guild-sprite-reedus-celebration-v87.png",
+      "portrait": "素材/人物/reedus-里达素/头像/guild-portrait-reedus-celebration-v87.png",
+      "source": "exec-d163052e-d692-41a0-926d-8d6164993aa0.png",
+      "lowAlphaRemoved": 10795,
+      "bounds": {
+        "x": 32,
+        "y": 16,
+        "width": 305,
+        "height": 317
+      }
+    },
+    {
+      "id": "mest",
+      "pose": "return",
+      "sprite": "素材/人物/mest-梅斯特/像素小人/guild-sprite-mest-return-v87.png",
+      "portrait": "素材/人物/mest-梅斯特/头像/guild-portrait-mest-return-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 8460,
+      "bounds": {
+        "x": 87,
+        "y": 24,
+        "width": 243,
+        "height": 347
+      }
+    },
+    {
+      "id": "mest",
+      "pose": "rest",
+      "sprite": "素材/人物/mest-梅斯特/像素小人/guild-sprite-mest-rest-v87.png",
+      "portrait": "素材/人物/mest-梅斯特/头像/guild-portrait-mest-rest-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 8425,
+      "bounds": {
+        "x": 39,
+        "y": 30,
+        "width": 324,
+        "height": 296
+      }
+    },
+    {
+      "id": "mest",
+      "pose": "celebration",
+      "sprite": "素材/人物/mest-梅斯特/像素小人/guild-sprite-mest-celebration-v87.png",
+      "portrait": "素材/人物/mest-梅斯特/头像/guild-portrait-mest-celebration-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 8833,
+      "bounds": {
+        "x": 75,
+        "y": 4,
+        "width": 265,
+        "height": 334
+      }
+    },
+    {
+      "id": "kinana",
+      "pose": "return",
+      "sprite": "素材/人物/kinana-金卡/像素小人/guild-sprite-kinana-return-v87.png",
+      "portrait": "素材/人物/kinana-金卡/头像/guild-portrait-kinana-return-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 5569,
+      "bounds": {
+        "x": 60,
+        "y": 35,
+        "width": 205,
+        "height": 333
+      }
+    },
+    {
+      "id": "kinana",
+      "pose": "rest",
+      "sprite": "素材/人物/kinana-金卡/像素小人/guild-sprite-kinana-rest-v87.png",
+      "portrait": "素材/人物/kinana-金卡/头像/guild-portrait-kinana-rest-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 7149,
+      "bounds": {
+        "x": 36,
+        "y": 51,
+        "width": 246,
+        "height": 286
+      }
+    },
+    {
+      "id": "kinana",
+      "pose": "celebration",
+      "sprite": "素材/人物/kinana-金卡/像素小人/guild-sprite-kinana-celebration-v87.png",
+      "portrait": "素材/人物/kinana-金卡/头像/guild-portrait-kinana-celebration-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 6760,
+      "bounds": {
+        "x": 41,
+        "y": 8,
+        "width": 220,
+        "height": 329
+      }
+    },
+    {
+      "id": "sting",
+      "pose": "return",
+      "sprite": "素材/人物/sting-斯汀/像素小人/guild-sprite-sting-return-v87.png",
+      "portrait": "素材/人物/sting-斯汀/头像/guild-portrait-sting-return-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 7585,
+      "bounds": {
+        "x": 85,
+        "y": 24,
+        "width": 192,
+        "height": 349
+      }
+    },
+    {
+      "id": "sting",
+      "pose": "rest",
+      "sprite": "素材/人物/sting-斯汀/像素小人/guild-sprite-sting-rest-v87.png",
+      "portrait": "素材/人物/sting-斯汀/头像/guild-portrait-sting-rest-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 8690,
+      "bounds": {
+        "x": 74,
+        "y": 27,
+        "width": 261,
+        "height": 301
+      }
+    },
+    {
+      "id": "sting",
+      "pose": "celebration",
+      "sprite": "素材/人物/sting-斯汀/像素小人/guild-sprite-sting-celebration-v87.png",
+      "portrait": "素材/人物/sting-斯汀/头像/guild-portrait-sting-celebration-v87.png",
+      "source": "exec-6db3fa4d-471f-4666-ae51-ca7804ab4ed7.png",
+      "lowAlphaRemoved": 9035,
+      "bounds": {
+        "x": 62,
+        "y": 2,
+        "width": 255,
+        "height": 340
+      }
+    },
+    {
+      "id": "yukino",
+      "pose": "return",
+      "sprite": "素材/人物/yukino-雪乃/像素小人/guild-sprite-yukino-return-v87.png",
+      "portrait": "素材/人物/yukino-雪乃/头像/guild-portrait-yukino-return-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 10621,
+      "bounds": {
+        "x": 122,
+        "y": 31,
+        "width": 168,
+        "height": 322
+      }
+    },
+    {
+      "id": "yukino",
+      "pose": "rest",
+      "sprite": "素材/人物/yukino-雪乃/像素小人/guild-sprite-yukino-rest-v87.png",
+      "portrait": "素材/人物/yukino-雪乃/头像/guild-portrait-yukino-rest-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 8789,
+      "bounds": {
+        "x": 128,
+        "y": 21,
+        "width": 151,
+        "height": 330
+      }
+    },
+    {
+      "id": "yukino",
+      "pose": "celebration",
+      "sprite": "素材/人物/yukino-雪乃/像素小人/guild-sprite-yukino-celebration-v87.png",
+      "portrait": "素材/人物/yukino-雪乃/头像/guild-portrait-yukino-celebration-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 16687,
+      "bounds": {
+        "x": 91,
+        "y": 16,
+        "width": 202,
+        "height": 333
+      }
+    },
+    {
+      "id": "minerva",
+      "pose": "return",
+      "sprite": "素材/人物/minerva-米涅芭/像素小人/guild-sprite-minerva-return-v87.png",
+      "portrait": "素材/人物/minerva-米涅芭/头像/guild-portrait-minerva-return-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 10851,
+      "bounds": {
+        "x": 59,
+        "y": 11,
+        "width": 240,
+        "height": 342
+      }
+    },
+    {
+      "id": "minerva",
+      "pose": "rest",
+      "sprite": "素材/人物/minerva-米涅芭/像素小人/guild-sprite-minerva-rest-v87.png",
+      "portrait": "素材/人物/minerva-米涅芭/头像/guild-portrait-minerva-rest-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 9452,
+      "bounds": {
+        "x": 73,
+        "y": 11,
+        "width": 236,
+        "height": 340
+      }
+    },
+    {
+      "id": "minerva",
+      "pose": "celebration",
+      "sprite": "素材/人物/minerva-米涅芭/像素小人/guild-sprite-minerva-celebration-v87.png",
+      "portrait": "素材/人物/minerva-米涅芭/头像/guild-portrait-minerva-celebration-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 14407,
+      "bounds": {
+        "x": 50,
+        "y": 2,
+        "width": 260,
+        "height": 347
+      }
+    },
+    {
+      "id": "ultear",
+      "pose": "return",
+      "sprite": "素材/人物/ultear-乌鲁蒂亚/像素小人/guild-sprite-ultear-return-v87.png",
+      "portrait": "素材/人物/ultear-乌鲁蒂亚/头像/guild-portrait-ultear-return-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 9521,
+      "bounds": {
+        "x": 80,
+        "y": 23,
+        "width": 205,
+        "height": 330
+      }
+    },
+    {
+      "id": "ultear",
+      "pose": "rest",
+      "sprite": "素材/人物/ultear-乌鲁蒂亚/像素小人/guild-sprite-ultear-rest-v87.png",
+      "portrait": "素材/人物/ultear-乌鲁蒂亚/头像/guild-portrait-ultear-rest-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 7245,
+      "bounds": {
+        "x": 68,
+        "y": 17,
+        "width": 206,
+        "height": 334
+      }
+    },
+    {
+      "id": "ultear",
+      "pose": "celebration",
+      "sprite": "素材/人物/ultear-乌鲁蒂亚/像素小人/guild-sprite-ultear-celebration-v87.png",
+      "portrait": "素材/人物/ultear-乌鲁蒂亚/头像/guild-portrait-ultear-celebration-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 16674,
+      "bounds": {
+        "x": 46,
+        "y": 9,
+        "width": 286,
+        "height": 340
+      }
+    },
+    {
+      "id": "meredy",
+      "pose": "return",
+      "sprite": "素材/人物/meredy-梅尔蒂/像素小人/guild-sprite-meredy-return-v87.png",
+      "portrait": "素材/人物/meredy-梅尔蒂/头像/guild-portrait-meredy-return-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 8181,
+      "bounds": {
+        "x": 49,
+        "y": 31,
+        "width": 232,
+        "height": 322
+      }
+    },
+    {
+      "id": "meredy",
+      "pose": "rest",
+      "sprite": "素材/人物/meredy-梅尔蒂/像素小人/guild-sprite-meredy-rest-v87.png",
+      "portrait": "素材/人物/meredy-梅尔蒂/头像/guild-portrait-meredy-rest-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 8488,
+      "bounds": {
+        "x": 66,
+        "y": 14,
+        "width": 226,
+        "height": 337
+      }
+    },
+    {
+      "id": "meredy",
+      "pose": "celebration",
+      "sprite": "素材/人物/meredy-梅尔蒂/像素小人/guild-sprite-meredy-celebration-v87.png",
+      "portrait": "素材/人物/meredy-梅尔蒂/头像/guild-portrait-meredy-celebration-v87.png",
+      "source": "exec-5c130aad-beb8-4452-8fca-c8c8627382ba.png",
+      "lowAlphaRemoved": 13481,
+      "bounds": {
+        "x": 56,
+        "y": 16,
+        "width": 247,
+        "height": 333
+      }
+    },
+    {
+      "id": "brandish",
+      "pose": "return",
+      "sprite": "素材/人物/brandish-布兰迪什/像素小人/guild-sprite-brandish-return-v87.png",
+      "portrait": "素材/人物/brandish-布兰迪什/头像/guild-portrait-brandish-return-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 6515,
+      "bounds": {
+        "x": 92,
+        "y": 91,
+        "width": 188,
+        "height": 299
+      }
+    },
+    {
+      "id": "brandish",
+      "pose": "rest",
+      "sprite": "素材/人物/brandish-布兰迪什/像素小人/guild-sprite-brandish-rest-v87.png",
+      "portrait": "素材/人物/brandish-布兰迪什/头像/guild-portrait-brandish-rest-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 6454,
+      "bounds": {
+        "x": 68,
+        "y": 57,
+        "width": 184,
+        "height": 304
+      }
+    },
+    {
+      "id": "brandish",
+      "pose": "celebration",
+      "sprite": "素材/人物/brandish-布兰迪什/像素小人/guild-sprite-brandish-celebration-v87.png",
+      "portrait": "素材/人物/brandish-布兰迪什/头像/guild-portrait-brandish-celebration-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 7386,
+      "bounds": {
+        "x": 68,
+        "y": 31,
+        "width": 206,
+        "height": 297
+      }
+    },
+    {
+      "id": "aries",
+      "pose": "return",
+      "sprite": "素材/人物/aries-白羊座/像素小人/guild-sprite-aries-return-v87.png",
+      "portrait": "素材/人物/aries-白羊座/头像/guild-portrait-aries-return-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 4918,
+      "bounds": {
+        "x": 63,
+        "y": 114,
+        "width": 156,
+        "height": 276
+      }
+    },
+    {
+      "id": "aries",
+      "pose": "rest",
+      "sprite": "素材/人物/aries-白羊座/像素小人/guild-sprite-aries-rest-v87.png",
+      "portrait": "素材/人物/aries-白羊座/头像/guild-portrait-aries-rest-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 5494,
+      "bounds": {
+        "x": 62,
+        "y": 80,
+        "width": 156,
+        "height": 277
+      }
+    },
+    {
+      "id": "aries",
+      "pose": "celebration",
+      "sprite": "素材/人物/aries-白羊座/像素小人/guild-sprite-aries-celebration-v87.png",
+      "portrait": "素材/人物/aries-白羊座/头像/guild-portrait-aries-celebration-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 6211,
+      "bounds": {
+        "x": 59,
+        "y": 58,
+        "width": 165,
+        "height": 273
+      }
+    },
+    {
+      "id": "taurus",
+      "pose": "return",
+      "sprite": "素材/人物/taurus-金牛座/像素小人/guild-sprite-taurus-return-v87.png",
+      "portrait": "素材/人物/taurus-金牛座/头像/guild-portrait-taurus-return-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 12765,
+      "bounds": {
+        "x": 10,
+        "y": 10,
+        "width": 326,
+        "height": 382
+      }
+    },
+    {
+      "id": "taurus",
+      "pose": "rest",
+      "sprite": "素材/人物/taurus-金牛座/像素小人/guild-sprite-taurus-rest-v87.png",
+      "portrait": "素材/人物/taurus-金牛座/头像/guild-portrait-taurus-rest-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 9641,
+      "bounds": {
+        "x": 45,
+        "y": 15,
+        "width": 283,
+        "height": 341
+      }
+    },
+    {
+      "id": "taurus",
+      "pose": "celebration",
+      "sprite": "素材/人物/taurus-金牛座/像素小人/guild-sprite-taurus-celebration-v87.png",
+      "portrait": "素材/人物/taurus-金牛座/头像/guild-portrait-taurus-celebration-v87.png",
+      "source": "exec-36a82fa8-09fe-4644-9fae-9f49840eb515.png",
+      "lowAlphaRemoved": 12249,
+      "bounds": {
+        "x": 11,
+        "y": 4,
+        "width": 301,
+        "height": 328
+      }
+    },
+    {
+      "id": "gemini",
+      "pose": "return",
+      "sprite": "素材/人物/gemini-双子座/像素小人/guild-sprite-gemini-return-v87.png",
+      "portrait": "素材/人物/gemini-双子座/头像/guild-portrait-gemini-return-v87.png",
+      "source": "exec-6ba2215b-36d1-4113-932a-704387880d3c.png",
+      "lowAlphaRemoved": 14254,
+      "bounds": {
+        "x": 59,
+        "y": 103,
+        "width": 277,
+        "height": 259
+      }
+    },
+    {
+      "id": "gemini",
+      "pose": "rest",
+      "sprite": "素材/人物/gemini-双子座/像素小人/guild-sprite-gemini-rest-v87.png",
+      "portrait": "素材/人物/gemini-双子座/头像/guild-portrait-gemini-rest-v87.png",
+      "source": "exec-6ba2215b-36d1-4113-932a-704387880d3c.png",
+      "lowAlphaRemoved": 13917,
+      "bounds": {
+        "x": 76,
+        "y": 75,
+        "width": 260,
+        "height": 252
+      }
+    },
+    {
+      "id": "gemini",
+      "pose": "celebration",
+      "sprite": "素材/人物/gemini-双子座/像素小人/guild-sprite-gemini-celebration-v87.png",
+      "portrait": "素材/人物/gemini-双子座/头像/guild-portrait-gemini-celebration-v87.png",
+      "source": "exec-6ba2215b-36d1-4113-932a-704387880d3c.png",
+      "lowAlphaRemoved": 19481,
+      "bounds": {
+        "x": 44,
+        "y": 68,
+        "width": 330,
+        "height": 252
+      }
+    },
+    {
+      "id": "cancer",
+      "pose": "return",
+      "sprite": "素材/人物/cancer-巨蟹座/像素小人/guild-sprite-cancer-return-v87.png",
+      "portrait": "素材/人物/cancer-巨蟹座/头像/guild-portrait-cancer-return-v87.png",
+      "source": "exec-6ba2215b-36d1-4113-932a-704387880d3c.png",
+      "lowAlphaRemoved": 14325,
+      "bounds": {
+        "x": 50,
+        "y": 32,
+        "width": 328,
+        "height": 330
+      }
+    },
+    {
+      "id": "cancer",
+      "pose": "rest",
+      "sprite": "素材/人物/cancer-巨蟹座/像素小人/guild-sprite-cancer-rest-v87.png",
+      "portrait": "素材/人物/cancer-巨蟹座/头像/guild-portrait-cancer-rest-v87.png",
+      "source": "exec-6ba2215b-36d1-4113-932a-704387880d3c.png",
+      "lowAlphaRemoved": 11366,
+      "bounds": {
+        "x": 69,
+        "y": 8,
+        "width": 279,
+        "height": 318
+      }
+    },
+    {
+      "id": "cancer",
+      "pose": "celebration",
+      "sprite": "素材/人物/cancer-巨蟹座/像素小人/guild-sprite-cancer-celebration-v87.png",
+      "portrait": "素材/人物/cancer-巨蟹座/头像/guild-portrait-cancer-celebration-v87.png",
+      "source": "exec-6ba2215b-36d1-4113-932a-704387880d3c.png",
+      "lowAlphaRemoved": 16122,
+      "bounds": {
+        "x": 42,
+        "y": 9,
+        "width": 297,
+        "height": 313
+      }
+    },
+    {
+      "id": "scorpio",
+      "pose": "return",
+      "sprite": "素材/人物/scorpio-天蝎座/像素小人/guild-sprite-scorpio-return-v87.png",
+      "portrait": "素材/人物/scorpio-天蝎座/头像/guild-portrait-scorpio-return-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 9327,
+      "bounds": {
+        "x": 104,
+        "y": 101,
+        "width": 197,
+        "height": 273
+      }
+    },
+    {
+      "id": "scorpio",
+      "pose": "rest",
+      "sprite": "素材/人物/scorpio-天蝎座/像素小人/guild-sprite-scorpio-rest-v87.png",
+      "portrait": "素材/人物/scorpio-天蝎座/头像/guild-portrait-scorpio-rest-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 7970,
+      "bounds": {
+        "x": 95,
+        "y": 72,
+        "width": 169,
+        "height": 271
+      }
+    },
+    {
+      "id": "scorpio",
+      "pose": "celebration",
+      "sprite": "素材/人物/scorpio-天蝎座/像素小人/guild-sprite-scorpio-celebration-v87.png",
+      "portrait": "素材/人物/scorpio-天蝎座/头像/guild-portrait-scorpio-celebration-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 9497,
+      "bounds": {
+        "x": 99,
+        "y": 49,
+        "width": 193,
+        "height": 258
+      }
+    },
+    {
+      "id": "capricorn",
+      "pose": "return",
+      "sprite": "素材/人物/capricorn-摩羯座/像素小人/guild-sprite-capricorn-return-v87.png",
+      "portrait": "素材/人物/capricorn-摩羯座/头像/guild-portrait-capricorn-return-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 6393,
+      "bounds": {
+        "x": 76,
+        "y": 93,
+        "width": 181,
+        "height": 281
+      }
+    },
+    {
+      "id": "capricorn",
+      "pose": "rest",
+      "sprite": "素材/人物/capricorn-摩羯座/像素小人/guild-sprite-capricorn-rest-v87.png",
+      "portrait": "素材/人物/capricorn-摩羯座/头像/guild-portrait-capricorn-rest-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 5740,
+      "bounds": {
+        "x": 73,
+        "y": 64,
+        "width": 160,
+        "height": 279
+      }
+    },
+    {
+      "id": "capricorn",
+      "pose": "celebration",
+      "sprite": "素材/人物/capricorn-摩羯座/像素小人/guild-sprite-capricorn-celebration-v87.png",
+      "portrait": "素材/人物/capricorn-摩羯座/头像/guild-portrait-capricorn-celebration-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 8976,
+      "bounds": {
+        "x": 62,
+        "y": 37,
+        "width": 215,
+        "height": 270
+      }
+    },
+    {
+      "id": "aquarius",
+      "pose": "return",
+      "sprite": "素材/人物/aquarius-水瓶座/像素小人/guild-sprite-aquarius-return-v87.png",
+      "portrait": "素材/人物/aquarius-水瓶座/头像/guild-portrait-aquarius-return-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 8474,
+      "bounds": {
+        "x": 45,
+        "y": 100,
+        "width": 247,
+        "height": 274
+      }
+    },
+    {
+      "id": "aquarius",
+      "pose": "rest",
+      "sprite": "素材/人物/aquarius-水瓶座/像素小人/guild-sprite-aquarius-rest-v87.png",
+      "portrait": "素材/人物/aquarius-水瓶座/头像/guild-portrait-aquarius-rest-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 6669,
+      "bounds": {
+        "x": 69,
+        "y": 80,
+        "width": 218,
+        "height": 263
+      }
+    },
+    {
+      "id": "aquarius",
+      "pose": "celebration",
+      "sprite": "素材/人物/aquarius-水瓶座/像素小人/guild-sprite-aquarius-celebration-v87.png",
+      "portrait": "素材/人物/aquarius-水瓶座/头像/guild-portrait-aquarius-celebration-v87.png",
+      "source": "exec-58779636-3f36-4d4a-b140-c34352513265.png",
+      "lowAlphaRemoved": 11881,
+      "bounds": {
+        "x": 49,
+        "y": 33,
+        "width": 236,
+        "height": 266
+      }
+    },
+    {
+      "id": "rogue",
+      "pose": "return",
+      "sprite": "素材/人物/rogue-罗格/像素小人/guild-sprite-rogue-return-v87.png",
+      "portrait": "素材/人物/rogue-罗格/头像/guild-portrait-rogue-return-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 6110,
+      "bounds": {
+        "x": 113,
+        "y": 163,
+        "width": 177,
+        "height": 285
+      }
+    },
+    {
+      "id": "rogue",
+      "pose": "rest",
+      "sprite": "素材/人物/rogue-罗格/像素小人/guild-sprite-rogue-rest-v87.png",
+      "portrait": "素材/人物/rogue-罗格/头像/guild-portrait-rogue-rest-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 6290,
+      "bounds": {
+        "x": 109,
+        "y": 145,
+        "width": 202,
+        "height": 246
+      }
+    },
+    {
+      "id": "rogue",
+      "pose": "celebration",
+      "sprite": "素材/人物/rogue-罗格/像素小人/guild-sprite-rogue-celebration-v87.png",
+      "portrait": "素材/人物/rogue-罗格/头像/guild-portrait-rogue-celebration-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 6544,
+      "bounds": {
+        "x": 98,
+        "y": 91,
+        "width": 235,
+        "height": 270
+      }
+    },
+    {
+      "id": "nab",
+      "pose": "return",
+      "sprite": "素材/人物/nab-纳布/像素小人/guild-sprite-nab-return-v87.png",
+      "portrait": "素材/人物/nab-纳布/头像/guild-portrait-nab-return-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 7923,
+      "bounds": {
+        "x": 58,
+        "y": 137,
+        "width": 288,
+        "height": 310
+      }
+    },
+    {
+      "id": "nab",
+      "pose": "rest",
+      "sprite": "素材/人物/nab-纳布/像素小人/guild-sprite-nab-rest-v87.png",
+      "portrait": "素材/人物/nab-纳布/头像/guild-portrait-nab-rest-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 6854,
+      "bounds": {
+        "x": 64,
+        "y": 109,
+        "width": 282,
+        "height": 287
+      }
+    },
+    {
+      "id": "nab",
+      "pose": "celebration",
+      "sprite": "素材/人物/nab-纳布/像素小人/guild-sprite-nab-celebration-v87.png",
+      "portrait": "素材/人物/nab-纳布/头像/guild-portrait-nab-celebration-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 10384,
+      "bounds": {
+        "x": 43,
+        "y": 50,
+        "width": 324,
+        "height": 312
+      }
+    },
+    {
+      "id": "azuma",
+      "pose": "return",
+      "sprite": "素材/人物/azuma-阿兹玛/像素小人/guild-sprite-azuma-return-v87.png",
+      "portrait": "素材/人物/azuma-阿兹玛/头像/guild-portrait-azuma-return-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 8227,
+      "bounds": {
+        "x": 81,
+        "y": 121,
+        "width": 244,
+        "height": 327
+      }
+    },
+    {
+      "id": "azuma",
+      "pose": "rest",
+      "sprite": "素材/人物/azuma-阿兹玛/像素小人/guild-sprite-azuma-rest-v87.png",
+      "portrait": "素材/人物/azuma-阿兹玛/头像/guild-portrait-azuma-rest-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 8573,
+      "bounds": {
+        "x": 87,
+        "y": 114,
+        "width": 260,
+        "height": 287
+      }
+    },
+    {
+      "id": "azuma",
+      "pose": "celebration",
+      "sprite": "素材/人物/azuma-阿兹玛/像素小人/guild-sprite-azuma-celebration-v87.png",
+      "portrait": "素材/人物/azuma-阿兹玛/头像/guild-portrait-azuma-celebration-v87.png",
+      "source": "exec-056c533c-fa2f-479c-949a-a65bc41c538b.png",
+      "lowAlphaRemoved": 9932,
+      "bounds": {
+        "x": 76,
+        "y": 62,
+        "width": 255,
+        "height": 300
+      }
+    },
+    {
+      "id": "pisces",
+      "pose": "return",
+      "sprite": "素材/人物/pisces-双鱼座/像素小人/guild-sprite-pisces-return-v87.png",
+      "portrait": "素材/人物/pisces-双鱼座/头像/guild-portrait-pisces-return-v87.png",
+      "source": "exec-55a2e16c-5f26-4176-ad67-826b395b3edb.png",
+      "lowAlphaRemoved": 25327,
+      "bounds": {
+        "x": 52,
+        "y": 153,
+        "width": 433,
+        "height": 387
+      }
+    },
+    {
+      "id": "pisces",
+      "pose": "rest",
+      "sprite": "素材/人物/pisces-双鱼座/像素小人/guild-sprite-pisces-rest-v87.png",
+      "portrait": "素材/人物/pisces-双鱼座/头像/guild-portrait-pisces-rest-v87.png",
+      "source": "exec-55a2e16c-5f26-4176-ad67-826b395b3edb.png",
+      "lowAlphaRemoved": 15521,
+      "bounds": {
+        "x": 69,
+        "y": 120,
+        "width": 417,
+        "height": 316
+      }
+    },
+    {
+      "id": "pisces",
+      "pose": "celebration",
+      "sprite": "素材/人物/pisces-双鱼座/像素小人/guild-sprite-pisces-celebration-v87.png",
+      "portrait": "素材/人物/pisces-双鱼座/头像/guild-portrait-pisces-celebration-v87.png",
+      "source": "exec-55a2e16c-5f26-4176-ad67-826b395b3edb.png",
+      "lowAlphaRemoved": 23059,
+      "bounds": {
+        "x": 59,
+        "y": 38,
+        "width": 448,
+        "height": 380
+      }
+    },
+    {
+      "id": "sagittarius",
+      "pose": "return",
+      "sprite": "素材/人物/sagittarius-射手座/像素小人/guild-sprite-sagittarius-return-v87.png",
+      "portrait": "素材/人物/sagittarius-射手座/头像/guild-portrait-sagittarius-return-v87.png",
+      "source": "exec-00491444-51e4-40d8-b087-770ed2ca8641.png",
+      "lowAlphaRemoved": 8757,
+      "bounds": {
+        "x": 264,
+        "y": 161,
+        "width": 206,
+        "height": 273
+      }
+    },
+    {
+      "id": "sagittarius",
+      "pose": "rest",
+      "sprite": "素材/人物/sagittarius-射手座/像素小人/guild-sprite-sagittarius-rest-v87.png",
+      "portrait": "素材/人物/sagittarius-射手座/头像/guild-portrait-sagittarius-rest-v87.png",
+      "source": "exec-00491444-51e4-40d8-b087-770ed2ca8641.png",
+      "lowAlphaRemoved": 9356,
+      "bounds": {
+        "x": 278,
+        "y": 92,
+        "width": 181,
+        "height": 290
+      }
+    },
+    {
+      "id": "sagittarius",
+      "pose": "celebration",
+      "sprite": "素材/人物/sagittarius-射手座/像素小人/guild-sprite-sagittarius-celebration-v87.png",
+      "portrait": "素材/人物/sagittarius-射手座/头像/guild-portrait-sagittarius-celebration-v87.png",
+      "source": "exec-00491444-51e4-40d8-b087-770ed2ca8641.png",
+      "lowAlphaRemoved": 10806,
+      "bounds": {
+        "x": 256,
+        "y": 46,
+        "width": 241,
+        "height": 269
+      }
+    },
+    {
+      "id": "libra",
+      "pose": "return",
+      "sprite": "素材/人物/libra-天秤座/像素小人/guild-sprite-libra-return-v87.png",
+      "portrait": "素材/人物/libra-天秤座/头像/guild-portrait-libra-return-v87.png",
+      "source": "exec-00491444-51e4-40d8-b087-770ed2ca8641.png",
+      "lowAlphaRemoved": 8452,
+      "bounds": {
+        "x": 163,
+        "y": 162,
+        "width": 223,
+        "height": 278
+      }
+    },
+    {
+      "id": "libra",
+      "pose": "rest",
+      "sprite": "素材/人物/libra-天秤座/像素小人/guild-sprite-libra-rest-v87.png",
+      "portrait": "素材/人物/libra-天秤座/头像/guild-portrait-libra-rest-v87.png",
+      "source": "exec-00491444-51e4-40d8-b087-770ed2ca8641.png",
+      "lowAlphaRemoved": 8565,
+      "bounds": {
+        "x": 165,
+        "y": 84,
+        "width": 226,
+        "height": 294
+      }
+    },
+    {
+      "id": "libra",
+      "pose": "celebration",
+      "sprite": "素材/人物/libra-天秤座/像素小人/guild-sprite-libra-celebration-v87.png",
+      "portrait": "素材/人物/libra-天秤座/头像/guild-portrait-libra-celebration-v87.png",
+      "source": "exec-00491444-51e4-40d8-b087-770ed2ca8641.png",
+      "lowAlphaRemoved": 7898,
+      "bounds": {
+        "x": 164,
+        "y": 39,
+        "width": 250,
+        "height": 291
+      }
+    },
+    {
+      "id": "virgo",
+      "pose": "return",
+      "sprite": "素材/人物/virgo-处女座/像素小人/guild-sprite-virgo-return-v87.png",
+      "portrait": "素材/人物/virgo-处女座/头像/guild-portrait-virgo-return-v87.png",
+      "source": "exec-fda46c5a-ff1f-4939-8e16-4be27dceb98f.png",
+      "lowAlphaRemoved": 0,
+      "bounds": {
+        "x": 203,
+        "y": 75,
+        "width": 363,
+        "height": 601
+      }
+    },
+    {
+      "id": "virgo",
+      "pose": "rest",
+      "sprite": "素材/人物/virgo-处女座/像素小人/guild-sprite-virgo-rest-v87.png",
+      "portrait": "素材/人物/virgo-处女座/头像/guild-portrait-virgo-rest-v87.png",
+      "source": "exec-fda46c5a-ff1f-4939-8e16-4be27dceb98f.png",
+      "lowAlphaRemoved": 0,
+      "bounds": {
+        "x": 256,
+        "y": 71,
+        "width": 223,
+        "height": 605
+      }
+    },
+    {
+      "id": "virgo",
+      "pose": "celebration",
+      "sprite": "素材/人物/virgo-处女座/像素小人/guild-sprite-virgo-celebration-v87.png",
+      "portrait": "素材/人物/virgo-处女座/头像/guild-portrait-virgo-celebration-v87.png",
+      "source": "exec-fda46c5a-ff1f-4939-8e16-4be27dceb98f.png",
+      "lowAlphaRemoved": 0,
+      "bounds": {
+        "x": 172,
+        "y": 57,
+        "width": 368,
+        "height": 619
+      }
+    },
+    {
+      "id": "natsu",
+      "pose": "return",
+      "sprite": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-return-v86.png",
+      "portrait": "素材/人物/natsu-纳兹/头像/guild-portrait-natsu-return-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "natsu",
+      "pose": "rest",
+      "sprite": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-rest-v86.png",
+      "portrait": "素材/人物/natsu-纳兹/头像/guild-portrait-natsu-rest-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "natsu",
+      "pose": "celebration",
+      "sprite": "素材/人物/natsu-纳兹/像素小人/guild-sprite-natsu-celebration-v86.png",
+      "portrait": "素材/人物/natsu-纳兹/头像/guild-portrait-natsu-celebration-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "lucy",
+      "pose": "return",
+      "sprite": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-return-v86.png",
+      "portrait": "素材/人物/lucy-露西/头像/guild-portrait-lucy-return-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "lucy",
+      "pose": "rest",
+      "sprite": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-rest-v86.png",
+      "portrait": "素材/人物/lucy-露西/头像/guild-portrait-lucy-rest-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "lucy",
+      "pose": "celebration",
+      "sprite": "素材/人物/lucy-露西/像素小人/guild-sprite-lucy-celebration-v86.png",
+      "portrait": "素材/人物/lucy-露西/头像/guild-portrait-lucy-celebration-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "erza",
+      "pose": "return",
+      "sprite": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-return-v86.png",
+      "portrait": "素材/人物/erza-艾露莎/头像/guild-portrait-erza-return-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "erza",
+      "pose": "rest",
+      "sprite": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-rest-v86.png",
+      "portrait": "素材/人物/erza-艾露莎/头像/guild-portrait-erza-rest-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "erza",
+      "pose": "celebration",
+      "sprite": "素材/人物/erza-艾露莎/像素小人/guild-sprite-erza-celebration-v86.png",
+      "portrait": "素材/人物/erza-艾露莎/头像/guild-portrait-erza-celebration-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "happy",
+      "pose": "return",
+      "sprite": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-return-v86.png",
+      "portrait": "素材/人物/happy-哈比/头像/guild-portrait-happy-return-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "happy",
+      "pose": "rest",
+      "sprite": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-rest-v86.png",
+      "portrait": "素材/人物/happy-哈比/头像/guild-portrait-happy-rest-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    },
+    {
+      "id": "happy",
+      "pose": "celebration",
+      "sprite": "素材/人物/happy-哈比/像素小人/guild-sprite-happy-celebration-v86.png",
+      "portrait": "素材/人物/happy-哈比/头像/guild-portrait-happy-celebration-v87.png",
+      "source": "v86-reused",
+      "lowAlphaRemoved": 0
+    }
+  ]
+}
