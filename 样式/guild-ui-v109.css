@@ -55,6 +55,22 @@ html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.
 html :is(.card,.toolbar,dialog) button:disabled{cursor:default;opacity:.68;box-shadow:none!important}
 html #form>button::before{content:'';display:inline-block;width:19px;height:19px;margin-right:6px;vertical-align:middle;background:url('../素材/道具/情报物件/guild-record-quill-v86-fast-v101.webp') center/contain no-repeat}
 html .task-filter button,html .review-filter button,html .daily-quote-actions button{font-size:13px!important;padding:5px 9px!important;min-height:30px!important}
+/* Daily cards allocate text space independently of controls and frame artwork. */
+html #cards>.card{container-type:inline-size;min-width:0}
+html #cards>.card>h2{display:grid;grid-template-columns:36px minmax(0,1fr);gap:8px 10px;align-items:center;margin-bottom:14px}
+html #cards .daily-section-title{min-width:0;white-space:normal;word-break:normal;overflow-wrap:break-word}
+html #cards .task-filter{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px;margin:0;white-space:normal}
+html #cards .task-filter button,html .review-filter button{flex:0 0 auto;white-space:nowrap!important;word-break:keep-all;min-width:max-content;margin:0;border-radius:5px!important}
+html #cards .row{display:grid!important;grid-template-columns:22px 34px minmax(0,1fr) auto;gap:5px 9px;align-items:start;min-width:0;padding:12px 0}
+html #cards .row>input[type=checkbox]{grid-column:1;grid-row:1;margin:8px 0 0}
+html #cards .row>:is(.task-helper,.completion-avatar){grid-column:2;grid-row:1;margin:3px 0 0!important}
+html #cards .row>label{grid-column:3;grid-row:1;min-width:0;width:auto;line-height:1.55;white-space:normal;word-break:normal;overflow-wrap:break-word}
+html #cards .row>label>.rank-label{display:flex;width:max-content;max-width:100%;margin:0 0 4px;white-space:nowrap;gap:5px}
+html #cards .daily-task-title{display:block;font-size:15px;line-height:1.55;font-weight:600;min-width:0;overflow-wrap:break-word}
+html #cards .row>label>:is(.task-detail,.quest-status){display:block;margin-top:4px;white-space:normal;word-break:normal;overflow-wrap:break-word}
+html #cards .row>select{grid-column:4;grid-row:1;width:112px;max-width:100%;min-width:0;margin:0!important;align-self:start;box-sizing:border-box}
+html #cards .row>.remove{grid-column:3/-1;justify-self:end;white-space:nowrap}
+@container(max-width:540px){html #cards .row{grid-template-columns:22px 34px minmax(0,1fr)}html #cards .row>select{grid-column:3;grid-row:2;justify-self:start}html #cards .row>.remove{grid-column:3;grid-row:3;justify-self:start}}
 @media(prefers-reduced-motion:reduce){.guild-hall-stage,.guild-hall-background-image{transition:none!important}}
 
 /* Optical rails: primary 6px, standard 5px, supporting 3px. Corner artwork stays independent. */
