@@ -1,10 +1,8 @@
 // ============================================================
 // 妖精的尾巴 · 三端云同步桥
 // 不改动 代码/schedule.js，通过 hook localStorage 实现云端镜像
-// 模式：
-//   demo      → 本地演示服务器（localhost:8787），先看效果
-//   supabase  → Supabase（免费层 500MB，真云端 REST API）
-// 使用：填好下方 supabase 凭据，将 mode 改为 'supabase' 即可
+// 模式：supabase → Supabase（免费层 500MB，真云端 REST API）
+// 使用：填好下方 supabase 凭据即可
 // ============================================================
 (function () {
   'use strict';
@@ -12,9 +10,7 @@
   var CONFIG = {
     // 在线同步总开关：false = 屏蔽云端同步（纯本地模式，不发起任何云端请求）。
     syncEnabled: true,
-    mode: 'supabase', // 'demo' | 'supabase'
-    // demo 演示服务器（工具/旧版门户/cloud-server.js）
-    demoEndpoint: 'http://localhost:8787/api/sync',
+    mode: 'supabase',
     // Supabase 凭据（Settings → API 页面获取）
     supabaseUrl: 'https://pjrcbacixmfdytuvgetu.supabase.co',
     supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqcmNiYWNpeG1mZHl0dXZnZXR1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA3NzUxODIsImV4cCI6MjEwNjM1MTE4Mn0.3VIBAs13hYb2bPwz2YrN47BLelbc9Vqapk0tETTcMvw',
@@ -263,14 +259,8 @@
       return;
     }
 
-    // demo 模式
-    fetch(CONFIG.demoEndpoint, {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(payload)
-    }).then(function (r) { return r.json(); })
-      .then(function () { online = true; setBadge('云端：已同步', true); })
-      .catch(function () { online = false; setBadge('云端：离线（本地模式）', false); });
+    online = false;
+    setBadge('云端：离线（本地数据待同步）', false);
   }
 
   // ---------- 拉取（云端 → 本地） ----------
@@ -291,14 +281,7 @@
         });
     }
 
-    return fetch(CONFIG.demoEndpoint + '?t=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { return r.json(); })
-      .then(function (list) { applyRemote(list); return list; })
-      .catch(function (error) {
-        online = false;
-        setBadge('云端：读取失败，将自动重试', null);
-        throw error;
-      });
+    return Promise.resolve([]);
   }
 
   // ---------- 云端通道（Supabase REST API） ----------
@@ -958,14 +941,7 @@
       });
     }
 
-    var payload = { entries: entries };
-    return fetch(CONFIG.demoEndpoint, {
-      method: 'POST',
-      headers: headers,
-      body: JSON.stringify(payload)
-    }).then(function (r) { return r.json(); })
-      .then(function () { online = true; setBadge('云端：已同步', true); })
-      .catch(function () { online = false; setBadge('云端：离线（本地模式）', false); });
+    return Promise.resolve();
     };
     // 超时保护：15 秒后强制解锁
     supaWriteQueue = supaWriteQueue.then(run, run);
