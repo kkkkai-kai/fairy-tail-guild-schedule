@@ -46,13 +46,15 @@ html .card button:focus-visible,html .guild-room-node:focus-visible{outline:2px 
 html #guildHallScene button:disabled{opacity:.65}
 /* One action palette, excluding scene actors and interactive props. */
 html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.guild-hall-visitor,.nook-exceed,.guild-intel-prop,.guild-record-prop,.happy-nook-supply,.guild-honor-prop){font-family:inherit;font-size:14px!important;font-weight:600;line-height:1.45!important;min-height:36px;padding:7px 12px;color:var(--action-ink,#493b30)!important;background:var(--action-fill,#f8f2e7)!important;border:1px solid var(--action-edge,#b49b7c)!important;border-radius:7px!important;box-shadow:0 1px 2px #46352412!important;text-shadow:none!important;transition:background .15s,border-color .15s,box-shadow .15s}
-html :is(.card,dialog) :is(.action-primary,.project-final-complete,.guild-event-complete,.priority-accept,.accept-quest,button[type=submit]),html #form>button,html #quickIntake>button:first-of-type{--action-ink:#fffdf6;--action-fill:#843d32;--action-edge:#713328;font-weight:700}
-html :is(.card,dialog) :is(.project-stage-complete,.quest-complete-btn,.guild-dynamic-complete,.action-complete){--action-ink:#fffdf6;--action-fill:#43634e;--action-edge:#35513e}
-html :is(.card,dialog) :is(.remove,.priority-cancel,.action-danger){--action-ink:#872f29;--action-fill:#fff5ef;--action-edge:#bf9586}
+html :is(.card,dialog) :is(.action-primary,.project-final-complete,.guild-event-complete,.priority-accept,.accept-quest,button[type=submit]),html #form>button,html #quickIntake>button:first-of-type{--action-ink:#fff9ed;--action-fill:#743c43;--action-edge:#613039;font-weight:700}
+html :is(.card,dialog) :is(.project-stage-complete,.quest-complete-btn,.guild-dynamic-complete,.action-complete){--action-ink:#fff9ed;--action-fill:#4d6659;--action-edge:#3e5348}
+html :is(.card,dialog) :is(.remove,.priority-cancel,.action-danger){--action-ink:#783f44;--action-fill:#f5e7e1;--action-edge:#bc9c91}
+html :is(.card,dialog) .action-start{--action-ink:#fff9ed;--action-fill:#5b493e;--action-edge:#493a31}
+html :is(.task-filter,.review-filter) button:disabled{--action-ink:#fff9ed;--action-fill:#5b493e;--action-edge:#493a31;opacity:1!important}
 html .card .priority-accept::before,html .card .action-start::before{content:'';display:inline-block;width:16px;height:16px;margin-right:4px;vertical-align:middle;background:center/contain no-repeat url('../素材/界面/功能图标/guild-scene-icon-board-v102.webp')}
 html .card .action-start::before{background-image:url('../素材/道具/情报物件/guild-record-pennant-v86-fast-v101.webp')}
 html #guildHallScene .s-rank-honor-pin{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
-html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.guild-hall-visitor,.nook-exceed,.guild-intel-prop,.guild-record-prop,.happy-nook-supply,.guild-honor-prop):hover:not(:disabled){filter:brightness(1.035);border-color:#936034!important;box-shadow:0 2px 5px #58321c28!important}
+html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.guild-hall-visitor,.nook-exceed,.guild-intel-prop,.guild-record-prop,.happy-nook-supply,.guild-honor-prop):hover:not(:disabled){filter:brightness(1.055);border-color:#8d7561!important;box-shadow:0 2px 5px #49362924!important}
 html :is(.card,.toolbar,dialog) button:disabled{cursor:default;opacity:.68;box-shadow:none!important}
 html #form>button::before{content:'';display:inline-block;width:19px;height:19px;margin-right:6px;vertical-align:middle;background:url('../素材/道具/情报物件/guild-record-quill-v86-fast-v101.webp') center/contain no-repeat}
 html .task-filter button,html .review-filter button,html .daily-quote-actions button{font-size:13px!important;padding:5px 9px!important;min-height:30px!important}
@@ -75,11 +77,18 @@ html #cards .row>.remove{grid-column:3/-1;justify-self:end;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.guild-hall-stage,.guild-hall-background-image{transition:none!important}}
 
 /* Optical rails: primary 6px, standard 5px, supporting 3px. Corner artwork stays independent. */
-html:root{--guild-paper:#fffdf6;--guild-border:#bca480;--guild-red:#843d32;--guild-cream:#eee5d6;--guild-ink:#332c26;--guild-muted:#625346;--text-xs:13px;--text-sm:14px;--text-base:15px}
-html body{background-color:#e9e4d9!important;color:var(--guild-ink)!important;font:15px/1.65 'Microsoft YaHei','PingFang SC',system-ui,sans-serif}
-html body::before{background:linear-gradient(115deg,#e9e4d9,#f3efe6 48%,#e9e4d9)!important}
-html body::after{opacity:.12;filter:saturate(.45)}
+html:root{--guild-paper:#f7efdf;--guild-border:#b19a7e;--guild-red:#743c43;--guild-red-dark:#613039;--guild-cream:#e8dcc8;--guild-ink:#3d3029;--guild-muted:#695849;--guild-gold:#9c8058;--action-ink:#4b392e;--action-fill:#ede1cf;--action-edge:#b19a7e;--text-xs:13px;--text-sm:14px;--text-base:15px}
+html body{background-color:#d8c9b8!important;color:var(--guild-ink)!important;font:15px/1.65 'Microsoft YaHei','PingFang SC',system-ui,sans-serif}
+html body::before{background:linear-gradient(115deg,#cfc0ad,#e7ddce 48%,#d2c3b1)!important}
+html body::after{opacity:.09;filter:saturate(.3)}
 html .card,html .guild-content>header{background-color:var(--guild-paper)!important;color:var(--guild-ink)!important}
+html :is(.top-total>div,.guild-day-brief,.today-expedition,.quick-intake,.guild-safety-panel,.form-grade-preview,.registration-preview,.stage-manager,.task-editor,.quest-note-panel,.happy-corner,.v4-section){background-color:#efe4d2!important;border-color:var(--guild-border)!important;color:var(--guild-ink)!important}
+html :is(.card,dialog,.toolbar) :is(input:not([type=checkbox]):not([type=radio]),select,textarea){background-color:#fbf6ec!important;border-color:#b7a18a!important;color:var(--guild-ink)!important;accent-color:var(--guild-red)}
+html :is(.card,dialog) :is(input[type=checkbox],input[type=radio],progress){accent-color:#743c43}
+html :is(.daily-progress-top,.growth-card) :is(.progress,progress){background:#dacbb8!important}
+html .daily-progress-top .bar{background:linear-gradient(90deg,#743c43,#ae7b67)!important}
+html .growth-level,html .growth-title,html .guild-content>header h1{color:var(--guild-red)!important}
+html :is(.level-badge,.guild-celebration-entry){background:#e8dcc8!important;color:#5b493e!important;border-color:#9c8058!important}
 html :is(.growth-rank,.growth-exp,.growth-latest,.muted,.project-stage-copy small,.registration-field>span){color:var(--guild-muted)!important}
 html :is(.guild-sidebar,.guild-content,dialog) :is(small,.task-detail,.quest-meta,.quest-world-meta,.quest-status,.weekly-trend,.backup-summary,.auto-reward-note,.form-type-hint,.form-summary,.sidebar-note,.registration-field>span,.guild-quote-audit,.daily-progress-top,.guild-scene-caption,.guild-scene-attendance){font-size:13px!important;line-height:1.65!important;color:var(--guild-muted)!important}
 html :is(.growth-exp,.growth-latest,.project-stage-copy small,.quest-meta,.quest-world-meta,.registration-field>span){font-size:14px!important}
@@ -88,18 +97,19 @@ html .guild-content>header :is(.muted,.guild-day-brief p,#quoteSource,#quoteOrig
 html .guild-content>header .top-total strong{font-size:19px!important;color:var(--guild-ink)!important}
 html .guild-content>header .daily-progress-top{grid-template-columns:minmax(0,1fr)!important;gap:5px;min-width:0}
 html .guild-content>header .daily-progress-top :is(#count,.progress){width:100%;min-width:0;white-space:normal!important;box-sizing:border-box}
-html #form.add :is(input,select,textarea),html #form #quickIntake input{font-size:15px!important;color:var(--guild-ink)!important;background:#fffefb!important;border-color:#b6a38a!important;min-height:42px}
+html #form.add :is(input,select,textarea),html #form #quickIntake input{font-size:15px!important;color:var(--guild-ink)!important;background:#fbf6ec!important;border-color:#b7a18a!important;min-height:42px}
 html input::placeholder,html textarea::placeholder{color:#73675b!important;opacity:1}
 html #form #quickIntake>button,html #form.add>button,html #projects :is(.project-actions,.project-stage-actions) button,html #onceTasks.once-quests .once-actions button{font-size:14px!important;line-height:1.45!important;min-height:36px!important;padding:7px 11px!important;color:var(--action-ink,#493b30)!important;background:var(--action-fill,#f8f2e7)!important;border-color:var(--action-edge,#b49b7c)!important}
-html #form .form-grade-preview{font-size:14px!important;color:var(--guild-ink)!important;background:#f2ebdc!important}
+html #form .form-grade-preview{font-size:14px!important;color:var(--guild-ink)!important;background:#efe4d2!important}
 html #guildHallScene .guild-room-label{font-size:14px!important;font-weight:600;color:inherit!important}
-html #guildHallScene .guild-room-node{background:#faf5e9!important;color:#493b30!important;border-color:#b49b7c!important;box-shadow:0 1px 2px #46352412!important}
-html #guildHallScene .guild-room-node.scene-mainHall{background:#eee0c5!important}
-html #guildHallScene .guild-room-node[aria-pressed=true]{background:#843d32!important;color:#fffdf6!important;border-color:#713328!important}
+html #guildHallScene .guild-room-node{background:#ede1cf!important;color:#4b392e!important;border-color:#b19a7e!important;box-shadow:inset 0 1px 0 #fff9ed88,0 1px 2px #46352412!important}
+html #guildHallScene .guild-room-node.scene-mainHall{background:#ddccb3!important}
+html #guildHallScene .guild-room-node[aria-pressed=true]{background:#5b493e!important;color:#fff9ed!important;border-color:#493a31!important}
+html #guildHallScene>summary,html #guildHallScene .guild-floor-map{background-color:var(--guild-paper)!important;border-color:#b19a7e!important}
 html #guildHallScene .guild-scene-heading{font-size:17px!important;color:var(--guild-ink)!important}
 html #guildHallScene :is(.guild-hall-encounter,.guild-hall-tip){font-size:14px!important;color:var(--guild-ink)!important}
 html .grade-S{color:#892e29!important}html .grade-A{color:#925023!important}html .grade-B{color:#23627f!important}html .grade-C{color:#655079!important}html .grade-D{color:#34685b!important}html .grade-E{color:#705b3d!important}html .grade-F{color:#6a6056!important}
-html :is(.guild-system-receipt,.guild-sync-toast,.growth-toast,.guild-celebration-copy){background:#fffdf6!important;color:var(--guild-ink)!important;font-size:14px!important;line-height:1.65!important}
+html :is(.guild-system-receipt,.guild-sync-toast,.growth-toast,.guild-celebration-copy){background:var(--guild-paper)!important;color:var(--guild-ink)!important;font-size:14px!important;line-height:1.65!important}
 html .guild-system-receipt p{font-size:14px!important}
 html :is(.growth-card,#guildHallScene,.priority-board,#guildCompendium,.treasury,.card:has(#newTask),.card:has(#projects),.card:has(#upcomingList),.card:has(#backlogList),.card:has(#weeklyReview),#onceTasks,#cards>.card,main>header,.guild-content>header){position:relative;border:var(--guild-frame-space,12px) solid transparent!important;border-image:var(--guild-module-frame) var(--guild-frame-slice,18%) / var(--guild-frame-rails,var(--guild-frame-depth,18px)) / 0 stretch!important;border-radius:var(--guild-frame-depth,18px)!important;box-shadow:none;background-color:var(--guild-paper)!important;background-clip:padding-box!important;background-image:none!important}
 html .growth-card{box-shadow:inset 0 0 0 3px #f4e4c9!important}
