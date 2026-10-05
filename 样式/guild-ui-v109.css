@@ -16,6 +16,7 @@ html #guildHallScene .guild-room-node.scene-researchRoom{grid-column:3!important
 html #guildHallScene .guild-room-node.scene-guildTavern{grid-column:1!important;grid-row:3!important}
 html #guildHallScene .guild-room-node.scene-happyNook{grid-column:3!important;grid-row:3!important}
 html #guildHallScene .guild-room-label{white-space:nowrap;min-width:0;font-size:13px}
+html #guildHallScene .guild-room-node .guild-room-count{display:inline-grid!important;place-items:center;flex:0 0 auto;min-width:14px;margin:0;padding:0 2px;border-radius:4px;font-size:11px!important;line-height:1.4!important;color:inherit!important;background:#a57d4920;white-space:nowrap}
 html #guildHallScene .guild-room-icon{flex:0 0 22px;width:22px!important;height:22px!important;object-fit:contain;image-rendering:auto}
 html #guildHallScene .scene-mainHall .guild-room-icon{width:30px!important;height:30px!important;flex-basis:30px}
 html #guildHallScene .guild-room-node[aria-pressed=true]{background:#874931!important;color:#fff9e9!important;border-color:#ad743c!important}
