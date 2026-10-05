@@ -63,7 +63,6 @@
 ### 辅助工具（不参与线上部署）
 | 文件 | 说明 |
 |---|---|
-| `cloud-server.js` | 本地演示服务器（localhost:8787），仅 demo 模式用 |
 | `compare-four-sources.html` | 数据源对比工具页 |
 | `migrate-to-supabase.html` | Supabase 迁移工具页 |
 

@@ -189,7 +189,7 @@
     });
 
     snapshotPromise
-      .then(function (snapshot) {
+      .then(async function (snapshot) {
         if (!snapshot || typeof snapshot !== 'object') {
           console.warn('[guild-recovery] Invalid snapshot data, aborting.');
           return;
@@ -223,7 +223,7 @@
           ' = ' + (ratio * 100).toFixed(1) + '% < ' + (threshold * 100).toFixed(0) +
           '% 阈值），是否从快照恢复？';
 
-        if (!confirm(msg)) {
+        if (!await guildConfirmDialog({ text: msg })) {
           console.info('[guild-recovery] User declined recovery.');
           return;
         }
