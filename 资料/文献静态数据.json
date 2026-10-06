@@ -1,0 +1,1725 @@
+{
+  "updatedAt": "2026-10-06",
+  "source": "本地文献服务静态快照",
+  "online": false,
+  "savedCount": 0,
+  "pendingCount": 5,
+  "unreadCount": 5,
+  "papers": [
+    {
+      "id": "doi:10.1016/j.devcel.2026.09.001",
+      "title": "Nitrate-responsive Sialin2 couples stress granule assembly and clearance to maintain neuronal homeostasis.",
+      "titleZh": "硝酸盐响应型 Sialin2 协调应激颗粒的组装与清除，以维持神经元稳态",
+      "abstract": "Stress granules (SGs) are phase-separated ribonucleoprotein condensates that support cellular adaptation to acute stress, but how extracellular signals coordinate their assembly and recovery-phase clearance remains unclear. Here, we show that nitrate-responsive Sialin2 coordinates SG homeostasis across the stress cycle. During acute stress, Sialin2 undergoes liquid-liquid phase separation and co-assembles with Ras GTPase-activating protein SH3-domain-binding protein (G3BP)-centered scaffolds to promote SG formation. During recovery, Sialin2 preserves liquid-like SG dynamics and promotes autophagy-linked clearance. Sialin2 loss delays SG resolution, promotes retention of amyotrophic lateral sclerosis (ALS)-linked fused in sarcoma (FUS) and TAR DNA-binding protein 43 (TDP-43) variants, and e",
+      "authors": "Li X, Cao Z, Jiang O, Wu S, Zhou B, Feng Y, Chen X, Wang J, Zhou J, Yan R, Chen M, Wang S.",
+      "journal": "Developmental cell",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "pending"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.1016/j.molcel.2026.09.002",
+      "title": "ZNFX1, an immunoregulatory RNA helicase and E3 ubiquitin ligase, assembles into pleiomorphic polymers.",
+      "titleZh": "兼具免疫调节性 RNA 解旋酶与 E3 泛素连接酶功能的 ZNFX1 组装成多形态聚合物",
+      "abstract": "NFX1-type zinc-finger-containing 1 (ZNFX1) is an SF1-family RNA helicase essential for innate immunity. Patients with ZNFX1 mutations experience recurrent infections, yet the underlying mechanism remains unclear. We determined cryo-electron microscopy (cryo-EM) structures of RNA-bound and RNA-free ZNFX1 and revealed auto-inhibition of the helicase-associated ATPase through a regulatory insertion occluding the RNA-binding groove. ZNFX1 also functions as a bi-catalytic E3 ubiquitin ligase, containing an RZ finger homologous to RNF213 and a previously unidentified Miz-like domain, which cooperate in catalyzing ubiquitylation. Ubiquitin chains enhance E3 activity further. Patient mutations demonstrate that the helicase/ATPase, E3 ligase, and the rigid zinc-finger stalk connecting them are requ",
+      "authors": "Naydenova K, Mund T, Yip MCJ, Harper CM, Leigh KE, Hankinson J, Boyle KB, Heatley A, Otten EG, Lulla V, Modis Y, Randow F.",
+      "journal": "Molecular cell",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "pending"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.21203/rs.3.rs-10284597/v1",
+      "title": "Rho GTPase–driven stress granules enable anchorage-independent survival under adhesion stress",
+      "titleZh": "Rho GTP 酶驱动的应激颗粒使细胞在黏附应激下实现非贴壁依赖性存活",
+      "abstract": "Abstract Cells that lose adhesion to their native extracellular matrix must either adapt to impaired adhesion signaling or undergo anoikis. How cells convert loss of adhesion into translational stress responses and survival signaling remains incompletely understood. Here, we define adhesion stress as a cellular stress state triggered by impaired adhesion signaling and show that this state induces stress granule (SG) assembly as an adaptive survival mechanism. We modeled adhesion stress through cell detachment, reduced adhesion strength, and pharmacologic inhibition of focal adhesion kinase (FAK). Across these models, adhesion stress activated a RhoA–ROCK–PERK–eIF2α signaling pathway that drove SG assembly. PERK was the principal eIF2α kinase required for this adhesion-stress response. Prot",
+      "authors": "Ivanov P, Yang S, Aulas A, Anderson P.",
+      "journal": "Research Square",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "pending"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1042/bcj20250300",
+      "title": "Loss of O-GlcNAc transferase activity impairs the dynamic formation of protective stress granules in ischemic cardiomyocytes.",
+      "titleZh": "O-GlcNAc 转移酶活性丧失损害缺血心肌细胞中保护性应激颗粒的动态形成",
+      "abstract": "Stress granules are transient biomolecular condensates of proteins and RNA formed during stress. Stress granules support cell survival by sequestering components of the translational machinery, suppressing pro-apoptotic signaling, and conserving cellular resources. O-GlcNAcylation, a dynamic modification of cytoplasmic proteins, is an important regulator of stress responses, including stress-granule assembly. O-GlcNAcylation is protective in acute myocardial stress; however, whether O-GlcNAcylation regulates stress granules to protect cardiomyocytes remains unclear. Here, we investigated whether O-GlcNAcylation regulates stress granule formation in cardiomyocytes exposed to sodium arsenite stress or ischemia/reperfusion (I/R) injury. G3BP1 is an RNA-binding protein that is essential in str",
+      "authors": "Swimm HC, Zhang W, Mallikarjun Y, Satish R, Medina AJ, Lo S, Qureshi H, Dunphy AJ, Ashok D, Sidor A, Mesubi OO, O'Rourke B, Foster DB, Zachara NE, Papanicolaou ",
+      "journal": "The Biochemical journal",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "pending"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.1038/s44319-026-00922-1",
+      "title": "FBXL21 regulates diurnal proteostasis in skeletal muscle by targeting DNAJB6 and client proteins.",
+      "titleZh": "FBXL21 通过靶向 DNAJB6 及其客户蛋白调节骨骼肌的昼夜蛋白质稳态",
+      "abstract": "Circadian regulation of proteostasis, a key determinant of muscle health, remains poorly understood. Here, we identify DNAJB6, an Hsp40 (DnaJ) co-chaperone, as a substrate of the circadian E3 ligase FBXL21. FBXL21 mediates the ubiquitination-dependent proteasomal degradation of both DNAJB6 and its client proteins, including Desmin. In contrast, myopathy-causing mutations of DNAJB6 confer resistance to FBXL21-directed degradation. Fbxl21 KO C2C12 cells display aberrant Desmin accumulation, and show aggravated cytoplasmic accumulation of TDP-43, another DNAJB6 client protein, in response to heat shock. Under timed exercise as a physiological stressor, WT mice display robust diurnal rhythms in the levels of stress granule markers (G3BP1 and FUS) and TDP-43 as a function of exercise timing. In",
+      "authors": "Lim JY, Wi J, Wirianto M, Han C, Kim SY, Nguyen J, Jung S, Eckel-Mahan K, Jung SY, Esser KA, Chen Z, Yoo SH.",
+      "journal": "EMBO reports",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.1111/andr.70403",
+      "title": "Cryopreservation Disrupts TRIM21-Mediated AKAP3 Ubiquitination and Triggers Stress Granule Formation in Human Sperm.",
+      "titleZh": "冷冻保存扰乱 TRIM21 介导的 AKAP3 泛素化，并触发人精子中的应激颗粒形成",
+      "abstract": "Background Sperm cryopreservation causes cryodamage, but the roles of posttranslational modifications (PTMs) and stress granules (SGs) in this process remain unclear. Objectives To investigate the molecular mechanism of cryodamage via the TRIM21-AKAP3 axis, PTMs, and SGs. Materials and methods Human sperm were divided into fresh and cryopreserved groups. Global ubiquitinome, phosphoproteome, and acetylome profiling were performed, combined with co-immunoprecipitation (Co-IP), Western blotting, and immunofluorescence for functional validation. Sperm cryopreservation with FAZ-3532 intervention was further conducted to verify SG-mediated injury. Results Cryopreservation-induced SG formation in mature human sperm is reported here for the first time. TRIM21 acted as the E3 ubiquitin ligase for ",
+      "authors": "Wang Y, Xu H, Lu W, Wang Y, Ma J, Ma C, Yan X, Fu L, Lv H, Liu Y.",
+      "journal": "Andrology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.28.755177",
+      "title": "A tRNA-derived small RNA orchestrates cardioprotection through distinct cell-type-specific mechanisms",
+      "titleZh": "一种 tRNA 来源的小 RNA 通过不同的细胞类型特异性机制协调心脏保护",
+      "abstract": "SUMMARY Pathological cardiac fibrosis and hypertrophy, key contributors to adverse remodeling that drives heart failure (HF), are not adequately targeted by current therapies. We identified tRNA-Asp-GTC-3′tDR, an ischemia-induced tRNA-derived small RNA (tDR), as an endogenous regulator of both remodeling processes across cardiac fibroblasts and cardiomyocytes. In murine models of myocardial ischemia- and pressure overload-induced HF, cardiac delivery of tRNA-Asp-GTC-3′tDR reduced fibrosis and hypertrophy, preserved cardiac function, and improved survival, with limited three doses conferring durable protection after ischemia, whereas silencing it worsened both. Strikingly, tRNA-Asp-GTC-3’tDR acts through distinct mechanisms in different cell types: in fibroblasts, it assembles stress granul",
+      "authors": "Hao T, Li J, Amancherla KV, Sun L, Gokulnath P, Patino-Guerrero A, Sharma R, Garcia-Mansfield K, Xiao C, Manning AC, Chartterjee E, Yu X, Xu R, Zhang Y, Yang Z,",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1186/s40164-026-00834-9",
+      "title": "Next-generation CAR-T therapy for malignant brain tumors: latest updates from the 2026 AACR Annual Meeting.",
+      "titleZh": "恶性脑肿瘤的下一代 CAR-T 治疗：2026 年 AACR 年会最新进展",
+      "abstract": "The 2026 AACR Annual Meeting showcased rapid progress in chimeric antigen receptor (CAR) T-cell therapy for malignant brain tumors. This correspondence synthesizes 12 clinical and translational abstracts addressing early efficacy, resistance mechanisms, target discovery, and next-generation engineering. Phase I studies in glioblastoma demonstrated feasibility, manageable toxicity, cellular persistence, and preliminary radiographic activity, while revealing antigen loss and treatment-associated myeloid suppression. Longitudinal and spatial analyses further identified limited CAR T-cell persistence, anti-CAR immune responses, and remodeling of suppressive tumor niches. Preclinical strategies sought to overcome these barriers through programmable antigen recognition, alternative KIR/DAP12 sig",
+      "authors": "Costa Filho VO, Rabenhorst SHB, Mesquita FP.",
+      "journal": "Experimental hematology & oncology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "other",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.25.754448",
+      "title": "FXR proteins and BICD2 cooperate to promote dynein-mediated RNP transport and stress granule assembly",
+      "titleZh": "FXR 蛋白与 BICD2 协同促进动力蛋白介导的核糖核蛋白运输及应激颗粒组装",
+      "abstract": "ABSTRACT Intracellular trafficking of ribonucleoprotein particles (RNPs) is a widespread strategy for regulating gene expression, yet how this process is orchestrated in mammalian systems remains unclear. Here, we show that Bicaudal D2 (BICD2), a partner of the microtubule motor dynein, is complexed with RNA-binding proteins (RBPs) in human cells. We also reveal that two of these RBPs – the Fragile X-related proteins FXR1 and FXR2 – bind directly to BICD2 and recruit mRNAs to dynein. Surprisingly, given its conventional designation as a cargo adaptor, BICD2 is not needed for dynein to interact with FXR1 and FXR2. Using in vitro reconstitution, we demonstrate that BICD2 instead activates dynein motility in concert with the FXR proteins. These data support a model in which BICD2 is recruited",
+      "authors": "Jeske YA, Mehtab E, Albacete-Albacete L, McClintock MA, Boulanger J, Bullock SL.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.1016/j.bbapap.2026.141183",
+      "title": "Intrinsically disordered proteins and liquid-liquid phase separation: Molecular grammar, condensate physiology, and disease-relevant phase transitions.",
+      "titleZh": "内在无序蛋白与液–液相分离：分子语法、凝聚体生理及疾病相关相变",
+      "abstract": "Intrinsically disordered proteins (IDPs) and intrinsically disordered regions (IDRs) of proteins constitute a substantial and functionally critical fraction of the eukaryotic proteome. Through multivalent, low-affinity interactions encoded in their low-complexity domains (LCDs), IDPs drive liquid-liquid phase separation (LLPS)-a physicochemical process that produces membraneless biomolecular condensates serving as dynamic reaction hubs within cells. Recent advances have substantially refined the conceptual framework governing condensate biophysics: the phase separation coupled to percolation (PSCP) model now recognizes that condensates are viscoelastic network fluids arising from the synergy between density transitions and connectivity (percolation) transitions, rather than simple LLPS alo",
+      "authors": "Abinawanto, Sophian A.",
+      "journal": "Biochimica et biophysica acta. Proteins and proteomics",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.1007/s11033-026-12735-5",
+      "title": "Stress granules and RNA-binding proteins in cellular senescence: a modular perspective on stress adaptation and inflammation.",
+      "titleZh": "细胞衰老中的应激颗粒与 RNA 结合蛋白：应激适应和炎症的模块化视角",
+      "abstract": "Cellular senescence is a complex stress response characterized not only by stable growth arrest but also by chromatin remodeling, altered proteostasis, metabolic adaptation, innate immune activation, and the senescence-associated secretory phenotype. Stress granules (SGs) are dynamic membraneless ribonucleoprotein condensates that form during translational stress and regulate mRNA triage, signaling and recovery. While both senescence and SGs represent important features of cellular stress response, the mechanisms underlying their intersection remain poorly defined. This review examines how the biology of SGs and RNA-binding proteins (RBPs) regulate senescence, with particular emphasis on stress granule-induced inflammation associated with SASP, activation of cGAS-STING, induction of NF- κB",
+      "authors": "Bahraminasab M, Al-Rashdi JS, Darweesh M, Mohammadi S, Al-Amri IS, Al-Harrasi A, Al-Roshdi MR.",
+      "journal": "Molecular biology reports",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.1016/j.cbd.2026.102042",
+      "title": "Dynamic changes in the heart proteome and phosphoproteome of Pelophylax nigromaculatus during salt stress and recovery.",
+      "titleZh": "盐胁迫及恢复过程中黑斑侧褶蛙心脏蛋白质组与磷酸化蛋白质组的动态变化",
+      "abstract": "Salinization of freshwater ecosystems poses an escalating threat to amphibian populations worldwide, yet the molecular mechanisms underlying cardiac responses to salt stress remain poorly understood. In this study, we employed DIA-based quantitative proteomics and phosphoproteomics to systematically investigate the dynamic protein expression and phosphorylation profiles in the heart of Pelophylax nigromaculatus across low-salt, high-salt, and recovery stages. A total of 3747 proteins and 623 phosphopeptides were identified. Kinase prediction analysis revealed that ERK2, along with AGC, TKL, TK, and STE kinase families, may serve as key upstream regulators of salt-stress signaling. Cluster analysis classified the proteins shared among all treatment groups into six expression patterns, among",
+      "authors": "Wu S, Wang N, Li Y, Gao J, Yang G, Zhang J, Liu Z, Wang H, Zhang X.",
+      "journal": "Comparative biochemistry and physiology. Part D, Genomics & proteomics",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.21203/rs.3.rs-10599847/v1",
+      "title": "Exploration of potential mechanisms and key genes associated with stress granules in immunoglobulin A nephropathy based on transcriptome and experimental validation",
+      "titleZh": "基于转录组与实验验证探索 IgA 肾病中应激颗粒相关的潜在机制和关键基因",
+      "abstract": "Abstract Background Stress granules (SGs) are involved in immunoglobulin A nephropathy (IgAN) pathogenic pathogenesis. This study aimed to identify SGs-related key genes in IgAN and explore their underlying mechanisms and therapeutic potential. Methods After IgAN modeling in rats, RNA sequencing was conducted to obtain their transcriptome data, and human SGs-related genes (SGs-RGs) were downloaded from public databases. Subsequently, differentially expressed genes (DEGs) were identified, and candidate genes were obtained by intersecting with rat SGs-RGs (converted from human SGs-RGs through homologous mapping). Key genes were finally determined through the protein-protein interaction network and the MCODE plug-in. Meanwhile, we performed in-depth analyses—including functional enrichment, d",
+      "authors": "Sailaiajimu G.",
+      "journal": "Research Square",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.21203/rs.3.rs-10537418/v1",
+      "title": "The human amniotic membrane derived MSC secretome restrains neuroinflammation and peripheral immune cell invasion of 3D neural tissue through conserved CXCL10 blockade and proteostatic rescue",
+      "titleZh": "人羊膜来源间充质干细胞分泌组通过保守的 CXCL10 阻断及蛋白质稳态修复，抑制三维神经组织中的神经炎症和外周免疫细胞侵入",
+      "abstract": "Abstract Chronic neuroinflammation is a convergent mechanism of neurodegenerative disease progression, yet therapies that restrain it without impairing central nervous system immune surveillance remain limited. The human amniotic membrane-derived mesenchymal stromal cell secretome (CM-hAMSC) was shown to modulate peripheral immunity, with demonstrated efficacy in several inflammatory models, but its action on the neuroinflammatory circuitry is poorly defined. Here, we systematically investigated the effects of CM-hAMSC across a nested hierarchy of complementary neuroinflammatory models, including: monolayer cultures of human cell line-derived neurons, astrocytes and microglia; 3D human tri-partite neurospheroids; a peripheral immune transwell interface; and microglia-free murine induced pl",
+      "authors": "Bufi AA, Papait A, Stefano JD, Marco FD, Motaln H, Farigu S, Vertua E, Signoroni PB, Scalvini E, Giuzzi E, Paini A, Romele P, Quaglia F, Breedam EV, Chiodelli P",
+      "journal": "Research Square",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.1016/j.phrs.2026.108464",
+      "title": "Orchestrating stress granule dynamics by SUMOylation: A new frontier in treating stress-induced age-related diseases.",
+      "titleZh": "SUMO 化调控应激颗粒动态：治疗应激诱导的年龄相关疾病的新前沿",
+      "abstract": "Stress granules (SGs), membrane-less organelles formed via liquid-liquid phase separation (LLPS), function as essential adaptive compartments that sequester mRNAs and proteins during acute stress. However, during chronic stress or aging, these dynamic condensates can undergo an irreversible phase transition into pathological insoluble aggregates, driving neurodegeneration and metabolic decline. The pivotal role of SUMOylation is elucidated as a molecular switch orchestrating the SG life cycle, from rapid nucleation and component recruitment to timely disassembly. The multivalent engagement of SUMO proteins and SUMO-interacting motifs (SIMs) is discussed as a biochemical glue that lowers the kinetic threshold for LLPS and maintains the fluid-like state of SG scaffold proteins. Furthermore, ",
+      "authors": "Zhang J, Hu H, Zhu Y, Xin X, Fan R, Ye Y, Li D.",
+      "journal": "Pharmacological research",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1016/j.compbiolchem.2026.109430",
+      "title": "An ATXN2-linked stress granule transcript program marks proliferative and CD8-low states in colorectal cancer.",
+      "titleZh": "ATXN2 相关的应激颗粒转录程序标记结直肠癌中的增殖状态和 CD8 低表达状态",
+      "abstract": "Immune checkpoint blockade benefits only a minority of colorectal cancer patients, and many tumors show immune-cold phenotypes at the transcript level, especially in microsatellite-stable (MSS) disease. Stress granules are conserved ribonucleoprotein assemblies that form under metabolic and proteotoxic stress and include the RNA-binding protein ataxin-2 (ATXN2). However, it remains unclear whether stress-granule-related tumor programs consistently track immune-cold colorectal cancer (CRC) states across independent cohorts. Here, we tested whether a compact stress-granule-related transcript program anchored on ATXN2 (CS_ATXN2) is associated with reduced CD8 cytotoxic transcript signal in bulk CRC beyond proliferation, hypoxia, and tumor purity. We analyzed three independent bulk CRC cohorts",
+      "authors": "Allal BE, Abdelaziz I, Djerdjouri B, Bounaama A.",
+      "journal": "Computational biology and chemistry",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.1186/s40035-026-00580-2",
+      "title": "What can we learn on ALS pathophysiology from iPSC-derived motor neurons harbouring TARBDP mutations: a systematic review.",
+      "titleZh": "携带 TARBDP 突变的 iPSC 来源运动神经元能揭示哪些 ALS 病理生理机制：系统综述",
+      "abstract": "The degenerating motor neurons of amyotrophic lateral sclerosis (ALS) patients are characterized by the accumulation of cytoplasmic aggregates, specifically enriched in ubiquitinated TDP-43. Expressed mainly in the nucleus and partially in the cytoplasm to execute its role in RNA metabolism, the exact mechanisms that bring TDP-43 to aggregate in disease have yet to be described. Unfolding these processes could bring us closer to effective drug development that is drastically lacking in the ALS research field. Induced pluripotent stem cells (iPSCs) offer a promising platform for studying ALS pathogenesis directly in the relevant human genetic backgrounds of ALS patients. Since 2012, more than 30 published studies have investigated altered cellular and subcellular features in iPSC-derived mo",
+      "authors": "Pasho E, Catanese A, Kabashi E, Ciura S.",
+      "journal": "Translational neurodegeneration",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.15.751797",
+      "title": "E3 ubiquitin ligase SYVN1 mediates K63-linked ubiquitination of DDX3X to activate Macrophage NLRP3 Inflammasome",
+      "titleZh": "E3 泛素连接酶 SYVN1 介导 DDX3X 的 K63 连接型泛素化，激活巨噬细胞 NLRP3 炎症小体",
+      "abstract": "DDX3X (DEAD-box helicase 3, X-linked) is a common and essential component for both stress granules and NLRP3 inflammasome assembly and their activation; however, the upstream cellular stress signals driving DDX3X to activate the contrasting cellular pathway remain unclear. We identified the pivotal role of the E3 ubiquitin ligase SYVN1(Synoviolin) as the upstream regulator of DDX3X and thereby controlling NLRP3 activation and stress granule assembly. We observed SYVN1 silencing in macrophages prevented both NLRP3-driven inflammation and stress granule formation. SYVN1 deficiency prevented LPS-induced inflammatory lung injury and increased the survival rate of the mice. SYVN1 sustains DDX3X gene expression and promotes stimulus-dependent ubiquitination of DDX3X. Under inflammatory condition",
+      "authors": "Anas M, Singh A, Prasad NR, Thompson JW, Tiruppathi C, Malik AB.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.17.752460",
+      "title": "Spatially Constrained Monte Carlo Permutation Test Reveals Diffusion Changes Near Stress Granules",
+      "titleZh": "空间约束蒙特卡洛置换检验揭示应激颗粒附近的扩散变化",
+      "abstract": "Intracellular diffusion is inherently heterogeneous, yet single-particle tracking (SPT) analyses are often summarized using cell-wide average parameters that can obscure localized effects. Here, we tracked 40-nm genetically encoded multimeric (GEM) nanoparticles during stress granule (SG) formation and developed SPaCe-MC (Spatially Constrained Monte Carlo permutation test), a statistical framework that generates cytoplasm-specific null models to test whether diffusion associated with a specific cellular structure differs from that expected in the surrounding heterogeneous cytoplasm. Across three SG-inducing conditions, including oxidative stress, DDX3 inhibition, and combined treatment, bulk cytoplasmic analyses revealed distinct responses ranging from increased nanoparticle mobility to in",
+      "authors": "Korunova E, Sikirzhytski V, Twiss JL, Shtutman M, Vasquez P.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.1101/gad.353720.126",
+      "title": "The hnRNPA1 D262V amyotrophic lateral sclerosis (ALS) mutation is linked to mitochondrial dysfunction.",
+      "titleZh": "hnRNPA1 D262V 肌萎缩侧索硬化症（ALS）相关突变与线粒体功能障碍有关",
+      "abstract": "Amyotrophic lateral sclerosis (ALS) is a progressive neurodegenerative disorder marked by motor neuron loss and has been genetically linked to mutations in RNA-binding proteins. A mutation D262V in the RNA-binding protein hnRNPA1, found in a subset of ALS patients, causes widespread splicing pattern changes. Cells expressing this hnRNPA1 mutation exhibit aggregation, reduced proliferation, altered stress granules and abnormal neuronal growth. To further elucidate how a single amino acid substitution in a splicing factor might impact cell growth, we employed ribosome profiling to study translational dynamics across the transcriptome in hnRNPA1 mutant cells. Differential ribosome occupancy was observed for a small number of transcripts linked to synaptic organization and GTPase functions, as",
+      "authors": "Lee YJ, Shen K, Dillin A, Rio DC.",
+      "journal": "Genes & development",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.3389/fimmu.2026.1908472",
+      "title": "Non-coding RNAs: master regulators in the battle between host antiviral defense and viral replication.",
+      "titleZh": "非编码 RNA：宿主抗病毒防御与病毒复制博弈中的核心调控者",
+      "abstract": "Viral infectious diseases pose serious threats to global public health. Host non-coding RNAs (ncRNAs), including miRNAs, lncRNAs, circRNAs, and vtRNAs, act as master regulators of host antiviral defense and viral replication. Current studies on ncRNA-virus interactions are generally fragmented, and most reviews focus on a single virus or a single class of ncRNAs, without combining ncRNA expression dynamics with their biological functions for systematic collation. Herein, we establish a novel four-category classification framework based on ncRNA expression patterns and functional characteristics upon viral infection. To counteract viral infections, the host dynamically modulates the expression of distinct ncRNAs to target proviral host factors, host restriction factors, other ncRNAs, microp",
+      "authors": "Chen N, Zhang B, Chen X, Zhang H, Yu Z.",
+      "journal": "Frontiers in immunology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.1016/j.jhazmat.2026.143589",
+      "title": "Corrigendum to \"Arsenic-responsive hsa_circ_0000118 couples early stress granule dynamics to later NF-κB-related signaling adaptation in NSCLC\" [J Hazard Mater 515 (2026) 143203].",
+      "titleZh": "勘误：砷响应性 hsa_circ_0000118 将非小细胞肺癌早期应激颗粒动态与后期 NF-κB 相关信号适应相耦联",
+      "abstract": "",
+      "authors": "Tan J, Liu N, Zhang Y, Zhu Y, Yang J, Yang X, Duan T, Yang X, Chen B, He Y.",
+      "journal": "Journal of hazardous materials",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.1016/j.celrep.2026.118056",
+      "title": "Gadd45β is critical for regulation of type I interferon signaling by facilitating G3BP-mediated stress granule formation.",
+      "titleZh": "Gadd45β 通过促进 G3BP 介导的应激颗粒形成，在 I 型干扰素信号调控中发挥关键作用",
+      "abstract": "",
+      "authors": "Chathuranga WAG, Nikapitiya C, Kim JH, Chathuranga K, Weerawardhana A, Dodantenna N, Kim DJ, Poo H, Jung JU, Lee CH, Lee JS.",
+      "journal": "Cell reports",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.08.749846",
+      "title": "Revisiting Stress Granule Transcriptomes Suggests Mitochondrial RNA Enrichment Despite Methodological Bias",
+      "titleZh": "重新审视应激颗粒转录组：尽管存在方法学偏倚，仍提示线粒体 RNA 富集",
+      "abstract": "Stress granules (SGs) are dynamic, membraneless cytoplasmic condensates that form in response to diverse cellular stressors. Although proposed to modulate stress responses by selectively sequestering proteins and RNAs, their precise molecular composition and function remain unclear. Reported SG transcriptomes differ substantially due to methodological discrepancies, notably between differential centrifugation (DC) and proximity labeling (PL). Here, we reanalyse publicly available human SG transcriptomes across multiple stressors, cell types, and isolation strategies. DC-based profiles were strongly shaped by RNA length, consistent with a physical bias inherent to the sedimentation-based separation. Correcting for this effect reveals limited concordance between studies. Mitochondrially enco",
+      "authors": "Kaizeler A, Coutinho D, Vieira DV, Morais VA, Barbosa-Morais NL.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.08.750051",
+      "title": "Fragile X syndrome-linked mutations impair FMRP accumulation in neuronal transport granules",
+      "titleZh": "脆性 X 综合征相关突变损害 FMRP 在神经元运输颗粒中的积累",
+      "abstract": "RNA granules are biomolecular condensates that are reversibly formed through multivalent interactions among mRNAs and RNA-binding proteins (RBPs). RNA granules include stress granules and neuronal transport granules, which share common components and functions in translational regulation. Fragile X messenger ribonucleoprotein (FMRP) is an RBP encoded by FMR1 , whose loss of function causes fragile X syndrome (FXS), a neurodevelopmental disorder. FMRP is a component of both stress granules and neuronal transport granules. Although several FXS-associated missense mutations in FMRP have been identified, it remains unclear whether these mutations affect the assembly of FMRP into RNA granules. Here, we found that the KH1 domain mutation G266E markedly reduced the accumulation of FMRP in stress ",
+      "authors": "Kubo M, Ishiyama M, Yoshizawa K, Sasaki Y.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.26508/lsa.202603825",
+      "title": "Proximity labeling puts ZFP36L1 as central hub for posttranscriptional regulation networks in T cells.",
+      "titleZh": "邻近标记揭示 ZFP36L1 是 T 细胞转录后调控网络的核心枢纽",
+      "abstract": "Effective T cell responses against pathogens require a rapid yet tightly controlled remodeling of the proteome, and RNA binding proteins (RBPs) are key in this process. For instance, the RBP ZFP36L1 prevents excessive protein production and thereby limits immunopathology. ZFP36L1 is primarily known to mediate mRNA decay, but it can also regulate other processes. How its mode of action relates to its interaction partners is, however, not well-understood. Here, we mapped the ZFP36L1 interactome in primary human T cells. Using proximity labeling, we identified known and new interactors that regulate 3'UTR-mediated RNA degradation, deadenylation, stress granule/p-body formation, as well as 5'UTR-mediated translation repression and mRNA decapping. Snapshot analysis uncovered the ZFP36L1 interac",
+      "authors": "Jurgens AP, Popović B, van Alphen FP, Steinmetz M, Wardak L, Bradarić A, Engels S, van der Zwaan C, van den Biggelaar M, Hoogendijk AJ, Béthune J, Wolkers MC.",
+      "journal": "Life science alliance",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.21203/rs.3.rs-10579672/v1",
+      "title": "Investigation of Stress Granule-Associated Biomarkers (IGF1 and CDK2) and Their Regulatory Mechanisms in Alzheimer’s Disease: A Combined Transcriptomic, Bioinformatic and Experimental Study",
+      "titleZh": "阿尔茨海默病中应激颗粒相关生物标志物 IGF1、CDK2 及其调控机制：转录组、生物信息学与实验联合研究",
+      "abstract": "Abstract Background Alzheimer's disease (AD) is the leading neurodegenerative disorder in older adults. Stress granules (SGs) have increasingly been implicated in AD, but their regulatory circuitry and biomarker relevance remain insufficiently defined. Methods Public transcriptomic datasets were integrated and analyzed with machine-learning strategies. Candidate biomarkers were refined by expression validation and receiver operating characteristic (ROC) analysis. A fully connected neural network (FCNN) was constructed to estimate diagnostic performance for AD. Gene set enrichment analysis (GSEA), molecular-network assessment, and immune-infiltration profiling were then performed to characterize biomarker-related functions. Reverse transcription quantitative polymerase chain reaction (RT-qP",
+      "authors": "Wusiyin M, Wei X, Liu X, Aheizan A, Maituzi A, Huang R.",
+      "journal": "Research Square",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "title:aff788589655a3ca1a28b31b",
+      "title": "Prion‐Like Protein LENG8‐Mediated Nucleation Drives Stress Granule Assembly",
+      "titleZh": "类朊蛋白 LENG8 介导的成核驱动应激颗粒组装",
+      "abstract": "",
+      "authors": "Zhang M, Wang X, Teng Y, Wu Z, Fan J, Zhu H, Dai P.",
+      "journal": "Advanced Science",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.1002/advs.77622",
+      "title": "Prion-Like Protein LENG8-Mediated Nucleation Drives Stress Granule Assembly.",
+      "titleZh": "类朊蛋白 LENG8 介导的成核驱动应激颗粒组装",
+      "abstract": "Stress granules (SGs) are highly dynamic and reversible cytoplasmic biomolecular condensates formed via liquid-liquid phase separation (LLPS) under various stresses. As inherently heterogeneous assemblies, SGs possess distinct stable cores (initial nucleation seeds), substructures, or microphases. However, the mechanisms governing the formation and heterogeneity of SG nucleation seeds, and their dynamic integration, remain largely unclear. Here, we demonstrate that LENG8 is recruited to SGs under multiple stress conditions and is indispensable for SG assembly. Upon stress exposure, nuclear LENG8 granules disassemble, enabling LENG8 to translocate into the cytoplasm and undergo LLPS to form independent initial nucleation foci distinct from canonical G3BP1/TIA1-dependent seeds. Subsequently,",
+      "authors": "Zhang M, Wang X, Teng Y, Wu Z, Fan J, Zhu H, Dai P.",
+      "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.1016/j.ijbiomac.2026.154368",
+      "title": "A lipoprotein-responsive circular RNA, circCTCF, couples extracellular lipid availability to mTOR signaling via ACSL5 in triple-negative breast cancer.",
+      "titleZh": "脂蛋白响应性环状 RNA circCTCF 通过 ACSL5，将三阴性乳腺癌中的细胞外脂质可用性与 mTOR 信号相耦联",
+      "abstract": "Triple-negative breast cancer (TNBC) is an aggressive subtype with limited therapeutic options. While metabolic reprogramming is a hallmark of cancer, most studies have focused on cell-intrinsic alterations in glucose and amino acid metabolism, with comparatively little attention paid to how cancer cells sense and respond to extracellular lipid availability. Here, through an unbiased transcriptomic and circRNA profiling screen under lipoprotein-deprived conditions, we identify circCTCF, a circular RNA derived from the CTCF gene, as a lipoprotein-responsive regulator of lipid metabolism and proliferation in TNBC. circCTCF is significantly downregulated upon lipid withdrawal, and its depletion impairs cell growth while promoting lipid droplet accumulation. Conversely, circCTCF overexpression",
+      "authors": "Zhang Y, Liu Z, Su X, Hu X, Zhang Q, Zhang H, Shicao D, Cheng L, Zhang XD, Liu X, Chen S, Thorne RF.",
+      "journal": "International journal of biological macromolecules",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.1371/journal.ppat.1014553",
+      "title": "TRIM21 blocks DDX3X-driven stress granule formation during Mycobacterium tuberculosis infection via a non-canonical E3 ligase mechanism.",
+      "titleZh": "TRIM21 通过非经典 E3 连接酶机制，阻断结核分枝杆菌感染期间 DDX3X 驱动的应激颗粒形成",
+      "abstract": "Tripartite motif-containing 21 (TRIM21) is an E3 ubiquitin ligase that binds viral and host proteins to mediate antiviral defense. Its role in Mycobacterium tuberculosis (Mtb) infection, however, is unclear. Here, our analysis of human TB transcriptomic datasets showed that TRIM21 expression levels correlate with TB progression in human patients. We further demonstrated that TRIM21 deficiency suppresses Mtb growth in both macrophages and a murine model of tuberculosis (TB). Mechanistically, TRIM21 limits host resistance to Mtb through a non-canonical pathway distinct with its E3 ligase activity. It physically interacts with the RNA helicase DEAD-box helicase family member DDX3X and disrupts phase separation dynamics required for stress granule (SG) assembly. Impaired SG formation compromis",
+      "authors": "Xu R, Lu M, Wang G, Zhang X, Huang Y, Wang Y, Yu Q, Wang Y, Chen D, Hu Y, Shi C, Cai Y, Fu L, Chen X, Dai Y.",
+      "journal": "PLoS pathogens",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1128/jvi.00992-26",
+      "title": "Antagonism of stress granules is key to SARS-CoV-2 infection and pathogenesis.",
+      "titleZh": "拮抗应激颗粒是 SARS-CoV-2 感染与致病的关键",
+      "abstract": "Viruses must subvert host responses to facilitate successful infection. While most antiviral responses are associated with interferons, stress granules (SGs) are another barrier to viral infection by inducing translation arrest. To combat SG activity, viruses have evolved mechanisms to disrupt formation and disassemble these complexes. Our prior studies identified residues in SARS-CoV-2 NSP3 (Y138/F145) and nucleocapsid (F17) that independently antagonize SG activity. Disrupting these key residues in NSP3 or nucleocapsid attenuated viral replication, but only modestly impacted in vivo pathogenesis, suggesting overlap in SG antagonism partially compensates for the individual losses. In this study, we evaluated a SARS-CoV-2 mutant (YF/F17A) that combines the NSP3 and N mutations. We find tha",
+      "authors": "Alvarado RE, Chen J, Lokugamage KG, Zhou Y, Estes LK, Morgan AL, Ahearn Y, Deng X, Lai L, Moayyed A, Meyers W, Plante JA, Plante KS, Walker DH, Xie X, Suthar MS",
+      "journal": "Journal of virology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.1128/jvi.01080-26",
+      "title": "African swine fever virus pMGF110-9L plays a critical role in the integrated stress response and viral pathogenesis.",
+      "titleZh": "非洲猪瘟病毒 pMGF110-9L 在整合应激反应与病毒致病中发挥关键作用",
+      "abstract": "African swine fever virus (ASFV) is the causative agent of ASF, a highly contagious and frequently fatal hemorrhagic disease in domestic swine and wild boars, posing a significant threat to the global pig industry. To ensure successful replication, ASFV may modulate cellular stress mechanisms to hijack the host translation machinery and promote viral factory formation to favor viral protein synthesis and counteract host defenses. However, the interplay between ASFV replication and cellular stress responses has not yet been elucidated, hindering the development of vaccines or therapeutic options. In this study, we dissected how ASFV manipulates the integrated stress response (ISR) to facilitate viral replication and identified the virulence-related factor pMGF110-9L as the strongest activat",
+      "authors": "Fan S, Zhong H, Li D, Zhang J, Zhang Y, Hu M, He W, Wan B, Zhu Z, Han S, Zheng H, Zhang G.",
+      "journal": "Journal of virology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.3389/fnmol.2026.1927505",
+      "title": "Stress granule phase transitions and neuronal fate in cerebral ischemia-reperfusion injury.",
+      "titleZh": "脑缺血再灌注损伤中的应激颗粒相变与神经元命运",
+      "abstract": "Cerebral ischemia-reperfusion injury (CIRI) drives neuronal death through secondary molecular events that persist after blood flow is restored. How neurons commit to survival or death before individual death programs engage remains unclear. Liquid-liquid phase separation and its stress granules (SGs) offer one regulatory platform. Under CIRI stress, SGs assemble around G3BP1 and concentrate stalled mRNP complexes with RNA-binding proteins such as TDP-43, FUS, and DDX3X. The physical state of the condensate sets its function. Liquid-state SGs are cytoprotective. In a mechanism so far demonstrated outside CIRI itself, they sequester executioner caspase-3 and caspase-7. They also upregulate GPX4 protein through a G3BP1-IGF2BP1-m6A hub that limits ferroptosis. They further reduce DDX3X availab",
+      "authors": "Liao X, Li L, Zhang X, Chen Q, Guo C, Luo J, Wang T, Wang Z.",
+      "journal": "Frontiers in molecular neuroscience",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.3390/cells15171623",
+      "title": "Ivermectin Inhibits Stress Granule Clearance by Blocking the De Novo Synthesis of Hsp70 in Neuroblastoma Cells.",
+      "titleZh": "伊维菌素通过阻断 Hsp70 的从头合成，抑制神经母细胞瘤细胞中的应激颗粒清除",
+      "abstract": "Cytoplasmic stress granules (SGs) form in response to diverse insults; they are dismantled when the stress subsides. SG clearance is facilitated by molecular chaperones, nuclear transport factors, and other components. The anti-parasitic drug ivermectin inhibits nuclear trafficking and has potential anti-cancer activities. However, the molecular pathways that promote ivermectin's therapeutic actions are poorly understood. Our study defined the effects of ivermectin on stress recovery in human neuroblastoma and cervical carcinoma cells. We demonstrate that ivermectin interferes with SG disassembly in neuroblastoma cells. The delay of SG dissolution is accompanied by significant changes in the proteostasis network. Notably, ivermectin diminishes de novo protein synthesis in unstressed and st",
+      "authors": "Chu S, Anim EP, Salehi-Tabar R, White JH, Stochaj U.",
+      "journal": "Cells",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.1007/s00425-026-05144-2",
+      "title": "Protein-RNA control networks at the plant-pathogen interface.",
+      "titleZh": "植物–病原体互作界面的蛋白质–RNA 调控网络",
+      "abstract": "Main conclusion Plant immunity depends on coordinated control of signaling gain, molecular persistence, RNA fate, interorganismal exchange and timely attenuation, defining testable routes to durable disease control. Plant immunity is often reviewed as a sequence of receptor activation, transcriptional reprogramming, and antimicrobial output. That organization is useful, but it obscures a central mechanistic problem: immune performance depends on coupled control of protein abundance, RNA fate, interorganismal exchange and response termination. Here, we develop an evidence-weighted protein-RNA control-loop framework that is explicitly differentiated from receptor-, proteostasis-, RNA-silencing- and extracellular-vesicle-centered reviews. The framework organizes plant-pathogen interactions ar",
+      "authors": "Zaman W, Ayaz A.",
+      "journal": "Planta",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "other",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.1038/s41589-026-02313-y",
+      "title": "Directed evolution of Lantern enables rapid RNA and protein proximity labeling.",
+      "titleZh": "Lantern 的定向进化实现快速 RNA 与蛋白质邻近标记",
+      "abstract": "In eukaryotic cells, the precise spatial localization of RNAs and proteins is essential for proper cellular function. Genetically encoded photocatalytic proximity labeling techniques have expanded our ability to map subcellular proteomes and transcriptomes, but their temporal resolution remains limited. Here we introduce Lantern, an engineered flavoprotein optimized via directed evolution, which enables sub‑minute, spatially resolved labeling of cellular biomolecules. Lantern is targetable to diverse subcellular compartments, including the endoplasmic reticulum (ER), mitochondria and stress granules (SGs), to map local transcriptomes (CAP-seq) and proteomes (CAP-MS). Using Lantern, we observed that N 6 -methyladenosine-rich RNAs are recruited to SGs within 10 minutes of stress induction, a",
+      "authors": "Fang Y, Ren Z, Zheng F, Wang R, Zhao S, Zhang Y, Wang W, Li C, Liu-Yang L, Lin C, Liu J, Zou P.",
+      "journal": "Nature chemical biology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "sg",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.10.01.756119",
+      "title": "Structure-Informed Stress-Testing of the Standard Numbering Scheme for Class B β-Lactamases Using AlphaFold2",
+      "titleZh": "利用 AlphaFold2 对 B 类 β-内酰胺酶标准编号体系开展结构指导的压力测试",
+      "abstract": "The standard numbering scheme for class B beta-lactamases (metallo-beta-lactamases, MBLs), the BBL scheme, was proposed by Galleni et al. in 2001 and updated by Garau et al. in 2004 from the small number of MBL structures then solved. Hundreds of additional class B sequences have since been catalogued, but most have never been structurally solved, so whether BBL correspondences hold across this larger diversity has not been directly tested. Following the precedent set for the sibling class D enzymes, we used ColabFold (AlphaFold2/MMseqs2) to model 87 class B families across subclasses B1, B2, and B3 lacking an experimental structure, after validating the pipeline against an eight-enzyme benchmark spanning all three subclasses (RMSD to experimental structures 0.35-0.46 A). Applying BBL zinc",
+      "authors": "Khan Niazi MM, Khan HA.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.1016/j.cbi.2026.112355",
+      "title": "Zinc Deficiency Exacerbates Cisplatin-Induced Acute Kidney Injury by Impairing Metabolic Adaptation and Antioxidant Defenses.",
+      "titleZh": "锌缺乏通过损害代谢适应与抗氧化防御，加重顺铂诱导的急性肾损伤",
+      "abstract": "Cisplatin-induced acute kidney injury (Cis-AKI) is a major limitation of chemotherapy and is largely driven by the inability of renal tubular epithelial cells to adapt to metabolic and oxidative stress. Zinc, an essential regulator of cellular stress responses, may influence this vulnerability, but its role in cisplatin nephrotoxicity remains unclear. Here, zinc-normal and zinc-deficient mice were subjected to Cis-AKI. Renal injury was evaluated by histology, serum creatinine (Scr), blood urea nitrogen (BUN), renal zinc levels, and NGAL expression. Transcriptomic analysis was performed to identify pathways altered by zinc deficiency, followed by validation of the AMPK/SIRT1/PGC-1α axis. Oxidative stress and apoptosis were assessed by Nrf2 signaling, antioxidant enzyme expression, SOD activ",
+      "authors": "Zhou Q, Zhu Z, Wan X, Chen H, Wang Y.",
+      "journal": "Chemico-biological interactions",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "pending"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.1039/d6fo03527b",
+      "title": "Comparative genomic insights into strain-specific zinc-promoting effects of the spore-forming probiotic Heyndrickxia coagulans.",
+      "titleZh": "比较基因组学揭示产孢益生菌凝结海恩德里克氏菌促进锌利用的菌株特异性效应",
+      "abstract": "Zinc deficiency is a prevalent micronutrient disorder, and probiotic intervention has emerged as a promising strategy to improve zinc bioavailability. However, the strain-specific characteristics and genetic basis underlying the zinc-promoting effects of probiotics remain poorly understood. Therefore, this study aimed to identify the key physiological properties and functional genes associated with the zinc-promoting capacity of Heyndrickxia coagulans ( H. coagulans , formerly Bacillus coagulans ). A Caco-2 intestinal epithelial cell monolayer model and a zinc-deficient mouse model were established to evaluate the zinc-promoting effects of H. coagulans . Male BALB/c mice were fed a zinc-deficient diet and orally administered H. coagulans spores (10 7 CFU per mouse per day) combined with zi",
+      "authors": "Qiu Y, Zhang C, Ma E, Zheng X, Wang R, Li Q, Li N, Wang G, Cui S, Lu W, Yang B, Lv X, Zhao J, Chen W, Zhai Q.",
+      "journal": "Food & function",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.1002/jdn.70186",
+      "title": "REST in the Central Nervous System: Context-Dependent Regulation of Neuronal Homeostasis and Disease.",
+      "titleZh": "中枢神经系统中的 REST：神经元稳态与疾病的情境依赖性调控",
+      "abstract": "The RE1-silencing transcription factor (REST), also known as neuron-restrictive silencer factor (NRSF), is a zinc-finger domain-containing transcriptional regulator involved in coordinating gene expression programmes in the nervous system. Initially characterized as a repressor of neuronal genes in nonneuronal cells, REST also exerts context-dependent functions during neurodevelopment, neuronal maturation, homeostasis and brain ageing. Its activity involves the recruitment of multiple regulatory complexes, including Sin3A/HDACs and CoREST/LSD1, as well as interactions with mechanisms associated with DNA methylation and hydroxymethylation. REST also integrates regulatory networks involving noncoding RNAs. MicroRNAs such as miR-9, miR-124 and miR-132 participate in networks that interact wit",
+      "authors": "Carvalho LB, Yamada AK, Furtado LA, Feltran GDS, de Lima ER, Paiva A, Canineo D, Bernardi MM, Fernandes CJDC, da Silva RAF.",
+      "journal": "International journal of developmental neuroscience : the official journal of the International Society for Developmental Neuroscience",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.1016/j.ijbiomac.2026.154714",
+      "title": "A C2H2-type zinc-finger transcription factor PdbZAT11 activates PdbTLP3 transcription to confer salt tolerance in Populus davidiana × P. bolleana.",
+      "titleZh": "C2H2 型锌指转录因子 PdbZAT11 激活 PdbTLP3 转录，赋予山杨 × 银白杨杂交种耐盐性",
+      "abstract": "Zinc-finger transcription factors essentially mediate plant responses to abiotic stress. In this study, a salt-inducible and nucleus-localized C2H2-type zinc-finger transcription factor designated as PdbZAT11 was screened and identified. Overexpression and mutant lines of PdbZAT11 were generated via genetic transformation. Phenotypic and physiological analyses demonstrated that PdbZAT11 overexpression enhanced salt tolerance by increasing antioxidant enzyme activities and proline accumulation, thereby alleviating reactive oxygen species (ROS)-induced cellular damage, whereas disruption of PdbZAT11 resulted in the opposite effect. As a transcriptional activator, PdbZAT11 specifically bound to the IBOX element in the promoter region and directly activated expression of its target gene PdbTLP",
+      "authors": "Li W, Wu Z, Hao F, Wang Q, Li L, Wang Y, Ji X.",
+      "journal": "International journal of biological macromolecules",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.2337/db26-0183",
+      "title": "Islet-Targeted ZnT8 Antibodies Protect Pancreatic β-Cells From Inflammatory Stress.",
+      "titleZh": "靶向胰岛的 ZnT8 抗体保护胰腺 β 细胞免受炎症应激损伤",
+      "abstract": "β-Cell maladaptive unfolded protein response is a shared pathogenic feature of type 1 and type 2 diabetes, yet therapeutic strategies that selectively restore β-cell proteostasis remain limited. Zinc transporter 8 (ZnT8) is an islet-restricted endoplasmic reticulum (ER)-resident membrane protein whose folding burden is amplified under inflammatory stress. Here, we show that cell surface-directed ZnT8 antibodies are internalized and act as selective ZnT8 chaperones, preserving β-cell function across multiple diabetes models. ZnT8 chaperoning protected β-cells in prediabetic autoimmune nonobese diabetic (NOD) mice and obesity-associated diabetic mice on an inflammation-prone background, suppressing maladaptive ER stress and MHC class I hyperexpression. In contrast, no protection was observed",
+      "authors": "Guo Z, Kasinathan D, Yun S, Golson ML, Fu D.",
+      "journal": "Diabetes",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": true,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.5414/cn111916",
+      "title": "Composite dietary antioxidant index in predicting chronic kidney disease risk: Findings from NHANES 1999 - 2018.",
+      "titleZh": "综合膳食抗氧化指数预测慢性肾病风险：NHANES 1999–2018 年数据的发现",
+      "abstract": "Background Chronic kidney disease (CKD) poses a significant global health burden, with oxidative stress implicated in its pathogenesis. The composite dietary antioxidant index (CDAI), integrating multiple dietary antioxidants, may offer a novel approach to CKD risk assessment, yet evidence remains limited. Objective This study aimed to evaluate the association between CDAI and CKD risk in a nationally representative U.S. Cohort Materials and methods Cross-sectional data from 24,202 adults in NHANES (1999 - 2018) were analyzed. CDAI was calculated from six dietary antioxidants (vitamins A/C/E, zinc, selenium, β-carotene). CKD was defined by estimated glomerular filtration rate (eGFR) 2 or UACR ≥ 30 mg/g. Multivariable logistic regression, restricted cubic splines (RCS), and subgroup analyse",
+      "authors": "Li W, Jiang L, Chen S, Shan W, Zhang Z.",
+      "journal": "Clinical nephrology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.1093/nutrit/nuaf195",
+      "title": "The Role of Immunological Challenges, Oxidative Stress, and Dietary Interventions in Managing Hashimoto's Thyroiditis: A Narrative Review.",
+      "titleZh": "免疫挑战、氧化应激与膳食干预在桥本甲状腺炎管理中的作用：叙述性综述",
+      "abstract": "Hashimoto thyroiditis (HT) is an autoimmune thyroid disorder characterized by chronic inflammation and hypothyroidism. The current scientific understanding indicates that the development of HT is influenced by a combination of genetic and environmental factors. Nevertheless, oxidative stress (OS) and dysregulated immune processes play a substantial role in HT pathogenesis. Reactive oxygen species (ROS) play a critical role in thyroid hormone synthesis by facilitating iodide oxidation. Since thyroid hormones influence mitochondrial activity and regulate ROS production, the thyroid gland is particularly vulnerable to OS and disruptions in homeostasis. Research indicates that, in HT, the oxidative balance shifts toward a pro-oxidative state. Excessive levels of ROS disrupt cellular homeostasi",
+      "authors": "Morasiewicz-Jeziorek J, Buczyńska A, Krętowski AJ, Adamska A.",
+      "journal": "Nutrition reviews",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.1039/d6ra08119c",
+      "title": "Zero-dimensional anodes across monovalent and multivalent batteries: a critical review of interfacial dynamics, bottlenecks, and solutions.",
+      "titleZh": "单价与多价电池中的零维负极：界面动态、瓶颈及解决方案的批判性综述",
+      "abstract": "The shift towards sustainable energy sources has created an urgent demand for advanced battery systems that can overcome the limitations of conventional anodes. High-capacity candidates such as phosphorus, tin, and silicon-based anodes suffer from poor cyclic stability and severe volume expansion. Higher-dimensional structures such as 1D nanowires, 2D sheets and 3D frameworks may offer high capacity but often suffer from limited scalability, poor structural stability and sluggish kinetics. In contrast, zero-dimensional (0D) nanomaterials provide a unique structural advantage for ion storage. Their exceptionally high surface-to-volume ratio, coupled with quantum confinement effects, shortens diffusion pathways, enhances ion diffusion, improves electrochemical kinetics, and buffers mechanica",
+      "authors": "Najum H, Majid A, Raza MT, Zandi H, Ahmad S, Nawaz S.",
+      "journal": "RSC advances",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.1016/j.envres.2026.125820",
+      "title": "Pseudoalteromonas lipolytica and its EPS-overproducing variant for acid mine drainage control: biofilm formation and biomineralization.",
+      "titleZh": "溶脂假交替单胞菌及其胞外聚合物高产变体用于酸性矿山排水控制：生物膜形成与生物矿化",
+      "abstract": "Acid mine drainage from metal sulfide tailings poses severe environmental risks. Although microbially induced carbonate precipitation (MICP) has been explored for heavy metal immobilization, the common ureolytic pathway generates harmful ammonia. This study demonstrated that Pseudoalteromonas lipolytica SCSIO 04301 and its extracellular polymeric substances (EPS)-overproducing variant effectively passivated pyrite and lead-zinc tailings via biomineralization without urea supplementation or ammonia release. Both strains formed biofilms and induced aragonite precipitation. For pyrite, passivation suppressed Fe release from ∼7500 μg/L to <60 μg/L over 180 days; leachates from passivated pyrite promoted Brassica chinensis growth to ∼100 mg fresh weight (vs. ∼53 mg for unpassivated controls). F",
+      "authors": "Li Q, Li J, Li S, Zhang L, Zeng Z, Sand W.",
+      "journal": "Environmental research",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1242/dev.205808",
+      "title": "C. elegans dauer morphogenesis requires inhibition of DBL-1/BMP signaling by ztf-30.",
+      "titleZh": "秀丽隐杆线虫 dauer 形态发生需要 ztf-30 抑制 DBL-1/BMP 信号",
+      "abstract": "In response to changing environments, the nematode Caenorhabditis elegans enters a stress-resistant diapause stage to survive adverse conditions. While the pathways controlling developmental arrest, such as insulin/daf-2 and TGF-β/daf-7, are well characterized, mechanisms governing subsequent dauer morphogenesis remain poorly understood. Here, we report that the zinc-finger transcription factor ZTF-30 is dispensable for developmental arrest but essential for dauer morphogenesis. ztf-30 mutants form partial dauers that lack a protective thickened cuticle and specialized structures such as alae. Transcriptomics revealed that ztf-30 mutants precociously activate adult collagen expression and upregulate the DBL-1/BMP signaling pathway, which primarily modulates body size and innate immunity. T",
+      "authors": "Godoy LF, Páez ME, Salvatore NR, Doctorovich Y, Yanowitz JL, Hochbaum D.",
+      "journal": "Development (Cambridge, England)",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.1002/adma.75206",
+      "title": "Tannic Acid-Fe3+ Complex‑Sulfonate Coupled Hydrogel Electrolyte for Stable Zinc Anodes.",
+      "titleZh": "用于稳定锌负极的单宁酸–Fe³⁺ 配合物与磺酸盐耦合水凝胶电解质",
+      "abstract": "Aqueous zinc-ion batteries feature low cost and inherent safety for large-scale energy storage. However, their practical deployment is significantly hindered by zinc dendrite proliferation and interfacial corrosion. Conventional electrolytes fail to address cascading failure modes, including corrosion onset, current concentration, and hydrostatic penetration. In this study, we fabricate a high-performance hydrogel electrolyte membrane via robust electrostatic interactions between tannic acid-ferric ion complexes and sulfonate groups. This membrane delivers ionic conductivity of (39.94 ± 0.33) mS cm -1 , a high zinc-ion transference number of (0.91 ± 0.02), and favorable mechanical adaptability. Combined DFT calculations, COMSOL simulations, and multi-scale characterizations uncover a three",
+      "authors": "Zhou Y, Zhu T, Yu F, Ma W, Huang X, Li Z, Tian L, Zhang W, Li Y, Yang Y, Huang C.",
+      "journal": "Advanced materials (Deerfield Beach, Fla.)",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.1016/j.plaphy.2026.111793",
+      "title": "The C2H2 zinc-finger protein CaZAT11 positively regulates cold tolerance in pepper and physically interacts with CaSTOP1.",
+      "titleZh": "C2H2 锌指蛋白 CaZAT11 正向调控辣椒耐寒性，并与 CaSTOP1 发生物理互作",
+      "abstract": "Low temperature is a major environmental constraint that challenges pepper growth and productivity. Although C2H2 zinc-finger transcription factors have been implicated in plant responses to abiotic stresses, their roles in pepper cold tolerance remain poorly understood. In this study, we identified the C2H2 zinc-finger protein CaZAT11 as a novel interacting partner of the C2H2-type zinc-finger protein CaSTOP1 through yeast two-hybrid library screening. This interaction was subsequently confirmed by directed yeast two-hybrid, luciferase complementation imaging, and bimolecular fluorescence complementation assays, with the latter showing that the two proteins interact in the nucleus. In addition, subcellular localization analysis showed that CaZAT11 is localized to the nucleus, and its expr",
+      "authors": "Ullah I, Jiangbai G, Hussain A, Nanda S, Pei Y, Zhang H, Chen R.",
+      "journal": "Plant physiology and biochemistry : PPB",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.1016/j.jhazmat.2026.143761",
+      "title": "Integrated physiological, transcriptomic, and metabolomic analyses provide insights into zinc-doped carbon quantum dot-mediated alleviation of cadmium toxicity in lettuce.",
+      "titleZh": "整合生理、转录组及代谢组分析，揭示锌掺杂碳量子点缓解生菜镉毒性的机制",
+      "abstract": "Cadmium (Cd) accumulation in crops seriously threatens agricultural productivity and food safety, highlighting the need for effective strategies to mitigate Cd toxicity. Uniformly dispersed zinc-doped carbon quantum dots (Zn-CQDs; 2.67 ± 0.36 nm) were synthesized in this study. The synthesized dots demonstrated enzyme-mimetic activities in vitro and potent radical-scavenging capacity. Foliar application of Zn-CQDs markedly alleviated Cd-induced growth inhibition in lettuce (Lactuca sativa L.), increasing shoot fresh and dry biomass by 30.8% and 23.9%, respectively. Moreover, Zn-CQDs treatment reduced the Cd concentration in lettuce shoots by 44.7% while elevating the Zn concentration by 167.9%. Photosynthetic performance was also substantially restored, as evidenced by a 61.0% increase in ",
+      "authors": "Chai S, Bai M, Chen B, Shen T, Wang L, Zhang Q, Sun M, Liu S.",
+      "journal": "Journal of hazardous materials",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.26.754270",
+      "title": "The iron-binding siderophore enterobactin is required for the response of multi-drug resistant Klebsiella pneumoniae to zinc limitation",
+      "titleZh": "铁结合型铁载体肠杆菌素是多重耐药肺炎克雷伯菌应对锌限制所必需的",
+      "abstract": "ABSTRACT To persist during infection Klebsiella pneumoniae must overcome nutrient iron and zinc limitation imposed by the host immune system through a process called nutritional immunity. Secreted small molecule siderophores are a major virulence determinant of Klebsiella pneumoniae pathogenesis and are presumed to overcome nutritional immunity by binding iron for bacterial acquisition. In this work, we set out to identify how a multi-drug resistant K. pneumoniae grows in zinc limited environments. Using unbiased transcriptomics, proteomics, and an arrayed transposon screen, we identified that synthesis and uptake of the siderophore enterobactin is required to allow for growth in low zinc conditions. Iron-specific chelators did not replicate this phenotype and addition of supplemental iron",
+      "authors": "Singer JR, Doyle DA, Kunkle DE, Burroughs OS, Service RJ, Chazin WJ, Skaar EP.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.1021/acsami.6c12093",
+      "title": "Shear Stress-Triggered Piezo-Photocatalytic Thrombolysis, Self-Luminescent Thrombus Imaging, and Recurrence Prevention.",
+      "titleZh": "剪切应力触发的压电–光催化溶栓、自发光血栓成像及复发预防",
+      "abstract": "Thrombotic diseases continue to pose substantial global harm, with high morbidity and mortality rates. Existing theranostic systems for thrombosis face significant risks such as bleeding complications, rapid clearance of therapeutic and imaging agents, and recurrence of thrombi. To overcome these challenges, we have developed a shear stress-triggered thrombosis diagnosis and treatment system, which is expected to achieve site-specific thrombolysis, shear-responsive imaging, and recurrence inhibition. Specifically, tetrakis(4-carboxyphenyl) porphyrin-zinc complexes (ZnTCPP) were anchored on piezoelectric barium titanate (BT) fiber rods (FRs). Luminol and Arg-Gly-Asp (RGD) peptides were then grafted to ZnTCPP, followed by the coordination of remaining carboxyl groups with Zn2+, resulting in ",
+      "authors": "Cao W, Fang Q, Ran P, Zheng H, Xie S, Zhang Z, Li X.",
+      "journal": "ACS applied materials & interfaces",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.1007/s10695-026-01801-1",
+      "title": "ZnO nanoparticle-mediated cadmium adsorption induces bioaccumulation, oxidative stress, and apoptotic responses in Korean rockfish Sebastes schlegelii.",
+      "titleZh": "ZnO 纳米颗粒介导的镉吸附诱导许氏平鲉的生物蓄积、氧化应激与凋亡反应",
+      "abstract": "Metal oxide nanoparticles (NPs) and trace metals may co-occur in polluted coastal waters, and their interactions can alter trace metal behavior and toxicity in aquatic organisms. Here, we evaluated the finteraction between zinc oxide (ZnO) NP and cadmium (Cd) and their effects on Cd accumulation and physiological responses in Korean rockfish Sebastes schlegelii. Changes in zeta potential and Cd concentrations in the supernatant were analyzed to assess ZnO NP-Cd interactions. Fish were exposed to ZnO NP at 0.5 or 5 mg/L and Cd at 10 µg/L, either individually or in combination, for 5 days. Hepatic Cd accumulation was measured, and mRNA expression of antioxidant-related genes, metallothionein (MT), and caspase-3 was analyzed in the liver and gill. Hepatic MT mRNA signals were visualized via i",
+      "authors": "Kim KW, Kwon YH, Kim JA, Kim JH, Choi CY.",
+      "journal": "Fish physiology and biochemistry",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.1016/j.redox.2026.104415",
+      "title": "The ribonuclease ZC3H12A stabilizes BRCA1 mRNA in DNA damage response.",
+      "titleZh": "核糖核酸酶 ZC3H12A 在 DNA 损伤反应中稳定 BRCA1 mRNA",
+      "abstract": "ZC3H12A is an endoribonuclease that destabilizes target transcripts by recognizing stem-loop structures containing a pyrimidine-purine-pyrimidine loop. Here, we identify ZC3H12A as a constitutive stabilizer of BRCA1 mRNA that supports DNA repair capacity. Under basal conditions, depletion of ZC3H12A shortens the half-life of BRCA1 mRNA, reduces its ribosomal loading and lowers BRCA1 protein levels, whereas overexpression has the opposite effect. ZC3H12A binds to the BRCA1 transcript via its PilT N-terminal (PIN) and CCCH-type zinc finger (ZF) domains; enhanced crosslinking and immunoprecipitation (eCLIP) narrows the bound sequence to defined intervals that lie outside the canonical stem-loop element through which ZC3H12A recognizes inflammatory transcripts. Moreover, ionizing radiation ind",
+      "authors": "Lu M, Hou J, Qin Z, Guo J, Wu J, Wang C, Zhao J, Zhu X, Ma T.",
+      "journal": "Redox biology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1016/j.actbio.2026.09.044",
+      "title": "Nonlinear radial force attenuation and stress-corrosion-crack induced fracture of biodegradable Zn alloy stents under vascular bioreactor conditions.",
+      "titleZh": "血管生物反应器条件下可降解锌合金支架的非线性径向力衰减及应力腐蚀裂纹诱导断裂",
+      "abstract": "Zinc alloy vascular stents have emerged as promising candidates in the development of biodegradable stents in recent years. However, due to the complexity of the in vivo environment and the high cost of animal experiments, robust experimental evidence regarding stent degradation-induced radial support loss and the underlying failure mechanisms remains lacking. In this study, a bioreactor system capable of simulating both physiological chemical conditions and pulsatile hemodynamics was developed to investigate the degradation behavior and mechanical evolution of Zn alloy stents. The results revealed a pronounced nonlinear relationship between radial force attenuation and mass loss. Specifically, the radial force decreased by >50% when the mass loss was only approximately 25%, demonstrating ",
+      "authors": "Gao J, Li Y, Wang C, Zhao Z, Shi J, Ding Z, Sun F, Bai J, Zheng Y, Yang H.",
+      "journal": "Acta biomaterialia",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.1016/j.alcohol.2026.09.002",
+      "title": "Regional brain iron, copper, and zinc in alcohol use disorder: Sex-specific differences in human post-mortem tissue.",
+      "titleZh": "酒精使用障碍中的脑区铁、铜、锌：人死后组织中的性别特异性差异",
+      "abstract": "Background One of the risks associated with alcohol use disorder (AUD) is dementia. While the exact pathology is unknown, there is increasing evidence that alcohol consumption may dysregulate iron homeostasis in the brain. Unregulated iron can produce oxidative stress and cellular damage to neurons, including the iron-dependent form of cell death termed ferroptosis. Previous human work has relied on magnetic resonance imaging and quantitative susceptibility mapping, which estimate iron indirectly. We therefore measured iron directly, together with copper and zinc, in three brain regions of donors with and without a diagnosis of AUD. Methods Hippocampus, caudate, and substantia nigra were obtained from the New South Wales Brain Tissue Resource Centre. Tissues came from 40 donors - 20 males ",
+      "authors": "Jones BC, Zhao W, Stevens J, Sutherland GT.",
+      "journal": "Alcohol (Fayetteville, N.Y.)",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.1021/acsami.6c13907",
+      "title": "Polyurethane Elastomers with Superior Mechanical Stability across a Wide Temperature Range.",
+      "titleZh": "在宽温度范围内具有优异力学稳定性的聚氨酯弹性体",
+      "abstract": "Elastomers with mechanically stable performance over extreme temperatures are urgently demanded for deep-space exploration, such as load-bearing components in lunar rovers. However, conventional elastomers suffer from cryogenic brittleness and high-temperature degradation. Herein, we report a polyurethane, FPPU6-Zn2, with exceptional mechanical strength and toughness across a broad window from -100 to 100 °C, by integrating two soft segments with multiple hydrogen bonds and metal-ligand coordination. At room temperature, it delivers a tensile strength of 42 MPa and toughness of 191 MJ/m3; it retains considerable strength at 100 °C; and at -100 °C, it achieves a high strength of 62 MPa and toughness of 102 MJ/m3, together with excellent flexibility even after immersion in liquid nitrogen. T",
+      "authors": "Cai C, Shen H, Sun H, Xie J, Mao Y, Zhang J, Zhang X, Chen S, Pei X, Li B, Wang Q, Zhang Y.",
+      "journal": "ACS applied materials & interfaces",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "other",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.1080/00498254.2026.2740560",
+      "title": "Modulatory Effects of Zinc and Cystine on Diisononyl Phthalate-Induced Male Reproductive Injury.",
+      "titleZh": "锌与胱氨酸对邻苯二甲酸二异壬酯诱导的雄性生殖损伤的调节作用",
+      "abstract": "1. This study investigated the combined effects of zinc and cystine on reproductive damage induced by diisononyl phthalate (DiNP) in male rats.2. A total of 28 rats were randomly assigned to four groups (n = 7 per group) and treated for 45 days. Group 0 (Control) received physiological saline, Group G1 (positive control) received a zinc- cystine combination at a dose of 5 mg zinc + 50 mg cystine/kg body weight, Group 2 received DiNP alone (15 mg/kg body weight), whereas Group 3 received DiNP in combination with zinc (5 mg/kg body weight) and cystine (50 mg/kg body weight).3. Hormonal parameters, including luteinizing hormone (LH), Follicle-stimulating hormone (FSH), and testosterone, were measured. Sperm concentration, motility, speed, and vitality were also evaluated, together with testic",
+      "authors": "Djemil R, Messai A, Lekmin S, Ati S.",
+      "journal": "Xenobiotica; the fate of foreign compounds in biological systems",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.1007/s00259-026-08195-5",
+      "title": "The prognostic value of quantitative myocardial blood flow and flow reserve by dynamic CZT-SPECT for major adverse cardiovascular events.",
+      "titleZh": "动态 CZT-SPECT 定量心肌血流及血流储备对主要不良心血管事件的预后价值",
+      "abstract": "Purpose Cadmium-zinc-telluride single-photon emission computed tomography (CZT SPECT) enables myocardial blood flow (MBF) quantification using 99m Tc-labeled tracers; however, its prognostic value is less well established. This study evaluated the prognostic value of CZT SPECT-derived MBF and myocardial flow reserve (MFR) for major adverse cardiovascular events (MACEs) in patients with suspected ischemic heart disease. Methods We retrospectively included 1,007 consecutive patients who underwent dynamic [ 99m Tc]Tc-sestamibi myocardial perfusion imaging using a CZT D-SPECT camera from June 2018 to May 2021, after excluding those who underwent early revascularization within 90 days. MBF and MFR were quantified using Corridor 4DM software with a net retention model. A MACE was defined as a co",
+      "authors": "Shih YC, Wang SY, Shiau YC, Wu YW.",
+      "journal": "European journal of nuclear medicine and molecular imaging",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.1007/s12013-026-02173-2",
+      "title": "Green Synthesis, Physicochemical Characterization, and In Vitro Biological Evaluation of Moringa concanensis-Mediated Zinc Oxide Nanoparticles with Keratinocyte Wound-Closure Activity.",
+      "titleZh": "长叶辣木介导氧化锌纳米颗粒的绿色合成、理化表征及体外生物学评价：角质形成细胞伤口闭合活性",
+      "abstract": "Oxidative stress, hyperglycaemia and defective keratinocyte-mediated repair impair diabetic wound healing. Moringa concanensis is a lesser explored medicinal plant with wide phytochemical constituents and feasible for the nanoparticle mediated biomedical applications. The current research was focused on the green synthesis of zinc oxide nanoparticles (ZnO NPs) with M. concanensis hydromethanolic leaf extract, their physicochemical characterization, and initial in vitro assessment of antioxidant, antidiabetic enzyme inhibitory, cytocompatibility, and wound-closure activities. ZnO NPs were synthesized using the hydromethanolic leaf extract of M. concanensis and zinc nitrate under alkaline conditions and characterized using UV-visible spectroscopy, Fourier-transform infrared spectroscopy (FTI",
+      "authors": "Kandasamy S, Alagarsamy S.",
+      "journal": "Cell biochemistry and biophysics",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.21203/rs.3.rs-11009043/v1",
+      "title": "Metabolomic Profile and Feeding Preference of Diatraea Saccharalis in Sugarcane Co-inoculated With a Diazotrophic Consortium",
+      "titleZh": "联合接种固氮菌群的甘蔗中代谢组特征与甘蔗螟的取食偏好",
+      "abstract": "Abstract Sugarcane is cultivated in over 100 countries and was introduced to Brazil in 1532. It has since become a major crop in the Brazilian economy. However, it is susceptible to pests, particularly Diatraea saccharalis . Applying microorganisms, such as plant growth-promoting rhizobacteria (PGPBs), affects plant metabolism and resistance, helping plants cope with pests. These microorganisms promote differential growth and induce resistance, phytohormone production, volatile organic compound production, and nitrogen fixation in plants. Gluconacetobacter diazotrophicus and Azospirillum sp. are examples of PGPBs that promote plant growth via biological nitrogen fixation, phytohormone production, phosphate and zinc solubilisation, and protection against biotic and abiotic stress. This stud",
+      "authors": "Oliveira DJdA, Ribeiro TFL, Sobrinho FSL, Sabino AR, Feres CIMdA, Junior KALR, Soares LHdB, Goulart HF, Costa JGd, Santana AEG.",
+      "journal": "Research Square",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.21203/rs.3.rs-10925857/v1",
+      "title": "Dapagliflozin prevents contrast-induced acute kidney injury in rats via Nrf2/HO-1-mediated inhibition of NLRP3 inflammation and tubular apoptosis Short Title: Dapagliflozin prevents CI-AKI via Nrf2/HO-1",
+      "titleZh": "达格列净通过 Nrf2/HO-1 介导的 NLRP3 炎症与肾小管凋亡抑制，预防大鼠造影剂诱导的急性肾损伤",
+      "abstract": "Abstract Contrast-induced acute kidney injury (CI-AKI) is a leading cause of iatrogenic acute kidney injury with limited effective preventive therapies. Dapagliflozin, a sodium-glucose cotransporter 2 inhibitor, has demonstrated pleiotropic renoprotective effects in various kidney diseases, yet its specific mechanism in CI-AKI remains incompletely understood. This study investigated the renoprotective effect of dapagliflozin against CI-AKI and the underlying signaling network. Thirty-six Sprague-Dawley rats were randomly divided into six groups: control, dapagliflozin alone, CI-AKI, CI-AKI plus conventional hydration, CI-AKI plus dapagliflozin pretreatment, and CI-AKI plus dapagliflozin with the HO-1 inhibitor zinc protoporphyrin IX (ZnPP). Renal function parameters, oxidative stress marke",
+      "authors": "Tao Z, Yumeng P, Yiyang L.",
+      "journal": "Research Square",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1039/d6ra04307k",
+      "title": "Effects of combined zinc and 2 mercaptobenzothiazole exposure on growth and physiological characteristics of Lolium perenne cultivars.",
+      "titleZh": "锌与 2-巯基苯并噻唑联合暴露对多年生黑麦草品种生长及生理特征的影响",
+      "abstract": "Heavy metal and organic pollutant co-contamination is increasingly being detected in soils and water systems, particularly due to tire wear-derived compounds such as zinc (Zn) and 2-mercaptobenzothiazole (MBT), yet their combined effects on forage grasses remain poorly understood. This hydroponic study investigated the varied responses of 20 Lolium perenne cultivars to elevated zinc, 2-mercaptobenzothiazole, and their combined stress (Zn 20 mg L -1 (Zn treatment group), MBT20 mg L -1 (MBT treatment group), and MBT20 mg L -1 + Zn 20 mg L -1 (MBT-Zn treatment group)). Fifteen physiological and biochemical markers, including biomass, photosynthetic pigments, osmoregulatory chemicals, and antioxidant enzyme activity, were examined. The results demonstrated specific varietal adaptation mechanis",
+      "authors": "Feng Y, Wu C, Yin G, Chen M, Fahad S, Zu Y, Hong Z, Deng G, Zhong G.",
+      "journal": "RSC advances",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.2174/0115672026455076260829144743",
+      "title": "Molecular Engineering of Metallic Nanoparticle Using Natural Flavonoids: From Synthesis to Biological Evaluation.",
+      "titleZh": "利用天然黄酮进行金属纳米颗粒的分子工程：从合成到生物学评价",
+      "abstract": "Introduction Parkinson's disease (PD) is a progressive neurodegenerative disorder driven by oxidative stress, neuroinflammation, and mitochondrial dysfunction. Although flavonoids such as luteolin and fisetin exhibit strong antioxidant and neuroprotective properties, their therapeutic utility is limited by poor solubility, stability, and bioavailability. The present study aimed to synthesize, characterize, and evaluate the safety and antioxidant potential of luteolinand fisetin-loaded zinc oxide nanoparticles (LF-ZnONPs) as a nanomedicine-based strategy for neurodegenerative disorders. Methods LF-ZnONPs were synthesized using a chemical method and characterized by UV- visible spectroscopy, Fourier-transform infrared spectroscopy (FTIR), X-ray diffraction (XRD), scanning electron microscopy",
+      "authors": "Aziz N, Singh Basra G, Wal A, Kumar N, Jayasingh Chellammal HS, Panik RK, Ali MS, Wal P.",
+      "journal": "Current neurovascular research",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.1161/jaha.126.050201",
+      "title": "Associations of Plasma Metal Exposure With the Risk and Severity of Acute Coronary Syndrome: Evidence From Epidemiological and Adverse Outcome Pathway Analyses.",
+      "titleZh": "血浆金属暴露与急性冠状动脉综合征风险及严重程度的关联：流行病学和不良结局路径分析证据",
+      "abstract": "Background Evidence links environmental metal exposure to cardiovascular disease, but its association with acute coronary syndrome (ACS) risk and severity remains insufficiently characterized. Methods This case-control study included 413 newly diagnosed patients with ACS and 413 controls matched 1:1 by sex and age (within 5 years). Conditional logistic regression assessed associations between individual plasma metals and ACS risk, and ordinal logistic regression evaluated ACS severity. Results Higher plasma zinc and selenium levels were inversely associated with ACS risk, whereas arsenic and lead showed positive associations. The odds ratios for extreme quantiles were 0.44 (95% CI, 0.22-0.89) for zinc, 0.23 (95% CI, 0.11-0.48) for selenium, 1.70 (95% CI, 0.85-3.41) for arsenic, and 2.46 (9",
+      "authors": "Fu Z, Hua Z, Huang Z, Song J, Ren L, Yang L, Guo H, Liu Y, Li A, Li H, Liu X.",
+      "journal": "Journal of the American Heart Association",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.1111/pce.70915",
+      "title": "Multilevel Mechanisms by Which Membrane Transport Proteins Regulate Plant Responses to Heavy Metal Stress: From Ion Perception and Uptake Control to Systemic Signaling and Translational Perspectives.",
+      "titleZh": "膜转运蛋白调控植物重金属胁迫反应的多层机制：从离子感知和摄取控制到系统信号与转化应用展望",
+      "abstract": "Soil heavy metal contamination-including cadmium (Cd), arsenic (As), lead (Pb), mercury (Hg), zinc (Zn) excess, and copper (Cu) excess-poses a critical threat to sustainable agriculture and food safety. Membrane transport proteins serve as primary interfaces governing ion entry, subcellular compartmentalization, and long-distance redistribution. This review integrates recent advances across multiple scales to construct a unified regulatory framework: (i) at the cell periphery, plasma membrane transporters of the NRAMP, ZIP, and COPT families mediate metal influx, whereas efflux transporters and cell wall modifications limit cytosolic accumulation; (ii) at the subcellular level, vacuolar HMA and ABCC transporters drive sequestration, coordinated by COPII-mediated forward trafficking, ESCRT-",
+      "authors": "Wu L, Cao L, Sun J, Li S, Song L, Zhatova H, Liu S, Tong S, Tang M, Chu Z, Yang Y, Dong L.",
+      "journal": "Plant, cell & environment",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.1016/j.jep.2026.122425",
+      "title": "Ferulic acid attenuates acute ischemic cerebral injury by enhancing antioxidant capacity and modulating autophagy via the Nrf2 signaling pathway.",
+      "titleZh": "阿魏酸通过 Nrf2 信号通路增强抗氧化能力并调节自噬，减轻急性缺血性脑损伤",
+      "abstract": "Ethnopharmacological relevance Ferulic acid (FA), a key bioactive compound extracted from Angelica sinensis-traditionally used in herbal medicine, is now widely used as nutritional supplements and therapeutic agent for the management of cardiovascular diseases in which oxidative stress and autophagy dysregulation contribute significantly to disease progression. Aim of the study This study aimed to investigate the protective effects and underlying mechanisms of FA against oxidative stress using both an in vivo transient middle cerebral artery occlusion (MCAO) rat model and an in vitro oxygen-glucose deprivation (OGD) model in PC12 cells. Materials and methods Male Sprague-Dawley rats (180-220 g) subjected to transient MCAO received intraperitoneal FA (25, 50, or 100 mg/kg) once daily for fi",
+      "authors": "Su W, Ai X, Lin S, Fang M, Jiang Q, Zheng E, Niu J, Liu Y, Jin Z.",
+      "journal": "Journal of ethnopharmacology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    },
+    {
+      "id": "doi:10.1007/s00449-026-03430-7",
+      "title": "Current challenges and future directions in the green synthesis of nanoparticles using fungi.",
+      "titleZh": "利用真菌绿色合成纳米颗粒的当前挑战与未来方向",
+      "abstract": "Fungi have historically played a significant role in advancing biotechnology and are now increasingly recognized as flexible platforms for eco-friendly nanoparticle production. Nonetheless, progress has been hindered by inconsistent methodologies, limited mechanistic understanding, and reproducibility issues. Unlike earlier reviews, this study comprehensively analyzes a decade of research (2015-2025) to link fungal species diversity, biosynthesis pathways, and experimental setups to nanoparticle formation. It highlights the crucial roles of enzymatic activity and secreted metabolites in determining nanoparticle shape and stability. The study demonstrates that variables such as culture medium, pH, incubation period, and downstream processes are not minor technical details but key factors in",
+      "authors": "Soares AR, Pavoski G, Espinosa DCR, Yin W, Dos Passos Galluzzi Baltazar M.",
+      "journal": "Bioprocess and biosystems engineering",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      }
+    },
+    {
+      "id": "doi:10.1128/aem.00647-26",
+      "title": "RkMsn4, a zinc finger transcription factor, regulates carotenoid and lipid metabolism to enhance tolerance to environmental stress in Rhodosporidium kratochvilovae.",
+      "titleZh": "锌指转录因子 RkMsn4 调控类胡萝卜素及脂质代谢，增强克拉托赫维尔红冬孢酵母的环境胁迫耐受性",
+      "abstract": "Red yeasts serve as indispensable microbial resources for the production of carotenoids and lipids; however, environmental stress factors often limit their performance during industrial fermentation. The zinc-finger transcription factors Msn2/Msn4 act as central regulators of stress responses in yeasts. However, researchers have not yet systematically elucidated the similarities and differences in the mechanisms underlying the regulatory effects of Msn2/Msn4 under different stress conditions. In this study, we compared the shared and stress-specific regulatory functions of RkMsn4 in Rhodosporidium kratochvilovae YM25235 under conditions of glucose starvation, 15 °C low temperature, and 4% NaCl salt stress. RkMsn4 contributed to the activity of the oxidative defense systems, including antio",
+      "authors": "He M, Yang M, Xiong X, Gan Y, Qiu J, Chen Y, Zhang Q.",
+      "journal": "Applied and environmental microbiology",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.17.752439",
+      "title": "The plasma membrane bound transporter COPPER TRANSPORTER 2 facilitates palladium uptake in Arabidopsis",
+      "titleZh": "质膜结合转运蛋白 COPPER TRANSPORTER 2 促进拟南芥对钯的摄取",
+      "abstract": "Palladium (Pd), a technology critical platinum group metal, is increasingly lost to the environment through anthropogenic activity, yet the molecular basis of Pd uptake and tolerance in plants remains poorly understood. Here, we examine the role of the Arabidopsis thaliana (Arabidopsis) COPT2 copper transporter in Pd transport and plant stress responses. Expression of COPT2 in Saccharomyces cerevisiae conferred Pd sensitivity, indicating a capability for Pd transport. Arabidopsis copt2 loss-of-function mutants accumulated less Pd in shoots and exhibited reduced reactive oxygen species (ROS) production, supporting a direct role for COPT2 in Pd distribution and associated oxidative stress. Our subsequent transcriptome profiling revealed extensive changes under Pd exposure, including downregu",
+      "authors": "Dobson JA, Jagielska J, Maathuis FJ, Bruce NC, Rylott EL.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      }
+    },
+    {
+      "id": "doi:10.1039/d6ra05494c",
+      "title": "Green synthesised zinc oxide nanoparticles mitigate salinity-induced oxidative stress in Vigna radiata L.",
+      "titleZh": "绿色合成的氧化锌纳米颗粒缓解绿豆盐胁迫诱导的氧化应激",
+      "abstract": "The productivity of the important dietary legume mungbean ( Vigna radiata L.) is severely constrained by abiotic stress, specifically soil salinisation driven by climate variability. To address this challenge, this study evaluated the potential of a novel nanotechnology formulation based on the cyanobacterium Chroococcus minor for the green synthesis and capping of biogenic zinc oxide nanoparticles ( Cm ZnONPs) to alleviate salt stress. The biomolecules of C. minor successfully stabilised and capped well-dispersed zinc oxide nanoparticles: UV-vis spectroscopy confirmed a characteristic peak at 340 nm with an optical band gap of 3.51 eV; FTIR identified functional capping groups with prominent ZnO stretching vibrations below 900 cm -1 ; XRD indicated wurtzite crystallinity (average crystall",
+      "authors": "Sabat S, Patra S, Bishoyi AK, Padhy RN.",
+      "journal": "RSC advances",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      }
+    },
+    {
+      "id": "doi:10.1039/d6ra05117k",
+      "title": "Hepatorenal protective effect of berberine-loaded Ag-ZnO nanoparticles in mitigating carbon tetrachloride (direct) and alloxan-induced oxidative stress (indirect) in albino rat models.",
+      "titleZh": "负载小檗碱的 Ag-ZnO 纳米颗粒缓解白化大鼠模型中四氯化碳直接诱导及四氧嘧啶间接诱导氧化应激的肝肾保护作用",
+      "abstract": "Hepatorenal toxicity stems from chronic oxidative stress (OS) generated from mechanisms underlying chemical or metabolic injury. The present study investigates the hepatorenal toxicity induced by carbon tetrachloride (CCl 4 ) and alloxan, and the hepatorenal-protective potential of Berberine-loaded (BBR) silver-zinc oxide nanoparticles (Ag-ZnO NPs) in mitigating the damage. The characterization of synthesized NPs was performed using UV-vis spectroscopy, XRD, FTIR, and TEM, DLS, zeta potential and TGA analysis. Synthesized NPs showed characteristic physicochemical properties in terms of size, shape and crystallinity. In vivo studies demonstrated that administration of CCl 4 directly altered the levels of hepatic and renal function parameters, attributed to excessive generation of ROS compro",
+      "authors": "Shafique J, Ali A, Nazim M, Inam M, Althobaiti SA, Alotaibi KS, Soliman MM, Anjum S.",
+      "journal": "RSC advances",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "艾妲",
+        "sprite": 8
+      }
+    },
+    {
+      "id": "doi:10.1007/s10534-026-00888-6",
+      "title": "Heavy metal tolerance in rare actinobacteria from Moroccan mining sites: first report of copper, zinc, and cobalt tolerance and zinc-associated antibacterial activity in Lentzea sp.",
+      "titleZh": "摩洛哥矿区稀有放线菌的重金属耐受性：首次报道 Lentzea 属菌株的铜、锌、钴耐受及锌相关抗菌活性",
+      "abstract": "The present work aims to investigate the heavy metal tolerance, antibiotic resistance and Zn 2+ -associated antibacterial effect of two rare actinobacterial strains belonging to the genera Lentzea and Amycolatopsis isolated from Moroccan mining sites. Interestingly, this study reports for the first time the tolerance profile of Lentzea sp. to three divalent metal cations: copper (Cu 2+ ), cobalt (Co 2+ ), and zinc (Zn 2+ ). To our knowledge, no prior studies have reported the tolerance of Lentzea strains to these metals. In parallel, we investigated Amycolatopsis sp., a genus previously reported to resist Zn 2+ , nickel (Ni 2+ ) and Cu 2+ , and here we provide novel data on its response to Co 2+ exposure. Both strains demonstrated significant tolerance to the tested divalent metal cations,",
+      "authors": "Ait Assou S, El Hassouni M.",
+      "journal": "Biometals : an international journal on the role of metal ions in biology, biochemistry, and medicine",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "珀拉",
+        "sprite": 4
+      }
+    },
+    {
+      "id": "doi:10.64898/2026.09.18.752640",
+      "title": "Glucocorticoid signalling exerts distinct lineage-permissive and dose-dependent disruptive actions during human osteoblast differentiation",
+      "titleZh": "人类成骨细胞分化过程中，糖皮质激素信号发挥不同的谱系许可作用及剂量依赖性干扰作用",
+      "abstract": "At physiological levels glucocorticoid (GC) signalling within the osteoblast lineage has been proposed to be required for skeletal homeostasis, whereas supraphysiological activation supresses bone formation and causes bone loss. While these observations suggest that GC exert dose- and context-dependent effects, the molecular mechanisms underlying these opposing actions remain unresolved. Here we systematically dissected the receptor-, lineage-, and concentration-dependent effects of GC signalling on human bone marrow stromal cell (BMSC) differentiation using integrated transcriptional, epigenomic, and functional analyses. Our findings suggest that GC opposing effects are not simply due to a GR dose-response but instead reflect distinct context- and concentration-dependent modes of action. ",
+      "authors": "Madsen MR, Ali D, Palmier M, Caci A, Akimov V, Haakonsson AK, Blagoev B, Kassem M, Mandrup S, Rauch A.",
+      "journal": "bioRxiv",
+      "year": "2026",
+      "preprint": true,
+      "openAccess": false,
+      "hasPDF": false,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "芙宁",
+        "sprite": 1
+      }
+    },
+    {
+      "id": "doi:10.3390/biom16091374",
+      "title": "Silymarin and Zinc Oxide Nanoparticles Attenuate Experimental Colon Cancer in Rats Through Crosstalk of miR-192 and β-Catenin Pathways.",
+      "titleZh": "水飞蓟素与氧化锌纳米颗粒通过 miR-192 和 β-catenin 通路串扰，减轻大鼠实验性结肠癌",
+      "abstract": "Colon cancer (CC) is a leading cause of cancer-related mortality globally. Although chemotherapy remains the primary treatment, its toxicity and drug resistance highlight the need for alternative therapeutic strategies. Silymarin (Sily), a natural compound, and zinc oxide nanoparticles (ZnO-NPs) have shown potential antitumor activity. This study evaluated Sily and/or ZnO-NPs against DMH-induced CC in rats. Thirty male Sprague-Dawley rats were divided into five groups ( n = 6): control, CC (DMH 20 mg/kg/16-week S.C.), and three groups receiving Sily (40 mg/kg orally), ZnO-NPs (10 mg/kg IP), or their combination daily for 4 weeks. In comparison to the CC group, Sily or ZnO-NPs significantly decreased CEA levels, restored mucin synthesis, and improved colonic histology, with the combination ",
+      "authors": "Yousef EH, Megahed A, Samy A, Salem AE, Alamoudi JA, Abbas A, Embaby EM.",
+      "journal": "Biomolecules",
+      "year": "2026",
+      "preprint": false,
+      "openAccess": true,
+      "hasPDF": true,
+      "topic": "zn",
+      "status": "unread",
+      "saved": false,
+      "dispatch": {
+        "state": "idle"
+      },
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      }
+    }
+  ],
+  "actors": [
+    {
+      "paperId": "doi:10.1016/j.devcel.2026.09.001",
+      "courier": {
+        "name": "伊芙",
+        "sprite": 0
+      },
+      "state": "pending"
+    },
+    {
+      "paperId": "doi:10.1016/j.cbi.2026.112355",
+      "courier": {
+        "name": "维拉",
+        "sprite": 3
+      },
+      "state": "pending"
+    },
+    {
+      "paperId": "doi:10.1016/j.molcel.2026.09.002",
+      "courier": {
+        "name": "洛安",
+        "sprite": 6
+      },
+      "state": "pending"
+    },
+    {
+      "paperId": "doi:10.21203/rs.3.rs-10284597/v1",
+      "courier": {
+        "name": "诺亚",
+        "sprite": 9
+      },
+      "state": "pending"
+    },
+    {
+      "paperId": "doi:10.1042/bcj20250300",
+      "courier": {
+        "name": "赛恩",
+        "sprite": 2
+      },
+      "state": "pending"
+    }
+  ],
+  "note": "静态快照仅含文字信息；PDF 与完整交互仅在桌面本地服务(18765)。"
+}
