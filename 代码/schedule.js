@@ -556,6 +556,7 @@ function applyWorkspaceLayout(){
   const main=document.querySelector('main');
   if(!main||document.querySelector('#guildWorkspace'))return;
   const children=[...main.children],shell=document.createElement('div'),side=document.createElement('aside'),content=document.createElement('div'),intro=document.createElement('section'),scroll=document.createElement('div');
+  const masthead=document.createElement('div');masthead.id='guildMasthead';masthead.className='guild-masthead';masthead.innerHTML='<img class="guild-masthead-pennant" src="素材/道具/情报物件/guild-record-pennant-v86-fast-v101.webp" alt="" width="42" height="58"><div class="guild-masthead-copy"><span class="guild-masthead-kicker">FAIRY TAIL · MY QUEST GUILD</span><div class="guild-masthead-title" role="heading" aria-level="1">妖精的尾巴<span>我的任务公会</span></div></div><img class="guild-masthead-quill" src="素材/道具/情报物件/guild-record-quill-v86-fast-v101.webp" alt="" width="38" height="44">';main.prepend(masthead);
   shell.id='guildWorkspace';shell.className='guild-workspace';side.className='guild-sidebar';content.className='guild-content';
   intro.className='sidebar-intro card';intro.innerHTML=`<div class="tag">GUILD AFFAIRS</div><h2>今天 · ${today()}</h2><p class="muted">把重要委托安排在魔法最充足的时段。</p>`;
   scroll.className='guild-sidebar-scroll';shell.append(side,content);main.append(shell);side.append(intro,scroll);
