@@ -650,7 +650,16 @@ const guildHallSceneRegistry={
  missionBoard:{id:'missionBoard',name:'告示厅',title:'委托告示厅',backgrounds:{dawn:'素材/场景/告示厅/guild-room-board-canon-dawn-v1-fast-v100.webp',day:'素材/场景/告示厅/guild-room-board-canon-v1-fast-v100.webp',sunset:'素材/场景/告示厅/guild-room-board-canon-sunset-v1-fast-v100.webp',night:'素材/场景/告示厅/guild-room-board-canon-night-v1-fast-v100.webp'}},
  guildTavern:{id:'guildTavern',name:'吧台',title:'公会吧台',backgrounds:{dawn:'素材/场景/吧台/guild-room-tavern-canon-dawn-v1-fast-v100.webp',day:'素材/场景/吧台/guild-room-tavern-canon-v1-fast-v100.webp',sunset:'素材/场景/吧台/guild-room-tavern-canon-sunset-v1-fast-v100.webp',night:'素材/场景/吧台/guild-room-tavern-canon-night-v1-fast-v100.webp'}}
 };
-function resolveGuildHallBackground(sceneId,date=new Date()){const scene=guildHallSceneRegistry[sceneId]||guildHallSceneRegistry.mainHall,phase=getGuildHallTimePhase(date);return scene.backgrounds?.[phase]||scene.backgrounds?.day||guildHallSceneRegistry.mainHall.backgrounds.day}
+function resolveGuildDailyHallTheme(date=new Date()){
+ const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
+ // Date-derived choice is stable across refreshes and devices; no task/save writes.
+ return stableHallHash('guild-daily-hall|'+day)%3===0?'quiet':'normal';
+}
+function resolveGuildHallBackground(sceneId,date=new Date()){
+ const scene=guildHallSceneRegistry[sceneId]||guildHallSceneRegistry.mainHall,phase=getGuildHallTimePhase(date);
+ if(scene.id==='mainHall'&&resolveGuildDailyHallTheme(date)==='quiet')return '素材/场景/大厅/guild-hall-quiet-'+phase+'-v155.webp';
+ return scene.backgrounds?.[phase]||scene.backgrounds?.day||guildHallSceneRegistry.mainHall.backgrounds.day;
+}
 const guildHallSceneCapacity={intelCorner:0,happyNook:0,mainHall:5,researchRoom:4,archiveRoom:4,missionBoard:4,guildTavern:4};
 const guildHallConnections={intelCorner:['mainHall','missionBoard'],happyNook:['guildTavern'],mainHall:['missionBoard','archiveRoom','guildTavern','intelCorner'],missionBoard:['mainHall','intelCorner'],archiveRoom:['mainHall','researchRoom'],researchRoom:['archiveRoom'],guildTavern:['mainHall','happyNook']};
 function guildHallRoute(from,to){if(from===to)return[from];const queue=[[from]],seen=new Set([from]);while(queue.length){const route=queue.shift(),last=route[route.length-1];for(const next of guildHallConnections[last]||[]){if(seen.has(next))continue;const candidate=[...route,next];if(next===to)return candidate;seen.add(next);queue.push(candidate)}}return[from,'mainHall',to]}
