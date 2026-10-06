@@ -104,7 +104,7 @@
     var style = document.createElement('style');
     style.id = 'guildDockStyles';
     style.textContent =
-      '#guildDockPanel{position:fixed;right:14px;bottom:76px;z-index:99998;width:min(340px,92vw);max-height:min(76vh,680px);display:flex;flex-direction:column;background:#fff8e9;border:2px solid #bfa27a;border-radius:6px;box-shadow:0 8px 26px #55301e33;overflow:hidden;font-family:"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;color:#5d3b2b}' +
+      '#guildDockPanel{position:fixed;right:5vw;top:18vh;bottom:auto;z-index:99998;width:min(380px,92vw);max-height:min(76vh,680px);display:flex;flex-direction:column;background:#fffdf8;border:1px solid #bfa27a;border-radius:10px;box-shadow:0 8px 26px #55301e33;overflow:hidden;font-family:"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;color:#5d3b2b}' +
       '#guildDockPanel[hidden]{display:none}' +
       '.guild-dock-head{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#654632;border-bottom:1px solid #b3986e}' +
       '.guild-dock-head strong{font-size:14px;color:#fff3dd;white-space:nowrap}' +
@@ -341,6 +341,11 @@
     ensureStyles();
     initView();
     buildPanel();
+    var dateBar = document.getElementById('day') && document.getElementById('day').parentElement;
+    if(dateBar && !document.getElementById('guildCalendarEntry')){
+      var entry=document.createElement('button');entry.id='guildCalendarEntry';entry.type='button';entry.textContent='▦ 委托日历';entry.onclick=toggle;
+      document.getElementById('day').after(entry);
+    }
     document.addEventListener('guildDockToggle', toggle);
     // 状态行跟随云端状态（代码/guild-cloud-sync.js 的 setBadge 也会主动更新）
     window.addEventListener('guildCloudStateChange', function () { syncStatusFromGlobal(); });

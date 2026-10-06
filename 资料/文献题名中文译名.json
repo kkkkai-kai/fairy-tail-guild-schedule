@@ -1,0 +1,310 @@
+{
+  "updatedAt": "2026-10-06",
+  "method": "AI 中文题名翻译，非出版社官方译名；保留原文",
+  "papers": {
+    "doi:10.1016/j.devcel.2026.09.001": {
+      "title": "Nitrate-responsive Sialin2 couples stress granule assembly and clearance to maintain neuronal homeostasis.",
+      "titleZh": "硝酸盐响应型 Sialin2 协调应激颗粒的组装与清除，以维持神经元稳态"
+    },
+    "doi:10.1016/j.molcel.2026.09.002": {
+      "title": "ZNFX1, an immunoregulatory RNA helicase and E3 ubiquitin ligase, assembles into pleiomorphic polymers.",
+      "titleZh": "兼具免疫调节性 RNA 解旋酶与 E3 泛素连接酶功能的 ZNFX1 组装成多形态聚合物"
+    },
+    "doi:10.21203/rs.3.rs-10284597/v1": {
+      "title": "Rho GTPase–driven stress granules enable anchorage-independent survival under adhesion stress",
+      "titleZh": "Rho GTP 酶驱动的应激颗粒使细胞在黏附应激下实现非贴壁依赖性存活"
+    },
+    "doi:10.1042/bcj20250300": {
+      "title": "Loss of O-GlcNAc transferase activity impairs the dynamic formation of protective stress granules in ischemic cardiomyocytes.",
+      "titleZh": "O-GlcNAc 转移酶活性丧失损害缺血心肌细胞中保护性应激颗粒的动态形成"
+    },
+    "doi:10.1038/s44319-026-00922-1": {
+      "title": "FBXL21 regulates diurnal proteostasis in skeletal muscle by targeting DNAJB6 and client proteins.",
+      "titleZh": "FBXL21 通过靶向 DNAJB6 及其客户蛋白调节骨骼肌的昼夜蛋白质稳态"
+    },
+    "doi:10.1111/andr.70403": {
+      "title": "Cryopreservation Disrupts TRIM21-Mediated AKAP3 Ubiquitination and Triggers Stress Granule Formation in Human Sperm.",
+      "titleZh": "冷冻保存扰乱 TRIM21 介导的 AKAP3 泛素化，并触发人精子中的应激颗粒形成"
+    },
+    "doi:10.64898/2026.09.28.755177": {
+      "title": "A tRNA-derived small RNA orchestrates cardioprotection through distinct cell-type-specific mechanisms",
+      "titleZh": "一种 tRNA 来源的小 RNA 通过不同的细胞类型特异性机制协调心脏保护"
+    },
+    "doi:10.1186/s40164-026-00834-9": {
+      "title": "Next-generation CAR-T therapy for malignant brain tumors: latest updates from the 2026 AACR Annual Meeting.",
+      "titleZh": "恶性脑肿瘤的下一代 CAR-T 治疗：2026 年 AACR 年会最新进展"
+    },
+    "doi:10.64898/2026.09.25.754448": {
+      "title": "FXR proteins and BICD2 cooperate to promote dynein-mediated RNP transport and stress granule assembly",
+      "titleZh": "FXR 蛋白与 BICD2 协同促进动力蛋白介导的核糖核蛋白运输及应激颗粒组装"
+    },
+    "doi:10.1016/j.bbapap.2026.141183": {
+      "title": "Intrinsically disordered proteins and liquid-liquid phase separation: Molecular grammar, condensate physiology, and disease-relevant phase transitions.",
+      "titleZh": "内在无序蛋白与液–液相分离：分子语法、凝聚体生理及疾病相关相变"
+    },
+    "doi:10.1007/s11033-026-12735-5": {
+      "title": "Stress granules and RNA-binding proteins in cellular senescence: a modular perspective on stress adaptation and inflammation.",
+      "titleZh": "细胞衰老中的应激颗粒与 RNA 结合蛋白：应激适应和炎症的模块化视角"
+    },
+    "doi:10.1016/j.cbd.2026.102042": {
+      "title": "Dynamic changes in the heart proteome and phosphoproteome of Pelophylax nigromaculatus during salt stress and recovery.",
+      "titleZh": "盐胁迫及恢复过程中黑斑侧褶蛙心脏蛋白质组与磷酸化蛋白质组的动态变化"
+    },
+    "doi:10.21203/rs.3.rs-10599847/v1": {
+      "title": "Exploration of potential mechanisms and key genes associated with stress granules in immunoglobulin A nephropathy based on transcriptome and experimental validation",
+      "titleZh": "基于转录组与实验验证探索 IgA 肾病中应激颗粒相关的潜在机制和关键基因"
+    },
+    "doi:10.21203/rs.3.rs-10537418/v1": {
+      "title": "The human amniotic membrane derived MSC secretome restrains neuroinflammation and peripheral immune cell invasion of 3D neural tissue through conserved CXCL10 blockade and proteostatic rescue",
+      "titleZh": "人羊膜来源间充质干细胞分泌组通过保守的 CXCL10 阻断及蛋白质稳态修复，抑制三维神经组织中的神经炎症和外周免疫细胞侵入"
+    },
+    "doi:10.1016/j.phrs.2026.108464": {
+      "title": "Orchestrating stress granule dynamics by SUMOylation: A new frontier in treating stress-induced age-related diseases.",
+      "titleZh": "SUMO 化调控应激颗粒动态：治疗应激诱导的年龄相关疾病的新前沿"
+    },
+    "doi:10.1016/j.compbiolchem.2026.109430": {
+      "title": "An ATXN2-linked stress granule transcript program marks proliferative and CD8-low states in colorectal cancer.",
+      "titleZh": "ATXN2 相关的应激颗粒转录程序标记结直肠癌中的增殖状态和 CD8 低表达状态"
+    },
+    "doi:10.1186/s40035-026-00580-2": {
+      "title": "What can we learn on ALS pathophysiology from iPSC-derived motor neurons harbouring TARBDP mutations: a systematic review.",
+      "titleZh": "携带 TARBDP 突变的 iPSC 来源运动神经元能揭示哪些 ALS 病理生理机制：系统综述"
+    },
+    "doi:10.64898/2026.09.15.751797": {
+      "title": "E3 ubiquitin ligase SYVN1 mediates K63-linked ubiquitination of DDX3X to activate Macrophage NLRP3 Inflammasome",
+      "titleZh": "E3 泛素连接酶 SYVN1 介导 DDX3X 的 K63 连接型泛素化，激活巨噬细胞 NLRP3 炎症小体"
+    },
+    "doi:10.64898/2026.09.17.752460": {
+      "title": "Spatially Constrained Monte Carlo Permutation Test Reveals Diffusion Changes Near Stress Granules",
+      "titleZh": "空间约束蒙特卡洛置换检验揭示应激颗粒附近的扩散变化"
+    },
+    "doi:10.1101/gad.353720.126": {
+      "title": "The hnRNPA1 D262V amyotrophic lateral sclerosis (ALS) mutation is linked to mitochondrial dysfunction.",
+      "titleZh": "hnRNPA1 D262V 肌萎缩侧索硬化症（ALS）相关突变与线粒体功能障碍有关"
+    },
+    "doi:10.3389/fimmu.2026.1908472": {
+      "title": "Non-coding RNAs: master regulators in the battle between host antiviral defense and viral replication.",
+      "titleZh": "非编码 RNA：宿主抗病毒防御与病毒复制博弈中的核心调控者"
+    },
+    "doi:10.1016/j.jhazmat.2026.143589": {
+      "title": "Corrigendum to \"Arsenic-responsive hsa_circ_0000118 couples early stress granule dynamics to later NF-κB-related signaling adaptation in NSCLC\" [J Hazard Mater 515 (2026) 143203].",
+      "titleZh": "勘误：砷响应性 hsa_circ_0000118 将非小细胞肺癌早期应激颗粒动态与后期 NF-κB 相关信号适应相耦联"
+    },
+    "doi:10.1016/j.celrep.2026.118056": {
+      "title": "Gadd45β is critical for regulation of type I interferon signaling by facilitating G3BP-mediated stress granule formation.",
+      "titleZh": "Gadd45β 通过促进 G3BP 介导的应激颗粒形成，在 I 型干扰素信号调控中发挥关键作用"
+    },
+    "doi:10.64898/2026.09.08.749846": {
+      "title": "Revisiting Stress Granule Transcriptomes Suggests Mitochondrial RNA Enrichment Despite Methodological Bias",
+      "titleZh": "重新审视应激颗粒转录组：尽管存在方法学偏倚，仍提示线粒体 RNA 富集"
+    },
+    "doi:10.64898/2026.09.08.750051": {
+      "title": "Fragile X syndrome-linked mutations impair FMRP accumulation in neuronal transport granules",
+      "titleZh": "脆性 X 综合征相关突变损害 FMRP 在神经元运输颗粒中的积累"
+    },
+    "doi:10.26508/lsa.202603825": {
+      "title": "Proximity labeling puts ZFP36L1 as central hub for posttranscriptional regulation networks in T cells.",
+      "titleZh": "邻近标记揭示 ZFP36L1 是 T 细胞转录后调控网络的核心枢纽"
+    },
+    "doi:10.21203/rs.3.rs-10579672/v1": {
+      "title": "Investigation of Stress Granule-Associated Biomarkers (IGF1 and CDK2) and Their Regulatory Mechanisms in Alzheimer’s Disease: A Combined Transcriptomic, Bioinformatic and Experimental Study",
+      "titleZh": "阿尔茨海默病中应激颗粒相关生物标志物 IGF1、CDK2 及其调控机制：转录组、生物信息学与实验联合研究"
+    },
+    "title:aff788589655a3ca1a28b31b": {
+      "title": "Prion‐Like Protein LENG8‐Mediated Nucleation Drives Stress Granule Assembly",
+      "titleZh": "类朊蛋白 LENG8 介导的成核驱动应激颗粒组装"
+    },
+    "doi:10.1002/advs.77622": {
+      "title": "Prion-Like Protein LENG8-Mediated Nucleation Drives Stress Granule Assembly.",
+      "titleZh": "类朊蛋白 LENG8 介导的成核驱动应激颗粒组装"
+    },
+    "doi:10.1016/j.ijbiomac.2026.154368": {
+      "title": "A lipoprotein-responsive circular RNA, circCTCF, couples extracellular lipid availability to mTOR signaling via ACSL5 in triple-negative breast cancer.",
+      "titleZh": "脂蛋白响应性环状 RNA circCTCF 通过 ACSL5，将三阴性乳腺癌中的细胞外脂质可用性与 mTOR 信号相耦联"
+    },
+    "doi:10.1371/journal.ppat.1014553": {
+      "title": "TRIM21 blocks DDX3X-driven stress granule formation during Mycobacterium tuberculosis infection via a non-canonical E3 ligase mechanism.",
+      "titleZh": "TRIM21 通过非经典 E3 连接酶机制，阻断结核分枝杆菌感染期间 DDX3X 驱动的应激颗粒形成"
+    },
+    "doi:10.1128/jvi.00992-26": {
+      "title": "Antagonism of stress granules is key to SARS-CoV-2 infection and pathogenesis.",
+      "titleZh": "拮抗应激颗粒是 SARS-CoV-2 感染与致病的关键"
+    },
+    "doi:10.1128/jvi.01080-26": {
+      "title": "African swine fever virus pMGF110-9L plays a critical role in the integrated stress response and viral pathogenesis.",
+      "titleZh": "非洲猪瘟病毒 pMGF110-9L 在整合应激反应与病毒致病中发挥关键作用"
+    },
+    "doi:10.3389/fnmol.2026.1927505": {
+      "title": "Stress granule phase transitions and neuronal fate in cerebral ischemia-reperfusion injury.",
+      "titleZh": "脑缺血再灌注损伤中的应激颗粒相变与神经元命运"
+    },
+    "doi:10.3390/cells15171623": {
+      "title": "Ivermectin Inhibits Stress Granule Clearance by Blocking the De Novo Synthesis of Hsp70 in Neuroblastoma Cells.",
+      "titleZh": "伊维菌素通过阻断 Hsp70 的从头合成，抑制神经母细胞瘤细胞中的应激颗粒清除"
+    },
+    "doi:10.1007/s00425-026-05144-2": {
+      "title": "Protein-RNA control networks at the plant-pathogen interface.",
+      "titleZh": "植物–病原体互作界面的蛋白质–RNA 调控网络"
+    },
+    "doi:10.1038/s41589-026-02313-y": {
+      "title": "Directed evolution of Lantern enables rapid RNA and protein proximity labeling.",
+      "titleZh": "Lantern 的定向进化实现快速 RNA 与蛋白质邻近标记"
+    },
+    "doi:10.64898/2026.10.01.756119": {
+      "title": "Structure-Informed Stress-Testing of the Standard Numbering Scheme for Class B β-Lactamases Using AlphaFold2",
+      "titleZh": "利用 AlphaFold2 对 B 类 β-内酰胺酶标准编号体系开展结构指导的压力测试"
+    },
+    "doi:10.1016/j.cbi.2026.112355": {
+      "title": "Zinc Deficiency Exacerbates Cisplatin-Induced Acute Kidney Injury by Impairing Metabolic Adaptation and Antioxidant Defenses.",
+      "titleZh": "锌缺乏通过损害代谢适应与抗氧化防御，加重顺铂诱导的急性肾损伤"
+    },
+    "doi:10.1039/d6fo03527b": {
+      "title": "Comparative genomic insights into strain-specific zinc-promoting effects of the spore-forming probiotic Heyndrickxia coagulans.",
+      "titleZh": "比较基因组学揭示产孢益生菌凝结海恩德里克氏菌促进锌利用的菌株特异性效应"
+    },
+    "doi:10.1002/jdn.70186": {
+      "title": "REST in the Central Nervous System: Context-Dependent Regulation of Neuronal Homeostasis and Disease.",
+      "titleZh": "中枢神经系统中的 REST：神经元稳态与疾病的情境依赖性调控"
+    },
+    "doi:10.1016/j.ijbiomac.2026.154714": {
+      "title": "A C2H2-type zinc-finger transcription factor PdbZAT11 activates PdbTLP3 transcription to confer salt tolerance in Populus davidiana × P. bolleana.",
+      "titleZh": "C2H2 型锌指转录因子 PdbZAT11 激活 PdbTLP3 转录，赋予山杨 × 银白杨杂交种耐盐性"
+    },
+    "doi:10.2337/db26-0183": {
+      "title": "Islet-Targeted ZnT8 Antibodies Protect Pancreatic β-Cells From Inflammatory Stress.",
+      "titleZh": "靶向胰岛的 ZnT8 抗体保护胰腺 β 细胞免受炎症应激损伤"
+    },
+    "doi:10.5414/cn111916": {
+      "title": "Composite dietary antioxidant index in predicting chronic kidney disease risk: Findings from NHANES 1999 - 2018.",
+      "titleZh": "综合膳食抗氧化指数预测慢性肾病风险：NHANES 1999–2018 年数据的发现"
+    },
+    "doi:10.1093/nutrit/nuaf195": {
+      "title": "The Role of Immunological Challenges, Oxidative Stress, and Dietary Interventions in Managing Hashimoto's Thyroiditis: A Narrative Review.",
+      "titleZh": "免疫挑战、氧化应激与膳食干预在桥本甲状腺炎管理中的作用：叙述性综述"
+    },
+    "doi:10.1039/d6ra08119c": {
+      "title": "Zero-dimensional anodes across monovalent and multivalent batteries: a critical review of interfacial dynamics, bottlenecks, and solutions.",
+      "titleZh": "单价与多价电池中的零维负极：界面动态、瓶颈及解决方案的批判性综述"
+    },
+    "doi:10.1016/j.envres.2026.125820": {
+      "title": "Pseudoalteromonas lipolytica and its EPS-overproducing variant for acid mine drainage control: biofilm formation and biomineralization.",
+      "titleZh": "溶脂假交替单胞菌及其胞外聚合物高产变体用于酸性矿山排水控制：生物膜形成与生物矿化"
+    },
+    "doi:10.1242/dev.205808": {
+      "title": "C. elegans dauer morphogenesis requires inhibition of DBL-1/BMP signaling by ztf-30.",
+      "titleZh": "秀丽隐杆线虫 dauer 形态发生需要 ztf-30 抑制 DBL-1/BMP 信号"
+    },
+    "doi:10.1002/adma.75206": {
+      "title": "Tannic Acid-Fe3+ Complex‑Sulfonate Coupled Hydrogel Electrolyte for Stable Zinc Anodes.",
+      "titleZh": "用于稳定锌负极的单宁酸–Fe³⁺ 配合物与磺酸盐耦合水凝胶电解质"
+    },
+    "doi:10.1016/j.plaphy.2026.111793": {
+      "title": "The C2H2 zinc-finger protein CaZAT11 positively regulates cold tolerance in pepper and physically interacts with CaSTOP1.",
+      "titleZh": "C2H2 锌指蛋白 CaZAT11 正向调控辣椒耐寒性，并与 CaSTOP1 发生物理互作"
+    },
+    "doi:10.1016/j.jhazmat.2026.143761": {
+      "title": "Integrated physiological, transcriptomic, and metabolomic analyses provide insights into zinc-doped carbon quantum dot-mediated alleviation of cadmium toxicity in lettuce.",
+      "titleZh": "整合生理、转录组及代谢组分析，揭示锌掺杂碳量子点缓解生菜镉毒性的机制"
+    },
+    "doi:10.64898/2026.09.26.754270": {
+      "title": "The iron-binding siderophore enterobactin is required for the response of multi-drug resistant Klebsiella pneumoniae to zinc limitation",
+      "titleZh": "铁结合型铁载体肠杆菌素是多重耐药肺炎克雷伯菌应对锌限制所必需的"
+    },
+    "doi:10.1021/acsami.6c12093": {
+      "title": "Shear Stress-Triggered Piezo-Photocatalytic Thrombolysis, Self-Luminescent Thrombus Imaging, and Recurrence Prevention.",
+      "titleZh": "剪切应力触发的压电–光催化溶栓、自发光血栓成像及复发预防"
+    },
+    "doi:10.1007/s10695-026-01801-1": {
+      "title": "ZnO nanoparticle-mediated cadmium adsorption induces bioaccumulation, oxidative stress, and apoptotic responses in Korean rockfish Sebastes schlegelii.",
+      "titleZh": "ZnO 纳米颗粒介导的镉吸附诱导许氏平鲉的生物蓄积、氧化应激与凋亡反应"
+    },
+    "doi:10.1016/j.redox.2026.104415": {
+      "title": "The ribonuclease ZC3H12A stabilizes BRCA1 mRNA in DNA damage response.",
+      "titleZh": "核糖核酸酶 ZC3H12A 在 DNA 损伤反应中稳定 BRCA1 mRNA"
+    },
+    "doi:10.1016/j.actbio.2026.09.044": {
+      "title": "Nonlinear radial force attenuation and stress-corrosion-crack induced fracture of biodegradable Zn alloy stents under vascular bioreactor conditions.",
+      "titleZh": "血管生物反应器条件下可降解锌合金支架的非线性径向力衰减及应力腐蚀裂纹诱导断裂"
+    },
+    "doi:10.1016/j.alcohol.2026.09.002": {
+      "title": "Regional brain iron, copper, and zinc in alcohol use disorder: Sex-specific differences in human post-mortem tissue.",
+      "titleZh": "酒精使用障碍中的脑区铁、铜、锌：人死后组织中的性别特异性差异"
+    },
+    "doi:10.1021/acsami.6c13907": {
+      "title": "Polyurethane Elastomers with Superior Mechanical Stability across a Wide Temperature Range.",
+      "titleZh": "在宽温度范围内具有优异力学稳定性的聚氨酯弹性体"
+    },
+    "doi:10.1080/00498254.2026.2740560": {
+      "title": "Modulatory Effects of Zinc and Cystine on Diisononyl Phthalate-Induced Male Reproductive Injury.",
+      "titleZh": "锌与胱氨酸对邻苯二甲酸二异壬酯诱导的雄性生殖损伤的调节作用"
+    },
+    "doi:10.1007/s00259-026-08195-5": {
+      "title": "The prognostic value of quantitative myocardial blood flow and flow reserve by dynamic CZT-SPECT for major adverse cardiovascular events.",
+      "titleZh": "动态 CZT-SPECT 定量心肌血流及血流储备对主要不良心血管事件的预后价值"
+    },
+    "doi:10.1007/s12013-026-02173-2": {
+      "title": "Green Synthesis, Physicochemical Characterization, and In Vitro Biological Evaluation of Moringa concanensis-Mediated Zinc Oxide Nanoparticles with Keratinocyte Wound-Closure Activity.",
+      "titleZh": "长叶辣木介导氧化锌纳米颗粒的绿色合成、理化表征及体外生物学评价：角质形成细胞伤口闭合活性"
+    },
+    "doi:10.21203/rs.3.rs-11009043/v1": {
+      "title": "Metabolomic Profile and Feeding Preference of Diatraea Saccharalis in Sugarcane Co-inoculated With a Diazotrophic Consortium",
+      "titleZh": "联合接种固氮菌群的甘蔗中代谢组特征与甘蔗螟的取食偏好"
+    },
+    "doi:10.21203/rs.3.rs-10925857/v1": {
+      "title": "Dapagliflozin prevents contrast-induced acute kidney injury in rats via Nrf2/HO-1-mediated inhibition of NLRP3 inflammation and tubular apoptosis Short Title: Dapagliflozin prevents CI-AKI via Nrf2/HO-1",
+      "titleZh": "达格列净通过 Nrf2/HO-1 介导的 NLRP3 炎症与肾小管凋亡抑制，预防大鼠造影剂诱导的急性肾损伤"
+    },
+    "doi:10.1039/d6ra04307k": {
+      "title": "Effects of combined zinc and 2 mercaptobenzothiazole exposure on growth and physiological characteristics of Lolium perenne cultivars.",
+      "titleZh": "锌与 2-巯基苯并噻唑联合暴露对多年生黑麦草品种生长及生理特征的影响"
+    },
+    "doi:10.2174/0115672026455076260829144743": {
+      "title": "Molecular Engineering of Metallic Nanoparticle Using Natural Flavonoids: From Synthesis to Biological Evaluation.",
+      "titleZh": "利用天然黄酮进行金属纳米颗粒的分子工程：从合成到生物学评价"
+    },
+    "doi:10.1161/jaha.126.050201": {
+      "title": "Associations of Plasma Metal Exposure With the Risk and Severity of Acute Coronary Syndrome: Evidence From Epidemiological and Adverse Outcome Pathway Analyses.",
+      "titleZh": "血浆金属暴露与急性冠状动脉综合征风险及严重程度的关联：流行病学和不良结局路径分析证据"
+    },
+    "doi:10.1111/pce.70915": {
+      "title": "Multilevel Mechanisms by Which Membrane Transport Proteins Regulate Plant Responses to Heavy Metal Stress: From Ion Perception and Uptake Control to Systemic Signaling and Translational Perspectives.",
+      "titleZh": "膜转运蛋白调控植物重金属胁迫反应的多层机制：从离子感知和摄取控制到系统信号与转化应用展望"
+    },
+    "doi:10.1016/j.jep.2026.122425": {
+      "title": "Ferulic acid attenuates acute ischemic cerebral injury by enhancing antioxidant capacity and modulating autophagy via the Nrf2 signaling pathway.",
+      "titleZh": "阿魏酸通过 Nrf2 信号通路增强抗氧化能力并调节自噬，减轻急性缺血性脑损伤"
+    },
+    "doi:10.1007/s00449-026-03430-7": {
+      "title": "Current challenges and future directions in the green synthesis of nanoparticles using fungi.",
+      "titleZh": "利用真菌绿色合成纳米颗粒的当前挑战与未来方向"
+    },
+    "doi:10.1128/aem.00647-26": {
+      "title": "RkMsn4, a zinc finger transcription factor, regulates carotenoid and lipid metabolism to enhance tolerance to environmental stress in Rhodosporidium kratochvilovae.",
+      "titleZh": "锌指转录因子 RkMsn4 调控类胡萝卜素及脂质代谢，增强克拉托赫维尔红冬孢酵母的环境胁迫耐受性"
+    },
+    "doi:10.64898/2026.09.17.752439": {
+      "title": "The plasma membrane bound transporter COPPER TRANSPORTER 2 facilitates palladium uptake in Arabidopsis",
+      "titleZh": "质膜结合转运蛋白 COPPER TRANSPORTER 2 促进拟南芥对钯的摄取"
+    },
+    "doi:10.1039/d6ra05494c": {
+      "title": "Green synthesised zinc oxide nanoparticles mitigate salinity-induced oxidative stress in Vigna radiata L.",
+      "titleZh": "绿色合成的氧化锌纳米颗粒缓解绿豆盐胁迫诱导的氧化应激"
+    },
+    "doi:10.1039/d6ra05117k": {
+      "title": "Hepatorenal protective effect of berberine-loaded Ag-ZnO nanoparticles in mitigating carbon tetrachloride (direct) and alloxan-induced oxidative stress (indirect) in albino rat models.",
+      "titleZh": "负载小檗碱的 Ag-ZnO 纳米颗粒缓解白化大鼠模型中四氯化碳直接诱导及四氧嘧啶间接诱导氧化应激的肝肾保护作用"
+    },
+    "doi:10.1007/s10534-026-00888-6": {
+      "title": "Heavy metal tolerance in rare actinobacteria from Moroccan mining sites: first report of copper, zinc, and cobalt tolerance and zinc-associated antibacterial activity in Lentzea sp.",
+      "titleZh": "摩洛哥矿区稀有放线菌的重金属耐受性：首次报道 Lentzea 属菌株的铜、锌、钴耐受及锌相关抗菌活性"
+    },
+    "doi:10.64898/2026.09.18.752640": {
+      "title": "Glucocorticoid signalling exerts distinct lineage-permissive and dose-dependent disruptive actions during human osteoblast differentiation",
+      "titleZh": "人类成骨细胞分化过程中，糖皮质激素信号发挥不同的谱系许可作用及剂量依赖性干扰作用"
+    },
+    "doi:10.3390/biom16091374": {
+      "title": "Silymarin and Zinc Oxide Nanoparticles Attenuate Experimental Colon Cancer in Rats Through Crosstalk of miR-192 and β-Catenin Pathways.",
+      "titleZh": "水飞蓟素与氧化锌纳米颗粒通过 miR-192 和 β-catenin 通路串扰，减轻大鼠实验性结肠癌"
+    }
+  }
+}

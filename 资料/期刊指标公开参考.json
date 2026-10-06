@@ -1,0 +1,518 @@
+{
+  "updatedAt": "2026-10-06",
+  "notice": "公开二手来源，未通过官方账号核验；JIF指标年与发布年分开，三套分区独立记录；多学科分区不得仅取最高区。",
+  "metrics": [
+    {
+      "sourceKind": "secondary",
+      "reference": true,
+      "verified": false,
+      "checkedAt": "2026-10-06",
+      "sourceUrl": "https://www.ablesci.com/journal/detail?id=rA99br",
+      "crosscheckUrls": [
+        "https://www.scholay.com/journal/2193/molecular-cell"
+      ],
+      "journal": "Molecular cell",
+      "issn": "1097-2765",
+      "year": 2025,
+      "releaseYear": 2026,
+      "value": 16,
+      "partitions": {
+        "jcr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=rA99br",
+          "crosscheckUrls": [
+            "https://www.scholay.com/journal/2193/molecular-cell"
+          ],
+          "year": 2025,
+          "zone": "Q1",
+          "category": "生化与分子生物学 / 细胞生物学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "Q1"
+            },
+            {
+              "name": "细胞生物学",
+              "zone": "Q1"
+            }
+          ],
+          "top": false
+        },
+        "cas": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=rA99br",
+          "crosscheckUrls": [
+            "https://www.scholay.com/journal/2193/molecular-cell"
+          ],
+          "year": 2025,
+          "zone": "1",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "1"
+            },
+            {
+              "name": "细胞生物学",
+              "zone": "1"
+            }
+          ],
+          "top": true
+        },
+        "xr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=rA99br",
+          "crosscheckUrls": [
+            "https://www.scholay.com/journal/2193/molecular-cell"
+          ],
+          "year": 2026,
+          "zone": "1",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "1"
+            },
+            {
+              "name": "细胞生物学",
+              "zone": "1"
+            }
+          ],
+          "top": true
+        }
+      }
+    },
+    {
+      "sourceKind": "secondary",
+      "reference": true,
+      "verified": false,
+      "checkedAt": "2026-10-06",
+      "sourceUrl": "https://www.ablesci.com/journal/detail?id=pWlzx5",
+      "crosscheckUrls": [
+        "https://www.booksci.cn/journal/11157.htm"
+      ],
+      "journal": "Developmental cell",
+      "issn": "1534-5807",
+      "year": 2025,
+      "releaseYear": 2026,
+      "value": 9.2,
+      "partitions": {
+        "jcr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=pWlzx5",
+          "crosscheckUrls": [
+            "https://www.booksci.cn/journal/11157.htm"
+          ],
+          "year": 2025,
+          "zone": "Q1",
+          "category": "细胞生物学 / 发育生物学",
+          "categories": [
+            {
+              "name": "细胞生物学",
+              "zone": "Q1"
+            },
+            {
+              "name": "发育生物学",
+              "zone": "Q1"
+            }
+          ],
+          "top": false
+        },
+        "cas": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=pWlzx5",
+          "crosscheckUrls": [
+            "https://www.booksci.cn/journal/11157.htm"
+          ],
+          "year": 2025,
+          "zone": "1",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "细胞生物学",
+              "zone": "1"
+            },
+            {
+              "name": "发育生物学",
+              "zone": "1"
+            }
+          ],
+          "top": true
+        },
+        "xr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=pWlzx5",
+          "crosscheckUrls": [
+            "https://www.booksci.cn/journal/11157.htm"
+          ],
+          "year": 2026,
+          "zone": "1",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "细胞生物学",
+              "zone": "2"
+            },
+            {
+              "name": "发育生物学",
+              "zone": "1"
+            }
+          ],
+          "top": true
+        }
+      }
+    },
+    {
+      "sourceKind": "secondary",
+      "reference": true,
+      "verified": false,
+      "checkedAt": "2026-10-06",
+      "sourceUrl": "https://www.ablesci.com/journal/detail?id=5O9v2r",
+      "crosscheckUrls": [
+        "https://www.bioxbio.com/journal/EMBO-REP"
+      ],
+      "journal": "EMBO reports",
+      "issn": "1469-221X",
+      "year": 2025,
+      "releaseYear": 2026,
+      "value": 6,
+      "partitions": {
+        "jcr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=5O9v2r",
+          "crosscheckUrls": [
+            "https://www.bioxbio.com/journal/EMBO-REP"
+          ],
+          "year": 2025,
+          "zone": "Q1/Q2",
+          "category": "生化与分子生物学 / 细胞生物学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "Q1"
+            },
+            {
+              "name": "细胞生物学",
+              "zone": "Q2"
+            }
+          ],
+          "top": false
+        },
+        "cas": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=5O9v2r",
+          "crosscheckUrls": [
+            "https://www.bioxbio.com/journal/EMBO-REP"
+          ],
+          "year": 2025,
+          "zone": "1",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "2"
+            },
+            {
+              "name": "细胞生物学",
+              "zone": "2"
+            }
+          ],
+          "top": true
+        },
+        "xr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=5O9v2r",
+          "crosscheckUrls": [
+            "https://www.bioxbio.com/journal/EMBO-REP"
+          ],
+          "year": 2026,
+          "zone": "1",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "2"
+            },
+            {
+              "name": "细胞生物学",
+              "zone": "2"
+            }
+          ],
+          "top": true
+        }
+      }
+    },
+    {
+      "sourceKind": "secondary",
+      "reference": true,
+      "verified": false,
+      "checkedAt": "2026-10-06",
+      "sourceUrl": "https://www.ablesci.com/journal/detail?id=DlaBAr",
+      "crosscheckUrls": [],
+      "journal": "Andrology",
+      "issn": "2047-2919",
+      "year": 2025,
+      "releaseYear": 2026,
+      "value": 3.4,
+      "partitions": {
+        "jcr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=DlaBAr",
+          "crosscheckUrls": [],
+          "year": 2025,
+          "zone": "Q1",
+          "category": "男科学",
+          "categories": [
+            {
+              "name": "男科学",
+              "zone": "Q1"
+            }
+          ],
+          "top": false
+        },
+        "cas": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=DlaBAr",
+          "crosscheckUrls": [],
+          "year": 2025,
+          "zone": "3",
+          "category": "医学",
+          "categories": [
+            {
+              "name": "男科学",
+              "zone": "1"
+            }
+          ],
+          "top": false
+        },
+        "xr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=DlaBAr",
+          "crosscheckUrls": [],
+          "year": 2026,
+          "zone": "2",
+          "category": "医学",
+          "categories": [
+            {
+              "name": "男科学",
+              "zone": "2"
+            }
+          ],
+          "top": false
+        }
+      }
+    },
+    {
+      "sourceKind": "secondary",
+      "reference": true,
+      "verified": false,
+      "checkedAt": "2026-10-06",
+      "sourceUrl": "https://www.ablesci.com/journal/detail?id=op6GX5",
+      "crosscheckUrls": [
+        "https://www.xueshu.com/sci/43249/"
+      ],
+      "journal": "Chemico-biological interactions",
+      "issn": "0009-2797",
+      "year": 2025,
+      "releaseYear": 2026,
+      "partitions": {
+        "jcr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=op6GX5",
+          "crosscheckUrls": [
+            "https://www.xueshu.com/sci/43249/"
+          ],
+          "year": 2025,
+          "zone": "Q1",
+          "category": "生化与分子生物学 / 药学 / 毒理学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "Q1"
+            },
+            {
+              "name": "药学",
+              "zone": "Q1"
+            },
+            {
+              "name": "毒理学",
+              "zone": "Q1"
+            }
+          ],
+          "top": false
+        },
+        "cas": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=op6GX5",
+          "crosscheckUrls": [
+            "https://www.xueshu.com/sci/43249/"
+          ],
+          "year": 2025,
+          "zone": "2",
+          "category": "医学",
+          "categories": [
+            {
+              "name": "毒理学",
+              "zone": "1"
+            },
+            {
+              "name": "生化与分子生物学",
+              "zone": "2"
+            },
+            {
+              "name": "药学",
+              "zone": "2"
+            }
+          ],
+          "top": false
+        },
+        "xr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=op6GX5",
+          "crosscheckUrls": [
+            "https://www.xueshu.com/sci/43249/"
+          ],
+          "year": 2026,
+          "zone": "2",
+          "category": "医学",
+          "categories": [
+            {
+              "name": "生化与分子生物学",
+              "zone": "2"
+            },
+            {
+              "name": "药学",
+              "zone": "2"
+            },
+            {
+              "name": "毒理学",
+              "zone": "1"
+            }
+          ],
+          "top": false
+        }
+      }
+    },
+    {
+      "sourceKind": "secondary",
+      "reference": true,
+      "verified": false,
+      "checkedAt": "2026-10-06",
+      "sourceUrl": "https://www.ablesci.com/journal/detail?id=DZe8a5",
+      "crosscheckUrls": [
+        "https://www.genelibs.com/db/command/search/j/detail/2073-4409/"
+      ],
+      "journal": "Cells",
+      "issn": "2073-4409",
+      "year": 2025,
+      "releaseYear": 2026,
+      "partitions": {
+        "jcr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=DZe8a5",
+          "crosscheckUrls": [
+            "https://www.genelibs.com/db/command/search/j/detail/2073-4409/"
+          ],
+          "year": 2025,
+          "zone": "Q2",
+          "category": "细胞生物学",
+          "categories": [
+            {
+              "name": "细胞生物学",
+              "zone": "Q2"
+            }
+          ],
+          "top": false
+        },
+        "cas": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=DZe8a5",
+          "crosscheckUrls": [
+            "https://www.genelibs.com/db/command/search/j/detail/2073-4409/"
+          ],
+          "year": 2025,
+          "zone": "2",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "细胞生物学",
+              "zone": "3"
+            }
+          ],
+          "top": false
+        },
+        "xr": {
+          "sourceKind": "secondary",
+          "reference": true,
+          "verified": false,
+          "checkedAt": "2026-10-06",
+          "sourceUrl": "https://www.ablesci.com/journal/detail?id=DZe8a5",
+          "crosscheckUrls": [
+            "https://www.genelibs.com/db/command/search/j/detail/2073-4409/"
+          ],
+          "year": 2026,
+          "zone": "2",
+          "category": "生物学",
+          "categories": [
+            {
+              "name": "细胞生物学",
+              "zone": "3"
+            }
+          ],
+          "top": true
+        }
+      }
+    }
+  ]
+}

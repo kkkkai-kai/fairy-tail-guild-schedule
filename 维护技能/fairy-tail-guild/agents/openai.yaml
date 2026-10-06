@@ -1,0 +1,4 @@
+interface:
+  display_name: "妖尾公会专属维护"
+  short_description: "提炼公会1.0与2.0约定，维护任务流转、实景美化、素材与跨端同步"
+  default_prompt: "使用 $fairy-tail-guild，按最新约定检查并增量维护我的妖尾公会系统，先保护历史数据。"

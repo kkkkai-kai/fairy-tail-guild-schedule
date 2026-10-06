@@ -1,0 +1,194 @@
+{
+  "updatedAt": "2026-10-06",
+  "metrics": [
+    {
+      "journal": "Nature chemical biology",
+      "issn": "1552-4450",
+      "value": 15.8,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://www.nature.com/nchembio/journal-impact",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Molecular biology reports",
+      "issn": "0301-4851",
+      "value": 3.2,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/11033",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Translational neurodegeneration",
+      "issn": "2047-9158",
+      "value": 19.1,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/40035",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Planta",
+      "issn": "0032-0935",
+      "value": 4.4,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/425",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "European journal of nuclear medicine and molecular imaging",
+      "issn": "1619-7070",
+      "value": 7.6,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/259",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Fish physiology and biochemistry",
+      "issn": "0920-1742",
+      "value": 3,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/10695",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Cell biochemistry and biophysics",
+      "issn": "1085-9195",
+      "value": 3,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/12013",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Bioprocess and biosystems engineering",
+      "issn": "1615-7591",
+      "value": 4.3,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/449",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Biometals : an international journal on the role of metal ions in biology, biochemistry, and medicine",
+      "issn": "0966-0844",
+      "value": 4,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://link.springer.com/journal/10534",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "RSC advances",
+      "issn": "2046-2069",
+      "value": 6.1,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://www.rsc.org/publishing/journals/rsc-advances",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Food & function",
+      "issn": "2042-6496",
+      "value": 6.3,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://www.rsc.org/publishing/journals/food-and-function",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "The Biochemical journal",
+      "issn": "0264-6021",
+      "value": 3.9,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://portlandpress.com/biochemj/pages/impact_and_information",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {}
+    },
+    {
+      "journal": "Cells",
+      "issn": "2073-4409",
+      "value": 6,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://www.mdpi.com/journal/cells/imprint",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {
+        "jcr": {
+          "zone": "Q2",
+          "year": 2025,
+          "category": "Cell Biology",
+          "sourceUrl": "https://www.mdpi.com/journal/cells",
+          "verified": true
+        }
+      }
+    },
+    {
+      "journal": "Frontiers in immunology",
+      "issn": "1664-3224",
+      "value": 7,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://www.frontiersin.org/about/impact",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {
+        "jcr": {
+          "zone": "Q1",
+          "year": 2025,
+          "category": "出版社未指定单一学科",
+          "sourceUrl": "https://www.frontiersin.org/about/impact",
+          "verified": true
+        }
+      }
+    },
+    {
+      "journal": "Frontiers in molecular neuroscience",
+      "issn": "1662-5099",
+      "value": 4.4,
+      "year": 2025,
+      "releaseYear": 2026,
+      "sourceUrl": "https://www.frontiersin.org/about/impact",
+      "verified": true,
+      "checkedAt": "2026-10-06",
+      "partitions": {
+        "jcr": {
+          "zone": "Q2",
+          "year": 2025,
+          "category": "出版社未指定单一学科",
+          "sourceUrl": "https://www.frontiersin.org/about/impact",
+          "verified": true
+        }
+      }
+    }
+  ]
+}
