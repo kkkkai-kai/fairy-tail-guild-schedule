@@ -1,4 +1,11 @@
 /* Readable guild navigation; decorative assets have transparent interiors. */
+html #guildMasthead{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 20px;padding:10px 8px 5px;background:none!important;border:0!important;box-shadow:none!important;min-width:0}
+html .guild-masthead-copy{min-width:0;text-align:center}
+html .guild-masthead-kicker{display:block;font-size:10px;letter-spacing:3px;font-weight:600;color:#65717f;line-height:1.6;margin-bottom:4px}
+html .guild-masthead-title{display:flex;align-items:baseline;justify-content:center;gap:18px;color:#a53243;font:700 clamp(25px,2.4vw,34px)/1.4 'Microsoft YaHei','PingFang SC',sans-serif;letter-spacing:2px}
+html .guild-masthead-title>span{font-size:.65em;font-weight:600;letter-spacing:1px;color:#303842}
+html .guild-masthead-pennant,html .guild-masthead-quill{flex:0 0 auto;object-fit:contain;filter:none;box-shadow:none;border:0;background:none}
+@media(max-width:650px){html #guildMasthead{gap:8px;margin-bottom:12px;padding-top:2px}html .guild-masthead-title{display:block;font-size:25px;letter-spacing:1px}html .guild-masthead-title>span{display:block;font-size:15px;margin-top:2px}html .guild-masthead-kicker{font-size:8px;letter-spacing:1.5px}html .guild-masthead-pennant{width:30px;height:42px}html .guild-masthead-quill{width:27px;height:34px}}
 html #guildHallScene .guild-floor-map{display:grid!important;grid-template-columns:1fr .74fr 1.14fr;grid-template-rows:repeat(3,36px);gap:4px!important;position:relative;overflow:visible!important;padding:0!important;background:transparent;border:0}
 html #guildHallScene .guild-scene-picker{width:100%;min-height:38px;display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border:1px solid #a87948;background:#fff7e7;color:#653c28;font-size:14px;font-weight:700;border-radius:5px}
 html #guildHallScene .guild-room-menu{position:absolute;left:0;right:0;top:43px;z-index:20;background:#fff8eb;border:1px solid #aa7848;border-radius:6px;padding:10px;box-shadow:0 6px 18px #3b201b38}
