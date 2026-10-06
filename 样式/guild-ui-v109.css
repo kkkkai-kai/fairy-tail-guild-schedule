@@ -165,7 +165,7 @@ html #guildMemberInteraction[data-assignee-id=natsu]{--guild-character-frame:url
 html #guildMemberInteraction[data-assignee-id=lucy]{--guild-character-frame:url('../素材/界面/边框/guild-frame-lucy-v105.webp');--guild-character-slice:18%}
 html .guild-frame-archive::before,html .guild-frame-honor::before{display:none!important}
 html #guildHallScene .guild-hall-member,html #guildHallScene .guild-hall-visitor{transform:translate(-50%,-100%)!important;display:flex!important;align-items:flex-end;justify-content:center;max-width:64px!important;cursor:pointer}
-html #guildHallScene .guild-hall-sprite{max-width:64px!important;pointer-events:none}
+html #guildHallScene .guild-hall-sprite{max-width:56px!important;pointer-events:none}
 html #guildHallScene .nook-exceed{cursor:pointer;max-width:56px!important;transform:translate(-50%,-100%)!important}
 html #guildHallScene .guild-hall-encounter{position:absolute!important;left:8px!important;right:8px!important;top:auto!important;bottom:8px!important;width:auto!important;max-width:calc(100% - 16px)!important;max-height:45%;overflow:auto;z-index:12!important;box-sizing:border-box;padding:8px 10px;background:#ffffffef!important;color:#252b32!important;border:1px solid #a6804e;border-radius:5px;font-size:12px!important;line-height:1.55!important;pointer-events:none}
 html #guildHallScene .guild-hall-tip{position:absolute!important;z-index:12!important;max-width:240px!important;max-height:4.4em!important;overflow:hidden!important;box-sizing:border-box;padding:6px 9px;background:#ffffffef!important;color:#252b32!important;border:1px solid #a6804e;border-radius:6px;font-size:12px!important;line-height:1.45!important;pointer-events:none;display:flex!important;flex-direction:column;gap:2px;box-shadow:0 3px 9px #6f4a3655}
