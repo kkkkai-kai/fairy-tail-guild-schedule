@@ -1583,8 +1583,8 @@ function ensureFoldedCompletionButtons(){
     const step=task.steps?.find(item=>!item.done);if(step)completeProjectStage(task,step);
    }else completeOnceTask(task,true);
   };
-  host.append(button)
- })
+  leaveNext(0);
+ },reduced?500:Math.max(4000,mode.wait));
 }
 function ensureTaskAssigneeAvatars(){
  let changed=false;tasks.forEach(task=>{const before=task.assigneeId;ensureTaskAssignee(task);if(task.assigneeId!==before)changed=true});
