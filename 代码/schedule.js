@@ -791,7 +791,7 @@ function guildTodayReturnMembers(dateKey=today()){
  return members;
 }
 document.addEventListener('guild-literature-ready',()=>runWithGuildViewPreserved(()=>renderGuildHallScene()));
-const guildHallSupper={date:'',phase:'open',timer:0,record:null};
+const guildHallSupper={date:'',phase:'open',timer:0,record:null,stage:null};
 const guildFarewellModes=[
 {id:'supper',text:'米拉端来晚餐，大家举杯道贺，再收好餐具互道明天见。',direction:32,delay:160,wait:5000},
 {id:'pairs',text:'伙伴们两两结伴，在门口互道晚安。',direction:26,delay:210,wait:1200},
@@ -808,7 +808,32 @@ const guildFarewellModes=[
 ];
 function hallSupperPhase(){if(guildHallSupper.date!==today()){clearTimeout(guildHallSupper.timer);guildHallSupper.date=today();let record=null;try{record=JSON.parse(localStorage.getItem('fairytail-guild-hall-farewell')||'null')}catch{}guildHallSupper.record=record?.date===today()?record:{date:today(),used:false,closed:false,modeId:''};guildHallSupper.phase=guildHallSupper.record.closed?'closed':'open'}return guildHallSupper.phase}
 function setHallSupperPhase(phase){hallSupperPhase();guildHallSupper.phase=phase;guildHallSupper.record.closed=phase!=='open';localStorage.setItem('fairytail-guild-hall-farewell',JSON.stringify(guildHallSupper.record))}
-function closeGuildHallTogether(){if(guildCelebrationController.playing||hallSupperPhase()!=='open'||guildHallSupper.record.used)return;const weather=currentGuildWeather(),pool=guildFarewellModes.filter(mode=>!mode.rainOnly||['rain','heavyRain','thunder'].includes(weather.condition)),random=new Uint32Array(1);crypto.getRandomValues(random);const mode=pool[random[0]%pool.length],date=today();guildHallSupper.record.used=true;guildHallSupper.record.modeId=mode.id;setHallSupperPhase('feasting');localStorage.setItem('fairytail-guild-hall-active-scene','mainHall');runWithGuildViewPreserved(()=>renderGuildHallScene());stopGuildHallMotion(true);const stage=document.querySelector('#guildHallScene .guild-hall-stage'),nodes=[...stage.querySelectorAll('.guild-hall-character-layer>button')],reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;nodes.forEach((node,i)=>{node.disabled=true;if(!reduced)node.animate([{transform:'translateY(0)'},{transform:'translateY(-3px)'},{transform:'translateY(0)'}],{duration:900,iterations:2,delay:i*60})});guildHallSupper.timer=setTimeout(()=>{if(today()!==date)return;guildHallSupper.phase='leaving';applyGuildFarewellBackground(stage,'leaving',mode.id);nodes.forEach((node,i)=>{const pair=mode.id==='pairs'?Math.floor(i/2):i,horizontal=mode.id==='street'?(i%2?16:-16):0;node.animate([{opacity:1,transform:'translate(0,0)'},{opacity:0,transform:'translate('+horizontal+'px,'+mode.direction+'px)'}],{duration:reduced?1:1300,delay:reduced?0:pair*mode.delay,fill:'forwards'})});guildHallSupper.timer=setTimeout(()=>{if(today()!==date)return;setHallSupperPhase('closed');runWithGuildViewPreserved(()=>renderGuildHallScene())},reduced?50:1500+nodes.length*mode.delay)},reduced?100:mode.wait)}
+function closeGuildHallTogether(){
+ if(guildCelebrationController.playing||hallSupperPhase()!=='open'||guildHallSupper.record.used)return;
+ const weather=currentGuildWeather(),pool=guildFarewellModes.filter(mode=>!mode.rainOnly||['rain','heavyRain','thunder'].includes(weather.condition)),random=new Uint32Array(1);crypto.getRandomValues(random);
+ const mode=pool[random[0]%pool.length],date=today();guildHallSupper.record.used=true;guildHallSupper.record.modeId=mode.id;setHallSupperPhase('feasting');localStorage.setItem('fairytail-guild-hall-active-scene','mainHall');runWithGuildViewPreserved(()=>renderGuildHallScene());stopGuildHallMotion(true);
+ const stage=document.querySelector('#guildHallScene .guild-hall-stage'),nodes=[...stage.querySelectorAll('.guild-hall-character-layer>button')].sort((a,b)=>parseFloat(b.style.top)-parseFloat(a.style.top)),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;guildHallSupper.stage=stage;
+ nodes.forEach(node=>node.disabled=true);
+ guildHallSupper.timer=setTimeout(()=>{
+  if(today()!==date||!stage.isConnected)return;
+  guildHallSupper.phase='leaving';applyGuildFarewellBackground(stage,'leaving',mode.id);
+  const leaveNext=index=>{
+   if(today()!==date||!stage.isConnected||guildHallSupper.phase!=='leaving')return;
+   if(index>=nodes.length){guildHallSupper.stage=null;setHallSupperPhase('closed');runWithGuildViewPreserved(()=>renderGuildHallScene());return}
+   const node=nodes[index];if(!node.isConnected){leaveNext(index+1);return}
+   const duration=reduced?350:['quiet','leaveLight','rain'].includes(mode.id)?4200:3400;
+   const from={left:node.style.left,top:node.style.top};
+   // Foot anchors stay inside the stage; retain the sprite's existing transform.
+   placeGuildActor(stage,node,{x:50,y:94});const exit={left:node.style.left,top:node.style.top};
+   node.style.left=from.left;node.style.top=from.top;node.style.transition='none';node.dataset.farewellWalking='true';
+   const actorId=node.dataset.companionId||node.dataset.assigneeId||node.dataset.visitorId,key=node.dataset.companionId?'nook:'+actorId:actorId;
+   if(!reduced&&actorId){guildHallMotionController.activeMoverId=key;animateGuildActorWalk(stage,node,actorId,key)}
+   node.animate(reduced?[{opacity:1},{opacity:0}]:[{...from,opacity:1,offset:0},{...exit,opacity:1,offset:.88},{...exit,opacity:0,offset:1}],{duration,easing:'linear',fill:'forwards'});
+   guildHallSupper.timer=setTimeout(()=>{cancelAnimationFrame(guildHallMotionController.walkFrame);guildHallMotionController.walkFrame=null;guildHallMotionController.activeMoverId=null;node.hidden=true;delete node.dataset.farewellWalking;guildHallSupper.timer=setTimeout(()=>leaveNext(index+1),reduced?150:700)},duration);
+  };
+  leaveNext(0);
+ },reduced?500:Math.max(4000,mode.wait));
+}
 function recallGuildHallMembers(){if(hallSupperPhase()!=='closed'||guildCelebrationController.playing)return;clearTimeout(guildHallSupper.timer);setHallSupperPhase('open');runWithGuildViewPreserved(()=>renderGuildHallScene())}
 function renderGuildHallSupper(card,stage,activeScene){const phase=hallSupperPhase(),record=guildHallSupper.record,mode=guildFarewellModes.find(item=>item.id===record.modeId);card.querySelector(':scope>.guild-hall-supper-controls')?.remove();const hallButton=card.querySelector('.guild-room-node[data-scene-id="mainHall"]');if(hallButton){let action=hallButton.querySelector('.guild-hall-inline-action');if(!action){action=document.createElement('span');action.className='guild-hall-inline-action';action.setAttribute('role','button');action.tabIndex=0;hallButton.append(action)}const disabled=guildCelebrationController.playing||['feasting','leaving'].includes(phase)||(record.used&&phase!=='closed');action.textContent=phase==='closed'?'召回':record.used?'已散场':'散场';action.title=phase==='closed'?'召回伙伴（包括哈比小窝）':record.used?'今天已经散场，明天再道别':'今日散场：随机告别，包括哈比小窝';action.setAttribute('aria-label',action.title);action.setAttribute('aria-disabled',String(disabled));const run=event=>{event.preventDefault();event.stopPropagation();if(disabled)return;phase==='closed'?recallGuildHallMembers():closeGuildHallTogether()};action.onclick=run;action.onkeydown=event=>{if(event.key==='Enter'||event.key===' ')run(event)}}
 if(['feasting','leaving'].includes(phase)&&activeScene==='mainHall'){const layer=stage.querySelector('.guild-hall-character-layer');getHappyNookVisitors().forEach((entry,i)=>{if(layer.querySelector('[data-companion-id="'+entry.id+'"]'))return;const cat=document.createElement('button'),img=document.createElement('img');cat.type='button';cat.className='guild-hall-member farewell-cat';cat.dataset.companionId=entry.id;cat.disabled=true;img.className='guild-hall-sprite';img.src=entry.sprite;img.alt=entry.name;cat.append(img);layer.append(cat);placeGuildActor(stage,cat,{x:18+i*13,y:85})})}card.querySelectorAll('.guild-room-node').forEach(node=>node.disabled=guildCelebrationController.playing||['feasting','leaving'].includes(phase));if(phase!=='open'&&activeScene==='mainHall')applyGuildFarewellBackground(stage,phase,mode?.id);else delete stage.dataset.farewellState;
@@ -821,6 +846,7 @@ function resolveGuildFarewellBackground(phase,modeId,date=new Date()){
 }
 function applyGuildFarewellBackground(stage,phase,modeId){const visual=resolveGuildFarewellBackground(phase,modeId);stage.dataset.light=visual.time;stage.dataset.timePhase=visual.time;stage.dataset.farewellState=visual.state;loadGuildHallBackground(stage,visual.file,visual.fallback)}
 function renderGuildHallScene(){
+ if(guildHallSupper.stage?.isConnected&&guildHallSupper.date===today()&&['feasting','leaving'].includes(guildHallSupper.phase))return;
  const side=document.querySelector('.guild-sidebar');if(!side)return;
  let card=side.querySelector('#guildHallScene');if(!card)return;
  card.style.flex='0 0 auto';if(!card.dataset.openInitialized){card.dataset.openInitialized='1';card.open=localStorage.getItem('fairytail-guild-hall-open')!=='0'}placeGuildHallAtSidebarTop();
