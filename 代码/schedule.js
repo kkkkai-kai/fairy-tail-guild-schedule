@@ -300,13 +300,7 @@ function openGuildMemberInteraction(memberId,opener){
  if(!dialog.open){[...document.querySelectorAll('dialog')].filter(d=>d.open&&d!==dialog).forEach(d=>{try{d.close()}catch(e){}});try{dialog.showModal()}catch(e){dialog.show()}}
 }
 function guildProfileAvatar(id){
- const avatar=document.createElement('span');avatar.className='gmp-avatar';const clip=document.createElement('span');clip.className='completion-avatar-clip';avatar.append(clip);
- const name=guildMemberRegistry[id]?.name||FTNames[id]||id;
- const candidates=['guild-portrait-'+id+'-v3.png','guild-portrait-'+id+'-v2.png','guild-portrait-'+id+'-v4.png','guild-portrait-'+id+'-return-v87.png','guild-portrait-'+id+'-rest-v87.png','guild-portrait-'+id+'-celebration-v87.png'].map(f=>guildAssetPath(f)).filter(Boolean);
- let idx=0;
- const show=()=>{if(idx>=candidates.length){const fb=document.createElement('span');fb.className='completion-avatar-placeholder';fb.textContent=name.slice(0,1);clip.replaceChildren(fb);return}const img=document.createElement('img');img.alt=name;img.loading='eager';img.decoding='async';img.onload=()=>clip.replaceChildren(img);img.onerror=()=>{idx++;show()};img.src=candidates[idx++]};
- show();
- return avatar;
+ return renderProfileAvatar(id,{source:'portrait',state:'normal'},'gmp-avatar');
 }function guildGiftName(itemId){return globalThis.GUILD_GIFT_CATALOG?.[itemId]||null}
 function guildBondMeta(id){try{const GBS=globalThis.GuildBondSystem;if(!GBS)return null;const b=GBS.read(),p=b[id];if(!p)return{lv:0,name:'初识',need:0,nextNeed:50,progress:0,pct:0};const m=GBS.meta(p.points||0);return{lv:m.level,name:m.name,need:m.need,nextNeed:m.nextNeed,progress:m.progress,pct:m.pct}}catch(e){return null}}
 function guildAddBond(id,n){try{const GBS=globalThis.GuildBondSystem;if(!GBS)return;const b=GBS.read(),p=b[id]||(b[id]={points:0,unlocked:0});p.points=Math.max(0,(p.points||0)+n);p._base=true;GBS.write(b);return GBS.meta(p.points)}catch(e){return null}}function openGuildIntelCorner(){

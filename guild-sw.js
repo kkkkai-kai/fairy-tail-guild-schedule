@@ -1,6 +1,6 @@
 /* Interface cache is versioned; filename-versioned images keep a separate cache. */
 'use strict';
-var CACHE_VER='guild-v185-farewell-20261008';
+var CACHE_VER='guild-v186-profile-20261008';
 importScripts('./代码/guild-assets.js?v='+CACHE_VER);
 var CACHE_NAME='guild-core-'+CACHE_VER;
 var MEDIA_CACHE_NAME='guild-media-v1';
