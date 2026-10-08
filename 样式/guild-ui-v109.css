@@ -154,7 +154,9 @@ html .project-card{border:1px solid #bfa57f!important;border-left:3px solid #a55
 html :is(.arcane-panel,.guild-warehouse-panel,.guild-dock-panel){border:2px solid #937048!important;box-shadow:inset 0 0 0 3px #ffffff,0 8px 25px #35231835!important;background-color:var(--guild-paper)!important}
 html .v4-section{border:1px solid #bfa57f!important;border-left:3px solid #ad8553!important;border-radius:5px!important}
 html :is(.v4-grid article,.spell-card,.reward-card,.guild-quote-results article){border:1px solid #cbb18a!important;border-radius:5px!important;background:#ffffff!important}
-html .guild-scene-journal,html #guildMemberInteraction{border:14px solid transparent!important;border-image:var(--guild-character-frame,url('../素材/界面/边框/guild-frame-scroll-v99-fast-v100.webp')) var(--guild-character-slice,22%) / 22px / 0 stretch!important;border-radius:22px!important;box-shadow:none!important;background:#ffffff padding-box!important;max-height:min(86vh,660px)!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+html .guild-scene-journal,html #guildMemberInteraction{border:14px solid transparent!important;border-image:var(--guild-character-frame,url('../素材/界面/边框/guild-frame-scroll-v99-fast-v100.webp')) var(--guild-character-slice,22%) / 22px / 0 stretch!important;border-radius:22px!important;box-shadow:none!important;background:#ffffff padding-box!important;max-height:min(86vh,660px)!important;flex-direction:column!important;overflow:hidden!important}
+html dialog.guild-scene-journal[open],html dialog#guildMemberInteraction[open]{display:flex!important}
+html dialog.guild-scene-journal:not([open]),html dialog#guildMemberInteraction:not([open]){display:none!important}
 html .guild-scene-journal>header,html #guildMemberInteraction>header{flex:0 0 auto!important}
 html .guild-scene-journal>nav,html #guildMemberInteraction>nav{flex:0 0 auto!important}
 html .guild-scene-journal .journal-scroll,html #guildMemberInteraction .journal-scroll{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important}
