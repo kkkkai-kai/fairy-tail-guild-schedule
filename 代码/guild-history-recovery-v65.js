@@ -172,6 +172,29 @@
     } catch (_) { /* non-critical */ }
   }
 
+  function recoveryPreview(snapshot) {
+    if (!snapshot || Array.isArray(snapshot) || typeof snapshot !== 'object') throw new Error('快照必须是存档对象');
+    var clean = {};
+    Object.keys(snapshot).forEach(function (key) {
+      if (!/^fairytail-[a-z0-9-]+$/.test(key) || /secret|token|credential/i.test(key)) return;
+      var value = snapshot[key];
+      if (typeof value !== 'string') value = JSON.stringify(value);
+      JSON.parse(value);
+      clean[key] = value;
+    });
+    var before = JSON.parse(localStorage.getItem('fairytail-tasks-v2') || '[]');
+    var after = JSON.parse(clean['fairytail-tasks-v2'] || '[]');
+    if (!Array.isArray(before) || !Array.isArray(after)) throw new Error('任务列表格式异常');
+    var ids = new Set();
+    after.forEach(function (task) { if (!task || !task.id || ids.has(task.id)) throw new Error('快照任务身份缺失或重复'); ids.add(task.id); });
+    var current = new Map(before.map(function (task) { return [task.id, task]; }));
+    var missing = before.filter(function (task) { return !ids.has(task.id); }).length;
+    var added = after.filter(function (task) { return !current.has(task.id); }).length;
+    var changed = after.filter(function (task) { return current.has(task.id) && JSON.stringify(current.get(task.id)) !== JSON.stringify(task); }).length;
+    var lostCompletion = after.filter(function (task) { var old = current.get(task.id); return old && ((old.done && !task.done) || (old.steps || []).some(function (step) { return step.done && !(task.steps || []).some(function (next) { return next.id === step.id && next.done; }); })); }).length;
+    return { snapshot: clean, added: added, missing: missing, changed: changed, lostCompletion: lostCompletion };
+  }
+
   /* ── Main flow ─────────────────────────────────────────────────── */
 
   function run() {
@@ -209,7 +232,7 @@
         }
 
         var ratio = currentTaskCount / snapshotTaskCount;
-        if (ratio >= threshold) {
+        if (!wantManual && ratio >= threshold) {
           console.info(
             '[guild-recovery] Data intact (' + currentTaskCount + '/' + snapshotTaskCount +
             ' = ' + (ratio * 100).toFixed(1) + '% >= ' + (threshold * 100).toFixed(0) + '%). No recovery needed.'
@@ -218,10 +241,13 @@
         }
 
         /* Step 3 – data loss detected; ask user (every time, no one-shot marker) */
-        var msg =
-          '检测到本地数据可能不完整（' + currentTaskCount + '/' + snapshotTaskCount +
-          ' = ' + (ratio * 100).toFixed(1) + '% < ' + (threshold * 100).toFixed(0) +
-          '% 阈值），是否从快照恢复？';
+        var preview = recoveryPreview(snapshot);
+        if (preview.missing || preview.lostCompletion) {
+          await guildConfirmDialog({ text: '已阻止覆盖式恢复：快照将丢失本机 ' + preview.missing + ' 条任务，或回退 ' + preview.lostCompletion + ' 条已完成任务/阶段。请使用逐条合并恢复，不会写入任何数据。' });
+          return;
+        }
+        snapshot = preview.snapshot;
+        var msg = '恢复预览：本机 ' + currentTaskCount + ' 条；快照 ' + snapshotTaskCount + ' 条。新增 ' + preview.added + ' 条，内容不同 ' + preview.changed + ' 条；将覆盖 ' + Object.keys(snapshot).length + ' 组公会数据。不会重新结算奖励。确认前请检查差异；恢复前会下载本机备份。是否继续？';
 
         if (!await guildConfirmDialog({ text: msg })) {
           console.info('[guild-recovery] User declined recovery.');
@@ -232,7 +258,7 @@
         var allKeys = [];
         for (var k = 0; k < localStorage.length; k++) {
           var key = localStorage.key(k);
-          if (key) allKeys.push(key);
+          if (key && /^fairytail-[a-z0-9-]+$/.test(key)) allKeys.push(key);
         }
         downloadBackup(allKeys);
 

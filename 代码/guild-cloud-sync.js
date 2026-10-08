@@ -46,14 +46,28 @@
 
   var META_KEY = '__guild_cloud_meta__';
   var dirty = new Set();
+  var PENDING_KEY = '__guild_cloud_pending_keys__';
+  var pending = new Set();
+  try {
+    var savedPending = JSON.parse(localStorage.getItem(PENDING_KEY) || '[]');
+    if (Array.isArray(savedPending)) savedPending.forEach(function (key) {
+      if (CONFIG.syncKeys.indexOf(key) !== -1 && localStorage.getItem(key) !== null) { pending.add(key); dirty.add(key); }
+    });
+  } catch (e) { console.warn('[guild-cloud] pending queue unreadable', e); }
+  function persistPending() {
+    try { localStorage.setItem(PENDING_KEY, JSON.stringify(Array.from(pending))); }
+    catch (e) { setBadge('本机已保存 · 待同步清单保存失败，请勿关闭页面', false); }
+  }
   var pushTimer = null;
   var lastPullAt = 0;
   var online = false;
   var hookInstalled = false;
   var supaWriteQueue = Promise.resolve();
+  var activeWrites = 0;
+  var lastConfirmedAt = 0;
   // 方案 A（省额度）：轮询从 60s 放宽到 5 分钟，且仅页面可见时轮询；
   // 打开页面 / 回到前台 / 点击浮标时立即拉一次，切后台或离开页面前立即 flush 推送。
-  var PULL_INTERVAL = 5 * 60 * 1000;
+  var PULL_INTERVAL = 30 * 1000;
 
   // ---------- 本地时间记录 ----------
   function readMeta() {
@@ -156,6 +170,7 @@
     m.style.cssText = 'position:fixed;right:14px;bottom:74px;z-index:999999;display:flex;gap:10px;background:rgba(255,250,242,.98);border:1px solid #e4c49a;border-radius:16px;padding:10px 14px;box-shadow:0 8px 28px rgba(80,40,10,.28);backdrop-filter:blur(8px)';
     var items = [
       { icon: '🏠', label: '码头', action: function () { document.dispatchEvent(new CustomEvent('guildDockToggle')); } },
+      { icon: '☷', label: '维护簿', action: showMaintenanceBook },
       { icon: '✦', label: '功能', action: function () {
         if (typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle();
       }}
@@ -184,6 +199,10 @@
   }
   // ok: true=绿(已同步) false=红(待同步/离线) null=黄(连接中/重试)
   function setBadge(text, ok) {
+    if (CONFIG.syncEnabled && ok === true && (pending.size || activeWrites)) {
+      text = '本机已保存 · 云端尚有待确认数据';
+      ok = null;
+    }
     window.__guildCloudState = { text: text, ok: ok };
     var els = badgeEls();
     var top = els.top, floater = els.floater;
@@ -211,6 +230,29 @@
       try { window.dispatchEvent(new CustomEvent('guildCloudStateChange')); } catch (e) {}
     }
   }
+  function showMaintenanceBook() {
+    var previous = document.getElementById('guildMaintenanceBook');
+    if (previous) { previous.showModal(); return; }
+    var dialog = document.createElement('dialog');
+    dialog.id = 'guildMaintenanceBook';
+    dialog.style.cssText = 'max-width:440px;width:calc(100% - 40px);padding:22px;background:#fffaf2;color:#382b25;border:1px solid #b98555;border-radius:14px;';
+    var title = document.createElement('h3'); title.textContent = '公会维护簿'; dialog.appendChild(title);
+    var tasks = parseJson(localStorage.getItem('fairytail-tasks-v2'), []);
+    var lines = [
+      CONFIG.syncEnabled ? '在线同步：已启用' : '在线同步：已停用；当前记录仅保存在本机',
+      '待上传数据组：' + pending.size + '；正在确认：' + activeWrites,
+      '最近云端写后确认：' + (lastConfirmedAt ? new Date(lastConfirmedAt).toLocaleString('zh-CN') : '本次打开尚未确认'),
+      '任务记录：' + (Array.isArray(tasks) ? tasks.length : '格式异常'),
+      '缺少人物身份：' + (Array.isArray(tasks) ? tasks.filter(function (task) { return task && !task.assigneeId; }).length : '未检查'),
+      '图片加载失败：' + Array.from(document.images).filter(function (img) { return img.getAttribute('src') && img.complete && !img.naturalWidth; }).length,
+      '说明：待上传数按存储数据组统计，并非任务数；未检查真实跨端一致性、人物身份及历史恢复。'
+    ];
+    lines.forEach(function (line) { var p = document.createElement('p'); p.textContent = line; p.style.cssText = 'line-height:1.6;overflow-wrap:anywhere'; dialog.appendChild(p); });
+    var close = document.createElement('button'); close.type = 'button'; close.textContent = '关闭'; close.onclick = function () { dialog.close(); }; dialog.appendChild(close);
+    dialog.addEventListener('click', function (event) { if (event.target === dialog) { var rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
+    dialog.addEventListener('close', function () { dialog.remove(); });
+    document.body.appendChild(dialog); dialog.showModal();
+  }
   function showNotice(text) {
     ensureBadge();
     var els = badgeEls();
@@ -232,15 +274,21 @@
   }
   function retryEntries(entries) {
     (entries || []).forEach(function (entry) {
-      if (entry && entry.key) dirty.add(entry.key);
+      if (entry && entry.key) { dirty.add(entry.key); pending.add(entry.key); }
     });
+    persistPending();
     online = false;
     setBadge('云端：离线（本地数据待同步）', false);
-    setTimeout(push, 3500 + Math.floor(Math.random() * 3000));
+    if (navigator.onLine !== false) setTimeout(push, 3500 + Math.floor(Math.random() * 3000));
   }
 
   function push() {
     if (!dirty.size) return;
+    if (navigator.onLine === false) {
+      online = false;
+      setBadge('云端：离线（本地数据待同步）', false);
+      return;
+    }
     var entries = [];
     dirty.forEach(function (k) {
       var v = localStorage.getItem(k);
@@ -309,6 +357,8 @@
   }
   function supaPushNow(entries) {
     if (!entries || !entries.length) return Promise.resolve({ list: [] });
+    activeWrites++;
+    setBadge('本机已保存 · 正在确认云端写入', null);
     var rows = entries.map(function (e) { return { key: e.key, value: e.value, updated_at: Number(e.updatedAt) || Date.now() }; });
     return fetch(supaRestUrl(), {
       method: 'POST',
@@ -323,8 +373,15 @@
             throw new Error('云端写后校验失败：' + entry.key);
           }
         });
+        entries.forEach(function (entry) {
+          if (localStorage.getItem(entry.key) === entry.value && localTimeOf(entry.key) <= entry.updatedAt) {
+            pending.delete(entry.key); dirty.delete(entry.key);
+          } else { pending.add(entry.key); dirty.add(entry.key); }
+        });
+        persistPending();
+        lastConfirmedAt = Date.now();
         return { list: list };
-      });
+      }).finally(function () { activeWrites--; });
   }
   function supaPush(entries) {
     var snapshot = (entries || []).map(function (entry) {
@@ -404,8 +461,14 @@
       return lT === 0 || rT > lT;
     });
   }
-  // 懒轮询：先 meta 探测，云端确有更新才发起全量拉取；无更新则零流量
-  function pullLazy(retryCount) {
+  // 只共享当前轻量读取；没有更新也会产生一次meta请求，不拉取业务正文。
+  var lazyPullFlight = null;
+  function pullLazy() {
+    if (lazyPullFlight) return lazyPullFlight;
+    lazyPullFlight = pullLazyAttempt(0).finally(function () { lazyPullFlight = null; });
+    return lazyPullFlight;
+  }
+  function pullLazyAttempt(retryCount) {
     retryCount = retryCount || 0;
     return supaMeta().then(function (meta) {
       if (metaNeedsPull(meta)) {
@@ -421,7 +484,7 @@
       if (retryCount < 1) {
         // 首次失败：3 秒后重试一次，避免手机网络波动误判离线
         return new Promise(function (resolve) { setTimeout(resolve, 3000); })
-          .then(function () { return pullLazy(1); });
+          .then(function () { return pullLazyAttempt(1); });
       }
       online = false;
       setBadge('云端：读取失败，将自动重试', null);
@@ -799,6 +862,8 @@
       if (!CONFIG.syncKeys.indexOf) return;
       if (CONFIG.syncKeys.indexOf(r.key) === -1) return;
       if (!r.value) return;
+      // 离线修改优先留在本机，交由推送阶段合并，不能被较新云时间戳直接覆盖。
+      if (pending.has(r.key)) return;
       var localT = localTimeOf(r.key);
       if (Number(r.updatedAt) > localT) {
         if (!validRemoteValue(r.key, r.value, localStorage.getItem(r.key))) {
@@ -874,9 +939,12 @@
     var origSet = Storage.prototype.setItem;
     Storage.prototype.setItem = function (key, value) {
       origSet.call(this, key, value);
-      if (CONFIG.syncKeys.indexOf(key) !== -1) {
+      if (this === localStorage && CONFIG.syncKeys.indexOf(String(key)) !== -1) {
         markLocalWrite(key, Date.now());
         dirty.add(key);
+        pending.add(key);
+        persistPending();
+        setBadge('本机已保存 · 等待云端确认', null);
         schedulePush();
       }
     };
@@ -917,7 +985,7 @@
           var pLocal = parseJsonSafe(entry.value, []);
           var pRemote = parseJsonSafe(remoteTasks, []);
           var rT = remote ? Number(remote.updatedAt) || 0 : 0;
-          var pMerged = mergeTaskArrays(pLocal, pRemote, entry.updatedAt >= rT);
+          var pMerged = mergeTaskArrays(pLocal, pRemote, pending.has(entry.key) || entry.updatedAt >= rT);
           var mergedRaw = JSON.stringify(pMerged);
           if (mergedRaw !== entry.value) {
             Storage.prototype.setItem.call(localStorage, entry.key, mergedRaw);
@@ -931,7 +999,8 @@
           }
         });
         if (!need.length) { online = true; setBadge('云端：已同步', true); return; }
-        return supaPush(need)
+        // 已在串行队列内部，不能再次排队并等待自己后面的任务。
+        return supaPushNow(need)
           .then(function () { online = true; setBadge('云端：已同步', true); })
           .catch(function () { retryEntries(need); });
       }).catch(function () {
@@ -962,14 +1031,19 @@
     // 打开页面：立即全量拉一次，再补传确实较新的本地 key。
     // 读取失败时保持纯本地模式，绝不把旧设备整包覆盖到云端。
     setTimeout(function () {
-      pull().then(fullPush).catch(function (e) { console.warn('[guild-cloud] startup sync failed', e); });
+      pull().then(fullPush).catch(function (e) { console.warn('[guild-cloud] startup sync failed', e); })
+        .finally(function () { if (dirty.size) schedulePush(); });
     }, 300);
-    // 方案 A+B：5 分钟懒轮询，仅页面可见时执行，且先走轻量 meta 探测（~1KB），
+    // 前台30秒轻量检查，仅页面可见时执行，且先走meta探测，
     // 云端确有更新才全量拉取；不可见时完全停止轮询。
     setInterval(function () {
-      if (document.hidden) return;
+      if (document.hidden || navigator.onLine === false) return;
       pullLazy().catch(function (e) { console.warn('[guild-cloud] polling pull failed', e); });
     }, PULL_INTERVAL);
+    window.addEventListener('online', function () {
+      if (dirty.size) schedulePush();
+      if (!document.hidden) pullLazy().catch(function (e) { console.warn('[guild-cloud] reconnect pull failed', e); });
+    });
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
         // 切后台/离开页面前：立即把本地待同步数据推送出去，避免最后一步操作滞留本机

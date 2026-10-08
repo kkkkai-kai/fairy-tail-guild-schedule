@@ -40,6 +40,8 @@
   function validateBackup(x){
     const obj=v=>v&&typeof v==='object'&&!Array.isArray(v),integer=v=>Number.isSafeInteger(v)&&v>=0;
     if(!obj(x)||!obj(x.data)||!obj(x.wallet)||!Array.isArray(x.wallet.redemptions))throw Error('备份缺少日程或兑换记录');
+    if(x.wallet.rate!==undefined&&(!Number.isFinite(x.wallet.rate)||x.wallet.rate<=0))throw Error('兑换比例格式无效');
+    if(x.wallet.cap!==undefined&&(!Number.isFinite(x.wallet.cap)||x.wallet.cap<0))throw Error('月度预算格式无效');
     for(const [d,s]of Object.entries(x.data)){if(!/^\d{4}-\d{2}-\d{2}$/.test(d)||!obj(s)||!obj(s.checked)||!obj(s.rewards||{})||!Array.isArray(s.extra||[]))throw Error('日程格式无效');for(const v of Object.values(s.checked))if(typeof v!=='boolean')throw Error('勾选格式无效');for(const v of Object.values(s.rewards||{}))if(!integer(v))throw Error('奖励格式无效')}
     for(const r of x.wallet.redemptions)if(!obj(r)||!integer(r.j)||!integer(r.cents)||typeof r.date!=='string'||typeof r.name!=='string')throw Error('兑换记录格式无效');
     if(x.tasks!==undefined&&!Array.isArray(x.tasks))throw Error('任务格式无效');
