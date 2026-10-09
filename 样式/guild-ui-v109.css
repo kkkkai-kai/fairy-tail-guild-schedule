@@ -178,3 +178,18 @@ html #guildHallScene .guild-hall-tip strong,html #guildHallScene .guild-hall-tip
 html #guildHallScene .guild-hall-tip span,html #guildHallScene .guild-hall-tip small,html #guildHallScene .guild-hall-tip p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 0 auto}
 html #guildHallScene .guild-hall-encounter[hidden],html #guildHallScene .guild-hall-tip[hidden]{display:none!important}
 html .guild-member-greeting{margin:0 0 10px;padding:10px 12px;border-left:3px solid #9c7040;background:#ffffff;color:#241b18;line-height:1.6}
+
+/* 小窝独立布局：不继承旧主页四列及 quick-menu 的隐式网格列。 */
+html #guildScenePartner #happyCorner{grid-template-columns:40px minmax(0,1fr)!important;grid-template-areas:"avatar info" "actions actions" "needs needs" "exp exp" "menu menu"!important;align-items:center;min-width:0}
+html #guildScenePartner #happyCorner>.happy-avatar{grid-area:avatar!important}
+html #guildScenePartner #happyCorner>.happy-copy{grid-area:info!important;min-width:0;width:auto!important;white-space:normal;overflow-wrap:break-word;font-size:14px!important;line-height:1.6!important}
+html #guildScenePartner #happyCorner>.happy-actions{grid-area:actions!important;display:flex;flex-wrap:wrap;gap:8px}
+html #guildScenePartner #happyCorner>.happy-needs{grid-area:needs!important}
+html #guildScenePartner #happyCorner>.happy-exp-line{grid-area:exp!important}
+html #guildScenePartner #happyCorner>.happy-quick-menu{grid-area:menu!important;min-width:0;display:flex;flex-wrap:wrap;gap:8px}
+html #guildScenePartner #happyCorner .happy-quick-menu button{max-width:100%;white-space:normal!important;text-align:left;overflow-wrap:break-word;line-height:1.5!important}
+html .happy-shop-body{min-height:0;overscroll-behavior:contain}
+html .happy-shop-item{min-width:0;box-sizing:border-box}
+html .happy-shop-footer{flex:0 0 auto;min-width:0;box-sizing:border-box}
+html .happy-shop-footer span{flex:1 1 100%;overflow-wrap:break-word}
+html .happy-shop-footer button{white-space:nowrap}
