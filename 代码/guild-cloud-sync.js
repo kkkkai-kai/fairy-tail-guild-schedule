@@ -159,7 +159,15 @@
       b.ondblclick = function (ev) { ev.stopPropagation(); toggleAutoRefresh(); };
       document.body.appendChild(b);
     }
-    setBadge('云端：连接中…', null);
+    if (!document.getElementById('guildSyncNow')) {
+      var syncButton = document.createElement('button');
+      syncButton.id = 'guildSyncNow'; syncButton.type = 'button';
+      syncButton.textContent = '立即同步';
+      syncButton.style.cssText = 'margin:6px 0;min-height:36px;padding:6px 12px;';
+      syncButton.onclick = function (event) { event.stopPropagation(); manualSync(); };
+      top.insertAdjacentElement('afterend', syncButton);
+    }
+    if (!window.__guildCloudState) setBadge('云端：连接中…', null);
   }
   // ---------- 融合菜单：单击右下角按钮弹出两个选项 ----------
   function showDockMenu(anchor) {
@@ -301,7 +309,7 @@
     var url, headers = { 'Content-Type': 'application/json' };
 
     if (CONFIG.mode === 'supabase' && CONFIG.supabaseAnonKey) {
-      supaPush(entries)
+      return supaPush(entries)
         .then(function () { online = true; setBadge('云端：已同步', true); })
         .catch(function () { retryEntries(entries); });
       return;
@@ -938,8 +946,9 @@
     hookInstalled = true;
     var origSet = Storage.prototype.setItem;
     Storage.prototype.setItem = function (key, value) {
+      var unchanged = this === localStorage && this.getItem(String(key)) === String(value);
       origSet.call(this, key, value);
-      if (this === localStorage && CONFIG.syncKeys.indexOf(String(key)) !== -1) {
+      if (!unchanged && this === localStorage && CONFIG.syncKeys.indexOf(String(key)) !== -1) {
         markLocalWrite(key, Date.now());
         dirty.add(key);
         pending.add(key);
@@ -951,6 +960,32 @@
     // 本地时间戳单独记录，避免 setItem 触发推送循环
   }
 
+  var manualSyncFlight = null;
+  function manualSync() {
+    if (manualSyncFlight) return manualSyncFlight;
+    if (!CONFIG.syncEnabled || navigator.onLine === false) {
+      setBadge('本机已保存 · 当前无法联网同步', false); return Promise.resolve(false);
+    }
+    var button = document.getElementById('guildSyncNow');
+    if (button) { button.disabled = true; button.textContent = '同步中…'; }
+    clearTimeout(pushTimer);
+    setBadge('本机已保存 · 正在主动同步', null);
+    manualSyncFlight = pull().then(function () {
+      pending.forEach(function (key) { dirty.add(key); });
+      return push();
+    }).then(fullPush).then(function () {
+      var confirmed = online && !pending.size && !activeWrites;
+      setBadge(confirmed ? '云端：已同步' : '本机已保存 · 云端未确认，请稍后重试', confirmed);
+      return confirmed;
+    }).catch(function () {
+      setBadge('本机已保存 · 同步失败，请稍后重试', false); return false;
+    }).finally(function () {
+      manualSyncFlight = null;
+      if (button) { button.disabled = false; button.textContent = '立即同步'; }
+    });
+    return manualSyncFlight;
+  }
+  window.guildSyncNow = manualSync;
   // ---------- 全量推送（首次上云/启动兜底） ----------
   var _fullPushTimeout = null;
   function fullPush() {
