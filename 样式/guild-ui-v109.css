@@ -154,7 +154,9 @@ html .project-card{border:1px solid #bfa57f!important;border-left:3px solid #a55
 html :is(.arcane-panel,.guild-warehouse-panel,.guild-dock-panel){border:2px solid #937048!important;box-shadow:inset 0 0 0 3px #ffffff,0 8px 25px #35231835!important;background-color:var(--guild-paper)!important}
 html .v4-section{border:1px solid #bfa57f!important;border-left:3px solid #ad8553!important;border-radius:5px!important}
 html :is(.v4-grid article,.spell-card,.reward-card,.guild-quote-results article){border:1px solid #cbb18a!important;border-radius:5px!important;background:#ffffff!important}
-html .guild-scene-journal,html #guildMemberInteraction{border:14px solid transparent!important;border-image:var(--guild-character-frame,url('../素材/界面/边框/guild-frame-scroll-v99-fast-v100.webp')) var(--guild-character-slice,22%) / 22px / 0 stretch!important;border-radius:22px!important;box-shadow:none!important;background:#ffffff padding-box!important;max-height:min(86vh,660px)!important;display:flex!important;flex-direction:column!important;overflow:hidden!important}
+html .guild-scene-journal,html #guildMemberInteraction{border:14px solid transparent!important;border-image:var(--guild-character-frame,url('../素材/界面/边框/guild-frame-scroll-v99-fast-v100.webp')) var(--guild-character-slice,22%) / 22px / 0 stretch!important;border-radius:22px!important;box-shadow:none!important;background:#ffffff padding-box!important;max-height:min(86vh,660px)!important;flex-direction:column!important;overflow:hidden!important}
+html dialog.guild-scene-journal[open],html dialog#guildMemberInteraction[open]{display:flex!important}
+html dialog.guild-scene-journal:not([open]),html dialog#guildMemberInteraction:not([open]){display:none!important}
 html .guild-scene-journal>header,html #guildMemberInteraction>header{flex:0 0 auto!important}
 html .guild-scene-journal>nav,html #guildMemberInteraction>nav{flex:0 0 auto!important}
 html .guild-scene-journal .journal-scroll,html #guildMemberInteraction .journal-scroll{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important}
@@ -176,3 +178,18 @@ html #guildHallScene .guild-hall-tip strong,html #guildHallScene .guild-hall-tip
 html #guildHallScene .guild-hall-tip span,html #guildHallScene .guild-hall-tip small,html #guildHallScene .guild-hall-tip p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:0 0 auto}
 html #guildHallScene .guild-hall-encounter[hidden],html #guildHallScene .guild-hall-tip[hidden]{display:none!important}
 html .guild-member-greeting{margin:0 0 10px;padding:10px 12px;border-left:3px solid #9c7040;background:#ffffff;color:#241b18;line-height:1.6}
+
+/* 小窝独立布局：不继承旧主页四列及 quick-menu 的隐式网格列。 */
+html #guildScenePartner #happyCorner{grid-template-columns:40px minmax(0,1fr)!important;grid-template-areas:"avatar info" "actions actions" "needs needs" "exp exp" "menu menu"!important;align-items:center;min-width:0}
+html #guildScenePartner #happyCorner>.happy-avatar{grid-area:avatar!important}
+html #guildScenePartner #happyCorner>.happy-copy{grid-area:info!important;min-width:0;width:auto!important;white-space:normal;overflow-wrap:break-word;font-size:14px!important;line-height:1.6!important}
+html #guildScenePartner #happyCorner>.happy-actions{grid-area:actions!important;display:flex;flex-wrap:wrap;gap:8px}
+html #guildScenePartner #happyCorner>.happy-needs{grid-area:needs!important}
+html #guildScenePartner #happyCorner>.happy-exp-line{grid-area:exp!important}
+html #guildScenePartner #happyCorner>.happy-quick-menu{grid-area:menu!important;min-width:0;display:flex;flex-wrap:wrap;gap:8px}
+html #guildScenePartner #happyCorner .happy-quick-menu button{max-width:100%;white-space:normal!important;text-align:left;overflow-wrap:break-word;line-height:1.5!important}
+html .happy-shop-body{min-height:0;overscroll-behavior:contain}
+html .happy-shop-item{min-width:0;box-sizing:border-box}
+html .happy-shop-footer{flex:0 0 auto;min-width:0;box-sizing:border-box}
+html .happy-shop-footer span{flex:1 1 100%;overflow-wrap:break-word}
+html .happy-shop-footer button{white-space:nowrap}

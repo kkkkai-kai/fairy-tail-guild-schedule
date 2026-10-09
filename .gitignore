@@ -9,3 +9,6 @@
 /工具/migrate-to-supabase.html
 /工具/旧版门户/
 /资料/素材审计/guild-exceeds-v95-audit.json
+# Local-only test page & regression scripts must not go public.
+/妖尾主题色测试.html
+/工具/测试/
