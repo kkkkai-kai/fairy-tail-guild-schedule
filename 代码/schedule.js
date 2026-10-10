@@ -965,6 +965,7 @@ function closeGuildHallTogether(){
  const mode=pool[random[0]%pool.length],date=today();guildHallSupper.record.used=true;guildHallSupper.record.modeId=mode.id;setHallSupperPhase('feasting');localStorage.setItem('fairytail-guild-hall-active-scene','mainHall');runWithGuildViewPreserved(()=>renderGuildHallScene());stopGuildHallMotion(true);
  const stage=document.querySelector('#guildHallScene .guild-hall-stage'),nodes=[...stage.querySelectorAll('.guild-hall-character-layer>button')].sort((a,b)=>parseFloat(b.style.top)-parseFloat(a.style.top)),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;guildHallSupper.stage=stage;
  nodes.forEach(node=>node.disabled=true);
+ const pendingLit=new Set((globalThis.GuildLiterature?.getSnapshot?.()?.actors||[]).filter(a=>a.state==='pending').map(a=>'literature:'+a.paperId));[...stage.querySelectorAll('.guild-hall-visitor[data-visitor-id^="literature:"]')].forEach(node=>{if(pendingLit.has(node.dataset.visitorId))node.hidden=true});
  guildHallSupper.timer=setTimeout(()=>{
   if(today()!==date||!stage.isConnected)return;
   guildHallSupper.phase='leaving';applyGuildFarewellBackground(stage,'leaving',mode.id);
@@ -972,7 +973,7 @@ function closeGuildHallTogether(){
    if(today()!==date||!stage.isConnected||guildHallSupper.phase!=='leaving')return;
    if(index>=nodes.length){guildHallSupper.stage=null;setHallSupperPhase('closed');runWithGuildViewPreserved(()=>renderGuildHallScene());return}
    const node=nodes[index];if(!node.isConnected){leaveNext(index+1);return}
-   const duration=reduced?350:['quiet','leaveLight','rain'].includes(mode.id)?4200:3400;
+   const duration=reduced?220:['quiet','leaveLight','rain'].includes(mode.id)?1500:1200;
    const from={left:node.style.left,top:node.style.top};
    // Foot anchors stay inside the stage; retain the sprite's existing transform.
    placeGuildActor(stage,node,{x:50,y:94});const exit={left:node.style.left,top:node.style.top};
@@ -980,10 +981,10 @@ function closeGuildHallTogether(){
    const actorId=node.dataset.companionId||node.dataset.assigneeId||node.dataset.visitorId,key=node.dataset.companionId?'nook:'+actorId:actorId;
    if(!reduced&&actorId){guildHallMotionController.activeMoverId=key;animateGuildActorWalk(stage,node,actorId,key)}
    node.animate(reduced?[{opacity:1},{opacity:0}]:[{...from,opacity:1,offset:0},{...exit,opacity:1,offset:.88},{...exit,opacity:0,offset:1}],{duration,easing:'linear',fill:'forwards'});
-   guildHallSupper.timer=setTimeout(()=>{cancelAnimationFrame(guildHallMotionController.walkFrame);guildHallMotionController.walkFrame=null;guildHallMotionController.activeMoverId=null;node.hidden=true;delete node.dataset.farewellWalking;guildHallSupper.timer=setTimeout(()=>leaveNext(index+1),reduced?150:700)},duration);
+   guildHallSupper.timer=setTimeout(()=>{cancelAnimationFrame(guildHallMotionController.walkFrame);guildHallMotionController.walkFrame=null;guildHallMotionController.activeMoverId=null;node.hidden=true;delete node.dataset.farewellWalking;guildHallSupper.timer=setTimeout(()=>leaveNext(index+1),reduced?80:180)},duration);
   };
   leaveNext(0);
- },reduced?500:Math.max(4000,mode.wait));
+ },reduced?400:Math.max(1800,mode.wait));
 }
 function recallGuildHallMembers(){if(hallSupperPhase()!=='closed'||guildCelebrationController.playing)return;clearTimeout(guildHallSupper.timer);setHallSupperPhase('open');runWithGuildViewPreserved(()=>renderGuildHallScene())}
 function finishGuildHallFarewell(){
