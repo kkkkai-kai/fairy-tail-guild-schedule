@@ -155,6 +155,10 @@
       b.id = 'guildCloudBadge';
       b.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:99999;width:52px;height:52px;border-radius:50%;background:#fff8ee url(素材/界面/站点标识/guild-dock-icon-fast-v101.webp) center/76% no-repeat;border:3px solid #e7a362;box-shadow:0 3px 12px rgba(0,0,0,.22);transition:border-color .3s,box-shadow .3s;cursor:pointer;user-select:none;';
       b.title = '单击=打开菜单；双击=切换自动刷新';
+      b.setAttribute('role', 'button');
+      b.tabIndex = 0;
+      b.setAttribute('aria-label', '打开公会工具');
+      b.onkeydown = function (event) { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showDockMenu(b); } };
       b.onclick = function () { showDockMenu(b); };
       b.ondblclick = function (ev) { ev.stopPropagation(); toggleAutoRefresh(); };
       document.body.appendChild(b);
@@ -177,7 +181,7 @@
     m.id = 'guildDockMenu';
     m.style.cssText = 'position:fixed;right:14px;bottom:74px;z-index:999999;display:flex;gap:10px;background:rgba(255,250,242,.98);border:1px solid #e4c49a;border-radius:16px;padding:10px 14px;box-shadow:0 8px 28px rgba(80,40,10,.28);backdrop-filter:blur(8px)';
     var items = [
-      { icon: '🏠', label: '码头', action: function () { document.dispatchEvent(new CustomEvent('guildDockToggle')); } },
+      { icon: '▦', label: '日历', action: function () { document.dispatchEvent(new CustomEvent('guildDockToggle')); } },
       { icon: '☷', label: '维护簿', action: showMaintenanceBook },
       { icon: '✦', label: '功能', action: function () {
         if (typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle();

@@ -193,3 +193,63 @@ html .happy-shop-item{min-width:0;box-sizing:border-box}
 html .happy-shop-footer{flex:0 0 auto;min-width:0;box-sizing:border-box}
 html .happy-shop-footer span{flex:1 1 100%;overflow-wrap:break-word}
 html .happy-shop-footer button{white-space:nowrap}
+/* 日历固定入席，账本按需展开；委托操作整颗按钮换行。 */
+html .guild-calendar-column{flex:0 0 240px;width:240px;min-width:0;max-width:100%;display:grid;align-self:start;gap:6px}
+html #guildDockPanel.guild-calendar-embedded{position:static!important;inset:auto!important;z-index:auto!important;width:100%!important;max-height:none!important;box-shadow:none!important;border:1px solid #e4c9ae;border-radius:12px;background:#fffdf9}
+html .guild-calendar-embedded .guild-dock-head{background:#fff3e5;border-bottom:1px solid #ecd9c8;padding:5px 8px}
+html .guild-calendar-embedded .guild-dock-head strong{color:#8d343b}
+html .guild-calendar-embedded .guild-dock-status{display:none}
+html .guild-calendar-embedded .guild-dock-body{padding:6px 8px}
+html .guild-calendar-embedded .guild-dock-cal-head{gap:3px;margin-bottom:4px}
+html .guild-calendar-embedded .guild-dock-cal-head button{min-height:24px!important;padding:2px 6px!important;font-size:11px!important}
+html .guild-calendar-embedded .guild-dock-cal .day{min-height:23px!important;font-size:11px;padding:0}
+html .guild-calendar-embedded .guild-dock-tasks{max-height:54px}
+html .guild-calendar-embedded .guild-dock-tasks-title{font-size:11px;margin:3px 0}
+html .guild-calendar-embedded .guild-dock-empty{margin:0;padding:3px 0}
+html .guild-calendar-embedded [hidden]{display:none!important}
+html .guild-ledger-fold{padding:6px 8px;background:#fff9f1;border:1px solid #ead3bc;border-radius:10px;font-size:12px}
+html .guild-ledger-fold summary{cursor:pointer;color:#713638;font-weight:600}
+html .guild-ledger-fold #topTotal{position:static!important;width:100%!important;max-width:100%;margin:10px 0 0;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px}
+html .guild-ledger-fold .level-badge{display:none!important}
+html :is(.quest-actions,.once-actions,.project-actions,.project-stage-actions,.project-fold-actions){display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;gap:7px!important;min-width:0!important;width:auto!important}
+html :is(.quest-actions,.once-actions,.project-actions,.project-stage-actions,.project-fold-actions)>:is(button,.quest-note-control){flex:0 0 auto!important;width:auto!important;max-width:100%;margin:0!important}
+html :is(.quest-actions,.project-stage-actions) .quest-note-control{display:flex!important;flex-direction:column!important}
+html :is(.quest-actions,.project-stage-actions) button{white-space:nowrap!important;word-break:normal!important}
+html #guildFeaturesFab{display:none!important}
+html #guildCloudBadge{width:48px!important;height:48px!important;border:1px solid #b97648!important;background-color:#fffaf0!important;background-size:68%!important;box-shadow:0 0 0 3px #fff,0 4px 12px #673a2826!important;border-radius:14px!important}
+html #guildCloudBadge:hover,html #guildCloudBadge:focus-visible{outline:2px solid #a8384b;outline-offset:3px;transform:translateY(-2px)}
+html #guildSyncNow{width:auto!important;display:inline-flex!important;align-self:flex-start}
+@media(min-width:651px){
+html :is(.guild-content>header,main>header).guild-calendar-header{display:grid!important;grid-template-columns:minmax(0,1fr) 240px!important;grid-auto-flow:row;align-items:start!important;align-content:start!important;gap:7px 18px!important;min-height:0!important;height:auto!important;padding:14px 18px!important}
+html .guild-calendar-header>*{position:static!important;min-width:0;max-width:100%;margin:0!important}
+html .guild-calendar-header>.guild-today-column{grid-column:1!important;grid-row:1!important;width:100%!important;display:grid;gap:8px;align-content:start}
+html .guild-calendar-header>.guild-calendar-column{grid-column:2!important;grid-row:1!important;width:240px!important;align-self:start!important}
+html .guild-calendar-header>#guildWeatherBanner{grid-column:1/-1!important;grid-row:2!important;width:100%!important;box-sizing:border-box;padding:5px 9px!important;margin-top:0!important;font-size:12px!important}
+html .guild-calendar-header .hero{display:block!important;min-height:0!important;width:100%!important}
+html .guild-calendar-header .header-line{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:6px!important;margin:0!important}
+html .guild-calendar-header .header-line .tag{margin-bottom:0!important;font-size:11px!important;letter-spacing:2px!important}
+html .guild-calendar-header #connectionBadge{position:static!important;width:auto!important;max-width:100%;margin:0!important}
+html .guild-calendar-header #guildSyncNow{position:static!important;width:auto!important;margin:0!important}
+html .guild-calendar-header .today-expedition{position:static!important;width:100%!important;margin:0!important}
+}
+html .guild-connection-tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px;min-width:0}
+html .guild-calendar-header .header-date-toolbar{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important;min-width:0;max-width:100%;margin:0!important}
+html .guild-calendar-header .header-date-toolbar input{flex:0 1 160px;min-width:130px;box-sizing:border-box}
+html .guild-calendar-header .header-date-toolbar button{flex:0 0 auto;white-space:nowrap;min-height:34px!important;padding:6px 10px!important;font-size:13px!important}
+html .guild-calendar-header .header-date-toolbar .muted{flex:1 0 100%;margin-top:0!important;font-size:12px!important;line-height:1.4!important}
+html .guild-calendar-header .guild-today-column .hero{margin:0!important}
+html .guild-calendar-header .guild-today-column .hero>div:first-child{max-width:none!important}
+html .guild-calendar-header .guild-today-column h1{font-size:17px!important;line-height:1.4!important;margin:0 0 3px!important}
+html .guild-calendar-header .guild-today-column .today-expedition{box-sizing:border-box;max-width:100%;padding:4px 8px!important}
+html .guild-calendar-header .guild-day-brief{padding:6px 10px!important;min-height:0!important;margin:0!important;gap:8px!important}
+html .guild-calendar-header .guild-day-brief .brief-avatar{width:34px!important;height:34px!important}
+html .guild-calendar-header .guild-day-brief h2{font-size:17px!important;margin:0 0 2px!important;line-height:1.35!important}
+html .guild-calendar-header .guild-day-brief p{font-size:12px!important;margin:0!important;line-height:1.4!important}
+html .guild-calendar-header .guild-day-brief .eyebrow{font-size:10px!important;margin:0!important}
+html .guild-calendar-header #guildSyncNow{min-height:28px!important;padding:4px 9px!important;font-size:12px!important}
+html .guild-calendar-header #quoteOriginal,html .guild-calendar-header .guild-today-column>a{display:none!important}
+html .guild-calendar-header #quoteSource{display:inline!important;font-size:12px!important;margin:0 8px 0 0!important;line-height:1.5!important}
+html .guild-calendar-header #dailyQuoteActions{display:inline-flex!important;flex-wrap:wrap;gap:4px;vertical-align:middle}
+html .guild-calendar-header #dailyQuoteActions button{min-height:26px!important;padding:3px 7px!important;font-size:11px!important;margin:0!important}
+html .guild-calendar-header .hero p.muted{display:none!important}
+@media(max-width:650px){html .guild-calendar-column{flex:0 0 auto;width:min(280px,100%);justify-self:end}html .project-stage-row{grid-template-columns:34px minmax(0,1fr)!important}html .project-stage-actions{grid-column:2/-1!important;justify-content:flex-start!important}html .guild-calendar-embedded .guild-dock-cal .day{min-height:30px!important}}

@@ -263,6 +263,11 @@
     grid.querySelectorAll('.day[data-date]').forEach(function (cell) {
       cell.onclick = function () {
         view.selected = cell.getAttribute('data-date');
+        var dateInput = document.getElementById('day');
+        if (dateInput && dateInput.value !== view.selected) {
+          dateInput.value = view.selected;
+          dateInput.dispatchEvent(new Event('change', {bubbles:true}));
+        }
         renderCalendar();
         renderTaskList();
       };
@@ -327,13 +332,14 @@
     panel.hidden = false;
     renderCalendar();
     syncStatusFromGlobal();
+    if (panel.classList.contains('guild-calendar-embedded')) panel.scrollIntoView({behavior:'smooth',block:'nearest'});
   }
   function hide() {
-    if (panel) panel.hidden = true;
+    if (panel && !panel.classList.contains('guild-calendar-embedded')) panel.hidden = true;
   }
   function toggle() {
     if (!panel) buildPanel();
-    if (panel.hidden) show(); else hide();
+    if (panel.classList.contains('guild-calendar-embedded') || panel.hidden) show(); else hide();
   }
 
   // ---------- 挂载 ----------
@@ -341,14 +347,64 @@
     ensureStyles();
     initView();
     buildPanel();
+    var hero = document.querySelector('.guild-content > header .hero, main > header .hero');
+    var stats = document.getElementById('topTotal');
+    if (hero) {
+      var right = document.createElement('aside');
+      right.className = 'guild-calendar-column';
+      var header = hero.closest('header');
+      header.classList.add('guild-calendar-header');
+      var left = document.createElement('div');
+      left.className = 'guild-today-column';
+      Array.from(header.children).forEach(function (node) {
+        if (node.id !== 'guildWeatherBanner') left.appendChild(node);
+      });
+      header.prepend(left);
+      header.appendChild(right);
+      right.appendChild(panel);
+      panel.classList.add('guild-calendar-embedded');
+      panel.hidden = false;
+      panel.querySelector('.guild-dock-head strong').textContent = '委托日历';
+      document.getElementById('guildDockClose').hidden = true;
+      panel.querySelector('.guild-dock-actions').hidden = true;
+      if (stats) {
+        var ledger = document.createElement('details');
+        ledger.className = 'guild-ledger-fold';
+        var heading = document.createElement('summary');
+        heading.textContent = '公会账本 · 收入与完成记录';
+        ledger.appendChild(heading);
+        ledger.appendChild(stats);
+        right.appendChild(ledger);
+      }
+      renderCalendar();
+      var line = left.querySelector('.header-line');
+      var badge = document.getElementById('connectionBadge');
+      var sync = document.getElementById('guildSyncNow');
+      if (line && badge) {
+        var connection = document.createElement('div');
+        connection.className = 'guild-connection-tools';
+        connection.appendChild(badge);
+        if (sync) connection.appendChild(sync);
+        line.appendChild(connection);
+      }
+    }
     var dateBar = document.getElementById('day') && document.getElementById('day').parentElement;
-    if(dateBar && !document.getElementById('guildCalendarEntry')){
+    if(dateBar && !panel.classList.contains('guild-calendar-embedded') && !document.getElementById('guildCalendarEntry')){
       var entry=document.createElement('button');entry.id='guildCalendarEntry';entry.type='button';entry.textContent='▦ 委托日历';entry.onclick=toggle;
       document.getElementById('day').after(entry);
     }
     document.addEventListener('guildDockToggle', toggle);
     // 状态行跟随云端状态（代码/guild-cloud-sync.js 的 setBadge 也会主动更新）
     window.addEventListener('guildCloudStateChange', function () { syncStatusFromGlobal(); });
+    window.addEventListener('storage', function (event) { if(event.key === STORE_KEY) renderCalendar(); });
+    var dayInput = document.getElementById('day');
+    if (dayInput) dayInput.addEventListener('change', function () {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(dayInput.value)) return;
+      view.selected = dayInput.value;
+      view.year = Number(view.selected.slice(0,4));
+      view.month = Number(view.selected.slice(5,7))-1;
+      renderCalendar();
+    });
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
