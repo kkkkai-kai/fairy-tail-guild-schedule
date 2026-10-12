@@ -65,9 +65,9 @@
   var supaWriteQueue = Promise.resolve();
   var activeWrites = 0;
   var lastConfirmedAt = 0;
-  // 方案 A（省额度）：轮询从 60s 放宽到 5 分钟，且仅页面可见时轮询；
+  // 前台每10秒只探测时间戳，有更新才下载正文；后台暂停轮询。
   // 打开页面 / 回到前台 / 点击浮标时立即拉一次，切后台或离开页面前立即 flush 推送。
-  var PULL_INTERVAL = 30 * 1000;
+  var PULL_INTERVAL = 10 * 1000;
 
   // ---------- 本地时间记录 ----------
   function readMeta() {
@@ -845,7 +845,22 @@
     document.body.appendChild(dlg);
     if (typeof dlg.showModal === 'function') dlg.showModal();
   }
-  var lastReloadAt = Date.now();
+  var remoteRefreshTimer = null;
+  function scheduleRemoteRefresh() {
+    if (remoteRefreshTimer !== null) return;
+    remoteRefreshTimer = setTimeout(function retryRefresh() {
+      if ((localStorage.getItem('guildAutoRefresh') || 'on') === 'off') {
+        remoteRefreshTimer = null;
+        return;
+      }
+      if (document.hidden || inputBusy()) {
+        remoteRefreshTimer = setTimeout(retryRefresh, 1000);
+        return;
+      }
+      remoteRefreshTimer = null;
+      silentRefresh();
+    }, 150);
+  }
   function inputBusy() {
     try {
       var el = document.activeElement;
@@ -923,18 +938,12 @@
     setBadge('云端：已同步', true);
     if (changed) {
       if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
-      var now = Date.now();
       var autoRefresh = (localStorage.getItem('guildAutoRefresh') || 'on') !== 'off';
-      // 只有委托数据（fairytail-tasks-v2）变化才整页自动刷新（15 秒防抖、输入中不刷新）；
+      // 只有委托数据变化才排队静默重绘，输入期间暂缓但不丢失刷新请求；
       // 其他数据（场景/天气/档案等）变化只提示，避免每次加载微变导致设备间无限循环刷屏。
       if (taskChanged) {
-        if (autoRefresh && now - lastReloadAt > 15000 && !inputBusy()) {
-          lastReloadAt = now;
-          showNotice('收到其他设备的新委托，正在后台同步…');
-          setTimeout(function () {
-            if (inputBusy()) { showNotice('检测到你正在输入，暂缓自动刷新（可点上方状态标识手动刷新）'); return; }
-            silentRefresh();
-          }, 1200);
+        if (autoRefresh) {
+          scheduleRemoteRefresh();
         } else {
           showNotice('云端有新委托，点击上方状态标识手动刷新');
         }
@@ -1073,7 +1082,7 @@
       pull().then(fullPush).catch(function (e) { console.warn('[guild-cloud] startup sync failed', e); })
         .finally(function () { if (dirty.size) schedulePush(); });
     }, 300);
-    // 前台30秒轻量检查，仅页面可见时执行，且先走meta探测，
+    // 前台10秒轻量检查，仅页面可见时执行，且先走meta探测，
     // 云端确有更新才全量拉取；不可见时完全停止轮询。
     setInterval(function () {
       if (document.hidden || navigator.onLine === false) return;
@@ -1082,6 +1091,11 @@
     window.addEventListener('online', function () {
       if (dirty.size) schedulePush();
       if (!document.hidden) pullLazy().catch(function (e) { console.warn('[guild-cloud] reconnect pull failed', e); });
+    });
+    window.addEventListener('focus', function () {
+      if (!document.hidden && navigator.onLine !== false) {
+        pullLazy().catch(function (e) { console.warn('[guild-cloud] focus pull failed', e); });
+      }
     });
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
