@@ -527,20 +527,27 @@
   function buildPanel() {
     var panel = document.createElement('div');
     panel.id = 'guildFeaturesPanel';
-    panel.innerHTML = '<div><span class="gf-tab on" data-tab="daily">今日</span><span class="gf-tab" data-tab="board">委托板</span><span class="gf-tab" data-tab="bond">羁绊</span><span class="gf-tab" data-tab="monthly">月刊</span><span class="gf-tab" data-tab="trial">S级</span></div>'
+    panel.setAttribute('role', 'region'); panel.setAttribute('aria-label','成长与收藏');
+    panel.innerHTML = '<div class="gf-panel-heading"><strong>成长与收藏</strong><button type="button" class="gf-panel-close" aria-label="关闭成长与收藏">×</button></div><div><button type="button" class="gf-tab on" data-tab="daily">今日</button><button type="button" class="gf-tab" data-tab="board">委托板</button><button type="button" class="gf-tab" data-tab="bond">羁绊</button><button type="button" class="gf-tab" data-tab="monthly">月刊</button><button type="button" class="gf-tab" data-tab="trial">S级</button></div>'
       + '<div class="gf-sec on" data-sec="daily"></div><div class="gf-sec" data-sec="board"></div><div class="gf-sec" data-sec="bond"></div><div class="gf-sec" data-sec="monthly"></div><div class="gf-sec" data-sec="trial"></div>';
     panel.addEventListener('click', function (ev) {
       var tb = ev.target.closest ? ev.target.closest('.gf-tab') : null;
       if (tb) { activeTab = tb.dataset.tab; renderPanel(); }
     });
     document.body.appendChild(panel);
+    function closePanel() { if(panelOpen) toggleFeaturesPanel(); }
+    panel.querySelector('.gf-panel-close').onclick = closePanel;
+    document.addEventListener('keydown', function (event) { if(event.key === 'Escape') closePanel(); });
+    document.addEventListener('click', function (event) {
+      if(panelOpen && !panel.contains(event.target) && !event.target.closest('#guildDockMenu,#guildCloudBadge,#guildFeaturesFab')) closePanel();
+    });
   }
   function secHTML(name) { var p = document.getElementById('guildFeaturesPanel'); if (!p) return ''; var s = p.querySelector('.gf-sec[data-sec="' + name + '"]'); return s ? s.innerHTML : ''; }
   function setSec(name, html) { var p = document.getElementById('guildFeaturesPanel'); if (!p) return; var s = p.querySelector('.gf-sec[data-sec="' + name + '"]'); if (s) s.innerHTML = html; }
   function renderPanel() {
     var p = document.getElementById('guildFeaturesPanel'); if (!p) return;
     var tabs = p.querySelectorAll('.gf-tab');
-    tabs.forEach(function (t) { t.classList.toggle('on', t.dataset.tab === activeTab); });
+    tabs.forEach(function (t) { t.classList.toggle('on', t.dataset.tab === activeTab); t.setAttribute('aria-pressed', String(t.dataset.tab === activeTab)); });
     var secs = p.querySelectorAll('.gf-sec');
     secs.forEach(function (s) { s.classList.toggle('on', s.dataset.sec === activeTab); });
     try { renderDaily(); renderBoard(); renderBond(); renderMonthly(); renderTrial(); } catch (e) { console.warn('[guild-features] render panels failed', e); }
@@ -549,11 +556,11 @@
     var a = attendance(), t = today(), w = weatherOf(t), evs = ensureDailyEvents();
     var claimed = a.claimDate === t;
     var rw = attendanceReward(a.streak + 1);
-    var html = '<div class="gf-card"><h4>✦ 公会出勤簿</h4>';
+    var html = '<details class="gf-card gf-attendance"><summary>公会报到簿 · ' + (claimed ? '今日已报到' : '今日未报到') + '</summary>';
     html += '<div>累计出勤 <b>' + a.total + '</b> 天 · 当前连续 <b>' + a.streak + '</b> 天</div>';
     html += '<div class="gf-bar"><div style="width:' + (a.streak % 7) * 14 + '%"></div></div>';
-    html += claimed ? '<div class="gf-ok">✓ 今日已签到（第 ' + a.streak + ' 天）</div>' : '<button class="gf-btn" id="gfClaimBtn">📖 签到（今日可得 ' + rw.j + ' J' + (rw.frag ? ' · 碎片×' + rw.frag : '') + '）</button>';
-    html += '<small>连续 7 天可得 500 J + 徽章碎片；断签清零，累计保留。</small></div>';
+    html += claimed ? '<div class="gf-ok">✓ 今日已报到（连续 ' + a.streak + ' 天）</div>' : '<button class="gf-btn" id="gfClaimBtn">登记今日报到 · ' + rw.j + ' J' + (rw.frag ? ' · 碎片×' + rw.frag : '') + '</button>';
+    html += '<small>保留既有报到奖励规则，不影响委托成长；未连续报到不扣除已有奖励。</small></details>';
     html += '<div class="gf-card"><h4>🌤 今日大陆气候 · ' + w.name + '</h4><div>' + w.icon + ' ' + w.jNote + '</div></div>';
     html += '<div class="gf-card"><h4>✨ 公会日常</h4>';
     evs.forEach(function (ev) {

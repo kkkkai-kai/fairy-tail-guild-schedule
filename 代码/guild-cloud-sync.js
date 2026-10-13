@@ -154,13 +154,13 @@
       var b = document.createElement('div');
       b.id = 'guildCloudBadge';
       b.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:99999;width:52px;height:52px;border-radius:50%;background:#fff8ee url(素材/界面/站点标识/guild-dock-icon-fast-v101.webp) center/76% no-repeat;border:3px solid #e7a362;box-shadow:0 3px 12px rgba(0,0,0,.22);transition:border-color .3s,box-shadow .3s;cursor:pointer;user-select:none;';
-      b.title = '单击=打开菜单；双击=切换自动刷新';
+      b.title = '公会工具';
+      b.innerHTML = '<img src="素材/界面/功能图标/guild-ui-tools-v205.svg" alt="" width="30" height="30"><span>工具</span>';
       b.setAttribute('role', 'button');
       b.tabIndex = 0;
       b.setAttribute('aria-label', '打开公会工具');
       b.onkeydown = function (event) { if(event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showDockMenu(b); } };
       b.onclick = function () { showDockMenu(b); };
-      b.ondblclick = function (ev) { ev.stopPropagation(); toggleAutoRefresh(); };
       document.body.appendChild(b);
     }
     if (!document.getElementById('guildSyncNow')) {
@@ -176,33 +176,51 @@
   // ---------- 融合菜单：单击右下角按钮弹出两个选项 ----------
   function showDockMenu(anchor) {
     var old = document.getElementById('guildDockMenu');
-    if (old) { old.remove(); return; }
+    if (old) { if (old._close) old._close(); else old.remove(); return; }
     var m = document.createElement('div');
     m.id = 'guildDockMenu';
-    m.style.cssText = 'position:fixed;right:14px;bottom:74px;z-index:999999;display:flex;gap:10px;background:rgba(255,250,242,.98);border:1px solid #e4c49a;border-radius:16px;padding:10px 14px;box-shadow:0 8px 28px rgba(80,40,10,.28);backdrop-filter:blur(8px)';
+    m.className = 'guild-tool-menu';
+    m.setAttribute('aria-label', '公会工具');
+    anchor.setAttribute('aria-expanded', 'true');
     var items = [
-      { icon: '▦', label: '日历', action: function () { document.dispatchEvent(new CustomEvent('guildDockToggle')); } },
-      { icon: '☷', label: '维护簿', action: showMaintenanceBook },
-      { icon: '✦', label: '功能', action: function () {
-        if (typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle();
+      { icon: 'quest', label: '登记委托', action: function () {
+        var input = document.getElementById('newTask');
+        if (!input) { showNotice('登记入口暂未就绪，请稍后再试'); return; }
+        input.scrollIntoView({behavior:'smooth',block:'center'}); input.focus({preventScroll:true});
+      } },
+      { icon: 'warehouse', label: '打开仓库', action: function () {
+        var button = document.getElementById('openGuildWarehouse');
+        if (button) button.click(); else showNotice('仓库入口暂未就绪，请稍后再试');
+      } },
+      { icon: 'mail', label: '公会信箱', action: function () {
+        if (document.getElementById('guildFeaturesPanel')?.classList.contains('open') && typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle();
+        if (typeof window.guildToggleMailbox === 'function') window.guildToggleMailbox(); else showNotice('信箱暂未就绪，请稍后再试');
+      } },
+      { icon: 'book', label: '成长与收藏', action: function () {
+        if (document.getElementById('ge196-panel')?.classList.contains('open')) document.querySelector('#ge196-panel .ge196-close')?.click();
+        if (typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle(); else showNotice('成长档案暂未就绪，请稍后再试');
       }}
     ];
     items.forEach(function (it) {
-      var d = document.createElement('div');
-      d.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;padding:6px 10px;border-radius:10px;transition:background .2s;user-select:none;min-width:52px';
-      d.innerHTML = '<span style="font-size:22px;line-height:1">' + it.icon + '</span><span style="font-size:11px;color:#5d3b2b">' + it.label + '</span>';
-      d.onmouseenter = function () { d.style.background = '#f4e6d0'; };
-      d.onmouseleave = function () { d.style.background = 'transparent'; };
-      d.onclick = function (e) { e.stopPropagation(); it.action(); m.remove(); };
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.innerHTML = '<img src="素材/界面/功能图标/guild-ui-' + it.icon + '-v205.svg" width="24" height="24" alt=""><span>' + it.label + '</span>';
+      d.onclick = function (e) { e.stopPropagation(); close(); it.action(); };
       m.appendChild(d);
     });
+    var more = document.createElement('details');
+    var summary = document.createElement('summary'); summary.textContent = '维护与设置'; more.appendChild(summary);
+    var maintenance = document.createElement('button'); maintenance.type = 'button'; maintenance.textContent = '维护簿';
+    maintenance.onclick = function () { close(); showMaintenanceBook(); }; more.appendChild(maintenance);
+    var automatic = document.createElement('button'); automatic.type = 'button'; automatic.textContent = '切换自动接收云端更新';
+    automatic.onclick = function () { toggleAutoRefresh(); close(); }; more.appendChild(automatic);m.appendChild(more);
     document.body.appendChild(m);
-    setTimeout(function () {
-      function close(ev) { if (!m.contains(ev.target) && ev.target !== anchor) { m.remove(); cleanup(); } }
-      function cleanup() { document.removeEventListener('click', close); document.removeEventListener('scroll', cleanup, true); }
-      document.addEventListener('click', close);
-      document.addEventListener('scroll', cleanup, true);
-    }, 10);
+    function close() { m.remove(); anchor.setAttribute('aria-expanded','false'); document.removeEventListener('click',outside); document.removeEventListener('keydown',escape); }
+    function outside(ev) { if (!m.contains(ev.target) && !anchor.contains(ev.target)) close(); }
+    function escape(ev) { if (ev.key === 'Escape') {close();anchor.focus({preventScroll:true});} }
+    m._close = close;
+    document.addEventListener('click',outside); document.addEventListener('keydown',escape);
+    m.querySelector('button').focus({preventScroll:true});
   }
   function toggleAutoRefresh() {
     var off = (localStorage.getItem('guildAutoRefresh') || 'on') === 'off';

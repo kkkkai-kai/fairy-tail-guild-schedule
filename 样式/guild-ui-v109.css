@@ -216,9 +216,27 @@ html :is(.quest-actions,.once-actions,.project-actions,.project-stage-actions,.p
 html :is(.quest-actions,.project-stage-actions) .quest-note-control{display:flex!important;flex-direction:column!important}
 html :is(.quest-actions,.project-stage-actions) button{white-space:nowrap!important;word-break:normal!important}
 html #guildFeaturesFab{display:none!important}
-html #guildCloudBadge{width:48px!important;height:48px!important;border:1px solid #b97648!important;background-color:#fffaf0!important;background-size:68%!important;box-shadow:0 0 0 3px #fff,0 4px 12px #673a2826!important;border-radius:14px!important}
+html #guildCloudBadge{width:52px!important;height:58px!important;border:1px solid #d6b58d!important;background:#fffaf2!important;box-shadow:0 3px 12px #673a2820!important;border-radius:16px!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#943d4b;font-size:11px;font-weight:600}
 html #guildCloudBadge:hover,html #guildCloudBadge:focus-visible{outline:2px solid #a8384b;outline-offset:3px;transform:translateY(-2px)}
 html #guildSyncNow{width:auto!important;display:inline-flex!important;align-self:flex-start}
+html #ge196-fab{display:none!important}
+html #ge196-panel{left:auto!important;right:14px!important;bottom:82px!important;width:min(340px,calc(100vw - 28px))!important;box-sizing:border-box;border:1px solid #dfc4a5;box-shadow:0 8px 24px #59342722}
+html #guildFeaturesPanel{bottom:82px!important;border:1px solid #dfc4a5;box-shadow:0 8px 24px #59342722}
+html .guild-tool-menu{position:fixed;right:14px;bottom:82px;z-index:999999;display:grid;gap:6px;width:min(250px,calc(100vw - 28px));max-height:70vh;overflow:auto;padding:10px;box-sizing:border-box;background:#fffdf8;border:1px solid #dfc4a5;border-radius:14px;box-shadow:0 8px 24px #59342722}
+html .guild-tool-menu button{display:flex;align-items:center;gap:10px;width:100%;min-height:40px;padding:8px 10px;border:0;border-radius:8px;background:#fff6ec;color:#713943;font-size:13px;text-align:left;cursor:pointer}
+html .guild-tool-menu button:hover,html .guild-tool-menu button:focus-visible{background:#f9e7d6;outline:2px solid #ad5862;outline-offset:-2px}
+html .guild-tool-menu summary{padding:8px 10px;color:#694a39;font-size:12px;cursor:pointer}
+html .gf-attendance summary{cursor:pointer;color:#743c48;font-weight:600;font-size:13px}
+html .guild-tool-menu img{flex:0 0 24px;object-fit:contain}
+html .gf-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;color:#743c48}
+html .gf-panel-close{min-height:32px;width:32px;padding:0;border:1px solid #dfc4a5;border-radius:8px;background:#fff;color:#713943;font-size:22px}
+html .gf-tab{border:1px solid #dfc4a5;font:inherit;font-size:12px;cursor:pointer}
+html :is(.guild-ledger-fold>summary,#todayExpedition>summary,.gf-attendance>summary)::before{content:"";display:inline-block;width:22px;height:22px;margin-right:6px;vertical-align:middle;background:center/contain no-repeat}
+html .guild-ledger-fold>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-ledger-v205.svg')}
+html #todayExpedition>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-quest-v205.svg')}
+html .gf-attendance>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-stamp-v205.svg')}
+html .guild-calendar-embedded .guild-dock-head strong::before{content:"";display:inline-block;width:20px;height:20px;margin-right:6px;vertical-align:middle;background:url('../素材/界面/功能图标/guild-ui-ledger-v205.svg') center/contain no-repeat}
+html .stage-manager>h4::before{content:"";display:inline-block;width:22px;height:22px;margin-right:6px;vertical-align:middle;background:url('../素材/界面/功能图标/guild-ui-quest-v205.svg') center/contain no-repeat}
 @media(min-width:651px){
 html :is(.guild-content>header,main>header).guild-calendar-header{display:grid!important;grid-template-columns:minmax(0,1fr) 240px!important;grid-auto-flow:row;align-items:start!important;align-content:start!important;gap:7px 18px!important;min-height:0!important;height:auto!important;padding:14px 18px!important}
 html .guild-calendar-header>*{position:static!important;min-width:0;max-width:100%;margin:0!important}

@@ -304,11 +304,13 @@
     var panel = document.createElement('div');
     panel.id = 'ge196-panel'; panel.className = 'ge196-panel';
     document.body.appendChild(fab); document.body.appendChild(panel);
-    fab.addEventListener('click', function () {
+    function toggleMailbox() {
       panelOpen = !panelOpen;
       if (panelOpen) { renderPanel(); panel.classList.add('open'); }
       else panel.classList.remove('open');
-    });
+    }
+    fab.addEventListener('click', toggleMailbox);
+    window.guildToggleMailbox = toggleMailbox;
   }
 
   /* ── 初始化 ── */
