@@ -233,6 +233,11 @@
   }
   function goToday() {
     initView();
+    var dateInput = document.getElementById('day');
+    if (dateInput && dateInput.value !== view.selected) {
+      dateInput.value = view.selected;
+      dateInput.dispatchEvent(new Event('change', {bubbles:true}));
+    }
     renderCalendar();
   }
 
@@ -397,6 +402,7 @@
     // 状态行跟随云端状态（代码/guild-cloud-sync.js 的 setBadge 也会主动更新）
     window.addEventListener('guildCloudStateChange', function () { syncStatusFromGlobal(); });
     window.addEventListener('storage', function (event) { if(event.key === STORE_KEY) renderCalendar(); });
+    window.addEventListener('fairytail:data-changed', renderCalendar);
     var dayInput = document.getElementById('day');
     if (dayInput) dayInput.addEventListener('change', function () {
       if (!/^\d{4}-\d{2}-\d{2}$/.test(dayInput.value)) return;

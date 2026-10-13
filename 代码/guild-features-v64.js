@@ -54,7 +54,7 @@
     { id: 'heavyRain', name: '大雨', icon: '⛈', jNote: '整理归档 +25% · 远征 -20%' },
     { id: 'snow', name: '雪', icon: '❄', jNote: '研究修炼类 +25%' },
     { id: 'fog', name: '雾', icon: '🌫', jNote: '雾隐之际，稀有委托概率 ×2' },
-    { id: 'storm', name: '雷暴', icon: '⚡', jNote: '远征禁止 · 室内类委托 +15~25%' }
+    { id: 'storm', name: '雷暴', icon: '⚡', jNote: '室内类委托津贴 +20% · 不限制真实任务执行' }
   ];
   function weatherOf(dateStr) {
     var r = hashStr('ft-climate-' + dateStr) % 100;
@@ -527,14 +527,17 @@
   function buildPanel() {
     var panel = document.createElement('div');
     panel.id = 'guildFeaturesPanel';
-    panel.setAttribute('role', 'region'); panel.setAttribute('aria-label','成长与收藏');
-    panel.innerHTML = '<div class="gf-panel-heading"><strong>成长与收藏</strong><button type="button" class="gf-panel-close" aria-label="关闭成长与收藏">×</button></div><div><button type="button" class="gf-tab on" data-tab="daily">今日</button><button type="button" class="gf-tab" data-tab="board">委托板</button><button type="button" class="gf-tab" data-tab="bond">羁绊</button><button type="button" class="gf-tab" data-tab="monthly">月刊</button><button type="button" class="gf-tab" data-tab="trial">S级</button></div>'
+    panel.setAttribute('role', 'region'); panel.setAttribute('aria-label','公会记录与羁绊');
+    panel.innerHTML = '<div class="gf-panel-heading"><strong>公会记录与羁绊</strong><button type="button" class="gf-panel-close" aria-label="关闭公会记录与羁绊">×</button></div><div><button type="button" class="gf-tab on" data-tab="daily">今日</button><button type="button" class="gf-tab" data-tab="board">委托板</button><button type="button" class="gf-tab" data-tab="bond">羁绊</button><button type="button" class="gf-tab" data-tab="monthly">月刊</button><button type="button" class="gf-tab" data-tab="trial">S级</button></div>'
       + '<div class="gf-sec on" data-sec="daily"></div><div class="gf-sec" data-sec="board"></div><div class="gf-sec" data-sec="bond"></div><div class="gf-sec" data-sec="monthly"></div><div class="gf-sec" data-sec="trial"></div>';
     panel.addEventListener('click', function (ev) {
       var tb = ev.target.closest ? ev.target.closest('.gf-tab') : null;
       if (tb) { activeTab = tb.dataset.tab; renderPanel(); }
     });
     document.body.appendChild(panel);
+    window.addEventListener('fairytail:data-changed', function () {
+      if (panelOpen) renderPanel();
+    });
     function closePanel() { if(panelOpen) toggleFeaturesPanel(); }
     panel.querySelector('.gf-panel-close').onclick = closePanel;
     document.addEventListener('keydown', function (event) { if(event.key === 'Escape') closePanel(); });
@@ -561,7 +564,7 @@
     html += '<div class="gf-bar"><div style="width:' + (a.streak % 7) * 14 + '%"></div></div>';
     html += claimed ? '<div class="gf-ok">✓ 今日已报到（连续 ' + a.streak + ' 天）</div>' : '<button class="gf-btn" id="gfClaimBtn">登记今日报到 · ' + rw.j + ' J' + (rw.frag ? ' · 碎片×' + rw.frag : '') + '</button>';
     html += '<small>保留既有报到奖励规则，不影响委托成长；未连续报到不扣除已有奖励。</small></details>';
-    html += '<div class="gf-card"><h4>🌤 今日大陆气候 · ' + w.name + '</h4><div>' + w.icon + ' ' + w.jNote + '</div></div>';
+    html += '<div class="gf-card"><h4>🌤 今日冒险情境（随机展示）· ' + w.name + '</h4><div>' + w.icon + ' ' + w.jNote + '</div></div>';
     html += '<div class="gf-card"><h4>✨ 公会日常</h4>';
     evs.forEach(function (ev) {
       html += '<div style="margin:6px 0">' + (ev.done ? '<span class="gf-ok">✓</span> ' : '◇ ') + '<b>' + esc(ev.title) + '</b>' + (ev.done ? ' <span class="gf-ok">已完成</span>' : '') + '<br><small>' + esc(ev.desc) + '（' + ev.rewardJ + ' J · 羁绊 +' + ev.bond + '）</small></div>';
@@ -612,7 +615,7 @@
   }
   function renderTrial() {
     var tr = ensureTrial();
-    var html = '<div class="gf-card"><h4>⚡ S级升级考试</h4>';
+    var html = '<div class="gf-card"><h4>⚡ 月度委托挑战（非魔导士升级）</h4>';
     if (!tr.active) { html += '<div class="muted">每月最后一个完整周开放。当月最难的三份委托，就是你的试炼。</div>'; }
     else if (tr.passed) { html += '<div class="gf-ok">🏆 已通过 S 级考核！称号「' + esc(tr.title) + '」</div>'; }
     else {

@@ -196,7 +196,7 @@
         if (document.getElementById('guildFeaturesPanel')?.classList.contains('open') && typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle();
         if (typeof window.guildToggleMailbox === 'function') window.guildToggleMailbox(); else showNotice('信箱暂未就绪，请稍后再试');
       } },
-      { icon: 'book', label: '成长与收藏', action: function () {
+      { icon: 'book', label: '公会记录与羁绊', action: function () {
         if (document.getElementById('ge196-panel')?.classList.contains('open')) document.querySelector('#ge196-panel .ge196-close')?.click();
         if (typeof window.__guildFeaturesToggle === 'function') window.__guildFeaturesToggle(); else showNotice('成长档案暂未就绪，请稍后再试');
       }}
@@ -212,7 +212,10 @@
     var summary = document.createElement('summary'); summary.textContent = '维护与设置'; more.appendChild(summary);
     var maintenance = document.createElement('button'); maintenance.type = 'button'; maintenance.textContent = '维护簿';
     maintenance.onclick = function () { close(); showMaintenanceBook(); }; more.appendChild(maintenance);
-    var automatic = document.createElement('button'); automatic.type = 'button'; automatic.textContent = '切换自动接收云端更新';
+    var automatic = document.createElement('button'); automatic.type = 'button';
+    var autoEnabled = (localStorage.getItem('guildAutoRefresh') || 'on') !== 'off';
+    automatic.textContent = '自动显示云端更新：' + (autoEnabled ? '已开启 · 点击关闭' : '已关闭 · 点击开启');
+    automatic.setAttribute('aria-pressed',String(autoEnabled));
     automatic.onclick = function () { toggleAutoRefresh(); close(); }; more.appendChild(automatic);m.appendChild(more);
     document.body.appendChild(m);
     function close() { m.remove(); anchor.setAttribute('aria-expanded','false'); document.removeEventListener('click',outside); document.removeEventListener('keydown',escape); }
@@ -225,7 +228,7 @@
   function toggleAutoRefresh() {
     var off = (localStorage.getItem('guildAutoRefresh') || 'on') === 'off';
     localStorage.setItem('guildAutoRefresh', off ? 'on' : 'off');
-    showNotice(off ? '自动刷新：已开启（收到新数据自动刷新）' : '自动刷新：已关闭（只提示，单击状态标识手动刷新）');
+    showNotice(off ? '自动显示已开启：收到新委托后自动更新列表' : '自动显示已关闭：云端数据仍会接收，点击立即同步可更新列表');
   }
   // ok: true=绿(已同步) false=红(待同步/离线) null=黄(连接中/重试)
   function setBadge(text, ok) {
@@ -249,7 +252,7 @@
     if (floater) {
       floater.style.borderColor = ok === true ? '#4caf50' : ok === false ? '#d9603b' : '#e7a362';
       floater.style.boxShadow = ok === true ? '0 0 10px #4caf5088' : ok === false ? '0 0 10px #d9603b66' : '0 3px 12px rgba(0,0,0,.22)';
-      floater.title = '单击=打开菜单；双击=切换自动刷新';
+      floater.title = '公会工具 · 单击打开';
     }
     var dockStatus = document.getElementById('guildDockStatus');
     if (dockStatus) {
@@ -963,10 +966,10 @@
         if (autoRefresh) {
           scheduleRemoteRefresh();
         } else {
-          showNotice('云端有新委托，点击上方状态标识手动刷新');
+          showNotice('云端有新委托，点击立即同步更新列表');
         }
       } else {
-        showNotice('其他数据已同步，点击上方状态标识可刷新页面');
+        showNotice('其他数据已接收，点击立即同步更新页面');
       }
     }
   }
@@ -1005,6 +1008,7 @@
       pending.forEach(function (key) { dirty.add(key); });
       return push();
     }).then(fullPush).then(function () {
+      if (!inputBusy()) silentRefresh();
       var confirmed = online && !pending.size && !activeWrites;
       setBadge(confirmed ? '云端：已同步' : '本机已保存 · 云端未确认，请稍后重试', confirmed);
       return confirmed;
