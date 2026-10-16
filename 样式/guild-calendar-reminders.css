@@ -1,0 +1,22 @@
+/* Scoped calendar tools: no new floating launcher or header height changes. */
+#guildCalendarReminderDialog:not([open]){display:none!important}
+#guildCalendarReminderDialog[open]{display:block;width:min(520px,calc(100vw - 32px));max-width:calc(100vw - 32px);max-height:85dvh;overflow:auto;box-sizing:border-box;padding:20px;border:1px solid #c79864;border-radius:14px;background:#fffdf8;color:#38291f;box-shadow:0 12px 40px #3a211a35}
+#guildCalendarReminderDialog::backdrop{background:#33231f70}
+#guildCalendarReminderDialog header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:0;border:0;background:none;min-height:0}
+#guildCalendarReminderDialog h3{margin:0;font-size:18px;color:#923947}
+#guildCalendarReminderDialog button{width:auto;min-height:40px;padding:7px 11px;font-size:14px;line-height:1.4;white-space:normal;color:#673324;background:#fff5e7;border:1px solid #cfa276;border-radius:8px;cursor:pointer}
+#guildCalendarReminderDialog [data-close]{flex:0 0 40px;font-size:22px;padding:3px}
+#guildCalendarReminderDialog form{display:block;margin:12px 0;padding:0;min-width:0}
+#guildCalendarReminderDialog label{display:grid;gap:6px;font-size:14px;color:#38291f}
+#guildCalendarReminderDialog input{box-sizing:border-box;width:100%;min-width:0;min-height:44px;padding:8px;font-size:16px;color:#38291f;background:#fff;border:1px solid #cfa276;border-radius:8px}
+#guildCalendarReminderDialog .gcr-title{display:block;overflow-wrap:anywhere;font-size:16px;line-height:1.5}
+#guildCalendarReminderDialog .gcr-shortcuts,#guildCalendarReminderDialog .gcr-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+#guildCalendarReminderDialog .gcr-actions button[type=submit]{background:#a63849;color:#fff;border-color:#a63849}
+#guildCalendarReminderDialog .gcr-help{font-size:13px;line-height:1.6;color:#654d40;margin:10px 0}
+#guildCalendarReminderDialog .gcr-status{font-size:14px;line-height:1.5;color:#803126;overflow-wrap:anywhere}
+#guildCalendarReminderDialog .gcr-due{font-size:14px;line-height:1.5}
+#guildCalendarReminderDialog button:disabled{opacity:.55;cursor:default}
+#guildCalendarReminderDialog :focus-visible{outline:2px solid #9c3748;outline-offset:2px}
+#guildDockPanel .gd-calendar-entry{grid-column:2/-1;justify-self:start;min-height:30px;padding:3px 7px;font-size:12px;white-space:nowrap}
+.guild-reminder-notice{position:fixed;right:16px;top:16px;z-index:100010;box-sizing:border-box;width:min(350px,calc(100vw - 32px));max-height:40vh;overflow:auto;display:grid;gap:8px;padding:14px;background:#fffdf6;border:1px solid #b7794c;border-radius:12px;box-shadow:0 6px 24px #58352426;color:#4a2a22}
+.guild-reminder-notice button{width:100%;min-height:40px;white-space:normal;overflow-wrap:anywhere;text-align:left;font-size:14px;line-height:1.4;color:#713047;background:#fff5e8;border:1px solid #dbb18c;border-radius:7px;padding:7px 10px}

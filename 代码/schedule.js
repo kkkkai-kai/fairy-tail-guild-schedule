@@ -1436,6 +1436,32 @@ function locateTask(t){
  const target=document.getElementById('quest-'+t.id)||document.querySelector('#projects');
  if(target){target.classList.add('quest-located');target.scrollIntoView({behavior:'smooth',block:'center'});target.tabIndex=-1;target.focus({preventScroll:true});setTimeout(()=>target.classList.remove('quest-located'),900)}
 }
+// Stable-ID bridge: reminder edits only write the existing task store, never rewards.
+window.guildCalendarTaskBridge={
+ list:()=>tasks,
+ saveReminder(taskId,stageId,value,expected){
+  const task=tasks.find(t=>t.id===taskId),item=stageId?task?.steps?.find(s=>s.id===stageId):task;
+  if(!task||!item||window.GuildCalendar.closed(task)||window.GuildCalendar.closed(item))throw Error('委托已结束或移除，提醒未保存。');
+  if(window.GuildCalendar.fingerprint(task,stageId)!==expected)throw Error('委托已更新，请重新打开后设置。');
+  if(value&&(!Number.isFinite(window.GuildCalendar.parseTime(value))||window.GuildCalendar.parseTime(value)<=Date.now()))throw Error('请选择未来的有效提醒时间。');
+  const previous=item.reminder,had=Object.hasOwn(item,'reminder');item.reminder=value;
+  try{localStorage.setItem('fairytail-tasks-v2',JSON.stringify(tasks))}catch(error){if(had)item.reminder=previous;else delete item.reminder;throw error}
+  window.dispatchEvent(new CustomEvent('fairytail:data-changed'));
+ },
+ locate(taskId,stageId=''){
+  const task=tasks.find(t=>t.id===taskId);if(!task){showGuildValidation('本端尚未找到这项委托，请先同步。');return false}
+  if(task.done||['completed','cancelled','archived'].includes(task.status)){guildAlert(task.title+'\n'+(task.done?'这项委托已完成，提醒已停止。':'这项委托已结束。'));return true}
+  if(task.type==='project')localStorage.setItem('fairytail-project-folded:'+task.id,'0');
+  else{const ids=acceptedQuestOpenIds();ids.add(task.id);sessionStorage.setItem('fairytail-open-accepted-quests',JSON.stringify([...ids]))}
+  render();
+  const card=document.getElementById('quest-'+task.id);
+  const row=stageId?[...document.querySelectorAll('.project-stage-row')].find(n=>n.dataset.taskId===taskId&&n.dataset.stageId===stageId):null;
+  const node=row||card||[...document.querySelectorAll('#upcomingList [data-task-id]')].find(n=>n.dataset.taskId===taskId);
+  if(node){node.scrollIntoView({behavior:'smooth',block:'center'});node.tabIndex=-1;node.focus({preventScroll:true});node.classList.add('quest-located');setTimeout(()=>node.classList.remove('quest-located'),2000)}
+  else showGuildValidation('已找到「'+task.title+'」，请在告示板或委托查找中查看。',true);
+  return true;
+ }
+};
 function syncGrowth(silent=false){
  const result=GuildGrowth.sync(data,tasks,growth);growth=result.growth;
  if(silent){growth.highestNotified=Math.max(growth.highestNotified||1,result.level)}
@@ -1557,6 +1583,7 @@ function renderOnceTasks(){
   const remove=document.createElement('button');remove.className='action-secondary';remove.textContent='撤销登记';remove.onclick=async e=>{e.stopPropagation();if(done(t)||t.settledJ!==undefined){showGuildValidation('该委托已有完成记录，请保留历史记录。');return}if(await guildConfirmDialog({text:`撤销登记单次委托「${t.title}」？不会影响其他委托。`})){tasks=tasks.filter(x=>x.id!==t.id);save();all()}};actions.append(remove);
   if(t.acceptedAt&&!t.done)actions.append(questFoldButton(t,false));
   if(t.done||(t.acceptedAt&&t.startedAt&&t.status!=='cancelled')){const complete=document.createElement('button');complete.type='button';complete.className='quest-complete-btn';complete.textContent=t.done?'✓ 委托已完成':'✓ 完成委托';complete.disabled=!!t.done;complete.onclick=e=>{e.stopPropagation();completeOnceTask(t,true)};actions.append(complete)}if(!t.done&&t.status!=='cancelled'){const record=document.createElement('button');record.type='button';record.className='action-secondary outcome-record-btn';record.title='先记录成果与下一步计划，再完成委托';record.textContent='✎ 记录成果';record.onclick=e=>{e.stopPropagation();requestTaskOutcome(t,()=>completeOnceTask(t,true))};actions.append(record)}
+  if(window.GuildCalendar)actions.append(window.GuildCalendar.button(t.id));
   row.append(avatar,main,actions);listHost.append(row)
  })
 }
@@ -1616,10 +1643,12 @@ function projects(){
   if(!folded&&!allStagesDone&&task.acceptedAt&&!task.startedAt){const start=document.createElement('button');start.type='button';start.className='action-start';start.textContent='▶ 启程执行';start.onclick=()=>{if(startOnceTask(task)){save();all()}};actions.append(start)}
   if(!task.done){const manage=document.createElement('button');manage.type='button';manage.className='action-secondary';manage.textContent='新增 / 整理阶段';manage.onclick=()=>renderStageManager(task,card);actions.append(manage)}
   if(!folded){const edit=document.createElement('button');edit.type='button';edit.className='action-secondary';edit.textContent='修订委托';edit.onclick=()=>inlineEditor(task,card);actions.append(edit);const cancelQuest=document.createElement('button');cancelQuest.type='button';cancelQuest.className='action-secondary';cancelQuest.textContent='取消远征';cancelQuest.onclick=async e=>{e.stopPropagation();if((task.steps||[]).some(step=>step.done||step.settledJ!==undefined)){showGuildValidation('这次远征已有阶段完成记录，请保留历史记录。');return}if(await guildConfirmDialog({text:`取消远征「${task.title}」？未完成的阶段将从远征板移除并同步云端。`})){tasks=tasks.filter(x=>x.id!==task.id);save();all()}};actions.append(cancelQuest)}
+  if(!folded&&window.GuildCalendar)actions.append(window.GuildCalendar.button(task.id));
   actions.append(questFoldButton(task,folded));card.append(heading,note,next,actions);root.append(card);if(sessionStorage.getItem('guild-stage-manager:'+task.id)==='1')renderStageManager(task,card,true);if(folded)return;
   const stageVisualCandidates=guildStageVisualCandidates(task),stageVisualOffset=stableRewardSeed([task.id,task.assigneeId,'project-stage-visual'])%Math.max(1,stageVisualCandidates.length);
   task.steps.forEach((step,stepIndex)=>{const stageVisual=stageVisualCandidates[(stageVisualOffset+stepIndex)%Math.max(1,stageVisualCandidates.length)]||{source:'portrait',state:'normal'},visualState=stageVisual.state||'normal',row=document.createElement('div'),avatar=taskAssigneeAvatar({...task,assigneeVisual:stageVisual},'completion-avatar project-stage-avatar'),copy=document.createElement('div'),label=document.createElement('strong'),meta=document.createElement('small'),stageActions=document.createElement('div'),exp=growth?.projectPools?.[task.id]?.shares?.[step.id]??0;row.className='project-stage-row';row.dataset.taskId=task.id;row.dataset.stageId=step.id;row.dataset.visualState=visualState;row.dataset.visualFile=stageVisual.file||'';avatar.title=(resolveGuildMember(task)?.name||'协助者')+' · '+(guildStateKeys.find(([key])=>key===visualState)?.[1]||'阶段状态');copy.className='project-stage-copy';stageActions.className='project-stage-actions';label.textContent=(step.done?'✓ ':'')+step.title;meta.textContent=step.done?'阶段已完成 · 已获得 '+(step.settledJ??step.reward)+' J · '+exp+' EXP · '+completionLabel(step.completedAt):'远征阶段 · '+step.reward+' J · '+exp+' EXP'+(step.due?(' · 截止：'+step.due+(step.dueTime?' '+step.dueTime:' 当日结束前')):'')+(step.note?(' · 备注：'+step.note):'');copy.append(label,meta);
    if(step.done){const status=document.createElement('button');status.type='button';status.className='project-stage-completed';status.textContent='✓ 阶段已完成';status.title='阶段完成记录已锁定，不会重复结算';status.disabled=true;stageActions.append(status)}else if(task.acceptedAt){const complete=document.createElement('button');complete.type='button';complete.className='quest-complete-btn';complete.textContent=step===nextStep?'✓ 完成当前阶段':'等待前置阶段';complete.disabled=step!==nextStep;complete.onclick=()=>completeProjectStage(task,step);stageActions.append(complete)}
+   if(!step.done&&window.GuildCalendar)stageActions.append(window.GuildCalendar.button(task.id,step.id));
    row.append(avatar,copy,stageActions);noteToggle(step,row,stageActions);card.append(row)
   })
  })

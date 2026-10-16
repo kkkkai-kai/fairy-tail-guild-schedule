@@ -62,10 +62,9 @@
   }
 
   /* ── 截止提醒（页面打开期间每分钟检查；静态托管无法后台推送，如实提示） ── */
-  var ALERT_LOG_KEY = 'fairytail-alert-log-v196';
   var ALERT_PREF_KEY = 'fairytail-alert-pref-v196';
   function alertStatus(t) {
-    if (!t || isDone(t)) return null;
+    if (!t || isDone(t) || ['completed','cancelled','archived'].includes(t.status)) return null;
     var due = dueDay(t);
     if (!due) return null;
     var today = todayStr();
@@ -82,38 +81,10 @@
     });
     return out;
   }
-  function notifyBrowser(text) {
-    if (!('Notification' in window)) return;
-    if (Notification.permission !== 'granted') return;
-    try {
-      var n = new Notification('公会信箱', { body: text, icon: '素材/界面/站点标识/guild-icon-192.png' });
-      setTimeout(function () { try { n.close(); } catch (e) {} }, 8000);
-    } catch (e) {}
-  }
   function fireNewAlerts() {
-    var log = lsGet(ALERT_LOG_KEY, {});
-    var alerts = collectAlerts(), changed = false;
-    getTasks().forEach(function (t) {
-      var st = alertStatus(t);
-      if (!st) return;
-      var id = t.id || t.title || '';
-      if (log[id] === st.kind) return;                       /* 同一状态只提醒一次 */
-      log[id] = st.kind; changed = true;
-      var name = memberName(t.assigneeId);
-      var msg = st.kind === 'overdue'
-        ? '⚠ 委托已逾期：「' + t.title + '」' + (name ? '（' + name + '）' : '')
-        : (st.kind === 'today' ? '⏰ 今日截止：「' + t.title + '」' + (name ? '（' + name + '）' : '') : '🌙 明日截止：「' + t.title + '」');
-      toast(msg);
-      notifyBrowser(t.title + (st.kind === 'overdue' ? ' 已逾期' : ' 今日截止'));
-    });
-    if (changed) lsSet(ALERT_LOG_KEY, log);
-    var pref = lsGet(ALERT_PREF_KEY, {});
-    if (pref.enabled && alerts.today.length) {
-      /* 每小时最多一次今日截止总览提示 */
-      var last = pref.lastSummary || '';
-      var now = todayStr() + ':' + Math.floor(Date.now() / 3600000);
-      if (last !== now) { pref.lastSummary = now; lsSet(ALERT_PREF_KEY, pref); toast('📌 今日有 ' + alerts.today.length + ' 项委托截止，记得去完成'); }
-    }
+    // Reuse this sole minute scheduler. Deadline lists remain read-only;
+    // notifications now obey each quest's explicit reminder and completion state.
+    window.GuildCalendar?.tick().catch(function () { console.warn('公会提醒未能记录发送状态'); });
   }
 
   /* ── 周报统计（本周完成 / 本周截止 / 分类） ── */
@@ -273,25 +244,26 @@
       });
     }
 
-    h += '<button type="button" class="ge196-toggle" id="ge196-notify-btn">' + (pref.enabled ? '🔔 截止提醒：已开启' : '🔕 截止提醒：未开启（点击开启）') + '</button>';
+    h += '<button type="button" class="ge196-toggle" id="ge196-notify-btn">' + (pref.enabled && window.Notification?.permission === 'granted' ? '系统通知：已开启 · 点击关闭' : '开启本设备系统通知') + '</button>';
+    h += '<p class="ge196-item">请在委托的“日历与提醒”中设置时刻。本版仅在网页运行时检查；iPhone 锁屏提醒请导入苹果日历并确认。系统通知权限不代表已开启后台推送。</p>';
     box.innerHTML = h;
 
     var closeBtn = box.querySelector('.ge196-close');
     if (closeBtn) closeBtn.onclick = function () { box.classList.remove('open'); panelOpen = false; };
     var nb = box.querySelector('#ge196-notify-btn');
     if (nb) nb.onclick = function () {
-      if (!('Notification' in window)) { toast('此浏览器不支持系统通知，仅展示页面提示'); return; }
+      if (!('Notification' in window)) { toast('此浏览器暂不支持系统通知。iPhone 可先将网站添加到主屏幕；锁屏提醒建议导入苹果日历。'); return; }
       if (Notification.permission === 'granted') {
         pref.enabled = !pref.enabled; lsSet(ALERT_PREF_KEY, pref);
-        toast(pref.enabled ? '🔔 截止提醒已开启' : '🔕 截止提醒已关闭');
+        toast(pref.enabled ? '本设备系统通知已开启；仅网页运行时检查已设置的提醒。' : '本设备系统通知已关闭；页面内提醒仍保留。');
         renderPanel();
       } else {
         Notification.requestPermission().then(function (p) {
           pref.enabled = p === 'granted'; lsSet(ALERT_PREF_KEY, pref);
-          if (p === 'granted') { toast('🔔 已开启系统通知'); notifyBrowser('截止提醒已开启'); }
+          if (p === 'granted') { toast('已获系统通知权限；仅网页运行时检查已设置的提醒。'); }
           else toast('未获得通知权限，仍将显示页面提示');
           renderPanel();
-        });
+        }).catch(function () { toast('未能取得通知权限，可以使用苹果日历提醒。'); });
       }
     };
   }

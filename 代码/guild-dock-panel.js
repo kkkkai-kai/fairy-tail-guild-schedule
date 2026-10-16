@@ -327,6 +327,10 @@
       side.className = 'gd-side';
       side.textContent = statusText(e.t);
       row.append(g, mid, side);
+      if(window.GuildCalendar){
+        var reminder=window.GuildCalendar.button(e.t.id,e.kind==='stage'?e.step.id:'');
+        reminder.classList.add('gd-calendar-entry');row.appendChild(reminder);
+      }
       list.appendChild(row);
     });
   }
