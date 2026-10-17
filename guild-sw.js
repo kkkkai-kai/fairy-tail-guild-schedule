@@ -1,6 +1,6 @@
 /* Interface cache is versioned; filename-versioned images keep a separate cache. */
 'use strict';
-var CACHE_VER='guild-v207-calendar-reminders-20261016';
+var CACHE_VER='guild-v208-daily-journal-20261017';
 importScripts('./代码/guild-assets.js?v='+CACHE_VER);
 var CACHE_NAME='guild-core-'+CACHE_VER;
 var MEDIA_CACHE_NAME='guild-media-v1';
