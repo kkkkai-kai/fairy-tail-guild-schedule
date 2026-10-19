@@ -241,6 +241,7 @@
     renderCalendar();
   }
 
+  document.addEventListener('guild-journal-changed',()=>renderCalendar());
   function renderCalendar() {
     var title = document.getElementById('dockCalTitle');
     var grid = document.getElementById('dockCalGrid');
@@ -261,8 +262,9 @@
       var cls = 'day';
       if (k === today) cls += ' today';
       if (k === view.selected) cls += ' sel';
+      var journalMark = window.GuildJournal?.store().entries[k]?.status==='saved' ? '<span class="journal-day-mark" title="有手记">✎</span>' : '';
       var dot = info && info.count > 0 ? '<span class="dot' + (info.overdue > 0 ? ' overdue' : '') + '"></span>' : '';
-      html += '<span class="' + cls + '" data-date="' + k + '">' + d + dot + '</span>';
+      html += '<span class="' + cls + '" data-date="' + k + '">' + d + dot + journalMark + '</span>';
     }
     grid.innerHTML = html;
     grid.querySelectorAll('.day[data-date]').forEach(function (cell) {
@@ -295,6 +297,7 @@
     var count = document.createElement('small');
     count.textContent = entries.length ? '共 ' + entries.length + ' 项' : '';
     title.appendChild(count);
+    let actions=document.getElementById('guildJournalCalendarActions');if(!actions){actions=document.createElement('div');actions.id='guildJournalCalendarActions';actions.className='guild-journal-calendar-actions';title.after(actions)}actions.replaceChildren();for(const [label,report]of [['✎ 当日手记',false],['研究周报',true]]){const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=()=>window.GuildJournal.open({date:view.selected,report});actions.append(b)}
     if (!entries.length) {
       list.innerHTML = '<p class="guild-dock-empty">这一天没有截止的委托</p>';
       return;
