@@ -104,46 +104,47 @@
     var style = document.createElement('style');
     style.id = 'guildDockStyles';
     style.textContent =
-      '#guildDockPanel{position:fixed;right:5vw;top:18vh;bottom:auto;z-index:99998;width:min(380px,92vw);max-height:min(76vh,680px);display:flex;flex-direction:column;background:#fffdf8;border:1px solid #bfa27a;border-radius:10px;box-shadow:0 8px 26px #55301e33;overflow:hidden;font-family:"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;color:#5d3b2b}' +
+      '#guildDockPanel{position:fixed;right:5vw;top:18vh;bottom:auto;z-index:99998;width:min(380px,92vw);max-height:min(76vh,680px);display:flex;flex-direction:column;background:#fffdf8;border:1px solid #dfc8aa;border-radius:14px;box-shadow:0 10px 28px #38211620;overflow:hidden;font-family:"Microsoft YaHei UI","PingFang SC",system-ui,sans-serif;color:#382b26}' +
       '#guildDockPanel[hidden]{display:none}' +
-      '.guild-dock-head{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#654632;border-bottom:1px solid #b3986e}' +
-      '.guild-dock-head strong{font-size:14px;color:#fff3dd;white-space:nowrap}' +
-      '.guild-dock-status{flex:1;min-width:0;text-align:right;font-size:11px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:3px 8px;border-radius:999px;background:#f4ead9;color:#8a5a22}' +
-      '.guild-dock-status.ok{background:#e8f6e4;color:#2f6b2f}' +
-      '.guild-dock-status.fail{background:#ffe3e0;color:#a33}' +
-      '.guild-dock-close{min-width:26px;height:26px;padding:0;border:1px solid #e0bf96;border-radius:50%;background:#fffaf2;color:#8a5a22;font-size:15px;line-height:1;cursor:pointer}' +
-      '.guild-dock-close:hover{background:#f7e3c4}' +
+      '.guild-dock-head{display:flex;align-items:center;gap:8px;padding:10px 12px;background:linear-gradient(180deg,#fff7e9,#fff1dc);border-bottom:1px solid #ead8bd}' +
+      '.guild-dock-head strong{display:flex;align-items:center;gap:7px;font-size:15px;color:#81283b;white-space:nowrap}' +
+      '.guild-dock-head strong::before{content:"";display:inline-block;width:19px;height:19px;background:url(素材/界面/功能图标/guild-ui-ledger-v210.svg) center/contain no-repeat}' +
+      '.guild-dock-status{flex:1;min-width:0;text-align:right;font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:4px 8px;border-radius:999px;background:#fffdf8;color:#574337}' +
+      '.guild-dock-status.ok{background:#edf6e9;color:#35663d}' +
+      '.guild-dock-status.fail{background:#fff0f2;color:#882638}' +
+      '.guild-dock-close{min-width:30px;height:30px;padding:0;border:1px solid #d8bda0;border-radius:50%;background:#fffdf8;color:#744137;font-size:17px;line-height:1;cursor:pointer}' +
+      '.guild-dock-close:hover{background:#fff4e4;border-color:#ad7859}' +
       '.guild-dock-body{overflow-y:auto;padding:10px 12px 4px}' +
       '.guild-dock-cal-head{display:flex;align-items:center;gap:6px;margin-bottom:8px}' +
-      '.guild-dock-cal-head .cal-title{flex:1;text-align:center;font-size:13px;font-weight:700;color:#6d4324}' +
-      '.guild-dock-cal-head button{min-height:26px;padding:2px 9px;border:1px solid #e0bf96;border-radius:8px;background:#fffaf2;color:#7a4a26;font-size:12px;cursor:pointer}' +
-      '.guild-dock-cal-head button:hover{background:#f7e3c4}' +
+      '.guild-dock-cal-head .cal-title{flex:1;text-align:center;font-size:14px;font-weight:700;color:#81283b}' +
+      '.guild-dock-cal-head button{min-height:32px;padding:3px 9px;border:1px solid #d8bda0;border-radius:8px;background:#fffdf8;color:#574337;font-size:13px;cursor:pointer}' +
+      '.guild-dock-cal-head button:hover{background:#fff4e4;border-color:#ad7859}' +
       '.guild-dock-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:6px}' +
-      '.guild-dock-cal .wk{text-align:center;font-size:10px;color:#a07a58;padding:2px 0}' +
-      '.guild-dock-cal .day{position:relative;min-height:30px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#5d3b2b;background:#fdf8ef;border:1px solid transparent;border-radius:8px;cursor:pointer;padding:2px 0}' +
-      '.guild-dock-cal .day:hover{background:#f7e3c4}' +
-      '.guild-dock-cal .day.out{color:#c9b298;background:transparent}' +
-      '.guild-dock-cal .day.today{border-color:#e7a362;font-weight:700;color:#9d421b}' +
-      '.guild-dock-cal .day.sel{background:#f0c98a;color:#6d3a12;font-weight:700}' +
-      '.guild-dock-cal .day .dot{position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:#c9a06a}' +
+      '.guild-dock-cal .wk{text-align:center;font-size:11px;color:#655044;padding:3px 0}' +
+      '.guild-dock-cal .day{position:relative;min-height:32px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#49382e;background:#fffaf2;border:1px solid transparent;border-radius:8px;cursor:pointer;padding:2px 0}' +
+      '.guild-dock-cal .day:hover{background:#fff1dc;border-color:#ead8bd}' +
+      '.guild-dock-cal .day.out{color:#9a8170;background:transparent}' +
+      '.guild-dock-cal .day.today{border-color:#d48b48;font-weight:700;color:#81283b;background:#fff5e5}' +
+      '.guild-dock-cal .day.sel{background:#9e3145;color:#fffdf8;font-weight:700}' +
+      '.guild-dock-cal .day .dot{position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:#bd8b45}' +
       '.guild-dock-cal .day .dot.overdue{background:#d9603b}' +
       '.guild-dock-cal .day.sel .dot{background:#fff}' +
-      '.guild-dock-tasks-title{font-size:12px;font-weight:700;color:#6d4324;margin:4px 0 6px;display:flex;align-items:baseline;gap:6px}' +
-      '.guild-dock-tasks-title small{font-weight:400;color:#a07a58}' +
+      '.guild-dock-tasks-title{font-size:14px;font-weight:700;color:#81283b;margin:6px 0;display:flex;align-items:baseline;gap:6px}' +
+      '.guild-dock-tasks-title small{font-size:12px;font-weight:500;color:#655044}' +
       '.guild-dock-tasks{display:flex;flex-direction:column;gap:5px;max-height:34vh;overflow-y:auto;padding-right:2px}' +
-      '.guild-dock-task{display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:6px;align-items:start;padding:6px 8px;border:1px solid #eed9bc;border-radius:10px;background:#fdf8ef}' +
-      '.guild-dock-task.stage{background:#f7f0e3;border-color:#e3d2b4}' +
-      '.guild-dock-task.done{opacity:.62}' +
-      '.guild-dock-task .gd-grade{font-size:11px;font-weight:700;text-align:center;padding-top:1px}' +
-      '.guild-dock-task .gd-title{font-size:12px;line-height:1.4;min-width:0;overflow-wrap:anywhere}' +
-      '.guild-dock-task .gd-meta{font-size:10px;color:#a07a58;margin-top:2px}' +
-      '.guild-dock-task .gd-side{font-size:10px;text-align:right;color:#8a6a4a;white-space:nowrap}' +
-      '.guild-dock-task.stage .gd-side{color:#b0854e}' +
-      '.guild-dock-empty{font-size:12px;color:#b29678;text-align:center;padding:12px 0}' +
-      '.guild-dock-actions{display:flex;gap:6px;padding:8px 12px 10px;border-top:1px solid #eed9bc}' +
-      '.guild-dock-actions button{flex:1;min-height:30px;padding:4px 6px;border:1px solid #e0bf96;border-radius:9px;background:#fffaf2;color:#7a4a26;font-size:11px;cursor:pointer;white-space:nowrap}' +
-      '.guild-dock-actions button:hover{background:#f7e3c4}' +
-      '.guild-dock-actions button.primary{background:#f0c98a;border-color:#e0a95e;color:#6d3a12;font-weight:700}' +
+      '.guild-dock-task{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:7px;align-items:start;padding:8px;border:1px solid #ead8bd;border-radius:9px;background:#fffefa}' +
+      '.guild-dock-task.stage{background:#fff5e5;border-color:#ddc39f}' +
+      '.guild-dock-task.done{opacity:.82}' +
+      '.guild-dock-task .gd-grade{font-size:12px;font-weight:700;text-align:center;padding-top:1px}' +
+      '.guild-dock-task .gd-title{font-size:14px;line-height:1.5;min-width:0;overflow-wrap:anywhere;color:#382b26}' +
+      '.guild-dock-task .gd-meta{font-size:12px;color:#655044;margin-top:3px;line-height:1.45}' +
+      '.guild-dock-task .gd-side{font-size:12px;text-align:right;color:#574337;white-space:nowrap}' +
+      '.guild-dock-task.stage .gd-side{color:#805725}' +
+      '.guild-dock-empty{font-size:13px;color:#655044;text-align:center;padding:14px 0}' +
+      '.guild-dock-actions{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px 10px;border-top:1px solid #ead8bd}' +
+      '.guild-dock-actions button{flex:1 1 92px;min-height:36px;padding:5px 8px;border:1px solid #d8bda0;border-radius:8px;background:#fffdf8;color:#574337;font-size:13px;cursor:pointer;white-space:nowrap}' +
+      '.guild-dock-actions button:hover{background:#fff4e4;border-color:#ad7859}' +
+      '.guild-dock-actions button.primary{background:#9e3145;border-color:#8d293c;color:#fffdf8;font-weight:700}' +
       '@media(max-width:650px){#guildDockPanel{right:8px;bottom:70px;width:min(340px,94vw)}.guild-dock-task{grid-template-columns:24px minmax(0,1fr) auto}.guild-dock-status{max-width:150px}}';
     document.head.appendChild(style);
   }

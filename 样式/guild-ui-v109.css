@@ -6,15 +6,15 @@ html .guild-masthead-title{display:flex;align-items:baseline;justify-content:cen
 html .guild-masthead-title>span{font-size:.65em;font-weight:600;letter-spacing:1px;color:#38251e}
 html .guild-masthead-pennant,html .guild-masthead-quill{flex:0 0 auto;object-fit:contain;filter:none;box-shadow:none;border:0;background:none}
 @media(max-width:650px){html #guildMasthead{gap:8px;margin-bottom:12px;padding-top:2px}html .guild-masthead-title{display:block;font-size:25px;letter-spacing:1px}html .guild-masthead-title>span{display:block;font-size:15px;margin-top:2px}html .guild-masthead-kicker{font-size:8px;letter-spacing:1.5px}html .guild-masthead-pennant{width:30px;height:42px}html .guild-masthead-quill{width:27px;height:34px}}
-html #guildHallScene .guild-floor-map{display:grid!important;grid-template-columns:1fr .74fr 1.14fr;grid-template-rows:repeat(3,36px);gap:4px!important;position:relative;overflow:visible!important;padding:0!important;background:transparent;border:0}
+html #guildHallScene .guild-floor-map{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(76px,.74fr) minmax(0,1.14fr);grid-template-rows:repeat(3,36px);gap:5px!important;position:relative;overflow:visible!important;padding:0!important;background:transparent;border:0}
 html #guildHallScene .guild-scene-picker{width:100%;min-height:38px;display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border:1px solid #a87948;background:#fff7e7;color:#653c28;font-size:14px;font-weight:700;border-radius:5px}
 html #guildHallScene .guild-room-menu{position:absolute;left:0;right:0;top:43px;z-index:20;background:#fff8eb;border:1px solid #aa7848;border-radius:6px;padding:10px;box-shadow:0 6px 18px #3b201b38}
 html #guildHallScene .guild-room-menu[hidden]{display:none!important}
 html #guildHallScene .guild-room-group{margin:0 0 8px;display:grid;grid-template-columns:1fr 1fr;gap:5px}
 html #guildHallScene .guild-room-group:last-child{margin-bottom:0}
 html #guildHallScene .guild-room-group>strong{grid-column:1/-1;font-size:12px;color:#896548;line-height:1.5}
-html #guildHallScene .guild-room-node{display:flex!important;flex:none;align-items:center;justify-content:center;gap:4px!important;width:100%;height:36px!important;min-height:36px!important;padding:4px 3px!important;font-size:13px!important;line-height:1.4!important;white-space:nowrap!important;border:1px solid #b58c5d!important;border-bottom-width:2px!important;border-radius:5px!important;color:#573724!important;background:linear-gradient(#fffdf7,#f2e2c9)!important;box-shadow:0 2px 3px #72422515!important}
-html #guildHallScene .guild-room-node.scene-mainHall{grid-column:2!important;grid-row:1/4!important;height:116px!important;flex-direction:column;background:linear-gradient(#fbe0ae,#edc388)!important;border:2px solid #b27b37!important}
+html #guildHallScene .guild-room-node{display:grid!important;grid-template-columns:20px minmax(0,1fr) auto;flex:none;align-items:center;justify-content:center;gap:3px!important;width:100%;height:36px!important;min-height:36px!important;padding:3px 5px!important;font-size:13px!important;line-height:1.2!important;white-space:nowrap!important;border:1px solid #b58c5d!important;border-bottom-width:1px!important;border-radius:7px!important;color:#573724!important;background:linear-gradient(#fffdf7,#f2e2c9)!important;box-shadow:0 2px 3px #72422515!important}
+html #guildHallScene .guild-room-node.scene-mainHall{display:flex!important;grid-column:2!important;grid-row:1/4!important;height:116px!important;flex-direction:column;background:linear-gradient(#fbe0ae,#edc388)!important;border:2px solid #b27b37!important}
 html #guildHallScene .scene-mainHall .guild-room-label{font-size:16px;font-weight:700}
 html #guildHallScene .guild-room-node.scene-missionBoard{grid-column:1!important;grid-row:1!important}
 html #guildHallScene .guild-room-node.scene-intelCorner{grid-column:3!important;grid-row:1!important}
@@ -22,12 +22,12 @@ html #guildHallScene .guild-room-node.scene-archiveRoom{grid-column:1!important;
 html #guildHallScene .guild-room-node.scene-researchRoom{grid-column:3!important;grid-row:2!important}
 html #guildHallScene .guild-room-node.scene-guildTavern{grid-column:1!important;grid-row:3!important}
 html #guildHallScene .guild-room-node.scene-happyNook{grid-column:3!important;grid-row:3!important}
-html #guildHallScene .guild-room-label{white-space:nowrap;min-width:0;font-size:13px}
-html #guildHallScene .guild-room-node .guild-room-count{display:inline-grid!important;place-items:center;flex:0 0 auto;min-width:14px;margin:0;padding:0 2px;border-radius:4px;font-size:11px!important;line-height:1.4!important;color:inherit!important;background:#a57d4920;white-space:nowrap}
-html #guildHallScene .guild-room-icon{flex:0 0 22px;width:22px!important;height:22px!important;object-fit:contain;image-rendering:auto}
-html #guildHallScene .scene-mainHall .guild-room-icon{width:30px!important;height:30px!important;flex-basis:30px}
+html #guildHallScene .guild-room-label{white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis;font-size:12px}
+html #guildHallScene .guild-room-node .guild-room-count{display:inline-grid!important;place-items:center;flex:0 0 auto;min-width:16px;margin:0;padding:1px 3px;border-radius:999px;font-size:10px!important;line-height:1.4!important;color:inherit!important;background:#a57d4920;white-space:nowrap}
+html #guildHallScene .guild-room-icon{flex:0 0 20px;width:20px!important;height:20px!important;object-fit:contain;image-rendering:auto}
+html #guildHallScene .scene-mainHall .guild-room-icon{width:28px!important;height:28px!important;flex-basis:28px}
 html #guildHallScene .guild-room-node[aria-pressed=true]{background:#874931!important;color:#fff9e9!important;border-color:#ad743c!important}
-html #guildHallScene .guild-room-node:hover{box-shadow:inset 0 0 0 1px #bb8b54!important}
+html #guildHallScene .guild-room-node:hover{background:#fff8ed!important;border-color:#bd9868!important;box-shadow:0 2px 5px #62452518!important}
 html .guild-scene-caption,html .guild-hall-rotation-status{font-size:12px!important;line-height:1.55!important}
 html .guild-hall-stage.is-room-transition{opacity:1!important;filter:none!important}
 html .guild-hall-stage.is-room-transition::after{font-size:13px!important;line-height:1.5;background:#57361cdb!important}
@@ -45,25 +45,28 @@ html #guildHallScene .guild-hall-stage:not([data-celebration-mode]){height:auto!
 html #guildHallScene .guild-hall-stage:not([data-celebration-mode])>.guild-hall-background-image{object-fit:contain!important;object-position:center!important;width:100%!important;height:100%!important}
 html .growth-card::after{display:none}
 html .growth-exp span{display:inline-block;white-space:nowrap;margin-right:7px}
-html .card h2,html .priority-board h2{font-size:20px!important;line-height:1.45!important;color:var(--guild-red)!important;font-weight:700}
+html .card h2,html .priority-board h2{font-size:18px!important;line-height:1.45!important;color:var(--guild-red)!important;font-weight:700}
 html .growth-level{font-size:18px!important;line-height:1.45!important}.growth-rank{font-size:14px!important;line-height:1.5!important}.growth-exp,.growth-latest{font-size:13px!important;line-height:1.55!important}
 html .card input,html .card select,html .card textarea,html .stage-manager input{font-family:inherit;font-size:14px!important;line-height:1.5!important}
 html .card .task-actions button,html .card form button,html .stage-manager button,html .stage-actions button,html .guild-scene-journal button,html #guildMemberInteraction button{font-size:13px!important;line-height:1.4!important;min-height:34px;padding:7px 11px;color:#743c27;border-color:#b99065;background:#ffffff}
-html .card button:focus-visible,html .guild-room-node:focus-visible{outline:2px solid #ad673c;outline-offset:2px}
+html :is(.card,.toolbar,dialog) :is(button,input,select,textarea):focus-visible{outline:3px solid #a15a35;outline-offset:3px}
 html #guildHallScene button:disabled{opacity:.65}
 /* One action palette, excluding scene actors and interactive props. */
-html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.guild-hall-visitor,.nook-exceed,.guild-intel-prop,.guild-record-prop,.happy-nook-supply,.guild-honor-prop){font-family:inherit;font-size:14px!important;font-weight:600;line-height:1.45!important;min-height:36px;padding:7px 12px;color:var(--action-ink,#493b30)!important;background:var(--action-fill,#f8f2e7)!important;border:1px solid var(--action-edge,#b49b7c)!important;border-radius:7px!important;box-shadow:0 1px 2px #46352412!important;text-shadow:none!important;transition:background .15s,border-color .15s,box-shadow .15s}
-html :is(.card,dialog) :is(.action-primary,.project-final-complete,.guild-event-complete,.priority-accept,.accept-quest,button[type=submit]),html #form>button,html #quickIntake>button:first-of-type{--action-ink:#ffffff;--action-fill:#a53243;--action-edge:#882638;font-weight:700}
-html :is(.card,dialog) :is(.project-stage-complete,.quest-complete-btn,.guild-dynamic-complete,.action-complete){--action-ink:#2f6242;--action-fill:#edf5ef;--action-edge:#b9d4c2}
-html :is(.card,dialog) :is(.remove,.priority-cancel,.action-danger){--action-ink:#943349;--action-fill:#fff3f5;--action-edge:#e4c5cd}
-html :is(.card,dialog) .action-start{--action-ink:#613d24;--action-fill:#fff1dd;--action-edge:#dfbc91}
-html :is(.task-filter,.review-filter) button:disabled{--action-ink:#613d24;--action-fill:#fff1dd;--action-edge:#dfbc91;opacity:1!important}
-html .card .priority-accept::before,html .card .action-start::before{content:'';display:inline-block;width:16px;height:16px;margin-right:4px;vertical-align:middle;background:center/contain no-repeat url('../素材/界面/功能图标/guild-scene-icon-board-v102.webp')}
-html .card .action-start::before{background-image:url('../素材/道具/情报物件/guild-record-pennant-v86-fast-v101.webp')}
+html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.guild-hall-visitor,.nook-exceed,.guild-intel-prop,.guild-record-prop,.happy-nook-supply,.guild-honor-prop,.guild-literature-prop,.s-rank-honor-pin,.guild-hall-inline-action):not(.guild-hall-stage button){font-family:inherit;font-size:14px!important;font-weight:600;line-height:1.45!important;min-height:36px;padding:7px 12px;color:var(--action-ink,#493b30)!important;background:var(--action-fill,#f8f2e7)!important;border:1px solid var(--action-edge,#b49b7c)!important;border-radius:9px!important;box-shadow:0 1px 1px #51392d0a!important;text-shadow:none!important;cursor:pointer;white-space:normal;word-break:keep-all;transition:background-color .14s,border-color .14s,box-shadow .14s}
+html :is(.card,dialog) :is(.action-primary,.project-final-complete,.guild-event-complete,.priority-accept,.accept-quest,button[type=submit]),html #form>button,html #quickIntake>button:first-of-type{--action-ink:#ffffff;--action-fill:#9e3145;--action-edge:#87273a;font-weight:700}
+html :is(.card,dialog) :is(.project-stage-complete,.quest-complete-btn,.guild-dynamic-complete,.action-complete){--action-ink:#28503c;--action-fill:#eff8f0;--action-edge:#a1c3a9}
+html :is(.card,dialog) :is(.remove,.priority-cancel,.action-danger){--action-ink:#9a3345;--action-fill:#fff5f5;--action-edge:#d8a8af}
+html :is(.card,dialog) .action-start{--action-ink:#69451d;--action-fill:#fff1d7;--action-edge:#d1ac73}
+html :is(.task-filter,.review-filter) button:disabled{--action-ink:#69451d;--action-fill:#fff1d7;--action-edge:#d1ac73;opacity:1!important}
+/* Action glyphs share one shape language; actors and room props keep their own artwork. */
+html :is(.priority-accept,.action-start,.action-complete,.project-stage-complete,.project-final-complete,.quest-complete-btn,#form>button)::before{content:'';display:inline-block;width:17px;height:17px;margin-right:6px;vertical-align:-3px;background-color:currentColor;mask:var(--guild-action-icon) center/contain no-repeat}
+html :is(.priority-accept,.project-final-complete){--guild-action-icon:url('../素材/界面/功能图标/guild-ui-stamp-v210.svg')}
+html .action-start{--guild-action-icon:url('../素材/界面/功能图标/guild-ui-quest-v210.svg')}
+html :is(.action-complete,.project-stage-complete,.quest-complete-btn){--guild-action-icon:url('../素材/界面/功能图标/guild-ui-check-v210.svg')}
+html #form>button{--guild-action-icon:url('../素材/界面/功能图标/guild-ui-quill-v210.svg')}
 html #guildHallScene .s-rank-honor-pin{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
-html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.guild-hall-visitor,.nook-exceed,.guild-intel-prop,.guild-record-prop,.happy-nook-supply,.guild-honor-prop):hover:not(:disabled){filter:brightness(1.055);border-color:#9cabbc!important;box-shadow:0 2px 5px #49362924!important}
+html :is(.card,.toolbar,dialog) button:not(.guild-room-node,.guild-hall-member,.guild-hall-visitor,.nook-exceed,.guild-intel-prop,.guild-record-prop,.happy-nook-supply,.guild-honor-prop,.guild-literature-prop,.s-rank-honor-pin,.guild-hall-inline-action):not(.guild-hall-stage button):hover:not(:disabled){filter:none;border-color:var(--guild-red)!important;box-shadow:0 0 0 2px #9e314512!important}
 html :is(.card,.toolbar,dialog) button:disabled{cursor:default;opacity:1;box-shadow:none!important}
-html #form>button::before{content:'';display:inline-block;width:19px;height:19px;margin-right:6px;vertical-align:middle;background:url('../素材/道具/情报物件/guild-record-quill-v86-fast-v101.webp') center/contain no-repeat}
 html .task-filter button,html .review-filter button,html .daily-quote-actions button{font-size:13px!important;padding:5px 9px!important;min-height:30px!important}
 /* Daily cards allocate text space independently of controls and frame artwork. */
 html #cards>.card{container-type:inline-size;min-width:0}
@@ -83,14 +86,14 @@ html #cards .row>.remove{grid-column:3/-1;justify-self:end;white-space:nowrap}
 @container(max-width:540px){html #cards .row{grid-template-columns:22px 34px minmax(0,1fr)}html #cards .row>select{grid-column:3;grid-row:2;justify-self:start}html #cards .row>.remove{grid-column:3;grid-row:3;justify-self:start}}
 @media(prefers-reduced-motion:reduce){.guild-hall-stage,.guild-hall-background-image{transition:none!important}}
 
-/* Optical rails: primary 6px, standard 5px, supporting 3px. Corner artwork stays independent. */
-html:root{--guild-paper:#ffffff;--guild-border:#e3c7b4;--guild-red:#a53243;--guild-red-dark:#882638;--guild-cream:#ffffff;--guild-ink:#241b18;--guild-muted:#493126;--guild-gold:#91713f;--action-ink:#38251e;--action-fill:#ffffff;--action-edge:#d5bcae;--text-xs:13px;--text-sm:14px;--text-base:15px}
-html body{background-color:#fffdfa!important;color:var(--guild-ink)!important;font:15px/1.65 'Microsoft YaHei','PingFang SC',system-ui,sans-serif}
-html body::before{background:linear-gradient(115deg,#fffdfa,#ffffff 48%,#fffaf5)!important}
-html body::after{opacity:.035;filter:saturate(.3)}
+/* Warm paper, dark readable text and restrained red/gold. Existing optical frame calibration is retained. */
+html:root{--guild-paper:#fffdf8;--guild-border:#dfc8aa;--guild-red:#9e3145;--guild-red-dark:#7c2334;--guild-cream:#fff5e5;--guild-ink:#382b26;--guild-muted:#655044;--guild-gold:#95703b;--action-ink:#51392d;--action-fill:#fffdf8;--action-edge:#c6a887;--text-xs:13px;--text-sm:14px;--text-base:15px}
+html body{background-color:#fcfaf6!important;color:var(--guild-ink)!important;font:15px/1.65 'Microsoft YaHei','PingFang SC',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+html body::before{background:linear-gradient(115deg,#fcf8f1,#fffdf9 48%,#fbf6ed)!important}
+html body::after{opacity:.045;filter:saturate(.4)}
 html .card,html .guild-content>header{background-color:var(--guild-paper)!important;color:var(--guild-ink)!important}
-html :is(.top-total>div,.guild-day-brief,.today-expedition,.quick-intake,.guild-safety-panel,.form-grade-preview,.registration-preview,.stage-manager,.task-editor,.quest-note-panel,.happy-corner,.v4-section){background-color:#ffffff!important;border-color:var(--guild-border)!important;color:var(--guild-ink)!important}
-html :is(.card,dialog,.toolbar) :is(input:not([type=checkbox]):not([type=radio]),select,textarea){background-color:#ffffff!important;border-color:#d5bcae!important;color:var(--guild-ink)!important;accent-color:var(--guild-red)}
+html :is(.top-total>div,.guild-day-brief,.today-expedition,.quick-intake,.guild-safety-panel,.form-grade-preview,.registration-preview,.stage-manager,.task-editor,.quest-note-panel,.happy-corner,.v4-section){background-color:#fff8ed!important;border-color:var(--guild-border)!important;color:var(--guild-ink)!important}
+html :is(.card,dialog,.toolbar) :is(input:not([type=checkbox]):not([type=radio]),select,textarea){background-color:#ffffff!important;border-color:#bda68d!important;color:var(--guild-ink)!important;accent-color:var(--guild-red)}
 html :is(.card,dialog) :is(input[type=checkbox],input[type=radio],progress){accent-color:#a53243}
 html :is(.daily-progress-top,.growth-card) :is(.progress,progress){background:#ffebdf!important}
 html .daily-progress-top .bar{background:linear-gradient(90deg,#a53243,#d67d89)!important}
@@ -108,49 +111,56 @@ html .guild-content>header .top-total strong{font-size:19px!important;color:var(
 html .guild-content>header .daily-progress-top{grid-template-columns:minmax(0,1fr)!important;gap:5px;min-width:0}
 html .guild-content>header .daily-progress-top :is(#count,.progress){width:100%;min-width:0;white-space:normal!important;box-sizing:border-box}
 html #form.add :is(input,select,textarea),html #form #quickIntake input{font-size:15px!important;color:var(--guild-ink)!important;background:#ffffff!important;border-color:#d5bcae!important;min-height:42px}
-html input::placeholder,html textarea::placeholder{color:#493126!important;opacity:1}
+html input::placeholder,html textarea::placeholder{color:#756455!important;opacity:1}
 html #form #quickIntake>button,html #form.add>button,html #projects :is(.project-actions,.project-stage-actions) button,html #onceTasks.once-quests .once-actions button{font-size:14px!important;line-height:1.45!important;min-height:36px!important;padding:7px 11px!important;color:var(--action-ink,#493b30)!important;background:var(--action-fill,#f8f2e7)!important;border-color:var(--action-edge,#b49b7c)!important}
 html #form .form-grade-preview{font-size:14px!important;color:var(--guild-ink)!important;background:#ffffff!important}
-html #guildHallScene .guild-room-label{font-size:14px!important;font-weight:600;color:inherit!important}
-html #guildHallScene .guild-room-node{background:#ffffff!important;color:#38251e!important;border-color:#e3c7b4!important;box-shadow:inset 0 1px 0 #ffffff88,0 1px 2px #46352412!important}
-html #guildHallScene .guild-room-node.scene-mainHall{background:#ffffff!important}
-html #guildHallScene .guild-room-node[aria-pressed=true]{background:#fbeef0!important;color:#882638!important;border-color:#dcaeb8!important}
+html #guildHallScene .guild-room-label{font-size:13px!important;font-weight:600;color:inherit!important}
+html #guildHallScene .guild-room-node{background:linear-gradient(180deg,#fffefa,#fff8ed)!important;color:#49382e!important;border-color:#d5bc9d!important;box-shadow:inset 0 1px 0 #ffffffaa,0 1px 2px #46352410!important}
+html #guildHallScene .guild-room-node.scene-mainHall{background:linear-gradient(180deg,#fff2df,#fce9cf)!important}
+html #guildHallScene .guild-room-node[aria-pressed=true]{background:#f9e7e5!important;color:#82273b!important;border-color:#b77d79!important}
 html #guildHallScene>summary,html #guildHallScene .guild-floor-map{background-color:var(--guild-paper)!important;border-color:#e3c7b4!important}
+html #guildHallScene .guild-room-node:focus-visible{outline:2px solid #9e3145!important;outline-offset:2px!important;z-index:2}
+html #guildHallScene .guild-room-node.scene-mainHall[aria-pressed=true]{border-color:#a54b4d!important;box-shadow:inset 0 0 0 2px #ffffffaa,0 2px 6px #8e35421c!important}
+@media(max-width:480px){html #guildHallScene .guild-room-label{font-size:12px!important}html #guildHallScene .guild-room-node{grid-template-columns:18px minmax(0,1fr) auto;padding-inline:3px!important;gap:2px!important}html #guildHallScene .guild-room-icon{width:18px!important;height:18px!important;flex-basis:18px}}
 html #guildHallScene .guild-scene-heading{font-size:17px!important;color:var(--guild-ink)!important}
 html #guildHallScene :is(.guild-hall-encounter,.guild-hall-tip){font-size:14px!important;color:var(--guild-ink)!important}
 html .grade-S{color:#892e29!important}html .grade-A{color:#925023!important}html .grade-B{color:#23627f!important}html .grade-C{color:#655079!important}html .grade-D{color:#34685b!important}html .grade-E{color:#705b3d!important}html .grade-F{color:#6a6056!important}
-html :is(.guild-system-receipt,.guild-sync-toast,.growth-toast,.guild-celebration-copy){background:var(--guild-paper)!important;color:var(--guild-ink)!important;font-size:14px!important;line-height:1.65!important}
+html :is(.guild-system-receipt,.growth-toast,.guild-celebration-copy){background:var(--guild-paper)!important;color:var(--guild-ink)!important;font-size:14px!important;line-height:1.65!important}
 html .guild-system-receipt p{font-size:14px!important}
 html :is(.growth-card,#guildHallScene,.priority-board,#guildCompendium,.treasury,.card:has(#newTask),.card:has(#projects),.card:has(#upcomingList),.card:has(#backlogList),.card:has(#weeklyReview),#onceTasks,#cards>.card,main>header,.guild-content>header){position:relative;border:var(--guild-frame-space,12px) solid transparent!important;border-image:var(--guild-module-frame) var(--guild-frame-slice,18%) / var(--guild-frame-rails,var(--guild-frame-depth,18px)) / 0 stretch!important;border-radius:var(--guild-frame-depth,18px)!important;box-shadow:none;background-color:var(--guild-paper)!important;background-clip:padding-box!important;background-image:none!important}
 html :is(.growth-card,#guildHallScene,.card:has(#upcomingList),.card:has(#projects),.card:has(#newTask),.priority-board,#guildCompendium,.treasury){box-shadow:none!important}
 /* Deadline labels keep their own foreground instead of inheriting muted metadata. */
+html #upcomingList .deadline{background:#fff8ed!important;box-shadow:none!important;border-color:#dec5a5!important;font-weight:400!important}
+html #upcomingList .deadline>span:not(.rank-label,.completion-avatar){color:var(--guild-ink)!important;font-weight:500!important}
 html .card .urgency-badge.urgency-overdue{background:#fff0f2!important;color:#882638!important;border:1px solid #e1b8c1;font-size:13px!important;font-weight:700;line-height:1.5!important;opacity:1!important;text-shadow:none!important}
 html .card .urgency-badge:is(.urgency-today,.urgency-tomorrow,.urgency-soon){background:#fff5e7!important;color:#784712!important;border:1px solid #ddc39f;font-size:13px!important;font-weight:700;line-height:1.5!important;opacity:1!important;text-shadow:none!important}
 html .card :is(.urgency-overdue .quest-meta,.urgency-overdue .priority-link,.deadline.urgency-overdue>span){color:#882638!important;opacity:1!important}
 html :is(.growth-card,#guildHallScene,.priority-board,#guildCompendium,.treasury,.card:has(#newTask),.card:has(#projects),.card:has(#upcomingList),.card:has(#backlogList),.card:has(#weeklyReview),#onceTasks,#cards>.card,main>header,.guild-content>header)::after{content:''!important;display:block!important;position:absolute!important;inset:calc(-1 * var(--guild-frame-space,12px))!important;width:auto!important;height:auto!important;border:1px solid transparent;border-image:var(--guild-module-frame) var(--guild-frame-slice,18%) / var(--guild-frame-depth,18px) / 0 stretch;background:none!important;opacity:1!important;z-index:1!important;pointer-events:none!important;mask:linear-gradient(#000 0 0) top left/var(--guild-frame-depth,18px) var(--guild-frame-depth,18px) no-repeat,linear-gradient(#000 0 0) top right/var(--guild-frame-depth,18px) var(--guild-frame-depth,18px) no-repeat,linear-gradient(#000 0 0) bottom left/var(--guild-frame-depth,18px) var(--guild-frame-depth,18px) no-repeat,linear-gradient(#000 0 0) bottom right/var(--guild-frame-depth,18px) var(--guild-frame-depth,18px) no-repeat}
 html #guildHallScene{padding:10px!important}
-html .growth-card{--guild-module-frame:url('../素材/界面/边框/guild-frame-archive-v102.webp');--guild-frame-space:16px;--guild-frame-depth:24px;--guild-frame-rails:16px 16px 16px 16px}
-html #guildHallScene{--guild-module-frame:url('../素材/界面/边框/guild-frame-hall-v102.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html .card:has(#newTask){--guild-module-frame:url('../素材/界面/边框/guild-frame-quest-v102.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html .priority-board{--guild-module-frame:url('../素材/界面/边框/guild-frame-priority-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html #guildCompendium{--guild-module-frame:url('../素材/界面/边框/guild-frame-compendium-v104.webp');--guild-frame-space:10px;--guild-frame-depth:16px;--guild-frame-rails:10px 10px 10px 10px}
-html .card:has(#backlogList){--guild-module-frame:url('../素材/界面/边框/guild-frame-backlog-v104.webp');--guild-frame-space:10px;--guild-frame-depth:16px;--guild-frame-rails:10px 10px 10px 10px}
-html .card:has(#weeklyReview){--guild-module-frame:url('../素材/界面/边框/guild-frame-review-v104.webp');--guild-frame-space:10px;--guild-frame-depth:16px;--guild-frame-rails:10px 10px 10px 10px}
-html main>header,html .guild-content>header{--guild-module-frame:url('../素材/界面/边框/guild-frame-header-v104.webp');--guild-frame-space:16px;--guild-frame-depth:24px;--guild-frame-rails:16px 16px 16px 16px}
-html .card:has(#upcomingList){--guild-module-frame:url('../素材/界面/边框/guild-frame-seven-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html .card:has(#projects){--guild-module-frame:url('../素材/界面/边框/guild-frame-expedition-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html #onceTasks{--guild-module-frame:url('../素材/界面/边框/guild-frame-once-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html #cards>[data-module=learn]{--guild-module-frame:url('../素材/界面/边框/guild-frame-lucy-v105.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html #cards>[data-module=experiment]{--guild-module-frame:url('../素材/界面/边框/guild-frame-erza-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px}
-html #cards>[data-module=life]{--guild-module-frame:url('../素材/界面/边框/guild-frame-happy-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px}
-html #cards>[data-module=extra]{--guild-module-frame:url('../素材/界面/边框/guild-frame-gray-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px}
-html #cards>[data-module=focus]{--guild-module-frame:url('../素材/界面/边框/guild-frame-natsu-v105.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
-html #cards>[data-module=closing]{--guild-module-frame:url('../素材/界面/边框/guild-frame-mirajane-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px}
-html .treasury{--guild-module-frame:url('../素材/界面/边框/guild-frame-treasury-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px}
+html .growth-card{--guild-module-frame:url('../素材/界面/边框/guild-frame-archive-v102.webp');--guild-frame-space:16px;--guild-frame-depth:24px;--guild-frame-rails:16px 16px 16px 16px;--guild-module-accent:#95703b}
+html #guildHallScene{--guild-module-frame:url('../素材/界面/边框/guild-frame-hall-v102.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#9e3145}
+html .card:has(#newTask){--guild-module-frame:url('../素材/界面/边框/guild-frame-quest-v102.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#a54d42}
+html .priority-board{--guild-module-frame:url('../素材/界面/边框/guild-frame-priority-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#b9823e}
+html #guildCompendium{--guild-module-frame:url('../素材/界面/边框/guild-frame-compendium-v104.webp');--guild-frame-space:10px;--guild-frame-depth:16px;--guild-frame-rails:10px 10px 10px 10px;--guild-module-accent:#71859a}
+html .card:has(#backlogList){--guild-module-frame:url('../素材/界面/边框/guild-frame-backlog-v104.webp');--guild-frame-space:10px;--guild-frame-depth:16px;--guild-frame-rails:10px 10px 10px 10px;--guild-module-accent:#8c684f}
+html .card:has(#weeklyReview){--guild-module-frame:url('../素材/界面/边框/guild-frame-review-v104.webp');--guild-frame-space:10px;--guild-frame-depth:16px;--guild-frame-rails:10px 10px 10px 10px;--guild-module-accent:#718b79}
+html main>header,html .guild-content>header{--guild-module-frame:url('../素材/界面/边框/guild-frame-header-v104.webp');--guild-frame-space:16px;--guild-frame-depth:24px;--guild-frame-rails:16px 16px 16px 16px;--guild-module-accent:#9e3145}
+html .card:has(#upcomingList){--guild-module-frame:url('../素材/界面/边框/guild-frame-seven-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#bf7747}
+html .card:has(#projects){--guild-module-frame:url('../素材/界面/边框/guild-frame-expedition-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#6c8195}
+html #onceTasks{--guild-module-frame:url('../素材/界面/边框/guild-frame-once-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#a65b3a}
+html #cards>[data-module=learn]{--guild-module-frame:url('../素材/界面/边框/guild-frame-lucy-v105.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#b84e55}
+html #cards>[data-module=experiment]{--guild-module-frame:url('../素材/界面/边框/guild-frame-erza-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#a37a38}
+html #cards>[data-module=life]{--guild-module-frame:url('../素材/界面/边框/guild-frame-happy-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#769678}
+html #cards>[data-module=extra]{--guild-module-frame:url('../素材/界面/边框/guild-frame-gray-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#9582a0}
+html #cards>[data-module=focus]{--guild-module-frame:url('../素材/界面/边框/guild-frame-natsu-v105.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#a53243}
+html #cards>[data-module=closing]{--guild-module-frame:url('../素材/界面/边框/guild-frame-mirajane-v106.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-slice:32%;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#83927c}
+html .treasury{--guild-module-frame:url('../素材/界面/边框/guild-frame-treasury-v104.webp');--guild-frame-space:14px;--guild-frame-depth:20px;--guild-frame-rails:14px 14px 14px 14px;--guild-module-accent:#967344}
 html #guildWeeklyChronicle{--guild-module-frame:url('../素材/界面/边框/guild-frame-chronicle-v104.webp');box-sizing:border-box;width:100%;max-width:100%;border:10px solid transparent!important;border-image:var(--guild-module-frame) 18% / 10px / 0 stretch!important;border-radius:16px!important;box-shadow:none!important;background-clip:padding-box!important;background-image:none!important}
+html :is(.growth-card,#guildHallScene,.priority-board,#guildCompendium,.treasury,.card:has(#newTask),.card:has(#projects),.card:has(#upcomingList),.card:has(#backlogList),.card:has(#weeklyReview),#onceTasks,#cards>.card,main>header,.guild-content>header)>:is(h2,h3):first-child{padding-inline-start:9px;border-inline-start:3px solid var(--guild-module-accent,#bd8b45);color:#81283b}
+html #guildHallScene>summary{padding-inline-start:9px;border-inline-start:3px solid var(--guild-module-accent,#9e3145)}
 /* Nested content uses fine material edges, not another heavy outer frame. */
 html :is(.guild-sidebar,.guild-content) .card:not(.growth-card,#guildHallScene,.priority-board,#guildCompendium,.treasury,#guildWeeklyChronicle,#onceTasks):not(:has(#newTask,#projects,#upcomingList,#backlogList,#weeklyReview)):not(#cards>.card){border:1px solid #bfa57f;box-shadow:0 1px 4px #61402912}
-html .project-card{border:1px solid #bfa57f!important;border-left:3px solid #a55b3d!important;border-radius:6px!important;background:#ffffff!important}
+html .project-card{border:1px solid #bfa57f!important;border-left:3px solid #a55b3d!important;border-radius:6px!important;background:#fffaf2!important}
 html :is(.arcane-panel,.guild-warehouse-panel,.guild-dock-panel){border:2px solid #937048!important;box-shadow:inset 0 0 0 3px #ffffff,0 8px 25px #35231835!important;background-color:var(--guild-paper)!important}
 html .v4-section{border:1px solid #bfa57f!important;border-left:3px solid #ad8553!important;border-radius:5px!important}
 html :is(.v4-grid article,.spell-card,.reward-card,.guild-quote-results article){border:1px solid #cbb18a!important;border-radius:5px!important;background:#ffffff!important}
@@ -193,6 +203,17 @@ html .happy-shop-item{min-width:0;box-sizing:border-box}
 html .happy-shop-footer{flex:0 0 auto;min-width:0;box-sizing:border-box}
 html .happy-shop-footer span{flex:1 1 100%;overflow-wrap:break-word}
 html .happy-shop-footer button{white-space:nowrap}
+
+/* Small module marks sit beside plain headings; character portrait headings remain intact. */
+html :is(.card:has(#newTask),.card:has(#upcomingList),.card:has(#backlogList),.card:has(#weeklyReview),.card:has(#projects),.treasury)>h2::before{content:'';display:inline-block;width:23px;height:23px;margin-right:8px;vertical-align:-4px;background:var(--guild-heading-icon) center/contain no-repeat}
+html .card:has(#newTask){--guild-heading-icon:url('../素材/界面/功能图标/guild-ui-quill-v210.svg')}
+html :is(.card:has(#upcomingList),.card:has(#projects)){--guild-heading-icon:url('../素材/界面/功能图标/guild-ui-quest-v210.svg')}
+html .card:has(#backlogList){--guild-heading-icon:url('../素材/界面/功能图标/guild-ui-mail-v210.svg')}
+html .card:has(#weeklyReview){--guild-heading-icon:url('../素材/界面/功能图标/guild-ui-book-v210.svg')}
+html .treasury{--guild-heading-icon:url('../素材/界面/功能图标/guild-ui-ledger-v210.svg')}
+html dialog::backdrop{background:#382b2666}
+@media(max-width:650px){html :is(.quest-actions,.project-actions,.project-stage-actions,.once-actions) button{min-height:40px!important}html .card h2{font-size:17px!important}html .card input,html .card select,html .card textarea{font-size:16px!important}html .guild-literature-letter{top:auto!important;bottom:88px!important;right:12px!important;width:min(330px,calc(100vw - 24px))!important}}
+
 /* 日历固定入席，账本按需展开；委托操作整颗按钮换行。 */
 html .guild-calendar-column{flex:0 0 240px;width:240px;min-width:0;max-width:100%;display:grid;align-self:start;gap:6px}
 html #guildDockPanel.guild-calendar-embedded{position:static!important;inset:auto!important;z-index:auto!important;width:100%!important;max-height:none!important;box-shadow:none!important;border:1px solid #e4c9ae;border-radius:12px;background:#fffdf9}
@@ -207,7 +228,7 @@ html .guild-calendar-embedded .guild-dock-tasks{max-height:54px}
 html .guild-calendar-embedded .guild-dock-tasks-title{font-size:11px;margin:3px 0}
 html .guild-calendar-embedded .guild-dock-empty{margin:0;padding:3px 0}
 html .guild-calendar-embedded [hidden]{display:none!important}
-html .guild-ledger-fold{padding:6px 8px;background:#fff9f1;border:1px solid #ead3bc;border-radius:10px;font-size:12px}
+html .guild-ledger-fold{padding:6px 8px;background:#fff7ea;border:1px solid #d7bea0;border-radius:10px;font-size:12px}
 html .guild-ledger-fold summary{cursor:pointer;color:#713638;font-weight:600}
 html .guild-ledger-fold #topTotal{position:static!important;width:100%!important;max-width:100%;margin:10px 0 0;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px}
 html .guild-ledger-fold .level-badge{display:none!important}
@@ -232,11 +253,11 @@ html .gf-panel-heading{display:flex;align-items:center;justify-content:space-bet
 html .gf-panel-close{min-height:32px;width:32px;padding:0;border:1px solid #dfc4a5;border-radius:8px;background:#fff;color:#713943;font-size:22px}
 html .gf-tab{border:1px solid #dfc4a5;font:inherit;font-size:12px;cursor:pointer}
 html :is(.guild-ledger-fold>summary,#todayExpedition>summary,.gf-attendance>summary)::before{content:"";display:inline-block;width:22px;height:22px;margin-right:6px;vertical-align:middle;background:center/contain no-repeat}
-html .guild-ledger-fold>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-ledger-v205.svg')}
-html #todayExpedition>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-quest-v205.svg')}
-html .gf-attendance>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-stamp-v205.svg')}
-html .guild-calendar-embedded .guild-dock-head strong::before{content:"";display:inline-block;width:20px;height:20px;margin-right:6px;vertical-align:middle;background:url('../素材/界面/功能图标/guild-ui-ledger-v205.svg') center/contain no-repeat}
-html .stage-manager>h4::before{content:"";display:inline-block;width:22px;height:22px;margin-right:6px;vertical-align:middle;background:url('../素材/界面/功能图标/guild-ui-quest-v205.svg') center/contain no-repeat}
+html .guild-ledger-fold>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-ledger-v210.svg')}
+html #todayExpedition>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-quest-v210.svg')}
+html .gf-attendance>summary::before{background-image:url('../素材/界面/功能图标/guild-ui-stamp-v210.svg')}
+html .guild-calendar-embedded .guild-dock-head strong::before{content:"";display:inline-block;width:20px;height:20px;margin-right:6px;vertical-align:middle;background:url('../素材/界面/功能图标/guild-ui-ledger-v210.svg') center/contain no-repeat}
+html .stage-manager>h4::before{content:"";display:inline-block;width:22px;height:22px;margin-right:6px;vertical-align:middle;background:url('../素材/界面/功能图标/guild-ui-quest-v210.svg') center/contain no-repeat}
 @media(min-width:651px){
 html :is(.guild-content>header,main>header).guild-calendar-header{display:grid!important;grid-template-columns:minmax(0,1fr) 240px!important;grid-auto-flow:row;align-items:start!important;align-content:start!important;gap:7px 18px!important;min-height:0!important;height:auto!important;padding:14px 18px!important}
 html .guild-calendar-header>*{position:static!important;min-width:0;max-width:100%;margin:0!important}

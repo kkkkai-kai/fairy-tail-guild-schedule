@@ -156,7 +156,7 @@
       b.id = 'guildCloudBadge';
       b.style.cssText = 'position:fixed;right:14px;bottom:14px;z-index:99999;width:52px;height:52px;border-radius:50%;background:#fff8ee url(素材/界面/站点标识/guild-dock-icon-fast-v101.webp) center/76% no-repeat;border:3px solid #e7a362;box-shadow:0 3px 12px rgba(0,0,0,.22);transition:border-color .3s,box-shadow .3s;cursor:pointer;user-select:none;';
       b.title = '公会工具';
-      b.innerHTML = '<img src="素材/界面/功能图标/guild-ui-tools-v205.svg" alt="" width="30" height="30"><span>工具</span>';
+      b.innerHTML = '<img src="素材/界面/功能图标/guild-ui-tools-v210.svg" alt="" width="30" height="30"><span>工具</span>';
       b.setAttribute('role', 'button');
       b.tabIndex = 0;
       b.setAttribute('aria-label', '打开公会工具');
@@ -205,7 +205,7 @@
     items.forEach(function (it) {
       var d = document.createElement('button');
       d.type = 'button';
-      d.innerHTML = '<img src="素材/界面/功能图标/guild-ui-' + it.icon + '-v205.svg" width="24" height="24" alt=""><span>' + it.label + '</span>';
+      d.innerHTML = '<img src="素材/界面/功能图标/guild-ui-' + it.icon + '-v210.svg" width="24" height="24" alt=""><span>' + it.label + '</span>';
       d.onclick = function (e) { e.stopPropagation(); close(); it.action(); };
       m.appendChild(d);
     });
@@ -269,8 +269,8 @@
     if (previous) { previous.showModal(); return; }
     var dialog = document.createElement('dialog');
     dialog.id = 'guildMaintenanceBook';
-    dialog.style.cssText = 'max-width:440px;width:calc(100% - 40px);padding:22px;background:#fffaf2;color:#382b25;border:1px solid #b98555;border-radius:14px;';
-    var title = document.createElement('h3'); title.textContent = '公会维护簿'; dialog.appendChild(title);
+    dialog.style.cssText = 'max-width:440px;width:calc(100% - 40px);max-height:86vh;overflow:auto;padding:22px;background:#fffdf8;color:#392d28;border:1px solid #c9935c;border-radius:16px;box-shadow:0 16px 44px rgba(80,40,20,.2);font-family:"Microsoft YaHei",sans-serif;';
+    var title = document.createElement('h3'); title.textContent = '公会维护簿'; title.style.cssText = 'margin:0 0 14px;color:#a53243;font-size:19px;'; dialog.appendChild(title);
     var tasks = parseJson(localStorage.getItem('fairytail-tasks-v2'), []);
     var lines = [
       CONFIG.syncEnabled ? '在线同步：已启用' : '在线同步：已停用；当前记录仅保存在本机',
@@ -281,8 +281,8 @@
       '图片加载失败：' + Array.from(document.images).filter(function (img) { return img.getAttribute('src') && img.complete && !img.naturalWidth; }).length,
       '说明：待上传数按存储数据组统计，并非任务数；未检查真实跨端一致性、人物身份及历史恢复。'
     ];
-    lines.forEach(function (line) { var p = document.createElement('p'); p.textContent = line; p.style.cssText = 'line-height:1.6;overflow-wrap:anywhere'; dialog.appendChild(p); });
-    var close = document.createElement('button'); close.type = 'button'; close.textContent = '关闭'; close.onclick = function () { dialog.close(); }; dialog.appendChild(close);
+    lines.forEach(function (line) { var p = document.createElement('p'); p.textContent = line; p.style.cssText = 'margin:0 0 9px;color:#49382f;font-size:14px;line-height:1.65;overflow-wrap:anywhere'; dialog.appendChild(p); });
+    var close = document.createElement('button'); close.type = 'button'; close.textContent = '关闭'; close.style.cssText = 'min-height:38px;padding:7px 16px;border:1px solid #c9935c;border-radius:10px;background:#fff7eb;color:#713d2d;font:600 14px "Microsoft YaHei",sans-serif;cursor:pointer;'; close.onclick = function () { dialog.close(); }; dialog.appendChild(close);
     dialog.addEventListener('click', function (event) { if (event.target === dialog) { var rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
     dialog.addEventListener('close', function () { dialog.remove(); });
     document.body.appendChild(dialog); dialog.showModal();
@@ -764,17 +764,17 @@
     if (document.getElementById('guildConflictDialog')) return;
     var dlg = document.createElement('dialog');
     dlg.id = 'guildConflictDialog';
-    dlg.style.cssText = 'border:1px solid #d98a4a;border-radius:16px;background:#fffaf0;color:#4a3b48;padding:0;max-width:430px;width:92vw;box-shadow:0 18px 60px rgba(80,40,20,.35);font-family:"Microsoft YaHei",sans-serif;';
+    dlg.style.cssText = 'border:1px solid #c9935c;border-radius:16px;background:#fffdf8;color:#392d28;padding:0;max-width:500px;width:min(92vw,500px);max-height:88vh;overflow:auto;box-shadow:0 16px 44px rgba(80,40,20,.22);font-family:"Microsoft YaHei",sans-serif;';
     var wrap = document.createElement('div');
     wrap.style.cssText = 'padding:18px 20px;';
     var h = document.createElement('h3');
     h.style.cssText = 'margin:0 0 6px;color:#9d421b;font-size:18px;';
     h.textContent = '⚖ 议会·双卷核对';
     var sub = document.createElement('p');
-    sub.style.cssText = 'margin:0 0 12px;font-size:12px;color:#705768;line-height:1.6;';
+    sub.style.cssText = 'margin:0 0 12px;font-size:13px;color:#554138;line-height:1.65;';
     sub.textContent = '云端委托板副本与本地公会档案出现了分歧。请选择保留哪一边，避免记录丢失。';
     var grid = document.createElement('div');
-    grid.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;';
+    grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:10px;margin:12px 0;';
     var localRaw = localStorage.getItem('fairytail-tasks-v2');
     var localArr = parseJsonSafe(localRaw, []);
     var remoteArr = conflict.onlyRemote.length ? conflict.onlyRemote : [];
@@ -794,7 +794,7 @@
     ];
     sides.forEach(function (s) {
       var box = document.createElement('div');
-      box.style.cssText = 'border:1px solid #e5cdb5;border-radius:10px;background:#fff;padding:10px 12px;font-size:12px;line-height:1.7;';
+      box.style.cssText = 'border:1px solid #e5cdb5;border-radius:10px;background:#fff;padding:10px 12px;color:#49382f;font-size:13px;line-height:1.7;overflow-wrap:anywhere;';
       var t = document.createElement('strong');
       t.style.cssText = 'display:block;color:#9d421b;font-size:13px;';
       t.textContent = s.name;
@@ -812,7 +812,7 @@
       grid.appendChild(box);
     });
     var diffList = document.createElement('div');
-    diffList.style.cssText = 'margin:10px 0 12px;padding:9px 12px;border:1px dashed #d9a257;border-radius:9px;background:#fff6e6;font-size:12px;line-height:1.7;color:#705768;';
+    diffList.style.cssText = 'margin:10px 0 12px;padding:9px 12px;border:1px solid #d8b68d;border-radius:10px;background:#fff6e6;font-size:13px;line-height:1.7;color:#49382f;overflow-wrap:anywhere;';
     var diffHead = document.createElement('strong');
     diffHead.style.cssText = 'color:#9d421b;display:block;margin-bottom:3px;';
     diffHead.textContent = '差异明细（共 ' + conflict.diff + ' 项）';
@@ -830,7 +830,7 @@
       diffList.appendChild(d);
     });
     var note = document.createElement('p');
-    note.style.cssText = 'margin:0 0 12px;font-size:11px;color:#806574;line-height:1.6;';
+    note.style.cssText = 'margin:0 0 12px;font-size:12px;color:#554138;line-height:1.65;';
     note.textContent = '提示：建议优先选择「逐条取新」，两边都保留。选择前不会执行任何覆盖。';
     var actions = document.createElement('div');
     actions.style.cssText = 'display:flex;flex-direction:column;gap:8px;';
@@ -844,7 +844,7 @@
     }
     var base = 'border-radius:9px;padding:10px 12px;font-size:13px;cursor:pointer;font-family:inherit;';
     actions.appendChild(btn('以本地为准（云端将同步为本地的记录）',
-      base + 'border:1px solid #e5cdb5;background:#fff;color:#705768;',
+      base + 'border:1px solid #d2ad88;background:#fff;color:#49382f;',
       function () {
         CONFIG.syncKeys.forEach(function (k) { var v = localStorage.getItem(k); if (v !== null) markLocalWrite(k, Date.now() + 1000); });
         var entries = [];
@@ -855,13 +855,13 @@
         }
       }));
     actions.appendChild(btn('以云端为准（本地先备份再覆盖）',
-      base + 'border:1px solid #e5cdb5;background:#fff;color:#705768;',
+      base + 'border:1px solid #d2ad88;background:#fff;color:#49382f;',
       function () {
         backupLocalToStorage();
         applyRemote(remoteList);
       }));
     actions.appendChild(btn('逐条取新（两边都保留，推荐）',
-      base + 'border:1px solid #dd6130;background:#ef7135;color:#fff;font-weight:700;',
+      base + 'border:1px solid #8d2635;background:#a53243;color:#fff;font-weight:700;',
       function () {
         backupLocalToStorage();
         mergeWithRemote(remoteList);
