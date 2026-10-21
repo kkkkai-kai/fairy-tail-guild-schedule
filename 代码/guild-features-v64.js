@@ -497,7 +497,7 @@
     el.innerHTML = '<span>' + w.icon + '</span><span>公会冒险情境：<b>' + w.name + '</b></span><span class="muted" style="color:#8a6a50">' + w.jNote + '</span>';
     el.title = '既有冒险规则提示，不是闵行实况预报。';
     var masthead = document.querySelector('.guild-content > header');
-    if (masthead) masthead.appendChild(el); else document.body.appendChild(el);
+    if (masthead) (masthead.querySelector('.guild-today-column') || masthead).appendChild(el); else document.body.appendChild(el);
   }
   var activeTab = 'daily';
   var featureStateSignature = '';
@@ -553,7 +553,8 @@
     tabs.forEach(function (t) { t.classList.toggle('on', t.dataset.tab === activeTab); t.setAttribute('aria-pressed', String(t.dataset.tab === activeTab)); });
     var secs = p.querySelectorAll('.gf-sec');
     secs.forEach(function (s) { s.classList.toggle('on', s.dataset.sec === activeTab); });
-    try { renderDaily(); renderBoard(); renderBond(); renderMonthly(); renderTrial(); } catch (e) { console.warn('[guild-features] render panels failed', e); }
+    var renderers = { daily: renderDaily, board: renderBoard, bond: renderBond, monthly: renderMonthly, trial: renderTrial };
+    try { if (renderers[activeTab]) renderers[activeTab](); } catch (e) { console.warn('[guild-features] render panel failed: ' + activeTab, e); }
   }
   function renderDaily() {
     var a = attendance(), t = today(), w = weatherOf(t), evs = ensureDailyEvents();
@@ -675,7 +676,6 @@
       ensureBondBase();
       checkNewCompletions();
       featureStateSignature = currentFeatureSignature();
-      renderPanel();
     } catch (e) { console.error('[guild-features] start failed', e); }
     setInterval(function () {
       try { refreshFeatureState(false); } catch (e) { console.warn('[guild-features] periodic refresh failed', e); }

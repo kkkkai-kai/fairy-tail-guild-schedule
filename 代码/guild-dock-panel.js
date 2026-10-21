@@ -12,9 +12,19 @@
   var panel = null;
 
   function pad2(n) { return (n < 10 ? '0' : '') + n; }
+  function beijingDateParts(date) {
+    var parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit'
+    }).formatToParts(date || new Date());
+    return {
+      year: Number(parts.find(function (part) { return part.type === 'year'; }).value),
+      month: Number(parts.find(function (part) { return part.type === 'month'; }).value),
+      day: Number(parts.find(function (part) { return part.type === 'day'; }).value)
+    };
+  }
   function todayKey() {
-    var d = new Date();
-    return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+    var d = beijingDateParts();
+    return d.year + '-' + pad2(d.month) + '-' + pad2(d.day);
   }
   function keyOf(y, m, d) { return y + '-' + pad2(m + 1) + '-' + pad2(d); }
 
@@ -27,16 +37,23 @@
   }
   function doneOf(t) { return !!(t && t.done); }
   function gradeOf(t) { return (t && t.grade) || '-'; }
+  function dateKeyOf(value) {
+    var match = /^(\d{4})-(\d{2})-(\d{2})(?:$|[T ])/.exec(String(value || ''));
+    if (!match) return '';
+    var stamp = Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+    var d = new Date(stamp);
+    if (d.getUTCFullYear() !== Number(match[1]) || d.getUTCMonth() + 1 !== Number(match[2]) || d.getUTCDate() !== Number(match[3])) return '';
+    return match[1] + '-' + match[2] + '-' + match[3];
+  }
   function dueDateOf(t) {
     if (!t) return '';
-    if (t.due) return String(t.due).slice(0, 10);
-    if (t.dueTime) return String(t.dueTime).slice(0, 10);
-    return '';
+    return dateKeyOf(t.due) || dateKeyOf(t.dueTime);
   }
-  function statusText(t) {
+  function statusText(t, entry) {
     if (!t) return '';
     if (doneOf(t)) return '已完成';
-    if (t.startedAt || t.status === 'in_progress') return '远征进行中';
+    if (entry && entry.kind === 'stage') return t.startedAt || t.status === 'in_progress' ? '远征阶段进行中' : t.acceptedAt ? '远征待启程' : '远征待接取';
+    if (t.startedAt || t.status === 'in_progress') return t.type === 'project' ? '远征进行中' : '委托进行中';
     if (t.acceptedAt) return '已接取 · 待启程';
     return '待接取';
   }
@@ -52,15 +69,16 @@
     tasks.forEach(function (t) {
       if (!t || t.status === 'cancelled') return;
       var d = dueDateOf(t);
-      if (!d) return;
-      if (!map[d]) map[d] = { count: 0, overdue: 0 };
-      map[d].count++;
-      if (!doneOf(t) && d < today) map[d].overdue++;
+      if (d) {
+        if (!map[d]) map[d] = { count: 0, overdue: 0 };
+        map[d].count++;
+        if (!doneOf(t) && d < today) map[d].overdue++;
+      }
       // 多阶段任务的未完成阶段截止日
       var steps = t.steps || [];
       steps.forEach(function (s) {
-        if (!s || s.done || !s.due) return;
-        var sd = String(s.due).slice(0, 10);
+        if (!s || s.done) return;
+        var sd = dateKeyOf(s.due) || dateKeyOf(s.dueTime);
         if (!sd) return;
         if (!map[sd]) map[sd] = { count: 0, overdue: 0 };
         map[sd].count++;
@@ -78,8 +96,8 @@
       if (dueDateOf(t) === dateKey) out.push({ kind: 'quest', t: t });
       var steps = t.steps || [];
       steps.forEach(function (s, i) {
-        if (!s || s.done || !s.due) return;
-        if (String(s.due).slice(0, 10) === dateKey) out.push({ kind: 'stage', t: t, step: s, index: i });
+        if (!s || s.done) return;
+        if ((dateKeyOf(s.due) || dateKeyOf(s.dueTime)) === dateKey) out.push({ kind: 'stage', t: t, step: s, index: i });
       });
     });
     var today = todayKey();
@@ -90,8 +108,10 @@
       var ag = GRADE_ORDER[gradeOf(a.t)] != null ? GRADE_ORDER[gradeOf(a.t)] : 9;
       var bg = GRADE_ORDER[gradeOf(b.t)] != null ? GRADE_ORDER[gradeOf(b.t)] : 9;
       if (ag !== bg) return ag - bg;
-      var ao = (!doneOf(a.t) && a.t.due && String(a.t.due) < today) ? 1 : 0;
-      var bo = (!doneOf(b.t) && b.t.due && String(b.t.due) < today) ? 1 : 0;
+      var adue = a.kind === 'stage' ? (dateKeyOf(a.step.due) || dateKeyOf(a.step.dueTime)) : dueDateOf(a.t);
+      var bdue = b.kind === 'stage' ? (dateKeyOf(b.step.due) || dateKeyOf(b.step.dueTime)) : dueDateOf(b.t);
+      var ao = (!doneOf(a.t) && adue && adue < today) ? 1 : 0;
+      var bo = (!doneOf(b.t) && bdue && bdue < today) ? 1 : 0;
       if (ao !== bo) return bo - ao;
       return 0;
     });
@@ -221,9 +241,9 @@
 
   // ---------- 日历 ----------
   function initView() {
-    var now = new Date();
-    view.year = now.getFullYear();
-    view.month = now.getMonth();
+    var now = beijingDateParts();
+    view.year = now.year;
+    view.month = now.month - 1;
     view.selected = todayKey();
   }
   function shiftMonth(delta) {
@@ -329,7 +349,7 @@
       }
       var side = document.createElement('span');
       side.className = 'gd-side';
-      side.textContent = statusText(e.t);
+      side.textContent = statusText(e.t, e);
       row.append(g, mid, side);
       if(window.GuildCalendar){
         var reminder=window.GuildCalendar.button(e.t.id,e.kind==='stage'?e.step.id:'');
@@ -370,7 +390,7 @@
       var left = document.createElement('div');
       left.className = 'guild-today-column';
       Array.from(header.children).forEach(function (node) {
-        if (node.id !== 'guildWeatherBanner') left.appendChild(node);
+        left.appendChild(node);
       });
       header.prepend(left);
       header.appendChild(right);
