@@ -45,9 +45,6 @@
     ]
   };
 
-  if (window.GuildCloudAuth) window.GuildCloudAuth.configure({ url: CONFIG.supabaseUrl, key: CONFIG.supabaseAnonKey, redirect: 'https://kkkkai-kai.github.io/fairy-tail-guild-schedule/guild-login.html' });
-  if (document.documentElement.dataset.guildAuthCallback === 'true') return;
-
   var META_KEY = '__guild_cloud_meta__';
   var dirty = new Set();
   var PENDING_KEY = '__guild_cloud_pending_keys__';
@@ -175,13 +172,6 @@
       syncButton.onclick = function (event) { event.stopPropagation(); manualSync(); };
       top.insertAdjacentElement('afterend', syncButton);
     }
-    if (!document.getElementById('guildCloudLogin')) {
-      var loginButton = document.createElement('button'); loginButton.id = 'guildCloudLogin'; loginButton.type = 'button';
-      loginButton.style.cssText = 'margin:6px;min-height:36px;padding:6px 12px;';
-      loginButton.onclick = function () { if (window.GuildCloudAuth) window.GuildCloudAuth.show(); };
-      document.getElementById('guildSyncNow').insertAdjacentElement('afterend', loginButton);
-    }
-    document.getElementById('guildCloudLogin').textContent = authReady() ? '同步账户' : '登录同步';
     if (!window.__guildCloudState) setBadge('云端：连接中…', null);
   }
   // ---------- 融合菜单：单击右下角按钮弹出两个选项 ----------
@@ -252,9 +242,6 @@
     } else if (CONFIG.syncEnabled && ok===true) {
       text = lastConfirmedAt ? '本机已保存 · 云端写入已确认' : '云端连接正常 · 无待上传记录';
     }
-    if (CONFIG.syncEnabled && cloudBlocked) { text = cloudBlocked; ok = null; }
-    if (CONFIG.syncEnabled && !authReady()) { text = '本机已保存 · 请登录后同步'; ok = null; }
-    var loginButton = document.getElementById('guildCloudLogin'); if (loginButton) loginButton.textContent = authReady() ? '同步账户' : '登录同步';
     window.__guildCloudState = { text: text, ok: ok, pendingCount: pending.size, activeWrites: activeWrites, lastConfirmedAt: lastConfirmedAt, lastPullAt: lastPullAt, otherDeviceConfirmed: null };
     var els = badgeEls();
     var top = els.top, floater = els.floater;
@@ -332,12 +319,11 @@
     persistPending();
     online = false;
     setBadge('云端：离线（本地数据待同步）', false);
-    if (authReady() && !cloudBlocked && navigator.onLine !== false) setTimeout(push, 3500 + Math.floor(Math.random() * 3000));
+    if (navigator.onLine !== false) setTimeout(push, 3500 + Math.floor(Math.random() * 3000));
   }
 
   function push() {
     if (!dirty.size) return;
-    if (!authReady()) { setBadge('本机已保存 · 请登录后同步', null); return Promise.resolve(false); }
     if (navigator.onLine === false) {
       online = false;
       setBadge('云端：离线（本地数据待同步）', false);
@@ -388,31 +374,9 @@
 
   // ---------- 云端通道（Supabase REST API） ----------
   function supaHeaders(extra) {
-    var h = { 'Content-Type': 'application/json', 'Prefer': 'return=representation' };
+    var h = { 'apikey': CONFIG.supabaseAnonKey, 'Authorization': 'Bearer ' + CONFIG.supabaseAnonKey, 'Content-Type': 'application/json', 'Prefer': 'return=representation' };
     if (extra) Object.keys(extra).forEach(function (k) { h[k] = extra[k]; });
     return h;
-  }
-  function authReady() { return Boolean(window.GuildCloudAuth && window.GuildCloudAuth.hasSession()); }
-  var cloudOwnerId = '', ownerFlight = null, cloudBlocked = '';
-  function authorizedFetch(url, options) {
-    var auth = window.GuildCloudAuth;
-    if (!authReady()) { var absent = new Error('请先登录公会；本机存档已保留'); absent.authRequired = true; return Promise.reject(absent); }
-    var userId = auth.userId();
-    if (cloudOwnerId === userId) return auth.fetch(url, options);
-    if (!ownerFlight) {
-      ownerFlight = auth.fetch(supaRestUrl('select=owner_id&limit=1')).then(function (response) {
-        if (!response.ok) throw new Error('邮箱已登录，云存档授权尚未完成；本机记录已保留');
-        return response.json();
-      }).then(function (rows) {
-        if (!Array.isArray(rows) || !rows.length || rows[0].owner_id !== userId) throw new Error('此账户尚未获准访问旧公会存档');
-        cloudOwnerId = userId;
-      }).catch(function (error) { cloudBlocked = error.message; error.authRequired = true; throw error; })
-        .finally(function () { ownerFlight = null; });
-    }
-    return ownerFlight.then(function () {
-      if (auth.userId() !== userId) throw new Error('同步账户已改变，请重试');
-      return auth.fetch(url, options);
-    });
   }
   function supaRestUrl(params) {
     var url = CONFIG.supabaseUrl + '/rest/v1/' + CONFIG.supabaseTable;
@@ -436,7 +400,7 @@
     activeWrites++;
     setBadge('本机已保存 · 正在确认云端写入', null);
     var rows = entries.map(function (e) { return { key: e.key, value: e.value, updated_at: Number(e.updatedAt) || Date.now() }; });
-    return authorizedFetch(supaRestUrl(), {
+    return fetch(supaRestUrl(), {
       method: 'POST',
       headers: supaHeaders({ 'Prefer': 'return=representation,resolution=merge-duplicates' }),
       body: JSON.stringify(rows)
@@ -502,7 +466,7 @@
     return supaWriteQueue;
   }
   function supaPull() {
-    return authorizedFetch(supaRestUrl('select=key,value,updated_at&updated_at=gte.0'), {
+    return fetch(supaRestUrl('select=key,value,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
     }).then(function (r) { return checkedJson(r, '云端读取'); })
@@ -515,7 +479,7 @@
 
   // ---------- 方案 B：轻量时间戳探测（~1KB，替代全量轮询） ----------
   function supaMeta() {
-    return authorizedFetch(supaRestUrl('select=key,updated_at&updated_at=gte.0'), {
+    return fetch(supaRestUrl('select=key,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
     }).then(function (r) { return checkedJson(r, '云端元数据'); })
@@ -540,7 +504,6 @@
   // 只共享当前轻量读取；没有更新也会产生一次meta请求，不拉取业务正文。
   var lazyPullFlight = null;
   function pullLazy() {
-    if (!authReady() || cloudBlocked) return Promise.resolve([]);
     if (lazyPullFlight) return lazyPullFlight;
     lazyPullFlight = pullLazyAttempt(0).finally(function () { lazyPullFlight = null; });
     return lazyPullFlight;
@@ -558,7 +521,6 @@
       setBadge('云端：已同步', true);
       return [];
     }).catch(function (error) {
-      if (!authReady() || error.authRequired) throw error;
       if (retryCount < 1) {
         // 首次失败：3 秒后重试一次，避免手机网络波动误判离线
         return new Promise(function (resolve) { setTimeout(resolve, 3000); })
@@ -1077,8 +1039,6 @@
   var manualSyncFlight = null;
   function manualSync() {
     if (manualSyncFlight) return manualSyncFlight;
-    if (!authReady()) { setBadge('本机已保存 · 请登录后同步', null); if (window.GuildCloudAuth) window.GuildCloudAuth.show(); return Promise.resolve(false); }
-    cloudBlocked = '';
     if (!CONFIG.syncEnabled || navigator.onLine === false) {
       setBadge('本机已保存 · 当前无法联网同步', false); return Promise.resolve(false);
     }
@@ -1106,7 +1066,6 @@
   // ---------- 全量推送（首次上云/启动兜底） ----------
   var _fullPushTimeout = null;
   function fullPush() {
-    if (!authReady()) return Promise.resolve(false);
     // 全量推送走 supaWriteQueue 串行化，避免与增量 supaPush 并发交错
     var run = function () {
     var entries = [];
@@ -1181,36 +1140,28 @@
       return;
     }
     installHook();
-    window.addEventListener('guild-auth-change', function () {
-      cloudOwnerId = ''; ownerFlight = null; cloudBlocked = ''; online = false;
-      setBadge('本机已保存 · 登录状态已更新', null);
-      if (authReady()) manualSync();
-    });
     // 打开页面：立即全量拉一次，再补传确实较新的本地 key。
     // 读取失败时保持纯本地模式，绝不把旧设备整包覆盖到云端。
     setTimeout(function () {
-      if (!authReady()) { setBadge('本机已保存 · 请登录后同步', null); return; }
       pull().then(fullPush).catch(function (e) { console.warn('[guild-cloud] startup sync failed', e); })
         .finally(function () { if (dirty.size) schedulePush(); });
     }, 300);
     // 前台10秒轻量检查，仅页面可见时执行，且先走meta探测，
     // 云端确有更新才全量拉取；不可见时完全停止轮询。
     setInterval(function () {
-      if (!authReady() || document.hidden || navigator.onLine === false) return;
+      if (document.hidden || navigator.onLine === false) return;
       pullLazy().catch(function (e) { console.warn('[guild-cloud] polling pull failed', e); });
     }, PULL_INTERVAL);
     window.addEventListener('online', function () {
-      if (!authReady()) return;
       if (dirty.size) schedulePush();
       if (!document.hidden) pullLazy().catch(function (e) { console.warn('[guild-cloud] reconnect pull failed', e); });
     });
     window.addEventListener('focus', function () {
-      if (authReady() && !document.hidden && navigator.onLine !== false) {
+      if (!document.hidden && navigator.onLine !== false) {
         pullLazy().catch(function (e) { console.warn('[guild-cloud] focus pull failed', e); });
       }
     });
     document.addEventListener('visibilitychange', function () {
-      if (!authReady()) return;
       if (document.hidden) {
         // 切后台/离开页面前：立即把本地待同步数据推送出去，避免最后一步操作滞留本机
         if (dirty.size) push();
