@@ -237,18 +237,24 @@
       text = '本机已保存 · 云端尚有待确认数据';
       ok = null;
     }
-    window.__guildCloudState = { text: text, ok: ok };
+    if (CONFIG.syncEnabled && pending.size) {
+      text = '本机已保存 · '+pending.size+'组记录待云端确认'+(ok===false?'（连接未成功）':'');
+    } else if (CONFIG.syncEnabled && ok===true) {
+      text = lastConfirmedAt ? '本机已保存 · 云端写入已确认' : '云端连接正常 · 无待上传记录';
+    }
+    window.__guildCloudState = { text: text, ok: ok, pendingCount: pending.size, activeWrites: activeWrites, lastConfirmedAt: lastConfirmedAt, lastPullAt: lastPullAt, otherDeviceConfirmed: null };
     var els = badgeEls();
     var top = els.top, floater = els.floater;
     if (top) {
       var label = top.querySelector('.label-text');
-      if (label) label.textContent = text;
+      if (label && label.textContent!==text) label.textContent = text;
+      top.setAttribute('role','status');top.setAttribute('aria-live','polite');
       var cls = 'guild-connection-badge';
       if (ok === true) cls += ' online';
       else if (ok === false) cls += ' offline';
       else cls += ' syncing';
       top.className = cls;
-      top.title = '单击=打开菜单；双击=切换自动刷新';
+      top.title = '单击打开工具；双击切换自动刷新。'+(lastConfirmedAt?'本次访问上次写入确认：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'}).format(new Date(lastConfirmedAt))+'。':'')+'云端确认不代表另一台设备已拉取。';
     }
     if (floater) {
       floater.style.borderColor = ok === true ? '#4caf50' : ok === false ? '#d9603b' : '#e7a362';
@@ -672,6 +678,20 @@
     merged.forEach(function (task, taskIndex) {
       var localTask = localMap[task.id], remoteTask = remoteMap[task.id];
       if (!localTask || !remoteTask) return;
+      // 接续独立于整条任务的新旧：旧设备改截止不能吞掉新接续，保留可对照版本。
+      var progressVersions = [], progressSeen = new Set();
+      [localTask.workProgress, remoteTask.workProgress].concat(localTask.workProgressVersions || [], remoteTask.workProgressVersions || []).forEach(function (record) {
+        if (!record || typeof record !== 'object' || Array.isArray(record)) return;
+        var identity = JSON.stringify([record.updatedAt || '', record.last || '', record.next || '', record.references || '']);
+        if (!progressSeen.has(identity)) { progressSeen.add(identity); progressVersions.push(record); }
+      });
+      if (progressVersions.length) {
+        progressVersions.sort(function (a, b) { return (Date.parse(b.updatedAt) || 0) - (Date.parse(a.updatedAt) || 0) || JSON.stringify(a).localeCompare(JSON.stringify(b)); });
+        task = Object.assign({}, task, {workProgress: progressVersions[0]});
+        if (progressVersions.length > 1) task.workProgressVersions = progressVersions.slice(1);
+        else delete task.workProgressVersions;
+        merged[taskIndex] = task;
+      }
       var preferredTask = preferLocal ? localTask : remoteTask;
       var otherTask = preferLocal ? remoteTask : localTask;
       var preferredSteps = Array.isArray(preferredTask.steps) ? preferredTask.steps : [];

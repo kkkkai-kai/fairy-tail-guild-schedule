@@ -40,6 +40,7 @@
   const body=dialog.querySelector('.gdj-body');body.replaceChildren();resolveParents=null;const key=mode==='reports'?core.week(date):date,s=store(),saved=s[mode][key],d=json(DRAFTS)[mode+':'+date];baseRevision=d?d.baseRevision:saved?.revisionId||null;
   const entry=d?.record||saved||{};const bar=el('div',null,'gdj-toolbar'),input=el('input');input.type='date';input.max=todayDate();input.value=date;input.setAttribute('aria-label','记录日期');input.onchange=()=>{if(!core.validDate(input.value)||input.value>todayDate()){input.value=date;return}if(!draft()){input.value=date;return}date=input.value;load()};
   bar.append(input,button(mode==='entries'?'查看本周研究周报':'返回当日手记',()=>{if(!draft())return;mode=mode==='entries'?'reports':'entries';load()}));body.append(bar);
+  const privacy=el('details');privacy.className='gdj-privacy';privacy.append(el('summary','保存与隐私'),el('p','自动暂存的草稿只在本设备。主动保存的手记参与现有公会云同步，内容会进入你配置的云端存储；不同设备的同日修改保留版本和冲突副本。云端确认不代表另一台设备已经读取。'));body.append(privacy);
   if(saved?.conflicts?.length){const conflict=el('details');conflict.append(el('summary','另有 '+saved.conflicts.length+' 份同日修改，副本均已保留'));for(const id of [saved.revisionId,...saved.conflicts]){const r=s.revisions[id],pre=el('pre',JSON.stringify(r,null,2));conflict.append(el('strong',r.updatedAt),pre)}conflict.append(button('已对照以上副本，以当前编辑内容合并保存',()=>{resolveParents=[saved.revisionId,...saved.conflicts];if(save())load()}));body.append(conflict)}
   if(mode==='reports'){
    body.append(el('p','根据本周已保存手记和真实完成账本整理；结果与结论由你核对补充。'));

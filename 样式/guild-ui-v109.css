@@ -255,6 +255,21 @@ html .happy-shop-footer span{flex:1 1 100%;overflow-wrap:break-word}
 html .happy-shop-footer button{white-space:nowrap}
 
 /* Small module marks sit beside plain headings; character portrait headings remain intact. */
+html .task-continuity{margin:8px 0 4px;min-width:0;color:var(--guild-ink);font-size:13px;line-height:1.6}
+html .task-continuity>summary{padding:6px 8px 6px 30px;border:1px solid #e5d7c3;border-radius:6px;background:#fffaf1 url('../素材/界面/功能图标/guild-ui-book-v210.svg') 8px center/15px no-repeat;cursor:pointer;overflow-wrap:break-word;font-weight:500}
+html .task-continuity-form{display:grid;gap:8px;padding:10px 0;min-width:0}
+html .task-continuity-form label{display:grid;gap:4px;font-size:13px;color:var(--guild-muted)}
+html .task-continuity-form textarea{width:100%;min-width:0;box-sizing:border-box;resize:vertical}
+html .task-continuity-form button{justify-self:start;font-size:13px!important}
+html .task-continuity-status{font-size:13px!important;color:var(--guild-muted);margin:0}
+html .project-card>.task-continuity{flex-basis:100%}
+html .expedition-reason{display:block;text-align:left;font-size:12px!important;font-weight:400;color:var(--guild-muted)!important;margin-top:3px;white-space:normal}
+html .expedition-waiting{grid-column:1/-1;width:100%;padding:7px 0;border-top:1px solid var(--guild-border);font-size:13px}
+html .expedition-waiting>summary{padding-left:23px;background:url('../素材/界面/功能图标/guild-ui-mail-v210.svg') left center/16px no-repeat}
+html .expedition-waiting>button{display:block;text-align:left;max-width:100%;margin:6px 0;font-size:13px!important}
+html .gmp-memories{padding:10px 0 0;border-top:1px solid var(--guild-border);font-size:13px;color:var(--guild-ink)}
+html .gmp-memories p{margin:6px 0;line-height:1.6}
+@media(prefers-reduced-motion:reduce){html .card,html .task-continuity,html .guild-hall-member,html .nook-exceed,html .guild-praise{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 html :is(.card:has(#newTask),.card:has(#upcomingList),.card:has(#backlogList),.card:has(#weeklyReview),.card:has(#projects),.treasury)>h2::before{content:'';display:inline-block;width:23px;height:23px;margin-right:8px;vertical-align:-4px;background:var(--guild-heading-icon) center/contain no-repeat}
 html .card:has(#newTask){--guild-heading-icon:url('../素材/界面/手账插画/guild3-dispatch-v217.webp')}
 html :is(.card:has(#upcomingList),.card:has(#projects)){--guild-heading-icon:url('../素材/界面/功能图标/guild-ui-quest-v210.svg')}
