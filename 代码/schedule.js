@@ -175,7 +175,13 @@ function recordGuildLedger({ledgerKey,action,taskId='',stageId='',jDelta=0,expDe
  const entry={id:'ledger-'+Date.now()+'-'+stableRewardSeed([ledgerKey,action]),action,taskId,stageId,ledgerKey,jDelta:Number(jDelta)||0,expDelta:Number(expDelta)||0,contributionDelta:Number(contributionDelta)||0,createdAt:nowShanghai(),reversedAt:'',active};ledger.push(entry);return entry
 }
 migrateGuildStorage();normalizeTaskRecords();
-function totals(){const earnedProjects=tasks.filter(t=>t.type==='project').reduce((n,t)=>n+t.steps.filter(s=>s.done).reduce((a,s)=>a+(Number(s.settledJ)||Number(s.reward)||0),0),0),income=Object.values(data).reduce((n,s)=>n+earned(s),0)+earnedProjects+tasks.filter(t=>t.type==='once'&&t.done&&!t.legacyCounted).reduce((n,t)=>n+(Number(t.settledJ)||Number(t.reward)||0),0),spent=wallet.redemptions.reduce((n,r)=>n+Number(r.j||0),0);const _bonus=(wallet.bonus||[]).reduce((n,b)=>n+Number(b.j||0),0);return{income:Number(income)||0,spent:Number(spent)||0,balance:Number((Number(income)||0)-(Number(spent)||0)+_bonus)||0}}
+function totals(){
+ const earnedProjects=tasks.filter(t=>t.type==='project').reduce((n,t)=>n+t.steps.filter(s=>s.done).reduce((a,s)=>a+(Number(s.settledJ)||Number(s.reward)||0),0),0);
+ let readingJ=0;try{readingJ=globalThis.GuildReadingCore?.rewardTotals(JSON.parse(localStorage.getItem(GuildReadingCore.KEY)||'null')).j||0}catch{}
+ const income=Object.values(data).reduce((n,s)=>n+earned(s),0)+earnedProjects+tasks.filter(t=>t.type==='once'&&t.done&&!t.legacyCounted).reduce((n,t)=>n+(Number(t.settledJ)||Number(t.reward)||0),0)+readingJ,spent=wallet.redemptions.reduce((n,r)=>n+Number(r.j||0),0),bonus=(wallet.bonus||[]).reduce((n,b)=>n+Number(b.j||0),0);
+ return{income:Number(income)||0,spent:Number(spent)||0,balance:Number(income-spent+bonus)||0};
+}
+document.addEventListener('guild-reading-changed',()=>{all()});
 function select(v){const e=document.createElement('select'),current=Number(v);prices.forEach((p,i)=>e.add(new Option(`${p} J · 酬劳`,p)));if(Number.isFinite(current)&&!prices.includes(current))e.add(new Option(`${current} J · 酬劳`,current));e.value=String(v);return e}
 const QUEST_DISPLAY_CAP=3,QUEST_PANEL_KEYS=['upcoming','today','priority','backlog'];let questPanelAllowed=Object.fromEntries(QUEST_PANEL_KEYS.map(k=>[k,new Set()]));
 function detailOnceCandidate(t){return t.type==='once'&&Boolean(t.acceptedAt)&&!done(t)&&t.status!=='cancelled'}

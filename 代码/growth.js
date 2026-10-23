@@ -33,7 +33,8 @@
       }
     }
     for(const [key,e]of Object.entries(g.entries))if(!seen.has(key))e.active=false;
-    const total=Object.values(g.entries).reduce((n,e)=>n+(e.active?(e.levelExp??e.exp):0),0),result=level(total);
+    let readingExp=0;try{readingExp=root.GuildReadingCore?.rewardTotals(JSON.parse(root.localStorage?.getItem(root.GuildReadingCore.KEY)||'null')).exp||0}catch{}
+    const total=Object.values(g.entries).reduce((n,e)=>n+(e.active?(e.levelExp??e.exp):0),0)+readingExp,result=level(total);
     if(!g.migrationComplete){g.highestNotified=result.level;g.migrationComplete=true;g.migratedAt=new Date().toISOString()}
     return {growth:g,...result};
   }
