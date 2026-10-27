@@ -47,6 +47,8 @@
   };
 
   var META_KEY = '__guild_cloud_meta__';
+  // 云端接收/合并不得走用户写入钩子，否则会制造待上传回声。
+  var nativeStorageSet = Storage.prototype.setItem;
   var dirty = new Set();
   var PENDING_KEY = '__guild_cloud_pending_keys__';
   var pending = new Set();
@@ -397,16 +399,32 @@
       catch (e) { throw new Error(label + '返回了无效 JSON'); }
     });
   }
+  function cloudJson(url, options, label) {
+    var controller = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer;
+    options = Object.assign({}, options);
+    if (controller) options.signal = controller.signal;
+    return Promise.race([
+      Promise.resolve().then(function () { return fetch(url, options); })
+        .then(function (response) { return checkedJson(response, label); }),
+      new Promise(function (_, reject) {
+        timer = setTimeout(function () {
+          if (controller) controller.abort();
+          reject(new Error(label + '超时，保留本地记录等待重试'));
+        }, 12000);
+      })
+    ]).finally(function () { clearTimeout(timer); });
+  }
   function supaPushNow(entries) {
     if (!entries || !entries.length) return Promise.resolve({ list: [] });
     activeWrites++;
     setBadge('本机已保存 · 正在确认云端写入', null);
     var rows = entries.map(function (e) { return { key: e.key, value: e.value, updated_at: Number(e.updatedAt) || Date.now() }; });
-    return fetch(supaRestUrl(), {
+    return cloudJson(supaRestUrl(), {
       method: 'POST',
       headers: supaHeaders({ 'Prefer': 'return=representation,resolution=merge-duplicates' }),
       body: JSON.stringify(rows)
-    }).then(function (r) { return checkedJson(r, '云端写入'); })
+    }, '云端写入')
       .then(function () { return supaPull(); })
       .then(function (list) {
         entries.forEach(function (entry) {
@@ -457,7 +475,7 @@
           }
           entry.value = mergedRaw;
           entry.updatedAt = Math.max(Date.now(), Number(entry.updatedAt) || 0, (Number(remote.updatedAt) || 0) + 1);
-          Storage.prototype.setItem.call(localStorage, entry.key, mergedRaw);
+          nativeStorageSet.call(localStorage, entry.key, mergedRaw);
           markLocalWrite(entry.key, entry.updatedAt);
         });
         if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
@@ -468,10 +486,10 @@
     return supaWriteQueue;
   }
   function supaPull() {
-    return fetch(supaRestUrl('select=key,value,updated_at&updated_at=gte.0'), {
+    return cloudJson(supaRestUrl('select=key,value,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
-    }).then(function (r) { return checkedJson(r, '云端读取'); })
+    }, '云端读取')
       .then(function (rows) {
         return (Array.isArray(rows) ? rows : []).map(function (x) {
           return { key: x.key, value: x.value, updatedAt: Number(x.updated_at) || 0 };
@@ -481,10 +499,10 @@
 
   // ---------- 方案 B：轻量时间戳探测（~1KB，替代全量轮询） ----------
   function supaMeta() {
-    return fetch(supaRestUrl('select=key,updated_at&updated_at=gte.0'), {
+    return cloudJson(supaRestUrl('select=key,updated_at&updated_at=gte.0'), {
       headers: supaHeaders(),
       cache: 'no-store'
-    }).then(function (r) { return checkedJson(r, '云端元数据'); })
+    }, '云端元数据')
       .then(function (rows) {
         var meta = {};
         (Array.isArray(rows) ? rows : []).forEach(function (x) {
@@ -937,7 +955,7 @@
   }
   function applyRemote(list) {
     var changed = false, taskChanged = false;
-    var origSet = Storage.prototype.setItem;
+    var origSet = nativeStorageSet;
     (list || []).forEach(function (r) {
       if (!CONFIG.syncKeys.indexOf) return;
       if (CONFIG.syncKeys.indexOf(r.key) === -1) return;
@@ -997,15 +1015,16 @@
         origSet.call(localStorage, r.key, nextValue);
         markLocalWrite(r.key, Number(r.updatedAt));
         changed = true;
-        if (r.key === 'fairytail-tasks-v2') taskChanged = true;
+        if (['fairytail-tasks-v2', 'fairytail-schedule-v1', 'fairytail-growth-v1', 'fairytail-wallet-v1', 'fairytail-warehouse-v1'].indexOf(r.key) !== -1) taskChanged = true;
       }
     });
     online = true;
+    lastPullAt = Date.now();
     setBadge('云端：已同步', true);
     if (changed) {
       if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
       var autoRefresh = (localStorage.getItem('guildAutoRefresh') || 'on') !== 'off';
-      // 只有委托数据变化才排队静默重绘，输入期间暂缓但不丢失刷新请求；
+      // 委托及完成/奖励记录变化都排队静默重绘，输入期间暂缓但不丢失请求；
       // 其他数据（场景/天气/档案等）变化只提示，避免每次加载微变导致设备间无限循环刷屏。
       if (taskChanged) {
         if (autoRefresh) {
@@ -1067,7 +1086,6 @@
   }
   window.guildSyncNow = manualSync;
   // ---------- 全量推送（首次上云/启动兜底） ----------
-  var _fullPushTimeout = null;
   function fullPush() {
     // 全量推送走 supaWriteQueue 串行化，避免与增量 supaPush 并发交错
     var run = function () {
@@ -1103,7 +1121,7 @@
           var pMerged = mergeTaskArrays(pLocal, pRemote, pending.has(entry.key) || entry.updatedAt >= rT);
           var mergedRaw = JSON.stringify(pMerged);
           if (mergedRaw !== entry.value) {
-            Storage.prototype.setItem.call(localStorage, entry.key, mergedRaw);
+            nativeStorageSet.call(localStorage, entry.key, mergedRaw);
           }
           if (!remote || mergedRaw !== remote.value) {
             var nextTime = Math.max(Date.now(), entry.updatedAt || 0, rT + 1);
@@ -1127,9 +1145,8 @@
 
     return Promise.resolve();
     };
-    // 超时保护：15 秒后强制解锁
+    // 每个网络请求由 cloudJson 限时；串行队列在成功和失败后均可继续。
     supaWriteQueue = supaWriteQueue.then(run, run);
-    _fullPushTimeout = setTimeout(function () { _fullPushTimeout = null; }, 15000);
     return supaWriteQueue;
   }
 
@@ -1143,6 +1160,17 @@
       return;
     }
     installHook();
+    // 另一标签页的真实操作先重载共享存档，避免本页内存仍停留在旧状态。
+    window.addEventListener('storage', function (event) {
+      if (event.storageArea !== localStorage || CONFIG.syncKeys.indexOf(event.key) === -1) return;
+      if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
+      scheduleRemoteRefresh();
+    });
+    window.addEventListener('pageshow', function (event) {
+      if (!event.persisted || navigator.onLine === false) return;
+      if (dirty.size) schedulePush();
+      pullLazy().catch(function (e) { console.warn('[guild-cloud] resume pull failed', e); });
+    });
     // 打开页面：立即全量拉一次，再补传确实较新的本地 key。
     // 读取失败时保持纯本地模式，绝不把旧设备整包覆盖到云端。
     setTimeout(function () {
