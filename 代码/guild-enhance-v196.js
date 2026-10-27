@@ -42,8 +42,8 @@
   var FESTIVALS = [
     { md: '01-01', name: '岁首祭', desc: '新年第一缕阳光照进公会大厅。', mult: 1.2, type: 'any', tag: '新年' },
     { md: '03-21', name: '花见之日', desc: '春分花见，书页与花瓣一起翻飞。', bonus: 50, type: 'write', tag: '花见' },
-    { md: '05-17', name: '火龙祭', desc: '纳兹生日庆典，火焰魔法点亮夜空。', mult: 1.3, type: 'high', tag: '庆典' },
-    { md: '07-07', name: '星灵祭', desc: '七夕之夜，星灵之门缓缓敞开。', bond: 20, type: 'any', tag: '星灵' },
+    { md: '05-17', name: '火龙主题日', desc: '公会自定纪念活动：以火龙主题为今天的努力助兴，不作为原著生日设定。', mult: 1.3, type: 'high', tag: '庆典' },
+    { md: '07-07', name: '星灵主题日', desc: '公会自定纪念活动：七月七日的星灵主题夜，不代表农历七夕。', bond: 20, type: 'any', tag: '星灵' },
     { md: '08-15', name: '花火大会', desc: '仲夏夜花火，公会全员在码头相聚。', mult: 1.5, type: 'any', tag: '花火' },
     { md: '10-31', name: '妖尾变装夜', desc: '万圣夜全员变装，连艾露莎都换下了铠甲。', bonus: 80, type: 'any', tag: '变装' },
     { md: '12-24', name: '公会平安夜', desc: '平安夜派对，吧台的酒已经热好。', bonus: 80, bond: 10, type: 'any', tag: '平安夜' }
@@ -52,7 +52,7 @@
   function monthlyEvent() {
     var d = new Date();
     if (d.getDate() === 1) return { name: '公会日 · 月例集会', desc: '每月例会，接取委托更有干劲。', bonus: 60, type: 'any', tag: '月例' };
-    if (d.getDate() === 15) return { name: '满月夜', desc: '月圆之夜，远征与实验类委托奖励加成。', mult: 1.3, type: 'exped', tag: '满月' };
+    if (d.getDate() === 15) return { name: '月中集会', desc: '每月十五日的公会自定集会，不代表实际月相；沿用原活动奖励。', mult: 1.3, type: 'exped', tag: '月中' };
     return null;
   }
   function festivalOf() {
