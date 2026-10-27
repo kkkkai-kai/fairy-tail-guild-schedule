@@ -413,11 +413,13 @@
       var line = left.querySelector('.header-line');
       var badge = document.getElementById('connectionBadge');
       var sync = document.getElementById('guildSyncNow');
+      var refresh = document.getElementById('guildRefreshPage');
       if (line && badge) {
         var connection = document.createElement('div');
         connection.className = 'guild-connection-tools';
         connection.appendChild(badge);
         if (sync) connection.appendChild(sync);
+        if (refresh) connection.appendChild(refresh);
         line.appendChild(connection);
       }
     }

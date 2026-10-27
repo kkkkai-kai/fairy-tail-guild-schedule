@@ -178,7 +178,32 @@
       syncButton.onclick = function (event) { event.stopPropagation(); manualSync(); };
       top.insertAdjacentElement('afterend', syncButton);
     }
+    if (!document.getElementById('guildRefreshPage')) {
+      var refresh = document.createElement('button');
+      refresh.id = 'guildRefreshPage'; refresh.type = 'button';
+      refresh.textContent = '↻ 刷新页面';
+      refresh.title = '重新加载当前页面，保留已保存的存档';
+      refresh.onclick = function (event) { event.stopPropagation(); refreshGuildPage(); };
+      document.getElementById('guildSyncNow').insertAdjacentElement('afterend', refresh);
+      var refreshStyle = document.createElement('style');
+      refreshStyle.textContent = '#guildRefreshPage{display:none}@media(max-width:820px){#guildRefreshPage{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 auto;width:auto!important;min-height:44px;margin:0 0 0 6px;padding:6px 12px;border:1px solid #c99b86;border-radius:9px;background:#fffaf4;color:#7f293b;font-family:inherit;font-size:13px;font-weight:600;white-space:nowrap}}';
+      document.head.appendChild(refreshStyle);
+    }
     if (!window.__guildCloudState) setBadge('云端：连接中…', null);
+  }
+  async function refreshGuildPage() {
+    var hasDraft = Array.from(document.querySelectorAll('#newTask,#quickIntake input[type="text"],form textarea,dialog[open] input:not([type="button"]):not([type="submit"])')).some(function (field) {
+      return field.getClientRects().length && !field.disabled && String(field.value || '').trim() && field.value !== field.defaultValue;
+    });
+    if (hasDraft || pending.size || activeWrites) {
+      var text = hasDraft ? '页面还有未提交的输入，刷新可能丢失这些内容。已保存的记录会保留。仍要刷新吗？' : '本机记录已保存，仍有云端同步尚未确认；刷新后会继续同步。现在刷新吗？';
+      var approved = typeof guildConfirmDialog === 'function'
+        ? await guildConfirmDialog({ title: '刷新公会页面', text: text, okText: '刷新页面', cancelText: '留在页面' })
+        : window.confirm(text);
+      if (!approved) return false;
+    }
+    location.reload();
+    return true;
   }
   // ---------- 融合菜单：单击右下角按钮弹出两个选项 ----------
   function showDockMenu(anchor) {
