@@ -450,6 +450,7 @@
     var run = function () {
       return supaPull().then(function (remoteList) {
         var remoteByKey = {}, remoteTasks = null;
+        var mergedViewChanged = false;
         (remoteList || []).forEach(function (item) {
           remoteByKey[item.key] = item;
           if (item.key === 'fairytail-tasks-v2') remoteTasks = item;
@@ -475,10 +476,12 @@
           }
           entry.value = mergedRaw;
           entry.updatedAt = Math.max(Date.now(), Number(entry.updatedAt) || 0, (Number(remote.updatedAt) || 0) + 1);
+          if (mergedRaw !== latestRaw) mergedViewChanged = true;
           nativeStorageSet.call(localStorage, entry.key, mergedRaw);
           markLocalWrite(entry.key, entry.updatedAt);
         });
         if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
+        if (mergedViewChanged) scheduleRemoteRefresh();
         return supaPushNow(snapshot);
       });
     };
@@ -1108,8 +1111,13 @@
           remoteMap[r.key] = r;
           if (r.key === 'fairytail-tasks-v2') remoteTasks = r.value;
         });
-        var need = [];
+        var need = [], mergedViewChanged = false;
         entries.forEach(function (entry) {
+          // 拉云端期间可能已登记/完成新任务，不能用请求前的旧快照覆盖。
+          var currentRaw = localStorage.getItem(entry.key);
+          if (currentRaw === null) return;
+          entry.value = currentRaw;
+          entry.updatedAt = localTimeOf(entry.key) || entry.updatedAt;
           var remote = remoteMap[entry.key];
           if (entry.key !== 'fairytail-tasks-v2') {
             if (!remote || Number(remote.updatedAt) < entry.updatedAt) need.push(entry);
@@ -1122,6 +1130,7 @@
           var mergedRaw = JSON.stringify(pMerged);
           if (mergedRaw !== entry.value) {
             nativeStorageSet.call(localStorage, entry.key, mergedRaw);
+            mergedViewChanged = true;
           }
           if (!remote || mergedRaw !== remote.value) {
             var nextTime = Math.max(Date.now(), entry.updatedAt || 0, rT + 1);
@@ -1131,6 +1140,11 @@
             markLocalWrite(entry.key, rT);
           }
         });
+        // 新安装入口可能先存了初始任务；合并后的历史必须立即进入业务内存和画面。
+        if (mergedViewChanged) {
+          if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
+          scheduleRemoteRefresh();
+        }
         if (!need.length) { online = true; setBadge('云端：已同步', true); return; }
         // 已在串行队列内部，不能再次排队并等待自己后面的任务。
         return supaPushNow(need)
