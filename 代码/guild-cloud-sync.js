@@ -145,6 +145,8 @@
     var els = badgeEls();
     var top = els.top;
     if (!top) return;
+    var statusLabel = top.querySelector('.label-text');
+    if (statusLabel) statusLabel.style.setProperty('display', 'inline', 'important');
     if (top.getAttribute('data-cloud-bound') !== '1') {
       top.setAttribute('data-cloud-bound', '1');
       top.style.cursor = 'pointer';
@@ -1120,6 +1122,24 @@
           entry.updatedAt = localTimeOf(entry.key) || entry.updatedAt;
           var remote = remoteMap[entry.key];
           if (entry.key !== 'fairytail-tasks-v2') {
+            // 启动恢复也必须合并日程和奖励历史；新设备的较新空表不能覆盖旧档。
+            if (remote && ['fairytail-schedule-v1','fairytail-wallet-v1','fairytail-growth-v1','fairytail-warehouse-v1'].indexOf(entry.key) !== -1) {
+              var combined = mergeProtectedValue(entry.key, entry.value, remote.value, pending.has(entry.key) || entry.updatedAt >= Number(remote.updatedAt));
+              if (combined !== entry.value) {
+                nativeStorageSet.call(localStorage, entry.key, combined);
+                mergedViewChanged = true;
+              }
+              entry.value = combined;
+              if (combined !== remote.value) {
+                entry.updatedAt = Math.max(Date.now(), entry.updatedAt, Number(remote.updatedAt) + 1);
+                markLocalWrite(entry.key, entry.updatedAt);
+                need.push(entry);
+              } else {
+                markLocalWrite(entry.key, Number(remote.updatedAt));
+                if (localStorage.getItem(entry.key) === combined) { pending.delete(entry.key); dirty.delete(entry.key); }
+              }
+              return;
+            }
             if (!remote || Number(remote.updatedAt) < entry.updatedAt) need.push(entry);
             return;
           }
@@ -1145,6 +1165,7 @@
           if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
           scheduleRemoteRefresh();
         }
+        persistPending();
         if (!need.length) { online = true; setBadge('云端：已同步', true); return; }
         // 已在串行队列内部，不能再次排队并等待自己后面的任务。
         return supaPushNow(need)
