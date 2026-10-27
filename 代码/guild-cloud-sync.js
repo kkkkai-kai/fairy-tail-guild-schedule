@@ -64,6 +64,7 @@
   }
   var pushTimer = null;
   var lastPullAt = 0;
+  var latestCloudRecords = [], lastAuditAt = 0, latestAudit = null, syncRisk = null, recoveryNote = "尚未保存本次恢复点";
   var online = false;
   var hookInstalled = false;
   var supaWriteQueue = Promise.resolve();
@@ -151,11 +152,8 @@
       top.setAttribute('data-cloud-bound', '1');
       top.style.cursor = 'pointer';
       top.title = '单击=打开菜单；双击=切换自动刷新';
-      top.onclick = function () {
-        var floater = document.getElementById('guildCloudBadge');
-        if (floater) showDockMenu(floater);
-      };
-      top.ondblclick = function (ev) { ev.stopPropagation(); toggleAutoRefresh(); };
+      top.onclick = function () { if (globalThis.GuildWorkspace) GuildWorkspace.openSync(); else { var floater = document.getElementById('guildCloudBadge'); if(floater)showDockMenu(floater); } };
+      top.ondblclick = null;
     }
     if (!els.floater) {
       var b = document.createElement('div');
@@ -271,7 +269,7 @@
     if (CONFIG.syncEnabled && pending.size) {
       text = '本机已保存 · '+pending.size+'组记录待云端确认'+(ok===false?'（连接未成功）':'');
     } else if (CONFIG.syncEnabled && ok===true) {
-      text = lastConfirmedAt ? '本机已保存 · 云端写入已确认' : '云端连接正常 · 无待上传记录';
+      text = (lastConfirmedAt ? '云端写入已确认' : '云端连接正常') + (lastPullAt ? ' · 接收 '+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'}).format(new Date(lastPullAt)) : '') + ' · 点击核对';
     }
     window.__guildCloudState = { text: text, ok: ok, pendingCount: pending.size, activeWrites: activeWrites, lastConfirmedAt: lastConfirmedAt, lastPullAt: lastPullAt, otherDeviceConfirmed: null };
     var els = badgeEls();
@@ -285,7 +283,7 @@
       else if (ok === false) cls += ' offline';
       else cls += ' syncing';
       top.className = cls;
-      top.title = '单击打开工具；双击切换自动刷新。'+(lastConfirmedAt?'本次访问上次写入确认：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'}).format(new Date(lastConfirmedAt))+'。':'')+'云端确认不代表另一台设备已拉取。';
+      top.title = '点击核对本机、云端与恢复点。'+(lastConfirmedAt?'本次访问上次写入确认：'+new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit'}).format(new Date(lastConfirmedAt))+'。':'')+'云端确认不代表另一台设备已拉取。';
     }
     if (floater) {
       floater.style.borderColor = ok === true ? '#4caf50' : ok === false ? '#d9603b' : '#e7a362';
@@ -313,12 +311,15 @@
       CONFIG.syncEnabled ? '在线同步：已启用' : '在线同步：已停用；当前记录仅保存在本机',
       '待上传数据组：' + pending.size + '；正在确认：' + activeWrites,
       '最近云端写后确认：' + (lastConfirmedAt ? new Date(lastConfirmedAt).toLocaleString('zh-CN') : '本次打开尚未确认'),
+      '最近云端读取：' + (lastPullAt ? new Date(lastPullAt).toLocaleString('zh-CN') : '尚未读取'),
+      recoveryNote,
       '任务记录：' + (Array.isArray(tasks) ? tasks.length : '格式异常'),
       '缺少人物身份：' + (Array.isArray(tasks) ? tasks.filter(function (task) { return task && !task.assigneeId; }).length : '未检查'),
       '图片加载失败：' + Array.from(document.images).filter(function (img) { return img.getAttribute('src') && img.complete && !img.naturalWidth; }).length,
       '说明：待上传数按存储数据组统计，并非任务数；未检查真实跨端一致性、人物身份及历史恢复。'
     ];
     lines.forEach(function (line) { var p = document.createElement('p'); p.textContent = line; p.style.cssText = 'margin:0 0 9px;color:#49382f;font-size:14px;line-height:1.65;overflow-wrap:anywhere'; dialog.appendChild(p); });
+    var compareButton = document.createElement('button'); compareButton.type = 'button'; compareButton.textContent = '核对本机与云端／恢复缺失历史'; compareButton.onclick = function () { dialog.close(); if (globalThis.GuildWorkspace) GuildWorkspace.openSync(); }; dialog.appendChild(compareButton);
     var close = document.createElement('button'); close.type = 'button'; close.textContent = '关闭'; close.style.cssText = 'min-height:38px;padding:7px 16px;border:1px solid #c9935c;border-radius:10px;background:#fff7eb;color:#713d2d;font:600 14px "Microsoft YaHei",sans-serif;cursor:pointer;'; close.onclick = function () { dialog.close(); }; dialog.appendChild(close);
     dialog.addEventListener('click', function (event) { if (event.target === dialog) { var rect = dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close(); } });
     dialog.addEventListener('close', function () { dialog.remove(); });
@@ -343,12 +344,13 @@
     if (pushTimer) clearTimeout(pushTimer);
     pushTimer = setTimeout(push, 800); // 防抖 0.8s
   }
-  function retryEntries(entries) {
+  function retryEntries(entries, error) {
     (entries || []).forEach(function (entry) {
       if (entry && entry.key) { dirty.add(entry.key); pending.add(entry.key); }
     });
     persistPending();
     online = false;
+    if (error && error.syncGuard) { syncRisk = error.message; setBadge('同步保护：已暂停异常覆盖，请核对数据', false); return; }
     setBadge('云端：离线（本地数据待同步）', false);
     if (navigator.onLine !== false) setTimeout(push, 3500 + Math.floor(Math.random() * 3000));
   }
@@ -374,7 +376,7 @@
     if (CONFIG.mode === 'supabase' && CONFIG.supabaseAnonKey) {
       return supaPush(entries)
         .then(function () { online = true; setBadge('云端：已同步', true); })
-        .catch(function () { retryEntries(entries); });
+        .catch(function (error) { retryEntries(entries, error); });
       return;
     }
 
@@ -442,8 +444,13 @@
       })
     ]).finally(function () { clearTimeout(timer); });
   }
-  function supaPushNow(entries) {
+  function supaPushNow(entries, baseline) {
     if (!entries || !entries.length) return Promise.resolve({ list: [] });
+    if (globalThis.GuildWorkspaceCore && baseline) {
+      var byKey = {}; baseline.forEach(function (r) { byKey[r.key] = r; });
+      var risks = []; entries.forEach(function (e) { if (byKey[e.key]) risks = risks.concat(GuildWorkspaceCore.reductions(e.key, byKey[e.key].value, e.value)); });
+      if (risks.length) { var problem = new Error(risks.join('；')); problem.syncGuard = true; syncRisk = problem.message; backupLocalToStorage(); if (globalThis.GuildSyncRecovery) return GuildSyncRecovery.save(baseline, 'blocked-' + Date.now()).catch(function () {}).then(function () { throw problem; }); return Promise.reject(problem); }
+    }
     activeWrites++;
     setBadge('本机已保存 · 正在确认云端写入', null);
     var rows = entries.map(function (e) { return { key: e.key, value: e.value, updated_at: Number(e.updatedAt) || Date.now() }; });
@@ -509,7 +516,7 @@
         });
         if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
         if (mergedViewChanged) scheduleRemoteRefresh();
-        return supaPushNow(snapshot);
+        return supaPushNow(snapshot, remoteList);
       });
     };
     supaWriteQueue = supaWriteQueue.then(run, run);
@@ -521,9 +528,10 @@
       cache: 'no-store'
     }, '云端读取')
       .then(function (rows) {
-        return (Array.isArray(rows) ? rows : []).map(function (x) {
-          return { key: x.key, value: x.value, updatedAt: Number(x.updated_at) || 0 };
-        });
+        var records = (Array.isArray(rows) ? rows : []).map(function (x) { return { key: x.key, value: x.value, updatedAt: Number(x.updated_at) || 0 }; });
+        latestCloudRecords = records; lastPullAt = Date.now();
+        if (globalThis.GuildSyncRecovery) void GuildSyncRecovery.saveDaily(records).then(function (saved) { recoveryNote = saved ? '本机恢复点已保存（最近3份）' : '云端尚无可保存的历史'; }).catch(function () { recoveryNote = '恢复点保存失败，请导出个人备份'; });
+        return records;
       });
   }
 
@@ -611,6 +619,7 @@
       merged.bonus = mergeRecordArrays(local.bonus, remote.bonus, preferLocal);
     } else if (key === 'fairytail-growth-v1') {
       merged.entries = Object.assign({}, preferLocal ? remote.entries : local.entries, preferLocal ? local.entries : remote.entries);
+      if (globalThis.GuildWorkspaceCore) merged.guildLedger = GuildWorkspaceCore.mergeLedgerRows(local.guildLedger || [], remote.guildLedger || []);
       var primary = preferLocal ? local : remote, secondary = preferLocal ? remote : local;
       if (primary.v4 && secondary.v4) {
         merged.v4 = JSON.parse(JSON.stringify(primary.v4));
@@ -717,7 +726,9 @@
         var l = map[t.id].t, r = t;
         var lDone = !!(l.done || l.completedAt), rDone = !!(r.done || r.completedAt);
         // 完成状态保护：已完成的一侧绝不被未完成的一侧覆盖（防止完成记录被旧数据吞掉）
-        if (lDone && !rDone) { map[t.id].src = 'l'; }
+        if (globalThis.GuildWorkspaceCore && GuildWorkspaceCore.explicitUndoWins(l,r)) map[t.id] = {t:l,src:'l'};
+        else if (globalThis.GuildWorkspaceCore && GuildWorkspaceCore.explicitUndoWins(r,l)) map[t.id] = {t:r,src:'r'};
+        else if (lDone && !rDone) { map[t.id].src = 'l'; }
         else if (rDone && !lDone) { map[t.id] = { t: t, src: 'r' }; }
         else if (!preferLocal) map[t.id] = { t: t, src: 'r' };
       }
@@ -742,6 +753,11 @@
         if (progressVersions.length > 1) task.workProgressVersions = progressVersions.slice(1);
         else delete task.workProgressVersions;
         merged[taskIndex] = task;
+      }
+      if (globalThis.GuildWorkspaceCore) {
+        var dossierFields = GuildWorkspaceCore.mergeDossiers(localTask, remoteTask);
+        var workflowFields = GuildWorkspaceCore.mergeWorkspaceStates(localTask, remoteTask); task = Object.assign({}, task, workflowFields); merged[taskIndex] = task;
+        if (dossierFields.dossier) { task = Object.assign({}, task, dossierFields); merged[taskIndex] = task; }
       }
       var preferredTask = preferLocal ? localTask : remoteTask;
       var otherTask = preferLocal ? remoteTask : localTask;
@@ -922,7 +938,7 @@
         CONFIG.syncKeys.forEach(function (k) { var v = localStorage.getItem(k); if (v !== null) entries.push({ key: k, value: v, updatedAt: localTimeOf(k) }); });
         if (entries.length) {
           supaPush(entries).then(function () { online = true; setBadge('云端：已同步', true); })
-            .catch(function () { retryEntries(entries); });
+            .catch(function () { retryEntries(entries, error); });
         }
       }));
     actions.appendChild(btn('以云端为准（本地先备份再覆盖）',
@@ -949,10 +965,15 @@
   var remoteRefreshTimer = null;
   function scheduleRemoteRefresh() {
     if (remoteRefreshTimer !== null) return;
+    var loadWaitStarted = Date.now();
     remoteRefreshTimer = setTimeout(function retryRefresh() {
       if ((localStorage.getItem('guildAutoRefresh') || 'on') === 'off') {
         remoteRefreshTimer = null;
         return;
+      }
+      if (!window.__guildScheduleReady || typeof all !== 'function') {
+        if (Date.now() - loadWaitStarted > 30000) { remoteRefreshTimer = null; setBadge('记录已接收，页面资源尚未就绪，请点击刷新页面', false); return; }
+        remoteRefreshTimer = setTimeout(retryRefresh, 1000); return;
       }
       if (document.hidden || inputBusy()) {
         remoteRefreshTimer = setTimeout(retryRefresh, 1000);
@@ -972,6 +993,7 @@
   }
   // 后台静默刷新：云端数据已写入 localStorage，直接重绘页面，避免整页 reload 白屏闪烁
   function silentRefresh() {
+    if (!window.__guildScheduleReady || typeof all !== 'function') { scheduleRemoteRefresh(); return false; }
     try {
       if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
       if (typeof all === 'function') {
@@ -981,7 +1003,8 @@
         return;
       }
     } catch (e) { console.warn('静默刷新失败：', e); }
-    location.reload();
+    setBadge('记录已接收，画面更新未完成，请主动刷新页面', false);
+    return false;
   }
   function applyRemote(list) {
     var changed = false, taskChanged = false;
@@ -1030,7 +1053,7 @@
               var protectedEntry = { key: r.key, value: JSON.stringify(pMerged), updatedAt: Date.now() };
               supaPush([protectedEntry])
                 .then(function () { online = true; setBadge('云端：已同步', true); })
-                .catch(function () { retryEntries([protectedEntry]); });
+                .catch(function (error) { retryEntries([protectedEntry], error); });
               return; // 跳过常规整包覆盖
             }
           }
@@ -1115,6 +1138,33 @@
     return manualSyncFlight;
   }
   window.guildSyncNow = manualSync;
+  function snapshotMetrics(values) {
+    var reading = parseJsonSafe(values['fairytail-reading-library-v1'], null), rewards = globalThis.GuildReadingCore && GuildReadingCore.valid(reading) ? GuildReadingCore.rewardTotals(reading) : {j:0,exp:0};
+    return GuildWorkspaceCore.metrics(values, rewards, typeof window.guildDailyRewardForAudit === 'function' ? window.guildDailyRewardForAudit : null);
+  }
+  window.guildAuditSync = async function () {
+    var rows = await supaPull(), remote = {}, local = {}; rows.forEach(function (r) { remote[r.key] = r.value; }); CONFIG.syncKeys.forEach(function (k) { local[k] = localStorage.getItem(k); });
+    var l = snapshotMetrics(local), r = snapshotMetrics(remote); lastAuditAt = Date.now(); latestAudit = {at:lastAuditAt,local:l,remote:r,differences:GuildWorkspaceCore.compare(l,r),contentDifferences:GuildWorkspaceCore.contentDifferences(local,remote),pending:pending.size,activeWrites:activeWrites,risk:syncRisk,recovery:recoveryNote}; return latestAudit;
+  };
+  function missingRecovery(records) {
+    var entries = [], notes = [];
+    records.forEach(function (r) { var raw = localStorage.getItem(r.key), old = parseJsonSafe(r.value, null), current = parseJsonSafe(raw, null), value; if (!old) return;
+      if (r.key === 'fairytail-schedule-v1') { value = Object.assign({}, current || {}); Object.keys(old).forEach(function (d) { if (!Object.prototype.hasOwnProperty.call(value,d)) value[d] = old[d]; }); }
+      else if (r.key === 'fairytail-tasks-v2') { value = (current || []).slice(); var ids = new Set(value.map(function (t) {return t.id;})); old.filter(function(t){return t.done || t.completedAt;}).forEach(function(t){if(!ids.has(t.id))value.push(t);}); }
+      else if (r.key === 'fairytail-growth-v1') { value = Object.assign({}, current || {}); value.entries = Object.assign({}, old.entries || {}, value.entries || {}); }
+      else if (r.key === 'fairytail-wallet-v1') { value = Object.assign({}, current || {}); ['redemptions','bonus'].forEach(function(k){value[k]=mergeRecordArrays(value[k],old[k],true);}); }
+      else return;
+      var next = JSON.stringify(value); if (GuildWorkspaceCore.stable(parseJsonSafe(raw,null)) !== GuildWorkspaceCore.stable(value)) { entries.push({key:r.key,value:next,updatedAt:Date.now()}); notes.push(r.key); }
+    }); return {entries:entries,keys:notes};
+  }
+  window.guildPreviewRecovery = function (records) { var p = missingRecovery(records); return {keys:p.keys,before:snapshotMetrics(Object.fromEntries(CONFIG.syncKeys.map(function(k){return[k,localStorage.getItem(k)];}))),after:snapshotMetrics(Object.assign(Object.fromEntries(CONFIG.syncKeys.map(function(k){return[k,localStorage.getItem(k)];})),Object.fromEntries(p.entries.map(function(e){return[e.key,e.value];}))))}; };
+  window.guildRestoreMissingHistory = async function (records) {
+    var original = CONFIG.syncKeys.map(function(k){return{key:k,value:localStorage.getItem(k),updatedAt:localTimeOf(k)};}).filter(function(r){return r.value!==null;});
+    if (!globalThis.GuildSyncRecovery || !await GuildSyncRecovery.save(original)) throw Error('未能保存恢复前记录，已停止恢复');
+    var p = missingRecovery(records), before = p.entries.map(function(e){return{key:e.key,value:localStorage.getItem(e.key)};});
+    try { p.entries.forEach(function(e){localStorage.setItem(e.key,e.value);}); } catch(error) { before.forEach(function(e){if(e.value!==null)nativeStorageSet.call(localStorage,e.key,e.value);}); throw error; }
+    if(typeof window.guildReloadStoredState==='function')window.guildReloadStoredState(); scheduleRemoteRefresh(); return {groups:p.entries.length};
+  };
   // ---------- 全量推送（首次上云/启动兜底） ----------
   function fullPush() {
     // 全量推送走 supaWriteQueue 串行化，避免与增量 supaPush 并发交错
@@ -1193,9 +1243,9 @@
         persistPending();
         if (!need.length) { online = true; setBadge('云端：已同步', true); return; }
         // 已在串行队列内部，不能再次排队并等待自己后面的任务。
-        return supaPushNow(need)
+        return supaPushNow(need, remoteList)
           .then(function () { online = true; setBadge('云端：已同步', true); })
-          .catch(function () { retryEntries(need); });
+          .catch(function (error) { retryEntries(need, error); });
       }).catch(function () {
         // 无法读取云端时不能盲目全量推送，否则旧设备可能覆盖较新的云端档案。
         online = false;

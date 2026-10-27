@@ -30,7 +30,7 @@
   for(const kind of ['progress','notes','research','finish','receive','discard']){const leaves=heads(data,id,kind),latest=leaves.at(-1);if(leaves.length>1)p.conflicts.push({kind,versions:leaves});if(!latest)continue;
    if(kind==='progress')p.progress=latest.payload;
    if(kind==='notes')p.notes=latest.payload.text;
-   if(kind==='research')p.research=latest.payload;
+   if(kind==='research'){p.research=clone(latest.payload);if(!Object.hasOwn(p.research,'claims')){const prior=Object.values(data.changes||{}).filter(r=>r.paperId===id&&r.kind==='research'&&r.payload&&Object.hasOwn(r.payload,'claims')).sort((a,b)=>stamp(a.at)-stamp(b.at)||a.id.localeCompare(b.id)).at(-1);const inherited=prior?.payload?.claims??source.research?.claims;if(inherited!==undefined)p.research.claims=clone(inherited)}}
    if(kind==='finish'){p.status='read';p.completion=latest.payload;p.completedAt=latest.at;}
    if(kind==='receive'){p.saved=true;p.dispatch={state:'received',decidedAt:latest.at};}
    if(kind==='discard'){p.discardedAt=latest.at;p.saved=false;}
