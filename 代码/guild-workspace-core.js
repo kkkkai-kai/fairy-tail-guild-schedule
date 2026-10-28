@@ -46,5 +46,24 @@
  function evidenceGroups(papers){const groups=new Map();for(const p of papers.filter(p=>p.saved&&!p.discardedAt)){const q=String(p.research?.question||'').normalize('NFKC').replace(/\s+/g,' ').trim();if(!q)continue;const key=q.toLocaleLowerCase();if(!groups.has(key))groups.set(key,{question:q,papers:[]});groups.get(key).papers.push(p)}return[...groups.values()]}
  function projectFacts(task,tasks,papers){const ids=new Set(task.dossier?.paperIds||[]);return{children:tasks.filter(t=>t.id!==task.id&&t.dossier?.projectId===task.id),papers:papers.filter(p=>ids.has(p.id)||(p.linkedTasks||[]).some(t=>t.id===task.id)),stages:(task.steps||[]).map(s=>({id:s.id,title:s.title,done:!!s.done,outcome:s.note||''})),outcome:task.outcome||{}}}
  function lifeEvent(scene,date,hour,weather,finished){const rain=/雨/.test(weather||'');if(scene==='mainHall')return rain?{id:'rain',text:'窗外有雨，伙伴把卷宗收进了干燥的桌角。',icon:'guild-ui-book-v210.svg'}:hour>=20?{id:'lamplight',text:'晚灯下，桌上的卷宗正被慢慢收好。',icon:'guild-ui-ledger-v210.svg'}:{id:'table',text:finished?'桌上多了一份已交付的卷宗。':'桌上留着今天的日程，伙伴各自忙着。',icon:'guild-ui-quest-v210.svg'};if(scene==='guildTavern')return{id:'tea',text:'吧台留了一杯茶，可以歇一会儿。',icon:'guild-scene-icon-tavern-v102.webp'};return null}
- return Object.freeze({KEYS,stable,parse,beijingDay,metrics,compare,contentDifferences,reductions,mergeDossiers,mergeWorkspaceStates,explicitUndoWins,mergeLedgerRows,deliveryIssue,staleTasks,memberHistory,bottlenecks,workArchive,evidenceGroups,projectFacts,lifeEvent});
+ function recoverSchedule(current,old,growth={}){
+  const value=JSON.parse(JSON.stringify(current||{})),own=(v,k)=>Object.prototype.hasOwnProperty.call(v||{},k);
+  for(const [date,source]of Object.entries(old||{})){
+   if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!source||typeof source!=='object'||Array.isArray(source))continue;
+   if(!own(value,date)){value[date]=JSON.parse(JSON.stringify(source));continue}
+   const day=value[date];if(!day||typeof day!=='object'||Array.isArray(day))continue;
+   for(const [id,done]of Object.entries(source.checked||{})){
+    const entry=growth?.entries?.['daily:'+date+':'+id];
+    if(done!==true||entry?.active===false)continue;
+    if(!own(day.checked,id)){day.checked??={};day.checked[id]=true}
+    if(day.checked?.[id]!==true)continue;
+    if(own(source.rewards,id)&&!own(day.rewards,id)){day.rewards??={};day.rewards[id]=source.rewards[id]}
+    if(own(source.completedAt,id)&&!own(day.completedAt,id)){day.completedAt??={};day.completedAt[id]=source.completedAt[id]}
+    const extra=(source.extra||[]).find(e=>e.id===id);
+    if(extra&&!(day.extra||[]).some(e=>e.id===id)){day.extra??=[];day.extra.push(JSON.parse(JSON.stringify(extra)))}
+   }
+  }
+  return value;
+ }
+ return Object.freeze({KEYS,stable,parse,beijingDay,metrics,compare,contentDifferences,reductions,mergeDossiers,mergeWorkspaceStates,explicitUndoWins,mergeLedgerRows,deliveryIssue,staleTasks,memberHistory,bottlenecks,workArchive,evidenceGroups,projectFacts,lifeEvent,recoverSchedule});
 });

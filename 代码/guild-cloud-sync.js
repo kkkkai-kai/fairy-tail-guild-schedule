@@ -49,6 +49,7 @@
   var META_KEY = '__guild_cloud_meta__';
   // 云端接收/合并不得走用户写入钩子，否则会制造待上传回声。
   var nativeStorageSet = Storage.prototype.setItem;
+  var nativeStorageRemove = Storage.prototype.removeItem;
   var dirty = new Set();
   var PENDING_KEY = '__guild_cloud_pending_keys__';
   var pending = new Set();
@@ -151,7 +152,7 @@
     if (top.getAttribute('data-cloud-bound') !== '1') {
       top.setAttribute('data-cloud-bound', '1');
       top.style.cursor = 'pointer';
-      top.title = '单击=打开菜单；双击=切换自动刷新';
+      top.title = '点击核对本机与云端记录';
       top.onclick = function () { if (globalThis.GuildWorkspace) GuildWorkspace.openSync(); else { var floater = document.getElementById('guildCloudBadge'); if(floater)showDockMenu(floater); } };
       top.ondblclick = null;
     }
@@ -1148,8 +1149,12 @@
   };
   function missingRecovery(records) {
     var entries = [], notes = [];
+    if (!Array.isArray(records)) throw Error('恢复点格式无效，未作修改');
+    var seen = new Set(), currentGrowth = parseJsonSafe(localStorage.getItem('fairytail-growth-v1'), {});
     records.forEach(function (r) { var raw = localStorage.getItem(r.key), old = parseJsonSafe(r.value, null), current = parseJsonSafe(raw, null), value; if (!old) return;
-      if (r.key === 'fairytail-schedule-v1') { value = Object.assign({}, current || {}); Object.keys(old).forEach(function (d) { if (!Object.prototype.hasOwnProperty.call(value,d)) value[d] = old[d]; }); }
+      if (['fairytail-schedule-v1','fairytail-tasks-v2','fairytail-growth-v1','fairytail-wallet-v1'].indexOf(r.key) === -1) return;
+      if (seen.has(r.key) || !validRemoteValue(r.key,r.value,raw)) throw Error('恢复点包含重复或无效记录，未作修改'); seen.add(r.key);
+      if (r.key === 'fairytail-schedule-v1') { value = GuildWorkspaceCore.recoverSchedule(current,old,currentGrowth); }
       else if (r.key === 'fairytail-tasks-v2') { value = (current || []).slice(); var ids = new Set(value.map(function (t) {return t.id;})); old.filter(function(t){return t.done || t.completedAt;}).forEach(function(t){if(!ids.has(t.id))value.push(t);}); }
       else if (r.key === 'fairytail-growth-v1') { value = Object.assign({}, current || {}); value.entries = Object.assign({}, old.entries || {}, value.entries || {}); }
       else if (r.key === 'fairytail-wallet-v1') { value = Object.assign({}, current || {}); ['redemptions','bonus'].forEach(function(k){value[k]=mergeRecordArrays(value[k],old[k],true);}); }
@@ -1159,11 +1164,26 @@
   }
   window.guildPreviewRecovery = function (records) { var p = missingRecovery(records); return {keys:p.keys,before:snapshotMetrics(Object.fromEntries(CONFIG.syncKeys.map(function(k){return[k,localStorage.getItem(k)];}))),after:snapshotMetrics(Object.assign(Object.fromEntries(CONFIG.syncKeys.map(function(k){return[k,localStorage.getItem(k)];})),Object.fromEntries(p.entries.map(function(e){return[e.key,e.value];}))))}; };
   window.guildRestoreMissingHistory = async function (records) {
+    if (!missingRecovery(records).entries.length) return {groups:0};
     var original = CONFIG.syncKeys.map(function(k){return{key:k,value:localStorage.getItem(k),updatedAt:localTimeOf(k)};}).filter(function(r){return r.value!==null;});
     if (!globalThis.GuildSyncRecovery || !await GuildSyncRecovery.save(original)) throw Error('未能保存恢复前记录，已停止恢复');
+    // Recompute after the asynchronous snapshot; concurrent local work must win.
     var p = missingRecovery(records), before = p.entries.map(function(e){return{key:e.key,value:localStorage.getItem(e.key)};});
-    try { p.entries.forEach(function(e){localStorage.setItem(e.key,e.value);}); } catch(error) { before.forEach(function(e){if(e.value!==null)nativeStorageSet.call(localStorage,e.key,e.value);}); throw error; }
-    if(typeof window.guildReloadStoredState==='function')window.guildReloadStoredState(); scheduleRemoteRefresh(); return {groups:p.entries.length};
+    if (!p.entries.length) return {groups:0};
+    var oldMeta = localStorage.getItem(META_KEY), oldPending = localStorage.getItem(PENDING_KEY), nextMeta = readMeta(), nextPending = new Set(pending), stamp = Date.now();
+    p.entries.forEach(function(e){nextMeta[e.key]=Math.max(stamp,Number(nextMeta[e.key]||0)+1);nextPending.add(e.key);});
+    try {
+      p.entries.forEach(function(e){nativeStorageSet.call(localStorage,e.key,e.value);});
+      nativeStorageSet.call(localStorage,META_KEY,JSON.stringify(nextMeta));
+      nativeStorageSet.call(localStorage,PENDING_KEY,JSON.stringify(Array.from(nextPending)));
+    } catch(error) {
+      var rollbackFailed=false;
+      before.concat([{key:META_KEY,value:oldMeta},{key:PENDING_KEY,value:oldPending}]).forEach(function(e){try{if(e.value===null)nativeStorageRemove.call(localStorage,e.key);else nativeStorageSet.call(localStorage,e.key,e.value);}catch(rollbackError){rollbackFailed=true;}});
+      throw Error(rollbackFailed?'恢复未完成，部分回滚失败；请保留页面并使用恢复前快照核对。':'恢复未完成，已撤回本次修改；未新增云端上传。');
+    }
+    p.entries.forEach(function(e){dirty.add(e.key);pending.add(e.key);});schedulePush();
+    var refreshed=true;try{if(typeof window.guildReloadStoredState==='function')window.guildReloadStoredState();scheduleRemoteRefresh();}catch(error){refreshed=false;}
+    return {groups:p.entries.length,refreshed:refreshed};
   };
   // ---------- 全量推送（首次上云/启动兜底） ----------
   function fullPush() {
