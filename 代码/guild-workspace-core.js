@@ -65,5 +65,34 @@
   }
   return value;
  }
- return Object.freeze({KEYS,stable,parse,beijingDay,metrics,compare,contentDifferences,reductions,mergeDossiers,mergeWorkspaceStates,explicitUndoWins,mergeLedgerRows,deliveryIssue,staleTasks,memberHistory,bottlenecks,workArchive,evidenceGroups,projectFacts,lifeEvent,recoverSchedule});
+ const textKey=value=>String(value||'').normalize('NFKC').replace(/\s+/g,' ').trim();
+ function sceneHash(value){let n=2166136261;for(const c of String(value)){n^=c.charCodeAt(0);n=Math.imul(n,16777619)}return n>>>0}
+ function projectDesk(tasks,papers,date){
+  const projects=tasks.filter(t=>t.type==='project'&&!['archived','cancelled'].includes(t.status)&&(!t.done||beijingDay(t.completedAt)===date)).slice().sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+  if(!projects.length)return null;
+  const project=projects[sceneHash(date+'|desk|'+projects.map(t=>t.id).join('|'))%projects.length],facts=projectFacts(project,tasks,papers);
+  return{project,children:facts.children,steps:facts.stages,papers:facts.papers,completedSteps:facts.stages.filter(s=>s.done).length,completedChildren:facts.children.filter(t=>t.done).length,artifact:project.outcome?.references||project.dossier?.artifact||'',summary:project.outcome?.summary||'',date};
+ }
+ function continuityNotes(rows,tasks,date){
+  return rows.map(row=>{const key=textKey(row.text),matches=tasks.filter(t=>t.status!=='cancelled'&&(textKey(t.title)===key||t.dossier?.sourceJournal?.date===row.date&&textKey(t.dossier.sourceJournal.text)===key));
+   if(matches.some(t=>t.done&&beijingDay(t.completedAt)>=date))return null;
+   const linked=matches.find(t=>!t.done);return{...row,key:'journal:'+row.date+':'+sceneHash(key),linkedTaskId:linked?.id||'',status:linked?'linked':'unregistered'};
+  }).filter(Boolean);
+ }
+ function readingShelf(papers,date){
+  const groups=[['unread','待研读'],['reading','研读中'],['read','已读归档']];
+  return groups.map(([state,label])=>{const rows=papers.filter(p=>p.saved&&!p.discardedAt&&(state==='unread'?!['read','reading'].includes(p.status):p.status===state)).slice().sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+   return rows.length?{state,label,count:rows.length,paper:rows[sceneHash(date+'|shelf|'+state+'|'+rows.map(p=>p.id).join('|'))%rows.length]}:null;
+  }).filter(Boolean);
+ }
+ function memberMemory(tasks,id,date){
+  const completed=[];for(const t of tasks.filter(t=>t.assigneeId===id&&t.status!=='cancelled')){
+   if(t.done&&t.completedAt)completed.push({taskId:t.id,at:t.completedAt,kind:'completion',text:'我们一起完成过「'+t.title+'」。'+(t.outcome?.summary?'你留下的成果记录是：'+t.outcome.summary:'完成记录仍收在公会卷宗里。')});
+   for(const s of t.steps||[])if(s.done&&s.completedAt)completed.push({taskId:t.id,at:s.completedAt,kind:'stage',text:'「'+t.title+'」里的「'+s.title+'」已经完成，阶段记录还在。'});
+  }
+  completed.sort((a,b)=>(Date.parse(b.at)||0)-(Date.parse(a.at)||0)||a.taskId.localeCompare(b.taskId));
+  const candidates=completed.slice(0,3);if(!candidates.length){const next=tasks.find(t=>t.assigneeId===id&&!t.done&&!['archived','cancelled'].includes(t.status)&&t.workProgress?.next);return next?{taskId:next.id,kind:'next',text:'你给「'+next.title+'」留下的下一步是：'+next.workProgress.next}:null}
+  return candidates[sceneHash(id+'|memory|'+date)%candidates.length];
+ }
+ return Object.freeze({KEYS,stable,parse,beijingDay,metrics,compare,contentDifferences,reductions,mergeDossiers,mergeWorkspaceStates,explicitUndoWins,mergeLedgerRows,deliveryIssue,staleTasks,memberHistory,bottlenecks,workArchive,evidenceGroups,projectFacts,lifeEvent,recoverSchedule,projectDesk,continuityNotes,readingShelf,memberMemory});
 });

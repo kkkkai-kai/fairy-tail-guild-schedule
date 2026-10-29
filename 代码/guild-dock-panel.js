@@ -303,6 +303,17 @@
     renderTaskList();
   }
 
+  function tidyOverview(){
+    const left=document.querySelector('.guild-today-column');if(!left)return;
+    let tools=document.getElementById('guildOverviewTools');if(!tools){tools=document.createElement('div');tools.id='guildOverviewTools';tools.className='guild-overview-tools';const more=document.createElement('details'),summary=document.createElement('summary'),body=document.createElement('div');more.id='guildOverviewMore';summary.textContent='更多操作';body.className='guild-overview-more-body';more.append(summary,body);tools.append(more);left.append(tools)}
+    const body=tools.querySelector('.guild-overview-more-body'),badge=document.getElementById('connectionBadge');if(badge)tools.prepend(badge);
+    const brief=left.querySelector('.guild-day-brief');if(brief){const profile=left.querySelector('#growthCard');if(profile)profile.after(brief);brief.after(tools)}
+    for(const node of [document.getElementById('guildSyncNow'),document.getElementById('guildRefreshPage'),document.getElementById('day')?.closest('.header-date-toolbar'),document.getElementById('yesterdaySummaryButton'),document.getElementById('guildJournalCalendarActions')])if(node&&!body.contains(node))body.append(node);
+    const continuation=left.querySelector('.today-continuation');if(continuation)tools.after(continuation);
+    const expedition=left.querySelector('.today-expedition');if(expedition)(continuation||tools).after(expedition);
+    const hero=left.querySelector('.hero');if(hero&&!hero.closest('#guildQuoteFold')){const fold=document.createElement('section');fold.id='guildQuoteFold';hero.before(fold);fold.append(hero)}
+  }
+
   // ---------- 该日截止任务 ----------
   function renderTaskList() {
     var title = document.getElementById('dockTasksTitle');
@@ -318,7 +329,7 @@
     var count = document.createElement('small');
     count.textContent = entries.length ? '共 ' + entries.length + ' 项' : '';
     title.appendChild(count);
-    let actions=document.getElementById('guildJournalCalendarActions');if(!actions){actions=document.createElement('div');actions.id='guildJournalCalendarActions';actions.className='guild-journal-calendar-actions';title.after(actions)}actions.replaceChildren();for(const [label,report]of [['✎ 当日手记',false],['研究周报',true]]){const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=()=>window.GuildJournal.open({date:view.selected,report});actions.append(b)}
+    let actions=document.getElementById('guildJournalCalendarActions');if(!actions){actions=document.createElement('div');actions.id='guildJournalCalendarActions';actions.className='guild-journal-calendar-actions';title.after(actions)}const moreBody=document.querySelector('#guildOverviewMore .guild-overview-more-body');if(moreBody&&actions.parentElement!==moreBody)moreBody.append(actions);actions.replaceChildren();for(const [label,report]of [['✎ 当日手记',false],['研究周报',true]]){const b=document.createElement('button');b.type='button';b.textContent=label;b.onclick=()=>window.GuildJournal.open({date:view.selected,report});actions.append(b)}
     if (!entries.length) {
       list.innerHTML = '<p class="guild-dock-empty">这一天没有截止的委托</p>';
       return;
@@ -428,6 +439,7 @@
       var entry=document.createElement('button');entry.id='guildCalendarEntry';entry.type='button';entry.textContent='▦ 委托日历';entry.onclick=toggle;
       document.getElementById('day').after(entry);
     }
+    tidyOverview();
     document.addEventListener('guildDockToggle', toggle);
     // 状态行跟随云端状态（代码/guild-cloud-sync.js 的 setBadge 也会主动更新）
     window.addEventListener('guildCloudStateChange', function () { syncStatusFromGlobal(); });
