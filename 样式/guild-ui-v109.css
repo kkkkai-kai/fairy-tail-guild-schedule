@@ -482,3 +482,12 @@ html #guildHallScene .guild-welcome-seal img{width:29px;height:29px;object-fit:c
 html #guildHallScene #guildHallEncounter button{pointer-events:auto;display:block;width:max-content;min-height:30px;margin:5px 0 0 auto;padding:3px 7px;border:1px solid #d9bf99;border-radius:5px;color:#704334;background:#fff8e9;font-size:11px}
 html .gmp-memory-source{display:block;margin:7px 0 0;padding:3px 7px;min-height:30px;font-size:12px}
 @media(max-width:650px){html #guildSceneZoom #guildHallScene{display:block!important;padding:8px!important}html #guildSceneZoom #guildHallScene>.guild-floor-map{width:100%;margin:7px 0!important}html #guildSceneZoom #guildHallScene>.guild-hall-stage{width:100%!important;margin-top:8px!important}html .guild-scene-zoom{padding:6px}}
+
+/* Seated artwork keeps the same body scale as standing sprites. */
+html #guildHallScene .guild-hall-member[data-visual-pose=seated] .guild-hall-sprite{height:31px!important;max-width:44px!important}
+
+
+html #guildHallScene .guild-hall-member[data-scene-scale=large][data-visual-pose=seated] .guild-hall-sprite{height:35px!important}
+html #guildHallScene .guild-hall-member[data-scene-scale=small][data-visual-pose=seated] .guild-hall-sprite{height:25px!important}
+html #guildHallScene .guild-hall-member[data-scene-scale=exceed][data-visual-pose=seated] .guild-hall-sprite,html #guildHallScene .nook-exceed[data-visual-pose=seated]>img{height:23px!important;width:auto!important}
+

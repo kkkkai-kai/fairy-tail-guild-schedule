@@ -430,20 +430,20 @@
     });
   }
   function cloudJson(url, options, label) {
-    var controller = typeof AbortController === 'function' ? new AbortController() : null;
-    var timer;
-    options = Object.assign({}, options);
-    if (controller) options.signal = controller.signal;
-    return Promise.race([
-      Promise.resolve().then(function () { return fetch(url, options); })
-        .then(function (response) { return checkedJson(response, label); }),
-      new Promise(function (_, reject) {
-        timer = setTimeout(function () {
-          if (controller) controller.abort();
-          reject(new Error(label + '超时，保留本地记录等待重试'));
-        }, 12000);
-      })
-    ]).finally(function () { clearTimeout(timer); });
+    options = Object.assign({ cache: 'no-store', credentials: 'omit' }, options);
+    var readable = !options.method || options.method === 'GET';
+    function attempt(retried) {
+      var controller = typeof AbortController === 'function' ? new AbortController() : null, timer;
+      var request = Object.assign({}, options); if (controller) request.signal = controller.signal;
+      return Promise.race([
+        Promise.resolve().then(function () { return fetch(url, request); }).then(function (response) { return checkedJson(response, label); }),
+        new Promise(function (_, reject) { timer = setTimeout(function () { if (controller) controller.abort(); reject(new Error(label + '连接超时，本机记录已保留')); }, 20000); })
+      ]).finally(function () { clearTimeout(timer); }).catch(function (error) {
+        if (readable && !retried && !document.hidden && !/HTTP/.test(error.message || '')) return attempt(true);
+        throw error;
+      });
+    }
+    return attempt(false);
   }
   function supaPushNow(entries, baseline) {
     if (!entries || !entries.length) return Promise.resolve({ list: [] });
@@ -1115,7 +1115,7 @@
   var manualSyncFlight = null;
   function manualSync() {
     if (manualSyncFlight) return manualSyncFlight;
-    if (!CONFIG.syncEnabled || navigator.onLine === false) {
+    if (!CONFIG.syncEnabled) {
       setBadge('本机已保存 · 当前无法联网同步', false); return Promise.resolve(false);
     }
     var button = document.getElementById('guildSyncNow');
