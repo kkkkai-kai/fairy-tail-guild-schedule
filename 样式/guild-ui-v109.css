@@ -491,3 +491,5 @@ html #guildHallScene .guild-hall-member[data-scene-scale=large][data-visual-pose
 html #guildHallScene .guild-hall-member[data-scene-scale=small][data-visual-pose=seated] .guild-hall-sprite{height:25px!important}
 html #guildHallScene .guild-hall-member[data-scene-scale=exceed][data-visual-pose=seated] .guild-hall-sprite,html #guildHallScene .nook-exceed[data-visual-pose=seated]>img{height:23px!important;width:auto!important}
 
+
+@media(pointer:coarse){html #guildHallScene .guild-hall-tip{max-width:calc(100% - 20px);max-height:30%;font-size:12px;line-height:1.5;overflow:auto}html #guildHallScene .guild-hall-encounter{max-height:26%;overflow:auto}}
