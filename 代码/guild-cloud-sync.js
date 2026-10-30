@@ -398,7 +398,7 @@
         })
         .catch(function (error) {
           online = false;
-          setBadge('云端：读取失败，将自动重试', null);
+          cloudReadFailure(error);
           throw error;
         });
     }
@@ -414,8 +414,13 @@
   }
   function supaRestUrl(params) {
     var url = CONFIG.supabaseUrl + '/rest/v1/' + CONFIG.supabaseTable;
-    if (params) url += '?' + params;
+    if (params) url += '?' + params + '&key=in.(' + CONFIG.syncKeys.map(encodeURIComponent).join(',') + ')';
     return url;
+  }
+  function cloudReadFailure(error) {
+    var message = String(error && error.message || '');
+    var reason = /HTTP (401|403)/.test(message) ? '云端授权失败' : /HTTP/.test(message) ? '云端服务响应异常' : /超时|timeout|abort/i.test(message) ? '网络超时' : /JSON/.test(message) ? '云端响应格式异常' : '网络连接失败';
+    setBadge('云端：' + reason + ' · 本机记录已保留', false);
   }
   function checkedJson(response, label) {
     if (!response || !response.ok) {
@@ -586,7 +591,7 @@
           .then(function () { return pullLazyAttempt(1); });
       }
       online = false;
-      setBadge('云端：读取失败，将自动重试', null);
+      cloudReadFailure(error);
       throw error;
     });
   }
@@ -1130,8 +1135,8 @@
       var confirmed = online && !pending.size && !activeWrites;
       setBadge(confirmed ? '云端：已同步' : '本机已保存 · 云端未确认，请稍后重试', confirmed);
       return confirmed;
-    }).catch(function () {
-      setBadge('本机已保存 · 同步失败，请稍后重试', false); return false;
+    }).catch(function (error) {
+      cloudReadFailure(error); return false;
     }).finally(function () {
       manualSyncFlight = null;
       if (button) { button.disabled = false; button.textContent = '立即同步'; }
@@ -1266,10 +1271,10 @@
         return supaPushNow(need, remoteList)
           .then(function () { online = true; setBadge('云端：已同步', true); })
           .catch(function (error) { retryEntries(need, error); });
-      }).catch(function () {
+      }).catch(function (error) {
         // 无法读取云端时不能盲目全量推送，否则旧设备可能覆盖较新的云端档案。
         online = false;
-        setBadge('云端：读取失败，将自动重试', null);
+        cloudReadFailure(error);
       });
     }
 

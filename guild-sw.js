@@ -1,6 +1,6 @@
 /* Interface cache is versioned; filename-versioned images keep a separate cache. */
 'use strict';
-var CACHE_VER='guild-v252-mobile-sync-release-20261030';
+var CACHE_VER='guild-v253-fixed-url-sync-20261030';
 importScripts('./代码/guild-assets.js?v='+CACHE_VER);
 var CACHE_NAME='guild-core-'+CACHE_VER;
 var MEDIA_CACHE_NAME='guild-media-v1';
@@ -23,7 +23,7 @@ self.addEventListener('notificationclick',function(event){
  }));
 });
 self.addEventListener('fetch',function(event){var req=event.request;if(req.method!=='GET')return;var url=new URL(req.url);if(url.origin!==self.location.origin)return;
- if(req.mode==='navigate'||/\.html?$/.test(url.pathname)){event.respondWith(caches.open(CACHE_NAME).then(function(cache){return fetch(req).then(function(res){return saveResponse(cache,req,res)}).catch(function(){return cache.match(req).then(function(c){return c||cache.match('./index.html')})})}));return}
+ if(req.mode==='navigate'||/\.html?$/.test(url.pathname)){event.respondWith(caches.open(CACHE_NAME).then(function(cache){return fetch(new Request(req,{cache:'no-store'})).then(function(res){return saveResponse(cache,req,res)}).catch(function(){return cache.match(req).then(function(c){return c||cache.match('./index.html')})})}));return}
  if(/\.(png|jpe?g|gif|webp|svg|ico)$/.test(url.pathname)){var base=new URL('./',self.location.href),relative=decodeURIComponent(url.pathname).slice(decodeURIComponent(base.pathname).length),mapped=GuildAssets.resolve(relative);var mediaReq=mapped!==relative?new Request(new URL(mapped+url.search,base),{credentials:req.credentials,cache:req.cache}):req;event.respondWith(caches.open(MEDIA_CACHE_NAME).then(function(cache){return cache.match(mediaReq).then(function(cached){return cached||fetch(mediaReq).then(function(res){return saveResponse(cache,mediaReq,res)})})}));return}
  if(!/\.(js|css|webmanifest)$/.test(url.pathname))return;
  event.respondWith(caches.open(CACHE_NAME).then(function(cache){var version=url.searchParams.get('v');return cache.match(req,{ignoreSearch:!version||version===CACHE_VER}).then(function(cached){if(cached&&version===CACHE_VER)return cached;var network=fetch(new Request(req,{cache:'reload'})).then(function(res){return saveResponse(cache,req,res)}).catch(function(error){if(cached)return cached;throw error});return version?network:cached||network})}));
