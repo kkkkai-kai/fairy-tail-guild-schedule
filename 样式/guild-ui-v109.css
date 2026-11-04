@@ -318,7 +318,7 @@ html :is(.quest-actions,.project-stage-actions) button{white-space:nowrap!import
 html .once-quests .once-task-row{grid-template-columns:36px minmax(0,1fr)!important;column-gap:10px!important;row-gap:7px!important}
 html .once-quests .once-task-row>.once-main{grid-column:2!important;grid-row:1!important}
 html .once-quests .once-task-row>.once-actions{grid-column:2!important;grid-row:2!important;max-width:100%!important}
-html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-fold-actions){justify-content:flex-start!important;align-content:start!important;margin:7px 0 0!important;padding:0!important;gap:7px!important;max-width:100%!important}
+html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-fold-actions){justify-content:flex-end!important;align-content:start!important;margin:7px 0 0!important;padding:0!important;gap:7px!important;max-width:100%!important}
 html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-stage-actions) :is(button,.quest-action-more>summary){box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:34px!important;padding:6px 11px!important;border:1px solid #ddcabc!important;border-radius:8px!important;background:#fffdfa!important;color:#63473f!important;font:600 12px/1.35 "Microsoft YaHei UI","PingFang SC",sans-serif!important;letter-spacing:0!important;box-shadow:none!important;white-space:nowrap!important;word-break:normal!important;margin:0!important;text-decoration:none!important;cursor:pointer}
 html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-stage-actions)>:is(button.action-primary,button.action-start,button.quest-complete-btn,button.project-final-complete){order:0;background:#a3314d!important;border-color:#a3314d!important;color:#fff!important}
 html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions)>.accepted-label{order:-1;background:transparent!important;border:0!important;padding:0 5px 0 0!important;color:#6c765f!important;font-size:11px!important;min-height:0!important}
@@ -330,12 +330,12 @@ html .quest-action-more>summary::after{content:'⌄';font-size:13px;color:#8d6b5
 html .quest-action-more[open]{flex-basis:100%!important}
 html .quest-action-more[open]>summary::after{transform:rotate(180deg)}
 html .quest-action-more>.quest-action-menu{display:none!important}
-html .quest-action-more[open]>.quest-action-menu{display:flex!important;flex-wrap:wrap;align-items:center;gap:7px;padding:8px 0 2px;margin-top:7px;border-top:1px solid #eee3d8}
+html .quest-action-more[open]>.quest-action-menu{display:flex!important;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:7px;padding:8px 0 2px;margin-top:7px;border-top:1px solid #eee3d8}
 html .quest-action-menu>.quest-note-control{display:contents!important}
 html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-stage-actions) button:disabled{background:#f5f3eb!important;border-color:#e5dfd3!important;color:#7b796a!important;cursor:default;opacity:1}
 html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-stage-actions) :is(button,summary):focus-visible{outline:2px solid #a3314d!important;outline-offset:3px}
 html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-stage-actions) :is(button,summary):not(:disabled):hover{filter:brightness(.97)}
-@media(max-width:650px){html .once-quests .once-task-row>.once-actions{grid-column:1/-1!important}html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-stage-actions) :is(button,.quest-action-more>summary){min-height:40px!important;padding:8px 10px!important;font-size:12px!important}html .project-stage-row>.project-stage-actions{justify-content:flex-start!important;gap:7px!important}}
+@media(max-width:650px){html .once-quests .once-task-row>.once-actions{grid-column:1/-1!important}html body :is(#onceTasks.once-quests,#projects) :is(.once-actions,.project-actions,.project-stage-actions) :is(button,.quest-action-more>summary){min-height:40px!important;padding:8px 10px!important;font-size:12px!important}html .project-stage-row>.project-stage-actions{justify-content:flex-end!important;gap:7px!important}}
 
 html #guildFeaturesFab{display:none!important}
 html #guildCloudBadge{width:52px!important;height:58px!important;border:1px solid #d6b58d!important;background:#fffaf2!important;box-shadow:0 3px 12px #673a2820!important;border-radius:16px!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#943d4b;font-size:11px;font-weight:600}
@@ -507,13 +507,13 @@ html .gmp-memory-source{display:block;margin:7px 0 0;padding:3px 7px;min-height:
 @media(max-width:650px){html #guildSceneZoom #guildHallScene{display:block!important;padding:8px!important}html #guildSceneZoom #guildHallScene>.guild-floor-map{width:100%;margin:7px 0!important}html #guildSceneZoom #guildHallScene>.guild-hall-stage{width:100%!important;margin-top:8px!important}html .guild-scene-zoom{padding:6px}}
 
 /* Seated artwork keeps the same body scale as standing sprites. */
-html #guildHallScene .guild-hall-member[data-visual-pose=seated] .guild-hall-sprite{height:31px!important;max-width:44px!important}
 
 
-html #guildHallScene .guild-hall-member[data-scene-scale=large][data-visual-pose=seated] .guild-hall-sprite{height:35px!important}
-html #guildHallScene .guild-hall-member[data-scene-scale=small][data-visual-pose=seated] .guild-hall-sprite{height:25px!important}
-html #guildHallScene .guild-hall-member[data-scene-scale=exceed][data-visual-pose=seated] .guild-hall-sprite,html #guildHallScene .nook-exceed[data-visual-pose=seated]>img{height:23px!important;width:auto!important}
 
 
 @media(pointer:coarse){html #guildHallScene .guild-hall-tip{max-width:calc(100% - 20px);max-height:30%;font-size:12px;line-height:1.5;overflow:auto}html #guildHallScene .guild-hall-encounter{max-height:26%;overflow:auto}}
 
+
+/* Visible alpha bounds, shared foot baseline and scale for every registered pose. */
+html body #guildHallScene :is(.guild-hall-member,.guild-hall-visitor,.nook-exceed){width:var(--guild-body-width,28px)!important;height:var(--guild-body-height,34px)!important;min-width:0!important;min-height:0!important;max-width:none!important;transform:translate(-50%,-100%)!important;cursor:pointer!important}
+html body #guildHallScene :is(.guild-hall-member,.nook-exceed)>.guild-hall-sprite,html body #guildHallScene .nook-exceed>img{position:absolute!important;left:50%!important;bottom:var(--guild-sprite-bottom,0px)!important;top:auto!important;translate:-50% 0!important;width:auto!important;height:var(--guild-sprite-height,34px)!important;max-width:none!important;max-height:none!important;margin:0!important;object-fit:contain!important;image-rendering:pixelated}
