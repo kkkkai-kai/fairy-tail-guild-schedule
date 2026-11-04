@@ -712,6 +712,7 @@
   function backupLocalToStorage() {
     var snap = {};
     CONFIG.syncKeys.forEach(function (k) { var v = localStorage.getItem(k); if (v !== null) snap[k] = v; });
+    if(globalThis.GuildSyncRecovery?.archiveBackup){var archiveKey='guild-backup-'+Date.now(),archiveRaw=JSON.stringify(snap);GuildSyncRecovery.archiveBackup(archiveKey,archiveRaw).catch(function(error){console.warn('[guild-cloud] recovery archive failed',error);try{localStorage.setItem(archiveKey,archiveRaw)}catch(fallbackError){console.warn('[guild-cloud] fallback backup unavailable',fallbackError)}});return;}
     try { localStorage.setItem('guild-backup-' + Date.now(), JSON.stringify(snap)); } catch (e) { console.warn('[guild-cloud] backup save failed', e); }
     // 保留最近 5 个备份 key，删除更旧
     var keys = [];
