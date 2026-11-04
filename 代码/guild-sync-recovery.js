@@ -24,8 +24,9 @@
  });archiveQueue=job;return job}
  function archiveLocalBackups(){const entries=[];for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(key==='fairytail-auto-snapshots-v1'||/^guild-backup-\d+$/.test(key)){const raw=localStorage.getItem(key);if(raw!==null)entries.push({key,raw})}}return enqueueArchive(entries)}
  function archiveBackup(key,raw){if(!/^guild-backup-\d+$/.test(key))return Promise.reject(Error('非恢复点存档'));return enqueueArchive([{key,raw,kind:'cloud'}])}
+ function saveTaskSnapshot(snapshot){if(!snapshot?.id||!Array.isArray(snapshot.tasks))return Promise.reject(Error('恢复点格式无效'));return enqueueArchive([{key:'fairytail-auto-snapshots-v1',raw:JSON.stringify([snapshot])}]).then(result=>{window.dispatchEvent(new Event('guild-local-backups-ready'));return result})}
  async function exportLocalBackups(){const records=await archiveRows(),url=URL.createObjectURL(new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),records},null,2)],{type:'application/json'})),link=document.createElement('a');link.href=url;link.download='公会本机恢复点-'+new Date().toISOString().slice(0,10)+'.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
- globalThis.GuildSyncRecovery=Object.freeze({list,save,saveDaily,archiveLocalBackups,archiveBackup,exportLocalBackups,getTaskSnapshots:()=>structuredClone(taskSnapshots)});
+ globalThis.GuildSyncRecovery=Object.freeze({list,save,saveDaily,archiveLocalBackups,archiveBackup,saveTaskSnapshot,exportLocalBackups,getTaskSnapshots:()=>structuredClone(taskSnapshots)});
  archiveLocalBackups().then(()=>window.dispatchEvent(new Event('guild-local-backups-ready'))).catch(error=>console.warn('恢复点仍保留原位置：',error));
 
 })();
