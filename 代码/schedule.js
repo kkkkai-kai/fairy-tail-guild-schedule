@@ -1677,15 +1677,15 @@ function isProjectFolded(task){return localStorage.getItem('fairytail-project-fo
 function questFoldButton(task,folded){const button=document.createElement('button');button.type='button';button.className='quest-fold-toggle';button.textContent=folded?(task.type==='project'?'展开远征':'展开委托'):(task.type==='project'?'收起远征':'收起委托');button.onclick=event=>{event.stopPropagation();runWithGuildViewPreserved(()=>{if(task.type==='project')localStorage.setItem('fairytail-project-folded:'+task.id,folded?'0':'1');else{const ids=acceptedQuestOpenIds();if(ids.has(task.id))ids.delete(task.id);else ids.add(task.id);sessionStorage.setItem('fairytail-open-accepted-quests',JSON.stringify([...ids]))}all()},task.id)};return button}
 function compactTaskActionMenus(){
  document.querySelectorAll('.once-actions,.project-card > .project-actions').forEach(actions=>{
-  if(actions.querySelector(':scope > .quest-action-more'))return;
+  const existing=actions.querySelector(':scope > .quest-action-more');
   const primarySelector='.action-primary,.action-start,.quest-complete-btn,.project-final-complete,.accepted-label,.quest-fold-toggle';
-  const extras=[...actions.children].filter(node=>!node.matches(primarySelector));
+  const extras=[...actions.children].filter(node=>node!==existing&&!node.matches(primarySelector));
+  if(existing){extras.forEach(node=>existing.querySelector('.quest-action-menu').append(node));return}
   if(!extras.length)return;
   const taskId=actions.closest('[data-task-id]')?.dataset.taskId||'',key='guild-task-actions-open:'+taskId;
   const details=document.createElement('details'),summary=document.createElement('summary'),menu=document.createElement('div');
-  details.className='quest-action-more';details.open=sessionStorage.getItem(key)==='1';details.style.cssText='display:flex;flex:0 0 auto;flex-wrap:wrap;align-items:center;gap:6px;min-width:0';summary.textContent='更多操作';summary.style.cssText='list-style:none;cursor:pointer;min-height:30px;padding:5px 10px;border:1px solid #d8bda0;border-radius:8px;background:#fffaf3;color:#654633;font-size:12px;line-height:1.25';menu.className='quest-action-menu';menu.style.cssText='display:none;flex:0 0 100%;flex-wrap:wrap;gap:6px;padding:4px 0 2px';
-  details.addEventListener('click',event=>event.stopPropagation());details.addEventListener('toggle',()=>{sessionStorage.setItem(key,details.open?'1':'0');menu.style.display=details.open?'flex':'none';details.style.flexBasis=details.open?'100%':'auto'});
-  if(details.open){menu.style.display='flex';details.style.flexBasis='100%'}
+  details.className='quest-action-more';details.open=sessionStorage.getItem(key)==='1';summary.textContent='更多操作';menu.className='quest-action-menu';
+  details.addEventListener('click',event=>event.stopPropagation());details.addEventListener('toggle',()=>{sessionStorage.setItem(key,details.open?'1':'0')});
   extras.forEach(node=>menu.append(node));details.append(summary,menu);actions.append(details);
  });
 }
@@ -1706,15 +1706,15 @@ function renderOnceTasks(){
   if(folded){
    meta.textContent=`${stamp?stamp+' · ':''}${t.due||'未设截止'} ${t.dueTime||'当日结束前'} · ${taskStatus(t)} · ${t.reward} J`;
    main.append(titleLine,meta,world,taskContinuityBlock(t));noteToggle(t,main,actions);
-   if(t.acceptedAt&&!t.startedAt){const start=document.createElement('button');start.type='button';start.className='action-start';start.textContent='▶ 启程执行';start.onclick=e=>{e.stopPropagation();if(startOnceTask(t)){save();all();GuildJournal.notice('已启程：'+t.title)}};actions.append(start)}
-   if(t.startedAt&&!t.done&&t.status!=='cancelled'){const complete=document.createElement('button');complete.type='button';complete.className='quest-complete-btn folded-complete';complete.textContent='✓ 完成委托';complete.onclick=e=>{e.stopPropagation();completeOnceTask(t,true)};actions.append(complete)}
+   if(t.acceptedAt&&!t.startedAt){const start=document.createElement('button');start.type='button';start.className='action-start';start.textContent='启程执行';start.onclick=e=>{e.stopPropagation();if(startOnceTask(t)){save();all();GuildJournal.notice('已启程：'+t.title)}};actions.append(start)}
+   if(t.startedAt&&!t.done&&t.status!=='cancelled'){const complete=document.createElement('button');complete.type='button';complete.className='quest-complete-btn folded-complete';complete.textContent='完成委托';complete.onclick=e=>{e.stopPropagation();completeOnceTask(t,true)};actions.append(complete)}
    actions.append(questFoldButton(t,true));row.append(avatar,main,actions);listHost.append(row);return;
   }
   meta.textContent=done(t)?`委托已完成 · 已获得 ${t.settledJ??t.reward} J · ${taskExp} EXP · ${completionLabel(t.completedAt)}`:`${stamp?stamp+' · ':''}${t.due||'未设截止'} ${t.dueTime||'当日结束前'} · ${deadlineHint(t)} · ${taskStatus(t)} · ${t.settledJ??t.reward} J · ${taskExp} EXP`;
   main.append(titleLine,meta,world,taskContinuityBlock(t));noteToggle(t,main,actions);
   if(!t.done&&t.status!=='cancelled'){
    if(t.acceptedAt){const accepted=document.createElement('span');accepted.className='accepted-label';accepted.textContent='已接取';actions.append(accepted)}else{const accept=document.createElement('button');accept.className='action-primary';accept.textContent='✦ 接取';accept.onclick=e=>{e.stopPropagation();if(acceptOnceTask(t)){all();GuildJournal.notice('已接取：'+t.title)}};actions.append(accept)}
-   if(t.acceptedAt&&!t.startedAt){const start=document.createElement('button');start.className='action-start';start.textContent='▶ 启程执行';start.onclick=e=>{e.stopPropagation();if(startOnceTask(t)){save();all();GuildJournal.notice('已启程：'+t.title)}};actions.append(start)}
+   if(t.acceptedAt&&!t.startedAt){const start=document.createElement('button');start.className='action-start';start.textContent='启程执行';start.onclick=e=>{e.stopPropagation();if(startOnceTask(t)){save();all();GuildJournal.notice('已启程：'+t.title)}};actions.append(start)}
    const postpone=document.createElement('button');postpone.className='action-secondary';postpone.textContent='重新约定日期';postpone.onclick=async e=>{e.stopPropagation();const value=await guildPromptDialog({title:'重新约定日期',label:'新的截止日期（YYYY-MM-DD）',value:t.due||today(),validate:v=>/^\d{4}-\d{2}-\d{2}$/.test(v)});if(value===null)return;const chosen=date(value);if(!/^\d{4}-\d{2}-\d{2}$/.test(value)||Number.isNaN(chosen)||chosen<date(today())){guildAlert('请选择今天或之后的有效日期。');return}t.due=value;save();all()};actions.append(postpone)
   }
   const edit=document.createElement('button');edit.className='action-secondary';edit.textContent='修订委托';edit.onclick=e=>{e.stopPropagation();inlineEditor(t,row)};actions.append(edit);
@@ -1775,10 +1775,10 @@ function projects(){
  projectTasks.forEach(task=>{
   task.steps??=buildProjectSteps(task.id,[task.title],task.reward);const finished=task.steps.filter(step=>step.done).length,allStagesDone=task.steps.length>0&&finished===task.steps.length,folded=isProjectFolded(task),card=document.createElement('article'),heading=document.createElement('h3'),note=document.createElement('small'),next=document.createElement('small'),actions=document.createElement('div');
   card.className='project-card guild-frame-dossier grade-'+guildGrade(task)+(folded?' is-folded':'');card.id='quest-'+task.id;card.dataset.taskId=task.id;heading.textContent=`${questGradeDisplay(task)}${questGradeStamp(task)?' · '+questGradeStamp(task):''} · ${task.title}`;note.textContent=`${task.due||'未设截止'} ${task.dueTime||''} · ${allStagesDone?'全部阶段完成，等待最终确认':taskStatus(task)} · ${finished}/${task.steps.length} 远征阶段完成 · ${questWorldMeta(task)}`;next.className='project-next';const nextStep=task.steps.find(step=>!step.done);next.textContent=(nextStep?`下一段路：${nextStep.title}`:'所有阶段已经完成')+` · 远征总酬劳 ${task.reward} J`;actions.className=folded?'project-fold-actions project-actions':'project-actions';
-  if(allStagesDone){const finalButton=document.createElement('button');finalButton.type='button';finalButton.className='project-final-complete';finalButton.textContent='✓ 完成委托';finalButton.onclick=event=>{event.stopPropagation();completeProjectQuest(task,finalButton,true)};actions.append(finalButton);{const record=document.createElement('button');record.type='button';record.className='action-secondary outcome-record-btn';record.title='先记录成果与下一步计划，再完成委托';record.textContent='✎ 记录成果';record.onclick=event=>{event.stopPropagation();requestTaskOutcome(task,()=>completeProjectQuest(task,finalButton,true))};actions.append(record)}}
+  if(allStagesDone){const finalButton=document.createElement('button');finalButton.type='button';finalButton.className='project-final-complete';finalButton.textContent='完成委托';finalButton.onclick=event=>{event.stopPropagation();completeProjectQuest(task,finalButton,true)};actions.append(finalButton);{const record=document.createElement('button');record.type='button';record.className='action-secondary outcome-record-btn';record.title='先记录成果与下一步计划，再完成委托';record.textContent='✎ 记录成果';record.onclick=event=>{event.stopPropagation();requestTaskOutcome(task,()=>completeProjectQuest(task,finalButton,true))};actions.append(record)}}
   else if(!task.acceptedAt){const accept=document.createElement('button');accept.type='button';accept.className='action-primary';accept.textContent='✦ 接取远征';accept.onclick=event=>{event.stopPropagation();if(acceptOnceTask(task)){all()}};actions.append(accept)}
-  else if(folded&&nextStep){const complete=document.createElement('button');complete.type='button';complete.className='quest-complete-btn folded-complete';complete.textContent='✓ 完成当前阶段';complete.onclick=event=>{event.stopPropagation();completeProjectStage(task,nextStep)};actions.append(complete)}
-  if(!folded&&!allStagesDone&&task.acceptedAt&&!task.startedAt){const start=document.createElement('button');start.type='button';start.className='action-start';start.textContent='▶ 启程执行';start.onclick=()=>{if(startOnceTask(task)){save();all()}};actions.append(start)}
+  else if(folded&&nextStep){const complete=document.createElement('button');complete.type='button';complete.className='quest-complete-btn folded-complete';complete.textContent='完成当前阶段';complete.onclick=event=>{event.stopPropagation();completeProjectStage(task,nextStep)};actions.append(complete)}
+  if(!folded&&!allStagesDone&&task.acceptedAt&&!task.startedAt){const start=document.createElement('button');start.type='button';start.className='action-start';start.textContent='启程执行';start.onclick=()=>{if(startOnceTask(task)){save();all()}};actions.append(start)}
   if(!task.done){const manage=document.createElement('button');manage.type='button';manage.className='action-secondary';manage.textContent='新增 / 整理阶段';manage.onclick=()=>renderStageManager(task,card);actions.append(manage)}
   if(!folded){const edit=document.createElement('button');edit.type='button';edit.className='action-secondary';edit.textContent='修订委托';edit.onclick=()=>inlineEditor(task,card);actions.append(edit);const cancelQuest=document.createElement('button');cancelQuest.type='button';cancelQuest.className='action-secondary';cancelQuest.textContent='取消远征';cancelQuest.onclick=async e=>{e.stopPropagation();if((task.steps||[]).some(step=>step.done||step.settledJ!==undefined)){showGuildValidation('这次远征已有阶段完成记录，请保留历史记录。');return}if(await guildConfirmDialog({text:`取消远征「${task.title}」？未完成的阶段将从远征板移除并同步云端。`})){tasks=tasks.filter(x=>x.id!==task.id);save();all()}};actions.append(cancelQuest)}
   if(!folded&&window.GuildCalendar)actions.append(window.GuildCalendar.button(task.id));
@@ -1996,7 +1996,7 @@ const foldedCompletionObserver=new MutationObserver(()=>{
  clearTimeout(foldedEnhancementTimer);
  foldedEnhancementTimer=setTimeout(()=>{
   foldedCompletionObserver.disconnect();
-  try{ensureFoldedCompletionButtons();ensureOutcomeButtons();ensureTaskAssigneeAvatars();normalizeOnceTaskRows();enhanceTaskEditor();appendQuickAssigneePreview();normalizeHappyStatusBars()}
+  try{ensureFoldedCompletionButtons();ensureOutcomeButtons();compactTaskActionMenus();ensureTaskAssigneeAvatars();normalizeOnceTaskRows();enhanceTaskEditor();appendQuickAssigneePreview();normalizeHappyStatusBars()}
   finally{foldedEnhancementScheduled=false;foldedCompletionObserver.observe(document.body,{childList:true,subtree:true})}
  },150)
 });
