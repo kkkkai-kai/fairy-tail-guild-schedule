@@ -1151,7 +1151,7 @@
   }
   window.guildAuditSync = async function () {
     var rows = await supaPull(), remote = {}, local = {}; rows.forEach(function (r) { remote[r.key] = r.value; }); CONFIG.syncKeys.forEach(function (k) { local[k] = localStorage.getItem(k); });
-    var l = snapshotMetrics(local), r = snapshotMetrics(remote); lastAuditAt = Date.now(); latestAudit = {at:lastAuditAt,local:l,remote:r,differences:GuildWorkspaceCore.compare(l,r),contentDifferences:GuildWorkspaceCore.contentDifferences(local,remote),pending:pending.size,activeWrites:activeWrites,risk:syncRisk,recovery:recoveryNote}; return latestAudit;
+    var l = snapshotMetrics(local), r = snapshotMetrics(remote); lastAuditAt = Date.now(); latestAudit = {at:lastAuditAt,local:l,remote:r,differences:GuildWorkspaceCore.compare(l,r),contentDifferences:GuildWorkspaceCore.contentDifferences(local,remote),taskRevisions:GuildWorkspaceCore.revisionDetails(local,remote),pending:pending.size,activeWrites:activeWrites,risk:syncRisk,recovery:recoveryNote}; return latestAudit;
   };
   function missingRecovery(records) {
     var entries = [], notes = [];

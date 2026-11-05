@@ -312,6 +312,7 @@
     const continuation=left.querySelector('.today-continuation');if(continuation)tools.after(continuation);
     const expedition=left.querySelector('.today-expedition');if(expedition)(continuation||tools).after(expedition);
     const hero=left.querySelector('.hero');if(hero&&!hero.closest('#guildQuoteFold')){const fold=document.createElement('section');fold.id='guildQuoteFold';hero.before(fold);fold.append(hero)}
+    globalThis.GuildWorkspace?.mountTools();
   }
 
   // ---------- 该日截止任务 ----------
