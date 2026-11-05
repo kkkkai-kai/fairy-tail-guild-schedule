@@ -19,3 +19,10 @@
 .guild-hall-stage[data-annex-light]>.guild-hall-weather-layer{display:none!important}
 @media(max-width:520px){.guild-character-milestone section{padding:16px}.guild-character-milestone h2{font-size:19px}.guild-annex-sign{font-size:11px;max-width:95px}}
 .guild-member-milestone-progress{display:block;margin:12px 0 0;padding:8px 0;color:#63472f;font-size:13px;line-height:1.5}
+
+.guild-character-milestone.milestone-illustrated .milestone-tableau{height:auto;aspect-ratio:3/2;background:none!important}
+.guild-character-milestone.milestone-illustrated .milestone-art{inset:0;transform:none;width:100%;max-width:none;height:100%;object-fit:contain;filter:none;image-rendering:auto}
+.guild-character-milestone.milestone-illustrated .milestone-prop,.guild-character-milestone.milestone-illustrated .milestone-keepsake{display:none}
+.guild-character-milestone.milestone-illustrated .milestone-tier-seal{z-index:3}
+
+.guild-hall-stage[data-annex-room]>.guild-hall-weather-layer{display:none!important}

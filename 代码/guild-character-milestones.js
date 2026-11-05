@@ -20,11 +20,12 @@
   const member=context.registry[r.memberId];if(!member)return false;
   dialog??=Object.assign(document.createElement('dialog'),{id:'guildCharacterMilestoneDialog',className:'guild-character-milestone'});if(!dialog.isConnected)document.body.append(dialog);dialog.replaceChildren();
   const close=document.createElement('button');close.type='button';close.className='milestone-close';close.textContent='×';close.setAttribute('aria-label','关闭纪念画面');close.onclick=()=>dialog.close();
-  const image=document.createElement('img');image.className='milestone-art';
+  const image=document.createElement('img');image.className='milestone-art';image.decoding='async';image.fetchPriority='high';
   const theme=globalThis.GuildMilestoneThemes?.config(r.memberId,r.threshold,context.registry)||{title:member.name+'的纪念',tier:'伙伴纪念',color:'#97754b',line:'完成记录已经妥善收好。',motif:'完成卷宗'};
-  image.alt=member.name+' · '+r.threshold+'次协作纪念';image.src=member.hallStates?.daily||member.hallStates?.normal||member.hallSprite;image.dataset.memberId=r.memberId;
-  dialog.dataset.tier=String(r.threshold);dialog.style.setProperty('--milestone-accent',theme.color);dialog.classList.add('milestone-composed');
-  image.onerror=()=>{if(!image.dataset.fallback&&member.hallSprite){image.dataset.fallback='1';image.src=member.hallSprite}else image.hidden=true};
+  const dedicated=globalThis.GuildMilestoneThemes?.artFor(r.memberId,r.threshold)||'';
+  image.alt=member.name+' · '+r.threshold+'次协作纪念';image.src=dedicated||member.hallStates?.daily||member.hallStates?.normal||member.hallSprite;image.dataset.memberId=r.memberId;
+  dialog.dataset.tier=String(r.threshold);dialog.style.setProperty('--milestone-accent',theme.color);dialog.classList.toggle('milestone-composed',!dedicated);dialog.classList.toggle('milestone-illustrated',!!dedicated);
+  image.onerror=()=>{if(!image.dataset.fallback&&member.hallSprite){image.dataset.fallback='1';dialog.classList.remove('milestone-illustrated');dialog.classList.add('milestone-composed');image.src=member.hallSprite}else image.hidden=true};
   const body=document.createElement('section'),title=document.createElement('h2'),text=document.createElement('p'),list=document.createElement('ol'),foot=document.createElement('small');title.id='guildMilestoneTitle';title.textContent=member.name+' · '+theme.title+' · '+theme.tier;dialog.setAttribute('aria-labelledby',title.id);
   text.textContent=(r.period==='week'?'本周已共同完成 '+r.threshold+' 项正式委托。':'旧每日纪念 · 三项正式委托。')+theme.line;
 
