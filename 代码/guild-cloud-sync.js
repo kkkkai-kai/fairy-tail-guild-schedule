@@ -17,6 +17,7 @@
     supabaseTable: 'guildcloudsync',
     // 参与云同步的数据 key（页面全部核心数据）
     syncKeys: [
+      'fairytail-guild-memories-v1',
       'fairytail-reading-library-v1',
       'fairytail-guild-daily-journal-v1',
       'fairytail-schedule-v1',
@@ -101,6 +102,7 @@
     if (typeof remoteValue !== 'string' || !remoteValue.length) return false;
     var remote = parseJson(remoteValue, null);
     var local = parseJson(localValue, null);
+    if (key === 'fairytail-guild-memories-v1') return GuildMemoryCore.valid(remote);
     if (key === 'fairytail-reading-library-v1') return GuildReadingCore.valid(remote);
     if (key === 'fairytail-tasks-v2') {
       if (!Array.isArray(remote) || remote.some(function (task) { return task && Array.isArray(task.value); })) return false;
@@ -518,6 +520,7 @@
           entry.updatedAt = Math.max(Date.now(), Number(entry.updatedAt) || 0, (Number(remote.updatedAt) || 0) + 1);
           if (mergedRaw !== latestRaw) mergedViewChanged = true;
           nativeStorageSet.call(localStorage, entry.key, mergedRaw);
+          if(entry.key==='fairytail-guild-memories-v1')document.dispatchEvent(new Event('guild-memories-changed'));
           markLocalWrite(entry.key, entry.updatedAt);
         });
         if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
@@ -615,6 +618,7 @@
   }
   function mergeProtectedValue(key, localRaw, remoteRaw, preferLocal) {
     var local = parseJsonSafe(localRaw, null), remote = parseJsonSafe(remoteRaw, null);
+    if (key === 'fairytail-guild-memories-v1') return GuildMemoryCore.stable(GuildMemoryCore.merge(local,remote));
     if (key === 'fairytail-guild-daily-journal-v1') return JSON.stringify(GuildJournalCore.merge(local, remote));
     if (key === 'fairytail-reading-library-v1') return GuildReadingCore.stable(GuildReadingCore.merge(local, remote));
     if (!local) return remoteRaw;
@@ -815,14 +819,15 @@
       if (localV === null) {
         localStorage.setItem(k, remote.value);
         markLocalWrite(k, Number(remote.updatedAt) || Date.now());
+        if(k==='fairytail-guild-memories-v1')document.dispatchEvent(new Event('guild-memories-changed'));
         return;
       }
       var lT = localTimeOf(k), rT = Number(remote.updatedAt) || 0;
-      if (k === 'fairytail-guild-daily-journal-v1' || k === 'fairytail-reading-library-v1') {
+      if (k === 'fairytail-guild-memories-v1' || k === 'fairytail-guild-daily-journal-v1' || k === 'fairytail-reading-library-v1') {
         var journalValue = mergeProtectedValue(k, localV, remote.value, true);
         if (journalValue !== localV) localStorage.setItem(k, journalValue);
         if (journalValue !== remote.value) pushed.push({key:k,value:journalValue,updatedAt:Math.max(Date.now(),rT+1)});
-        document.dispatchEvent(new CustomEvent(k === 'fairytail-reading-library-v1' ? 'guild-reading-changed' : 'guild-journal-changed'));
+        document.dispatchEvent(new CustomEvent(k === 'fairytail-guild-memories-v1' ? 'guild-memories-changed' : k === 'fairytail-reading-library-v1' ? 'guild-reading-changed' : 'guild-journal-changed'));
         return;
       }
       if (k === 'fairytail-tasks-v2') {
@@ -1022,11 +1027,12 @@
       if (!r.value) return;
       // 离线修改优先留在本机，交由推送阶段合并，不能被较新云时间戳直接覆盖。
       if (pending.has(r.key)) return;
-      if (r.key === 'fairytail-guild-daily-journal-v1' || r.key === 'fairytail-reading-library-v1') {
+      if (r.key === 'fairytail-guild-memories-v1' || r.key === 'fairytail-guild-daily-journal-v1' || r.key === 'fairytail-reading-library-v1') {
+        if(r.key==='fairytail-guild-memories-v1'&&!GuildMemoryCore.valid(parseJsonSafe(r.value,null)))return;
         var journalRaw = localStorage.getItem(r.key), journalMerged = mergeProtectedValue(r.key, journalRaw, r.value, false);
         if (journalMerged !== journalRaw) {
           origSet.call(localStorage, r.key, journalMerged);
-          document.dispatchEvent(new CustomEvent(r.key === 'fairytail-reading-library-v1' ? 'guild-reading-changed' : 'guild-journal-changed'));
+          document.dispatchEvent(new CustomEvent(r.key === 'fairytail-guild-memories-v1' ? 'guild-memories-changed' : r.key === 'fairytail-reading-library-v1' ? 'guild-reading-changed' : 'guild-journal-changed'));
         }
         // Only merge back genuinely missing revisions; an identical union must not echo forever.
         if (journalMerged !== mergeProtectedValue(r.key, r.value, r.value, false)) {
