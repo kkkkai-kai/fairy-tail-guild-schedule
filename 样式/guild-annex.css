@@ -1,0 +1,15 @@
+.guild-character-milestone{padding:0;border:1px solid #c79b60;border-radius:14px;background:#fffaf1;color:#39281f;width:min(760px,calc(100vw - 28px));max-height:90dvh;overflow:auto;box-shadow:0 16px 60px #38200c55}
+.guild-character-milestone::backdrop,.guild-milestone-picker::backdrop{background:#30251988}
+.guild-character-milestone .milestone-art{display:block;width:100%;height:auto;max-height:49dvh;object-fit:contain;background:#f5e5cb}
+.guild-character-milestone section{padding:20px 26px}.guild-character-milestone h2{font-size:22px;margin:0 0 10px;color:#9d3048}.guild-character-milestone p,.guild-character-milestone li{font-size:16px;line-height:1.7}.guild-character-milestone small{display:block;color:#684b34;line-height:1.6}
+.guild-character-milestone .milestone-close{position:absolute;right:10px;top:10px;z-index:2;width:40px;height:40px;border-radius:50%;border:1px solid #a97944;background:#fffdf8;color:#5c3022;font-size:25px}
+.guild-annex-sign{position:absolute;z-index:7;min-width:44px;min-height:36px;max-width:118px;padding:5px 8px;border:1px solid #bf985d;border-radius:6px;background:#fff8e8ee;color:#633e20;font-size:12px;line-height:1.3;transform:translate(-50%,-50%);box-shadow:0 2px 5px #422a2233}
+.guild-annex-sign:focus-visible{outline:3px solid #a02f4b;outline-offset:3px}.guild-annex-sign small{display:block;font-size:10px;color:#795930}
+.guild-milestone-memory{position:absolute;z-index:7;right:8px;bottom:8px;font-size:12px;padding:6px 9px;background:#fff7e6;color:#7e342b;border:1px solid #b98b4e;border-radius:8px}
+.guild-milestone-picker{max-width:440px;width:calc(100vw - 36px);max-height:80dvh;overflow:auto;background:#fff9ef;color:#402d23;border:1px solid #bd965f;border-radius:12px;padding:18px}.guild-milestone-picker>button{margin:4px;padding:8px}
+.guild-hall-stage[data-annex-light=dawn]>.guild-hall-background-image{filter:brightness(1.04) saturate(.94)}
+.guild-hall-stage[data-annex-light=sunset]>.guild-hall-background-image{filter:brightness(.96) sepia(.1)}
+.guild-hall-stage[data-annex-light=night]>.guild-hall-background-image{filter:brightness(.75) saturate(.88)}
+.guild-hall-stage[data-annex-light]>.guild-hall-weather-layer{display:none!important}
+@media(max-width:520px){.guild-character-milestone section{padding:16px}.guild-character-milestone h2{font-size:19px}.guild-annex-sign{font-size:11px;max-width:95px}}
+.guild-member-milestone-progress{display:block;margin:12px 0 0;padding:8px 0;color:#63472f;font-size:13px;line-height:1.5}
