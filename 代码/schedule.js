@@ -490,7 +490,7 @@ function settleArcane(key,title,category,raw,active,grade){
  showGuildPraise(key,title,category,grade,praiseReward(key),original);notifyGuildV4Settlement({key,title,category,grade,active:true,completedAt});return record;
 }
 function guildV4Context(){return{growth,tasks,data,warehouse:guildWarehouse,save,today,nowShanghai,registry:guildMemberRegistry,names:FTNames}}
-function notifyGuildV4Settlement(payload){try{const task=praiseTaskForKey(payload.key),assigneeId=task?.assigneeId||completionMember(payload.key,payload.title,payload.category,payload.grade,'');globalThis.GuildV4?.onSettlement({...payload,assigneeId});if(payload.active&&payload.key.startsWith('task:')&&task?.type==='once')globalThis.GuildCharacterMilestones?.completed(task,tasks,guildMilestoneContext())}catch(error){console.error('v4 委托结算未完成：',error)}}
+function notifyGuildV4Settlement(payload){try{const task=praiseTaskForKey(payload.key),assigneeId=task?.assigneeId||completionMember(payload.key,payload.title,payload.category,payload.grade,'');globalThis.GuildV4?.onSettlement({...payload,assigneeId})}catch(error){console.error('v4 委托结算未完成：',error)}}
 function guildMilestoneContext(){return{registry:guildMemberRegistry,save}}
 function itemPracticeExp(j){return j>=450?18:j>=300?12:j>=200?8:5}
 function itemPractice(item){if(!['star','alchemy','expedition'].includes(item.kind)||!Arcane.info(item.magicId)||item.j<120||/铭牌|图鉴|纪念|陈列|索引册/.test(item.title))return null;return{magicId:item.magicId,exp:itemPracticeExp(item.j)}}
@@ -1775,7 +1775,7 @@ function completeOnceTask(t,outcomeConfirmed=false){
  settleArcane(t.legacyCounted?'daily:'+t.legacyDate+':'+t.legacyId:'task:'+t.id,t.title,t.category,GuildGrowth.points[guildGrade(t)],true,guildGrade(t));
  if(t.legacyCounted){data[t.legacyDate].checked[t.legacyId]=true;data[t.legacyDate].completedAt??={};data[t.legacyDate].completedAt[t.legacyId]=t.completedAt}
  scheduleRecurringQuest(t);
- if(['A','S'].includes(guildGrade(t))){ensureGuildCelebration(t);localStorage.setItem('fairytail-guild-hall-active-scene','mainHall');localStorage.setItem('fairytail-guild-hall-open','1')}save();all();if(!['A','S'].includes(guildGrade(t)))showGuildPraise('task:'+t.id,t.title,t.category,guildGrade(t),t.settledJ??t.reward,GuildGrowth.points[guildGrade(t)])
+ if(['A','S'].includes(guildGrade(t))){ensureGuildCelebration(t);localStorage.setItem('fairytail-guild-hall-active-scene','mainHall');localStorage.setItem('fairytail-guild-hall-open','1')}save();globalThis.GuildCharacterMilestones?.completed(t,tasks,guildMilestoneContext());all();if(!['A','S'].includes(guildGrade(t)))showGuildPraise('task:'+t.id,t.title,t.category,guildGrade(t),t.settledJ??t.reward,GuildGrowth.points[guildGrade(t)])
 }function completeProjectStage(task,step){
  const taskId=task?.id,stageId=step?.id;
  task=tasks.find(current=>current.id===taskId&&current.type==='project');
@@ -1796,7 +1796,7 @@ function completeProjectQuest(task,button,outcomeConfirmed=false){
  if(!task||task.done||task.status==='completed'||task.status==='cancelled'||!(task.steps||[]).length||!task.steps.every(step=>step.done))return false;
  if(!outcomeConfirmed||globalThis.GuildWorkspaceCore?.deliveryIssue(task)){requestTaskOutcome(task,()=>completeProjectQuest(task,button,true));return false}
  createGuildSnapshot('完成长期远征前 · '+task.title);
- if(button)button.disabled=true;const view=captureGuildViewState(task.id);task.done=true;task.status='completed';task.completedAt??=nowShanghai();task.projectCompletionLedgerKey??='project-complete:'+task.id+':'+task.completedAt;globalThis.GuildCharacterMilestones?.completed(task,tasks,guildMilestoneContext());if(['A','S'].includes(guildGrade(task))){ensureGuildCelebration(task);localStorage.setItem('fairytail-guild-hall-active-scene','mainHall');localStorage.setItem('fairytail-guild-hall-open','1')}save();all();
+ if(button)button.disabled=true;const view=captureGuildViewState(task.id);task.done=true;task.status='completed';task.completedAt??=nowShanghai();task.projectCompletionLedgerKey??='project-complete:'+task.id+':'+task.completedAt;if(['A','S'].includes(guildGrade(task))){ensureGuildCelebration(task);localStorage.setItem('fairytail-guild-hall-active-scene','mainHall');localStorage.setItem('fairytail-guild-hall-open','1')}save();globalThis.GuildCharacterMilestones?.completed(task,tasks,guildMilestoneContext());all();
  const close=()=>restoreGuildViewState(view);if(['A','S'].includes(guildGrade(task))){const notice=document.createElement('div');notice.className='guild-praise guild-praise--notice';notice.setAttribute('role','status');notice.dataset.grade=guildGrade(task);notice.innerHTML='<div class="guild-praise-copy"><strong>公会大厅已为归队庆典点亮</strong><span>前往左侧公会实景，点击“举行归队庆典”。</span></div>';document.body.append(notice);setTimeout(()=>notice.remove(),5200);close()}else{const exp=(task.steps||[]).reduce((sum,step)=>sum+(growth?.projectPools?.[task.id]?.shares?.[step.id]??0),0);showGuildPraise('task:'+task.id,task.title,task.category,guildGrade(task),task.reward,exp);close()}return true
 }
 function projects(){

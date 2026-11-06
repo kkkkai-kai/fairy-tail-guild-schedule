@@ -14,32 +14,38 @@
   for(const threshold of thresholds){const id='character-week:'+range.start+':'+task.assigneeId+':'+threshold;if(completed.length<threshold||existing.has(id))continue;const selected=completed.slice(0,threshold),r={id,version:2,period:'week',date:range.start,weekStart:range.start,weekEnd:range.end,memberId:task.assigneeId,threshold,taskIds:selected.map(t=>t.id),titles:selected.map(t=>t.title),unlockedAt:now,claimedAt:''};task.characterMilestones??={};task.characterMilestones[id]=r;latest=r;}
   return latest;
  }
- let pending=null,dialog=null,bound=false;
+ const pending=[];let dialog=null,bound=false,drainTimer=0;
+ function bindQueue(){if(bound)return;bound=true;document.addEventListener('close',()=>{clearTimeout(drainTimer);drainTimer=setTimeout(drain,60)},true);document.addEventListener('visibilitychange',()=>{if(document.visibilityState!=='hidden')drain()})}
+ function drain(){if(document.visibilityState==='hidden'||document.querySelector('dialog[open]'))return;const next=pending.shift();if(next)show(next.r,next.context,next.replay)}
+ function enqueue(r,context,replay){bindQueue();const key=r.id||[r.memberId,r.period,r.date,r.threshold].join(':');if(!pending.some(x=>x.key===key))pending.push({key,r,context,replay});return false}
  function show(r,context,replay=false){
-  if(document.querySelector('dialog[open]')){pending={r,context,replay};return false}
-  const member=context.registry[r.memberId];if(!member)return false;
+  if(!r||!context?.registry?.[r.memberId])return false;bindQueue();
+  if(dialog?.open&&dialog.dataset.recordId===r.id)return true;
+  if(document.querySelector('dialog[open]'))return enqueue(r,context,replay);
+  const member=context.registry[r.memberId];
   dialog??=Object.assign(document.createElement('dialog'),{id:'guildCharacterMilestoneDialog',className:'guild-character-milestone'});if(!dialog.isConnected)document.body.append(dialog);dialog.replaceChildren();
   const close=document.createElement('button');close.type='button';close.className='milestone-close';close.textContent='×';close.setAttribute('aria-label','关闭纪念画面');close.onclick=()=>dialog.close();
   const image=document.createElement('img');image.className='milestone-art';image.decoding='async';image.fetchPriority='high';
   const theme=globalThis.GuildMilestoneThemes?.config(r.memberId,r.threshold,context.registry)||{title:member.name+'的纪念',tier:'伙伴纪念',color:'#97754b',line:'完成记录已经妥善收好。',motif:'完成卷宗'};
-  const dedicated=globalThis.GuildMilestoneThemes?.artFor(r.memberId,r.threshold)||'';
-  image.alt=member.name+' · '+r.threshold+'次协作纪念';image.src=dedicated||member.hallStates?.daily||member.hallStates?.normal||member.hallSprite;image.dataset.memberId=r.memberId;
+  const visual=globalThis.GuildMilestoneThemes?.visualFor(r,context.registry),dedicated=visual?.illustration||'',candidates=visual?.candidates||[member.hallSprite].filter(Boolean);let candidateIndex=0;
+  image.alt=member.name+' · '+r.threshold+'次协作纪念';image.dataset.memberId=r.memberId;dialog.dataset.recordId=r.id||'';dialog.dataset.artUsage='settlement-dialog';
   dialog.dataset.tier=String(r.threshold);dialog.style.setProperty('--milestone-accent',theme.color);dialog.classList.toggle('milestone-composed',!dedicated);dialog.classList.toggle('milestone-illustrated',!!dedicated);
-  image.onerror=()=>{if(!image.dataset.fallback&&member.hallSprite){image.dataset.fallback='1';dialog.classList.remove('milestone-illustrated');dialog.classList.add('milestone-composed');image.src=member.hallSprite}else image.hidden=true};
+  image.onerror=()=>{candidateIndex++;dialog.classList.remove('milestone-illustrated');dialog.classList.add('milestone-composed');scene.style.backgroundImage='url("'+visual.background+'")';if(candidateIndex<candidates.length){image.dataset.fallback='1';image.src=candidates[candidateIndex]}else{image.hidden=true;scene.dataset.artUnavailable='true'}};if(candidates.length)image.src=candidates[0];else image.hidden=true;
   const body=document.createElement('section'),title=document.createElement('h2'),text=document.createElement('p'),list=document.createElement('ol'),foot=document.createElement('small');title.id='guildMilestoneTitle';title.textContent=member.name+' · '+theme.title+' · '+theme.tier;dialog.setAttribute('aria-labelledby',title.id);
   text.textContent=(r.period==='week'?'本周已共同完成 '+r.threshold+' 项正式委托。':'旧每日纪念 · 三项正式委托。')+theme.line;
 
-  for(const value of r.titles){const item=document.createElement('li');item.textContent=value;list.append(item)}foot.textContent=(r.period==='week'?r.weekStart+' — '+r.weekEnd:r.date+' · 旧每日纪念')+' · 酬劳与经验已按各项委托结算，本画面不重复发奖。';body.append(title,text,list,foot);const scene=document.createElement('div');scene.className='milestone-tableau';scene.append(image);
+  for(const value of r.titles||[]){const item=document.createElement('li');item.textContent=value;list.append(item)}foot.textContent=(r.period==='week'?r.weekStart+' — '+r.weekEnd:r.date+' · 旧每日纪念')+' · 酬劳与经验已按各项委托结算，本画面不重复发奖。';const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='查看这次纪念的真实委托 · '+(r.titles||[]).length+' 项';details.append(summary,list);body.append(title,text,details,foot);const scene=document.createElement('div');scene.className='milestone-tableau';scene.append(image);
   const historical=member.roleType==='historical-member'||r.memberId==='azuma',spirit=member.roleType==='celestial-spirit',visitor=member.roleType==='visitor-ally';
-  const bg=historical||spirit?'素材/场景/星灵契约桌/guild-celestial-desk-v268.webp':visitor?'素材/场景/联盟会客席/guild-alliance-seat-v268.webp':r.threshold>=10?'素材/场景/大厅/guild-hall-supper-night-v155.webp':r.threshold>=5?'素材/场景/联盟会客席/guild-alliance-seat-v268.webp':'素材/场景/星灵契约桌/guild-celestial-desk-v268.webp';scene.style.backgroundImage='url("'+bg+'")';
+  const bg=historical||spirit?'素材/场景/星灵契约桌/guild-celestial-desk-v268.webp':visitor?'素材/场景/联盟会客席/guild-alliance-seat-v268.webp':r.threshold>=10?'素材/场景/大厅/guild-hall-supper-night-v155.webp':r.threshold>=5?'素材/场景/联盟会客席/guild-alliance-seat-v268.webp':'素材/场景/星灵契约桌/guild-celestial-desk-v268.webp';if(!dedicated)scene.style.backgroundImage='url("'+(visual?.background||bg)+'")';
   const tier=document.createElement('span');tier.className='milestone-tier-seal';tier.textContent=(r.period==='week'?'本周 ':'')+r.threshold+' 次 · '+theme.tier;scene.append(tier);
-  const count=r.threshold>=10?5:r.threshold>=5?3:1;for(let i=0;i<count;i++){const prop=document.createElement('img');prop.className='milestone-prop';prop.alt='';prop.src='素材/道具/情报物件/guild-record-'+(r.threshold>=10?'pennant':r.threshold>=5?'toast':'scroll')+'-v86-fast-v101.webp';prop.style.left=(count===1?68:15+i*(70/(count-1)))+'%';scene.append(prop)}
-  const keepsake=document.createElement('p');keepsake.className='milestone-keepsake';keepsake.textContent=theme.motif;scene.append(keepsake);dialog.append(close,scene,body);
+  const count=r.threshold>=10?5:r.threshold>=5?3:1;for(let i=0;!dedicated&&i<count;i++){const prop=document.createElement('img');prop.className='milestone-prop';prop.alt='';prop.src='素材/道具/情报物件/guild-record-'+(r.threshold>=10?'pennant':r.threshold>=5?'toast':'scroll')+'-v86-fast-v101.webp';prop.style.left=(count===1?68:15+i*(70/(count-1)))+'%';scene.append(prop)}
+  const keepsake=document.createElement('p');keepsake.className='milestone-keepsake';keepsake.textContent=theme.motif;scene.append(keepsake);const finish=document.createElement('button');finish.type='button';finish.className='milestone-finish';finish.textContent='收好纪念 · 继续';finish.onclick=()=>dialog.close();body.append(finish);dialog.append(close,scene,body);
   if(!dialog.dataset.bound){dialog.dataset.bound='1';let outside=false;dialog.addEventListener('pointerdown',e=>{const b=dialog.getBoundingClientRect();outside=e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom});dialog.addEventListener('click',e=>{if(e.target===dialog&&outside)dialog.close();outside=false})}
-  if(!replay&&!r.claimedAt){r.claimedAt=new Date().toISOString();context.save()}
-  dialog.showModal();if(!matchMedia('(prefers-reduced-motion: reduce)').matches)scene.animate([{opacity:.2,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:480,easing:'ease-out'});return true;
+  dialog.showModal();if(!dialog.open)return enqueue(r,context,replay);
+  if(!replay&&!r.claimedAt){r.claimedAt=new Date().toISOString();try{context.save()}catch(error){r.claimedAt='';foot.textContent+=' 观看标记尚未保存，可从纪念卷宗重新开启。';console.error('纪念观看记录未保存',error)}}
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)scene.animate([{opacity:.2,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:320,easing:'ease-out'});close.focus({preventScroll:true});return true;
  }
- function completed(task,tasks,context){const r=record(task,tasks);if(!r)return null;context.save();if(!bound){bound=true;document.addEventListener('close',()=>{if(pending&&!document.querySelector('dialog[open]')){const next=pending;pending=null;queueMicrotask(()=>show(next.r,next.context,next.replay))}},true)}queueMicrotask(()=>show(r,context));return r}
+ function completed(task,tasks,context){const r=record(task,tasks);if(!r)return null;context.save();bindQueue();queueMicrotask(()=>show(r,context));return r}
  function mount(stage,sceneId,tasks,context){
   stage.querySelector(':scope>.guild-milestone-memory')?.remove();if(!['mainHall','returnTable','upperGallery'].includes(sceneId))return;
   const list=records(tasks).sort((a,b)=>b.unlockedAt.localeCompare(a.unlockedAt));if(!list.length)return;
