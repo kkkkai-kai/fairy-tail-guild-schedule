@@ -44,7 +44,7 @@
   if(!dialog.dataset.bound){dialog.dataset.bound='1';let outside=false;dialog.addEventListener('pointerdown',e=>{const b=dialog.getBoundingClientRect();outside=e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom});dialog.addEventListener('click',e=>{if(e.target===dialog&&outside)dialog.close();outside=false})}
   dialog.showModal();if(!dialog.open)return enqueue(r,context,replay);
   if(!replay&&!r.claimedAt){r.claimedAt=new Date().toISOString();try{context.save()}catch(error){r.claimedAt='';foot.textContent+=' 观看标记尚未保存，可从纪念卷宗重新开启。';console.error('纪念观看记录未保存',error)}}
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)scene.animate([{opacity:.2,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:320,easing:'ease-out'});close.focus({preventScroll:true});return true;
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)scene.animate([{opacity:.2,transform:'translateY(8px)'},{opacity:1,transform:'translateY(0)'}],{duration:320,easing:'ease-out'});globalThis.GuildSettlementStage?.play(dialog,r,context.registry);close.focus({preventScroll:true});return true;
  }
  function completed(task,tasks,context){const r=record(task,tasks);if(!r)return null;context.save();bindQueue();queueMicrotask(()=>show(r,context));return r}
  function mount(stage,sceneId,tasks,context){
