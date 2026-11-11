@@ -7,7 +7,9 @@
   celestialDesk:{name:'星灵契约桌',parent:'archiveRoom',file:'素材/场景/星灵契约桌/guild-celestial-desk-v268.webp',x:82,y:29,floor:[20,85,57,94]},
   returnTable:{name:'归队交付长桌',parent:'missionBoard',reuse:'mainHall',x:51,y:35},
   oldRecords:{name:'旧卷宗壁龛',parent:'archiveRoom',reuse:'archiveRoom',x:18,y:35},
-  windowSeat:{name:'窗边休憩席',parent:'guildTavern',reuse:'guildTavern',x:73,y:31}
+  windowSeat:{name:'窗边休憩席',parent:'guildTavern',reuse:'guildTavern',x:73,y:31},
+  supplyCounter:{name:'补给交接台',parent:'guildTavern',reuse:'guildTavern',x:52,y:44},
+  readingAlcove:{name:'文献研读席',parent:'researchRoom',reuse:'archiveRoom',x:67,y:45}
  };
  const hash=text=>{let n=2166136261;for(const c of String(text)){n^=c.charCodeAt(0);n=Math.imul(n,16777619)}return n>>>0};
  function register(registry,spots,connections){for(const[id,z]of Object.entries(zones)){
@@ -26,7 +28,7 @@
  function counts(values){const out={...values};for(const[id,z]of Object.entries(zones))out[z.parent]=(out[z.parent]||0)+(values[id]||0);return out}
  function mount(stage,scene,phase,go,context){
   stage.querySelectorAll(':scope>.guild-annex-sign').forEach(n=>n.remove());const zone=zones[scene];if(zone?.file){stage.dataset.annexRoom=scene;if(annexTimeFiles[scene])delete stage.dataset.annexLight;else stage.dataset.annexLight=phase}else{delete stage.dataset.annexRoom;delete stage.dataset.annexLight}
-  const sign=(id,label,x,y,run)=>{const b=document.createElement('button');b.type='button';b.className='guild-annex-sign';b.dataset.annexTarget=id;b.style.left=x+'%';b.style.top=y+'%';b.textContent=label;b.onclick=e=>{e.stopPropagation();run()};stage.append(b);return b};
+  const sign=(id,label,x,y,run)=>{const b=document.createElement('button'),img=document.createElement('img');b.type='button';b.className='guild-annex-sign';b.dataset.annexTarget=id;b.style.left=x+'%';b.style.top=y+'%';b.setAttribute('aria-label',label);const prop=/supply|supplies/.test(id)?'chest':/memory/.test(id)?'book':/contract/.test(id)?'quill':/records|delivery|project/.test(id)?'scroll':zones[id]?'pennant':'book';img.src='素材/道具/情报物件/guild-record-'+prop+'-v86-fast-v101.webp';img.alt='';b.append(img);b.onclick=e=>{e.stopPropagation();run()};stage.append(b);return b};
   if(zone){sign(zone.parent,'← '+(context.scenes[zone.parent]?.name||'大厅'),17,9,()=>go(zone.parent));
    if(scene==='upperGallery')sign('project-records','成果卷宗',82,29,()=>{const project=context.tasks.find(t=>t.type==='project'&&t.done)||context.tasks.find(t=>t.type==='project');project?context.openTask(project):globalThis.GuildSceneLife?.openMemory()});
    if(scene==='returnTable')sign('delivery-records','交付卷宗',82,36,()=>context.openRecords());
@@ -34,6 +36,8 @@
    if(scene==='celestialDesk')sign('contract-records','契约联络',66,31,()=>context.openMember('lucy'));
    if(scene==='allianceSeat'){const guest=context.tasks.find(t=>context.registry[t.assigneeId]?.roleType==='visitor-ally');sign('alliance-records','来访记录',42,35,()=>context.openMember(guest?.assigneeId||'sting'))}
    if(scene==='windowSeat')sign('memory-album','纪念画册',70,29,()=>globalThis.GuildSceneLife?.openMemory());
+   if(scene==='supplyCounter')sign('supplies','查看真实库存与物资记录',62,53,()=>context.openSupplies());
+   if(scene==='readingAlcove')sign('reading-library','打开已收藏文献与研读进度',56,53,()=>globalThis.GuildLiterature?.open('library'));
   }else for(const[id,z]of Object.entries(zones))if(z.parent===scene)sign(id,z.name,z.x,z.y,()=>go(id));
  }
  globalThis.GuildAnnex=Object.freeze({zones,register,route,parent,counts,mount,floor:id=>zones[id]?.floor});
