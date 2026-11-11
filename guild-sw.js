@@ -1,6 +1,6 @@
 /* Interface cache is versioned; filename-versioned images keep a separate cache. */
 'use strict';
-var CACHE_VER='guild-v272-reading-stability-20261106';
+var CACHE_VER='guild-v273-desktop-happy-20261111';
 importScripts('./代码/guild-assets.js?v='+CACHE_VER);
 var CACHE_NAME='guild-core-'+CACHE_VER;
 var MEDIA_CACHE_NAME='guild-media-v1';
@@ -8,6 +8,7 @@ var CORE_URLS=['./代码/guild-assets.js','./代码/guild-literature-static.js',
 CORE_URLS.push('./代码/guild-reading-core.js','./代码/guild-reading-ui.js','./代码/guild-journal-core.js','./代码/guild-journal-ui.js','./样式/guild-journal.css','./代码/guild-calendar-reminders.js','./样式/guild-calendar-reminders.css');
 CORE_URLS.push('./代码/guild-memory-core.js','./代码/guild-workflow-tools.js','./代码/guild-scene-life.js','./代码/guild-workspace-core.js','./代码/guild-sync-recovery.js','./代码/guild-workspace.js','./样式/guild-workspace.css');
 CORE_URLS.push('./代码/guild-milestone-themes.js','./代码/guild-annex.js','./代码/guild-character-milestones.js','./样式/guild-annex.css');
+CORE_URLS.push('./代码/guild-desktop-happy.js');
 self.addEventListener('install',function(event){event.waitUntil(caches.open(CACHE_NAME).then(function(cache){return Promise.all(CORE_URLS.map(function(url){var request=new Request(new URL(url,self.location.href),{cache:'reload'});return fetch(request).then(function(response){if(!response.ok)throw new Error('Core cache unavailable: '+url);return cache.put(url,response)})}))}).then(function(){return self.skipWaiting()}))});
 self.addEventListener('activate',function(event){event.waitUntil(caches.keys().then(function(keys){return Promise.all(keys.filter(function(key){return key.indexOf('guild-core-')===0&&key!==CACHE_NAME}).map(function(key){return caches.delete(key)}))}).then(function(){return self.clients.claim()}))});
 function saveResponse(cache,req,res){if(res&&res.ok)return cache.put(req,res.clone()).then(function(){return res},function(){return res});return Promise.resolve(res)}
