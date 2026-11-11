@@ -28,7 +28,7 @@
   dialog.querySelector('.guild-literature-back').hidden=LOCAL_ONLY&&!offline;
   dialog.querySelectorAll('iframe,.guild-literature-offline,.guild-literature-static-list').forEach(n=>n.remove());
   if(LOCAL_ONLY&&!offline){
-   const iframe=document.createElement('iframe');iframe.title=view==='library'?'研读角文献收藏':'情报角文献呈递';iframe.dataset.contextNonce=crypto.randomUUID();
+   const iframe=document.createElement('iframe');iframe.title=view==='holding'?'待开卷文献':view==='library'?'研读角文献收藏':'情报角文献呈递';iframe.dataset.contextNonce=crypto.randomUUID();
    const path=deskRoute(previous.path||defaultRoute,iframe.dataset.contextNonce)||deskRoute(defaultRoute,iframe.dataset.contextNonce),restoreY=Number.isFinite(previous.scrollY)?Math.max(0,previous.scrollY):0;
    iframe._restorePending=restoreY>0;iframe._restoreY=restoreY;iframe.src=base+path;iframe.referrerPolicy='no-referrer';
    iframe.addEventListener('load',()=>{iframe.contentWindow.postMessage({type:'guild-literature-restore-position',nonce:iframe.dataset.contextNonce,scrollY:restoreY},base);setTimeout(()=>{iframe._restorePending=false},3000)});
@@ -62,8 +62,8 @@
  }
  function renderStaticList(view,paperId,query=''){
   const list=document.createElement('div');list.className='guild-literature-static-list';if(!LOCAL_ONLY)list.append(readingWorkbenchLinks(view,paperId,query));
-  const needle=query.normalize('NFKC').trim().toLocaleLowerCase(),papers=(snapshot?.papers||[]).filter(p=>!p.discardedAt).filter(p=>!needle||[p.title,p.titleZh,p.authors,p.doi,p.pmid,p.journal,p.abstract,p.notes,...Object.values(p.research||{})].join(' ').normalize('NFKC').toLocaleLowerCase().includes(needle)).filter(p=>view==='library'?p.saved:p.dispatch?.state==='pending');
-  if(!papers.length){const empty=document.createElement('p');empty.className='guild-literature-offline';empty.textContent=view==='library'?'研读角暂无已收藏文献；同步完成后重新打开。':'情报角暂无待呈递文献。';list.append(empty);}
+  const needle=query.normalize('NFKC').trim().toLocaleLowerCase(),papers=(snapshot?.papers||[]).filter(p=>!p.discardedAt).filter(p=>!needle||[p.title,p.titleZh,p.authors,p.doi,p.pmid,p.journal,p.abstract,p.notes,...Object.values(p.research||{})].join(' ').normalize('NFKC').toLocaleLowerCase().includes(needle)).filter(p=>view==='holding'?(p.saved&&p.status!=='reading'&&p.status!=='read'&&!['started','linked'].includes(p.readingWorkflow?.state)):view==='library'?(p.saved&&(p.status==='reading'||p.status==='read'||['started','linked'].includes(p.readingWorkflow?.state))):p.dispatch?.state==='pending');
+  if(!papers.length){const empty=document.createElement('p');empty.className='guild-literature-offline';empty.textContent=view==='holding'?'待开卷暂无文献；情报角确认接收后会先到这里。':view==='library'?'研读角暂无在读或已读文献；同步完成后重新打开。':'情报角暂无待呈递文献。';list.append(empty);}
   for(const p of papers){const item=document.createElement('details');item.className='guild-literature-static-item';if(paperId&&p.id===paperId)item.open=true;const sum=document.createElement('summary'),name=document.createElement('span'),meta=document.createElement('span');name.textContent=p.titleZh||p.title||'未命名文献';meta.className='gls-meta';meta.textContent=[p.journal,p.year,p.status==='read'?'已研读':p.status==='reading'?'研读中':'未读'].filter(Boolean).join(' · ');sum.append(name,meta);const body=document.createElement('div');body.className='gls-body';const en=document.createElement('p');en.textContent=p.title||'';body.append(en);if(p.abstract){const detail=document.createElement('details'),head=document.createElement('summary'),ab=document.createElement('p');head.textContent='原文摘要';ab.textContent=p.abstract;detail.append(head,ab);body.append(detail);}globalThis.GuildReadingUI?.render(body,p);item.append(sum,body);list.append(item);}
   dialog.append(list);
  }
