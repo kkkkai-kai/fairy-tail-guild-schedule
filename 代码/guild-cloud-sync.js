@@ -200,7 +200,7 @@
       var text = hasDraft ? '页面还有未提交的输入，刷新可能丢失这些内容。已保存的记录会保留。仍要刷新吗？' : '本机记录已保存，仍有云端同步尚未确认；刷新后会继续同步。现在刷新吗？';
       var approved = typeof guildConfirmDialog === 'function'
         ? await guildConfirmDialog({ title: '刷新公会页面', text: text, okText: '刷新页面', cancelText: '留在页面' })
-        : window.confirm(text);
+        : (function () { if (typeof showGuildReceipt === 'function') showGuildReceipt('公会确认尚未准备好，请稍后再刷新。', false); return false; })();
       if (!approved) return false;
     }
     location.reload();
