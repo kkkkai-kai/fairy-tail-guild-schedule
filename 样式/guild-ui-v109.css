@@ -532,8 +532,16 @@ html body #guildHallScene :is(.guild-hall-member,.nook-exceed)>.guild-hall-sprit
 #guildPresentationDialog label{display:block;margin:14px 0;line-height:1.6}#guildPresentationDialog button{margin:4px}#guildPoseCoverage details{border-bottom:1px solid #dfc9ae;padding:8px 0}
 #quickStagePreview textarea{min-height:44px;width:100%;box-sizing:border-box;font:inherit;resize:vertical}#quickStagePreview .quick-stage-row{align-items:start;gap:8px;min-width:0}#quickStagePreview .quick-stage-row input[type=date]{max-width:150px}#quickStagePreview .quick-stage-row input[type=time]{max-width:100px}
 @media(max-width:640px){#quickStagePreview .quick-stage-row{display:flex;flex-wrap:wrap}#quickStagePreview .quick-stage-row textarea{flex-basis:100%}#guildMemoryPage{padding:12px}}
-#quickStagePreview .quick-stage-row{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important;padding:12px 0!important;border-bottom:1px solid #e9d9c3;position:relative!important;height:auto!important;min-height:0!important}
-#quickStagePreview .quick-stage-row>*{position:static!important;grid-column:auto!important;grid-row:auto!important;min-width:0;max-width:100%;box-sizing:border-box}
-#quickStagePreview .quick-stage-row textarea{flex:1 1 100%;height:auto;min-height:54px}#quickStagePreview .quick-stage-row small{flex:1 1 100%;overflow-wrap:anywhere}#quickStagePreview .quick-stage-row button{flex:0 1 auto;margin:0!important;min-height:34px}
+#form #quickStagePreview .quick-stage-row{display:grid!important;grid-template-columns:62px minmax(0,1fr)!important;gap:6px 10px!important;padding:10px 0!important;border-bottom:1px solid #e9d9c3;position:relative!important;height:auto!important;min-height:0!important;width:100%}
+#form #quickStagePreview .quick-stage-row>*{position:static!important;min-width:0;max-width:100%;box-sizing:border-box}
+#form #quickStagePreview .quick-batch-choice{grid-column:1!important;grid-row:1!important;display:flex;align-items:center;gap:5px;align-self:start;padding-top:9px;font-size:13px;white-space:nowrap}
+#form #quickStagePreview .quick-batch-choice input[type=checkbox]{width:18px!important;height:18px!important;min-width:18px!important;min-height:18px!important;padding:0!important;margin:0!important;flex:0 0 18px;appearance:auto}
+#form #quickStagePreview .quick-stage-row>textarea{grid-column:2!important;grid-row:1!important;width:100%;height:auto;min-height:48px;font:inherit;resize:vertical}
+#form #quickStagePreview .quick-stage-row>small{grid-column:2!important;grid-row:2!important;overflow-wrap:anywhere}
+#form #quickStagePreview .quick-batch-actions{grid-column:1/-1!important;display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+#form #quickStagePreview .quick-batch-actions input[type=date]{width:160px;min-height:36px!important}
+#form #quickStagePreview .quick-batch-actions input[type=time]{width:110px;min-height:36px!important}
+#form #quickStagePreview .quick-batch-actions button{width:auto;flex:0 1 auto;margin:0!important;min-height:34px;padding:5px 9px}
+@media(max-width:640px){#form #quickStagePreview .quick-stage-row{grid-template-columns:52px minmax(0,1fr)!important;gap:5px!important}#form #quickStagePreview .quick-batch-actions{gap:5px}#form #quickStagePreview .quick-batch-actions button{font-size:12px!important}}
 .gw-task-trace{position:absolute;z-index:4;pointer-events:auto;width:26px;height:26px;border:0!important;padding:0!important;background:transparent!important;box-shadow:none!important}.gw-task-trace img{width:100%;height:100%;object-fit:contain}.gw-task-trace:focus-visible{outline:2px solid #ad713c;outline-offset:2px}
 html #guildHallScene .guild-scene-foreground{background-size:cover;background-position:center}

@@ -28,3 +28,6 @@
 .guild-character-milestone.milestone-illustrated .milestone-tier-seal{z-index:3}
 
 .guild-hall-stage[data-annex-room]>.guild-hall-weather-layer{display:none!important}
+
+/* Room objects are kept on one wall rack, never scattered across the walkable floor. */
+.guild-room-prop-rack{position:absolute;right:7px;top:12%;z-index:4;display:grid;gap:9px;width:42px}.guild-room-prop-rack .guild-room-object{position:relative!important;left:auto!important;top:auto!important;width:40px!important;height:40px!important;transform:none!important;margin:0!important}.guild-object-card{width:min(300px,88vw);border:1px solid #bf9564;border-radius:10px;background:#fff9ed;color:#533a2a;padding:16px}.guild-object-card::backdrop{background:#3c281a45}.guild-object-card p{font-size:14px;line-height:1.5}.guild-object-card button{padding:7px 10px;margin:4px}

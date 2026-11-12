@@ -650,6 +650,21 @@
       } else if (!primary.v4 && secondary.v4) merged.v4 = secondary.v4;
     } else if (key === 'fairytail-warehouse-v1') {
       merged.items = mergeRecordArrays(local.items, remote.items, preferLocal);
+      merged.movements = mergeRecordArrays(local.movements, remote.movements, preferLocal);
+      var p = preferLocal ? local : remote, q = preferLocal ? remote : local;
+      var ps = p.happy && p.happy.activities && p.happy.activities.sessions || {};
+      var qs = q.happy && q.happy.activities && q.happy.activities.sessions || {};
+      if (Object.keys(ps).length || Object.keys(qs).length) {
+        merged.happy = Object.assign({}, q.happy, p.happy);
+        var sessions = Object.assign({}, ps), extraExp = 0;
+        Object.keys(qs).forEach(function(id) {
+          var row=qs[id], old=ps[id];
+          if (!old || (old.status !== 'claimed' && row.status === 'claimed')) sessions[id]=row;
+          if (row.status === 'claimed' && (!old || old.status !== 'claimed')) extraExp += Number(row.happyExp)||0;
+        });
+        merged.happy.exp = (Number(p.happy && p.happy.exp)||0) + extraExp;
+        merged.happy.activities = Object.assign({}, q.happy && q.happy.activities, p.happy && p.happy.activities, {sessions:sessions});
+      }
     } else if (key === 'fairytail-schedule-v1') {
       Object.keys(Object.assign({}, remote, local)).forEach(function (date) {
         var l = local[date], r = remote[date];

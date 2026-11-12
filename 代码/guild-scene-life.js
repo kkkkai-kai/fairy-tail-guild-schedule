@@ -5,10 +5,10 @@
  const icons={mainHall:'素材/道具/情报物件/guild-record-pennant-v86-fast-v101.webp',archiveRoom:'素材/界面/功能图标/guild-scene-icon-archive-v102.webp',researchRoom:'素材/界面/功能图标/guild-scene-icon-study-v102.webp',missionBoard:'素材/界面/功能图标/guild-scene-icon-board-v102.webp',intelCorner:'素材/界面/功能图标/guild-scene-icon-intel-v102.webp',guildTavern:'素材/界面/功能图标/guild-scene-icon-tavern-v102.webp',happyNook:'素材/界面/功能图标/guild-scene-icon-nook-v102.webp'};
  // These are app navigation anchors, not claims about the canonical building floor plan.
  const rooms={
-  mainHall:{region:'公会中心',links:[['archiveRoom',22,24,'楼梯旁 · 卷宗架'],['missionBoard',85,40,'告示板 · 委托区域'],['guildTavern',51,31,'柜台方向 · 吧台']],windows:[[0,0,5,19],[34,4,5,14],[62,4,5,14],[95,0,5,19]],table:{polygon:'polygon(8% 75%,28% 74%,29% 80%,7% 81%)',front:81}},
+  mainHall:{region:'公会中心',links:[['archiveRoom',7,34,'一楼左侧资料区域 · 卷宗架'],['missionBoard',85,40,'告示板 · 委托区域'],['guildTavern',51,31,'柜台方向 · 吧台']],windows:[[0,0,5,19],[34,4,5,14],[62,4,5,14],[95,0,5,19]],table:{polygon:'polygon(8% 75%,28% 74%,29% 80%,7% 81%)',front:81}},
   archiveRoom:{region:'资料区域',links:[['mainHall',49,93,'返回大厅'],['researchRoom',86,41,'书柜旁 · 研读角']],windows:[[33,5,6,14],[71,5,7,14]],table:{polygon:'polygon(36% 48%,77% 48%,77% 63%,36% 63%)',front:64}},
   researchRoom:{region:'资料区域',links:[['archiveRoom',8,81,'卷宗架方向']],windows:[[28,5,10,21],[62,5,10,21]],table:{polygon:'polygon(0% 63%,21% 65%,21% 94%,0% 94%)',front:94}},
-  missionBoard:{region:'委托区域',links:[['mainHall',49,92,'返回大厅'],['intelCorner',86,43,'来信旁 · 情报角']],windows:[]},
+  missionBoard:{region:'委托区域',links:[['mainHall',49,92,'返回大厅'],['intelCorner',92,61,'右侧通道 · 情报角']],windows:[]},
   intelCorner:{region:'委托区域',links:[['mainHall',8,49,'左侧门廊 · 返回大厅'],['missionBoard',54,33,'告示厅方向']],windows:[[30,12,9,19],[65,12,9,19]]},
   guildTavern:{region:'休整区域',links:[['mainHall',91,83,'回到大厅'],['happyNook',9,84,'补给篮旁 · 哈比小窝']],windows:[],table:{polygon:'polygon(5% 50%,24% 51%,24% 79%,5% 78%)',front:80}},
   happyNook:{region:'休整区域',links:[['guildTavern',90,81,'吧台方向']],windows:[[70,4,14,25]]}
