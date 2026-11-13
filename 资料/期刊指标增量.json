@@ -1,0 +1,22 @@
+{
+  "updatedAt": "2026-10-23",
+  "notice": "公开参考，非官方数据库登录核验。JIF年度、JCR分区、中科院与新锐分区分别保存；不能用期刊指标认定单篇质量或加倍阅读奖励。",
+  "metrics": [{
+    "journal":"Cell","issn":"0092-8674","year":2025,"releaseYear":2026,"value":45.1,
+    "sourceUrl":"https://www.bioxbio.com/journal/CELL","crosscheckUrls":["https://www.sci365.cn/journals/cell-00928674/"],"verified":false,"reference":true,"sourceKind":"secondary","checkedAt":"2026-10-23",
+    "partitions":{
+      "jcr":{"year":2025,"zone":"Q1","category":"Biochemistry & Molecular Biology / Cell Biology","categories":[{"name":"Biochemistry & Molecular Biology","zone":"Q1"},{"name":"Cell Biology","zone":"Q1"}],"sourceUrl":"https://www.sci365.cn/journals/cell-00928674/","verified":false,"reference":true,"checkedAt":"2026-10-23"},
+      "cas":{"year":2025,"zone":"1","category":"生物学","categories":[{"name":"生化与分子生物学","zone":"1"},{"name":"细胞生物学","zone":"1"}],"top":true,"sourceUrl":"https://www.sci365.cn/journals/cell-00928674/","verified":false,"reference":true,"checkedAt":"2026-10-23"},
+      "xr":{"year":2026,"zone":"1","category":"生物学","categories":[{"name":"生化与分子生物学","zone":"1"},{"name":"细胞生物学","zone":"1"}],"top":true,"sourceUrl":"https://www.sci365.cn/journals/cell-00928674/","verified":false,"reference":true,"checkedAt":"2026-10-23"}
+    }
+  },{
+    "journal": "PLoS Pathogens", "issn": "1553-7374", "year": 2025, "releaseYear": 2026, "value": 4.9,
+    "sourceUrl": "https://www.bioxbio.com/journal/PLOS-PATHOG", "crosscheckUrls": ["https://referencecitationanalysis.com/InCiteJournalInfo?id=19232"],
+    "verified": false, "reference": true, "sourceKind": "secondary", "checkedAt": "2026-10-23",
+    "partitions": {
+      "jcr": {"year": 2025, "zone": "Q1", "category": "Microbiology / Parasitology / Virology", "categories": [{"name":"Microbiology","zone":"Q1"},{"name":"Parasitology","zone":"Q1"},{"name":"Virology","zone":"Q1"}], "sourceUrl":"https://referencecitationanalysis.com/InCiteJournalInfo?id=19232", "crosscheckUrls":["https://www.ais.cn/journal/database/8947"], "verified":false, "reference":true, "checkedAt":"2026-10-23"},
+      "cas": {"year":2025,"zone":"1","category":"医学","categories":[{"name":"寄生虫学","zone":"1"},{"name":"病毒学","zone":"1"}],"top":true,"sourceUrl":"https://www.ais.cn/journal/database/8947","verified":false,"reference":true,"checkedAt":"2026-10-23"},
+      "xr": {"year":2026,"zone":"2","category":"医学","categories":[{"name":"寄生虫学","zone":"1"},{"name":"病毒学","zone":"1"}],"top":true,"sourceUrl":"https://www.ais.cn/journal/database/8947","verified":false,"reference":true,"checkedAt":"2026-10-23"}
+    }
+  }]
+}
