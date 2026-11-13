@@ -18,7 +18,22 @@ function visitors(seed=today()){
  });
 }
 function quote(modeId,minutes=30){const mode=modes[modeId];if(!mode)throw Error('请选择修炼或钓鱼');minutes=Number(minutes);if(![15,30,60].includes(minutes))throw Error('请选择15、30或60分钟');const units=minutes/15;return{minutes,units,duration:minutes*60000,happyExp:modeId==='training'?8*units:units,memberExp:modeId==='training'?4*units:0}}
-const skillRules=[{id:'balance',name:'平衡练习',level:1},{id:'hoop',name:'跃过练习圈',level:3},{id:'landing',name:'精准落点',level:5},{id:'flight',name:'空中巡回',level:8},{id:'tandem',name:'双人飞行配合',level:12}];
+const skillRules=[{id:'balance',name:'平衡练习',level:1},{id:'hoop',name:'跃过练习圈',level:3},{id:'landing',name:'精准落点',level:5},{id:'slalom',name:'穿圈折返',level:6},{id:'flight',name:'空中巡回',level:8},{id:'parcel',name:'载物飞行',level:10},{id:'tandem',name:'双人飞行配合',level:12},{id:'relay',name:'空中接力',level:15}];
+const challengeKinds=['slalom','parcel','relay'];
+function practiceChallenge(s,c){
+ const now=Date.now(),active=s.challenge;
+ if(s.practiceReceipts?.[c.id])return s.practiceReceipts[c.id];
+ if(active&&active.expiresAt>now&&active.type!==c.playType)throw Error('先完成当前三段配合；稍后可重新选择');
+ if(!active||active.expiresAt<=now){
+  if(now-(s.lastPlayAt||0)<5000)throw Error('让哈比歇5秒，再开始下一次配合');
+  return commit(()=>{s.course=c.playType;s.challenge={type:c.playType,step:1,nextAt:now+1500,expiresAt:now+45000};s.practiceReceipts??={};return s.practiceReceipts[c.id]='第一段已就位 · 待哈比准备好，再点同一项目继续';});
+ }
+ if(now<active.nextAt)throw Error('哈比正在到位，请稍等片刻');
+ return commit(()=>{s.practiceReceipts??={};if(active.step===1){active.step=2;active.nextAt=now+1500;active.expiresAt=now+45000;return s.practiceReceipts[c.id]='第二段已完成 · 再次点击同一项目，收好这次配合';}
+  const h=ensureWarehouse().happy,before=h.moodValue;s.plays??={};h.moodValue=Math.min(100,before+(Object.keys(s.plays).length<3?1:0));s.plays[c.id]={type:c.playType,steps:3,at:now,moodGain:h.moodValue-before};s.lastPlayAt=now;s.challenge=null;
+  return s.practiceReceipts[c.id]=skillRules.find(x=>x.id===c.playType).name+'三段配合完成 · 心情 '+h.moodValue+'/100'+(h.moodValue>before?'（+1）':' · 已记下本次练习');
+ });
+}
 function skills(){const level=happyLevel(ensureWarehouse().happy.exp).level,history=Object.values(store().sessions).flatMap(s=>Object.values(s.plays||{})).map(p=>p.type);return skillRules.map(s=>({...s,unlocked:level>=s.level||history.includes(s.id)}))}
 function view(){const sessions=Object.values(store().sessions),session=sessions.filter(s=>s.status==='running'&&s.kind!=='gather').sort((a,b)=>a.startedAt-b.startedAt)[0]||null;return{version:5,skills:skills(),lastReceipt:sessions.filter(s=>s.status==='claimed').sort((a,b)=>b.claimedAt-a.claimedAt).map(s=>({id:s.id,mode:s.mode,message:s.receiptMessage||(s.kind==='gather'?'已领取：修炼补给1份、鱼饵1份':'已领取记录：伙伴EXP +'+s.happyExp+(s.mode==='fishing'?' · 鱼获 '+(s.fish||0)+'份':''))}))[0]||null,gather:sessions.filter(s=>s.kind==='gather'&&s.status==='running').sort((a,b)=>a.startedAt-b.startedAt)[0]||null,durations:[15,30,60],catalog:catalog.map(i=>({...i,count:warehouseStock(i.id)})),modes,session,guest:session?.memberId?{id:session.memberId,name:session.memberName,sprite:session.memberSprite,invited:true,sessionId:session.id}:visitors(today()+'|nook')[0]||null}}
 const keys=['fairytail-schedule-v1','fairytail-wallet-v1','fairytail-tasks-v2','fairytail-growth-v1','fairytail-warehouse-v1'];
@@ -41,7 +56,7 @@ function execute(c){if(!c.id||typeof c.id!=='string'||c.id.length>120)throw Erro
   const s=store().sessions[c.sessionId];if(!s||s.kind!=='gather')throw Error('这份采集记录不存在');if(s.status==='claimed')return '采集物资已经领取';if(Date.now()<s.endsAt)throw Error('伙伴还在采集，请稍等');return commit(()=>{movement('gather-ration:'+s.id,'happy-training-ration','in',1,s.id);movement('gather-bait:'+s.id,'happy-fishing-bait','in',1,s.id);s.status='claimed';s.claimedAt=Date.now();return (s.receiptMessage='采集归来：修炼补给 +1、鱼饵 +1，已存入原公会库存')})
  }
  if(c.action==='game-play'){
-  const s=store().sessions[c.sessionId];if(!s||s.mode!=='training'||s.status!=='running'||Date.now()>=s.endsAt)throw Error('请先开始一场修炼');const skill=skills().find(x=>x.id===c.playType);if(!skill)throw Error('练习项目不存在');if(!skill.unlocked)throw Error('伙伴Lv.'+skill.level+'解锁'+skill.name);if(c.playType==='tandem'&&!s.memberId)throw Error('请邀请伙伴后一起配合');if(s.plays?.[c.id])return '这次配合已记下';if(Date.now()-(s.lastPlayAt||0)<5000)throw Error('让哈比歇5秒，再进行下一次配合');return commit(()=>{s.plays??={};const h=ensureWarehouse().happy,before=h.moodValue,gain=Object.keys(s.plays).length<3?1:0;h.moodValue=Math.min(100,before+gain);s.course=c.playType;s.lastPlayAt=Date.now();s.plays[c.id]={type:c.playType,at:s.lastPlayAt,moodGain:h.moodValue-before};return ({hoop:'哈比跃过了练习圈',balance:'哈比稳稳保持住平衡',landing:'哈比准确降落在标记处',flight:'哈比绕着庭院飞行了一圈',tandem:'哈比与伙伴完成了默契配合'})[c.playType]+' · 心情 '+h.moodValue+'/100'+(h.moodValue-before?'（+'+(h.moodValue-before)+'）':h.moodValue===100?'，已到上限':'；这次只练动作，不重复加奖励')})
+  const s=store().sessions[c.sessionId];if(!s||s.mode!=='training'||s.status!=='running'||Date.now()>=s.endsAt)throw Error('请先开始一场修炼');const skill=skills().find(x=>x.id===c.playType);if(!skill)throw Error('练习项目不存在');if(!skill.unlocked)throw Error('伙伴Lv.'+skill.level+'解锁'+skill.name);if(['tandem','relay'].includes(c.playType)&&!s.memberId)throw Error('请邀请伙伴后一起配合');if(s.plays?.[c.id])return '这次配合已记下';if(challengeKinds.includes(c.playType))return practiceChallenge(s,c);if(s.challenge&&s.challenge.expiresAt>Date.now())throw Error('先完成当前三段配合，或稍后重新选择');if(Date.now()-(s.lastPlayAt||0)<5000)throw Error('让哈比歇5秒，再进行下一次配合');return commit(()=>{s.plays??={};const h=ensureWarehouse().happy,before=h.moodValue,gain=Object.keys(s.plays).length<3?1:0;h.moodValue=Math.min(100,before+gain);s.course=c.playType;s.lastPlayAt=Date.now();s.plays[c.id]={type:c.playType,at:s.lastPlayAt,moodGain:h.moodValue-before};return ({hoop:'哈比跃过了练习圈',balance:'哈比稳稳保持住平衡',landing:'哈比准确降落在标记处',flight:'哈比绕着庭院飞行了一圈',tandem:'哈比与伙伴完成了默契配合'})[c.playType]+' · 心情 '+h.moodValue+'/100'+(h.moodValue-before?'（+'+(h.moodValue-before)+'）':h.moodValue===100?'，已到上限':'；这次只练动作，不重复加奖励')})
  }
  if(c.action==='game-start'){
   if(hallSupperPhase()!=='open')throw Error('哈比已经收工，请先召回伙伴再安排活动');const a=store();if(a.sessions[c.id])return '这场活动已经登记';if(view().session)throw Error('先完成并领取上一场活动');const mode=modes[c.activityType];if(!mode)throw Error('请选择修炼或钓鱼');const plan=quote(c.activityType,c.minutes??30);if(warehouseStock(mode.gear)<1)throw Error('还没有'+catalog.find(i=>i.id===mode.gear).title);if(warehouseStock(mode.supply)<plan.units)throw Error('活动补给不足，本场需要 '+plan.units+' 份，请在这里购买');
