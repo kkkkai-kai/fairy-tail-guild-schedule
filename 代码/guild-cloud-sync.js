@@ -1166,6 +1166,36 @@
     return manualSyncFlight;
   }
   window.guildSyncNow = manualSync;
+  // Desktop commands share the normal merger and incremental queue. A local
+  // receipt need not wait for an unrelated full archive scan and upload.
+  var desktopPrepareFlight = null, desktopFlushFlight = null, desktopProbeAt = 0;
+  function flushDesktopChanges() {
+    if (desktopFlushFlight) return desktopFlushFlight;
+    clearTimeout(pushTimer);
+    desktopFlushFlight = Promise.resolve(supaWriteQueue).then(function () {
+      pending.forEach(function (key) { dirty.add(key); });
+      return push();
+    }).then(function () { return online && !pending.size && !activeWrites; })
+      .finally(function () { desktopFlushFlight = null; });
+    return desktopFlushFlight;
+  }
+  function prepareDesktopAction() {
+    if (desktopPrepareFlight) return desktopPrepareFlight;
+    desktopPrepareFlight = Promise.resolve().then(async function () {
+      if (!CONFIG.syncEnabled || syncRisk) throw new Error('公会尚未完成同步核对，本次暂不执行');
+      if (pending.size || activeWrites) {
+        if (!await flushDesktopChanges()) throw new Error('上一份记录尚待云端确认，本次暂不执行');
+      }
+      if (!online || Date.now() - Math.max(lastPullAt, lastConfirmedAt, desktopProbeAt) >= 8000) {
+        await pullLazy(); desktopProbeAt = Date.now();
+      }
+      if (typeof window.guildReloadStoredState === 'function') window.guildReloadStoredState();
+      if (!online || syncRisk) throw new Error('云端核对未完成，本次暂不执行');
+      return true;
+    }).finally(function () { desktopPrepareFlight = null; });
+    return desktopPrepareFlight;
+  }
+  window.GuildDesktopSync = { prepare: prepareDesktopAction, flush: flushDesktopChanges };
   function snapshotMetrics(values) {
     var reading = parseJsonSafe(values['fairytail-reading-library-v1'], null), rewards = globalThis.GuildReadingCore && GuildReadingCore.valid(reading) ? GuildReadingCore.rewardTotals(reading) : {j:0,exp:0};
     return GuildWorkspaceCore.metrics(values, rewards, typeof window.guildDailyRewardForAudit === 'function' ? window.guildDailyRewardForAudit : null);
