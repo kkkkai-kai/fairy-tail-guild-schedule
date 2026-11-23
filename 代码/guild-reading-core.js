@@ -89,7 +89,14 @@
   const result={};for(const k of keys)if(p[k]!==undefined)result[k]=clone(p[k]);
   result.abstract=text(p.abstract,12000);result.notes=text(p.notes,20000);result.research=clone(p.research||{});result.sourceUrl=safeUrl(p.sourceUrl);result.catalogAt=p.updatedAt||p.workbench?.generatedAt||p.foundAt||'2000-01-01T00:00:00Z';
   result.pdf={status:p.pdf?.status||'not_requested',sha256:p.pdf?.sha256||'',verification:{status:p.pdf?.verification?.status||'pending',label:text(p.pdf?.verification?.label,500)}};
-  if(p.workbench)result.workbench={sourceSha256:p.workbench.sourceSha256,panelIds:clone(p.workbench.panelIds||[]),generatedAt:p.workbench.generatedAt};
+  if(p.workbench){
+   const ids=clone(p.workbench.panelIds||[]);
+   result.workbench={sourceSha256:p.workbench.sourceSha256,panelIds:ids,generatedAt:p.workbench.generatedAt};
+   if(p.workbench.mode==='review')result.workbench.mode='review';
+   const entryTitles=p.workbench.entryTitles||{};
+   const titles=Object.fromEntries(ids.filter(id=>Object.hasOwn(entryTitles,id)&&typeof entryTitles[id]==='string').map(id=>[id,text(entryTitles[id],250)]));
+   if(Object.keys(titles).length)result.workbench.entryTitles=titles;
+  }
   if(metric)result.metric=clone(metric);return result;
  }
  return{KEY,POLICY,empty,valid,merge,stable,heads,change,view,aliases,identity,recorded,rewardRows,rewardTotals,eligible,claim,projectPaper,safeUrl};
