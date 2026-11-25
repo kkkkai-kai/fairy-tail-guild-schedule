@@ -2,7 +2,7 @@
 const fs=require('node:fs/promises'),path=require('node:path'),crypto=require('node:crypto');
 const Core=require('../代码/guild-reading-core.js');
 module.exports=function({read,edit,metricFor,ROOT,verifyPdf}){
- let active=null,last={state:'idle',message:'目录、笔记和成果可同步；PDF留在本机'};
+ let active=null,quotaRetryAt=0,confirmed=null,last={state:'idle',message:'目录、笔记和成果可同步；PDF留在本机'};
  const hash=x=>crypto.createHash('sha256').update(Core.stable(x)).digest('hex');
  function capture(d){
   const portable=Core.merge(d.readingCloud,Core.empty());
@@ -45,22 +45,30 @@ module.exports=function({read,edit,metricFor,ROOT,verifyPdf}){
  async function sync(){
   if(process.env.GUILD_LIT_ROOT||process.env.GUILD_LIT_PORT||process.env.GUILD_READING_CLOUD==='off')return{state:'disabled',message:'自定义/测试资料库不连接正式云端'};
   if(active)return active;
+  if(Date.now()<quotaRetryAt)return last;
   active=(async()=>{try{
    last={state:'syncing',message:'正在同步文献目录与阅读记录'};const config=await credentials();let local=await exportLocal();
-   async function request(url,options={}){const r=await fetch(url,{...options,signal:AbortSignal.timeout(12000),headers:{apikey:config.key,Authorization:'Bearer '+config.key,'Content-Type':'application/json',...(options.headers||{})}});if(!r.ok)throw Error('文献同步返回 '+r.status);const body=await r.text();return body?JSON.parse(body):null;}
+   async function request(url,options={}){const r=await fetch(url,{...options,signal:AbortSignal.timeout(12000),headers:{apikey:config.key,Authorization:'Bearer '+config.key,'Content-Type':'application/json',...(options.headers||{})}});if(!r.ok){if(r.status===402)quotaRetryAt=Date.now()+30*60*1000;throw Error('文献同步返回 '+r.status);}const body=await r.text();return body?JSON.parse(body):null;}
    const query=config.url+'?key=eq.'+encodeURIComponent(Core.KEY);
+   const synced=()=>{last={state:'synced',at:new Date().toISOString(),papers:Object.keys(local.papers).length,message:'文献目录、笔记与奖励回执已同步；PDF保存在本机'};return last;};
+   if(confirmed&&Core.stable(local)===confirmed.value){
+    const meta=(await request(query+'&select=updated_at'))?.[0];
+    if(meta&&String(meta.updated_at)===confirmed.at)return synced();
+   }
    for(let i=0;i<3;i++){
     const remote=(await request(query+'&select=value,updated_at'))?.[0];let parsed=null;if(remote){try{parsed=JSON.parse(remote.value)}catch{throw Error('云端文献记录无法解析，未覆盖')}if(!Core.valid(parsed))throw Error('云端文献格式不兼容，未覆盖');}
     local=Core.merge(local,parsed);local=await applyRemote(local);
     const value=Core.stable(local);if(Buffer.byteLength(value)>3*1024*1024)throw Error('文献笔记超过3MB，请先导出整理；本地记录仍保留');
-    if(remote?.value!==value){
+    if(remote?.value===value){confirmed={value,at:String(remote.updated_at)};return synced();}
+    {
      const row={key:Core.KEY,value,updated_at:Math.max(Date.now(),Number(remote?.updated_at||0)+1)};
-     if(remote){const changed=await request(query+'&updated_at=eq.'+remote.updated_at,{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(row)});if(!changed?.length)continue;}
-     else await request(config.url+'?on_conflict=key',{method:'POST',headers:{Prefer:'resolution=ignore-duplicates,return=representation'},body:JSON.stringify(row)});
+     if(remote){const changed=await request(query+'&updated_at=eq.'+remote.updated_at+'&select=updated_at',{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(row)});if(!changed?.length)continue;}
+     else await request(config.url+'?on_conflict=key',{method:'POST',headers:{Prefer:'resolution=ignore-duplicates,return=minimal'},body:JSON.stringify(row)});
     }
-    const check=(await request(query+'&select=value'))?.[0];const actual=check?JSON.parse(check.value):null;
-    if(Core.stable(Core.merge(local,actual))!==Core.stable(actual)){local=Core.merge(local,actual);continue;}
-    last={state:'synced',at:new Date().toISOString(),papers:Object.keys(local.papers).length,message:'文献目录、笔记与奖励回执已同步；PDF保存在本机'};return last;
+    const check=(await request(query+'&select=value,updated_at'))?.[0];const actual=check?JSON.parse(check.value):null;
+    if(!check||Core.stable(Core.merge(local,actual))!==Core.stable(actual)){local=Core.merge(local,actual);continue;}
+    confirmed={value:check.value,at:String(check.updated_at)};
+    return synced();
    }throw Error('另一设备正在更新，记录已保留，稍后重试');
   }catch(e){last={state:'error',message:e.message+'；本机记录保留，稍后可重试'};return last;}finally{active=null;}})();return active;
  }

@@ -72,9 +72,10 @@
   var supaWriteQueue = Promise.resolve();
   var activeWrites = 0;
   var lastConfirmedAt = 0;
-  // 前台每10秒只探测时间戳，有更新才下载正文；后台暂停轮询。
+  // 前台每45秒只探测时间戳，有更新才下载正文；后台暂停轮询。
   // 打开页面 / 回到前台 / 点击浮标时立即拉一次，切后台或离开页面前立即 flush 推送。
-  var PULL_INTERVAL = 10 * 1000;
+  var PULL_INTERVAL = 45 * 1000;
+  var quotaRetryAt = 0;
 
   // ---------- 本地时间记录 ----------
   function readMeta() {
@@ -353,13 +354,14 @@
     });
     persistPending();
     online = false;
+    if (Date.now() < quotaRetryAt) { cloudReadFailure(error || new Error('HTTP 402')); return; }
     if (error && error.syncGuard) { syncRisk = error.message; setBadge('同步保护：已暂停异常覆盖，请核对数据', false); return; }
     setBadge('云端：离线（本地数据待同步）', false);
     if (navigator.onLine !== false) setTimeout(push, 3500 + Math.floor(Math.random() * 3000));
   }
 
   function push() {
-    if (!dirty.size) return;
+    if (!dirty.size || Date.now() < quotaRetryAt) return;
     if (navigator.onLine === false) {
       online = false;
       setBadge('云端：离线（本地数据待同步）', false);
@@ -414,18 +416,19 @@
     if (extra) Object.keys(extra).forEach(function (k) { h[k] = extra[k]; });
     return h;
   }
-  function supaRestUrl(params) {
+  function supaRestUrl(params, keys) {
     var url = CONFIG.supabaseUrl + '/rest/v1/' + CONFIG.supabaseTable;
-    if (params) url += '?' + params + '&key=in.(' + CONFIG.syncKeys.map(encodeURIComponent).join(',') + ')';
+    if (params) url += '?' + params + '&key=in.(' + (keys || CONFIG.syncKeys).map(encodeURIComponent).join(',') + ')';
     return url;
   }
   function cloudReadFailure(error) {
     var message = String(error && error.message || '');
-    var reason = /HTTP (401|403)/.test(message) ? '云端授权失败' : /HTTP/.test(message) ? '云端服务响应异常' : /超时|timeout|abort/i.test(message) ? '网络超时' : /JSON/.test(message) ? '云端响应格式异常' : '网络连接失败';
+    var reason = /HTTP 402/.test(message) ? 'Supabase 流量限额' : /HTTP (401|403)/.test(message) ? '云端授权失败' : /HTTP/.test(message) ? '云端服务响应异常' : /超时|timeout|abort/i.test(message) ? '网络超时' : /JSON/.test(message) ? '云端响应格式异常' : '网络连接失败';
     setBadge('云端：' + reason + ' · 本机记录已保留', false);
   }
   function checkedJson(response, label) {
     if (!response || !response.ok) {
+      if (response && response.status === 402) quotaRetryAt = Date.now() + 30 * 60 * 1000;
       return response.text().then(function (text) {
         throw new Error(label + '失败：HTTP ' + (response ? response.status : '无响应') + ' ' + (text || ''));
       });
@@ -437,6 +440,7 @@
     });
   }
   function cloudJson(url, options, label) {
+    if (Date.now() < quotaRetryAt) return Promise.reject(new Error('HTTP 402 · 云端流量超限，自动同步暂缓'));
     options = Object.assign({ cache: 'no-store', credentials: 'omit' }, options);
     var readable = !options.method || options.method === 'GET';
     function attempt(retried) {
@@ -464,10 +468,10 @@
     var rows = entries.map(function (e) { return { key: e.key, value: e.value, updated_at: Number(e.updatedAt) || Date.now() }; });
     return cloudJson(supaRestUrl(), {
       method: 'POST',
-      headers: supaHeaders({ 'Prefer': 'return=representation,resolution=merge-duplicates' }),
+      headers: supaHeaders({ 'Prefer': 'return=minimal,resolution=merge-duplicates' }),
       body: JSON.stringify(rows)
     }, '云端写入')
-      .then(function () { return supaPull(); })
+      .then(function () { return supaPull(entries.map(function (e) { return e.key; })); })
       .then(function (list) {
         entries.forEach(function (entry) {
           var matches = list.filter(function (item) { return item.key === entry.key; });
@@ -490,7 +494,7 @@
       return { key: entry.key, value: entry.value, updatedAt: entry.updatedAt };
     });
     var run = function () {
-      return supaPull().then(function (remoteList) {
+      return supaPull(snapshot.map(function (e) { return e.key; })).then(function (remoteList) {
         var remoteByKey = {}, remoteTasks = null;
         var mergedViewChanged = false;
         (remoteList || []).forEach(function (item) {
@@ -531,15 +535,17 @@
     supaWriteQueue = supaWriteQueue.then(run, run);
     return supaWriteQueue;
   }
-  function supaPull() {
-    return cloudJson(supaRestUrl('select=key,value,updated_at&updated_at=gte.0'), {
+  function supaPull(keys) {
+    if (keys && !keys.length) return Promise.resolve([]);
+    return cloudJson(supaRestUrl('select=key,value,updated_at&updated_at=gte.0', keys), {
       headers: supaHeaders(),
       cache: 'no-store'
     }, '云端读取')
       .then(function (rows) {
         var records = (Array.isArray(rows) ? rows : []).map(function (x) { return { key: x.key, value: x.value, updatedAt: Number(x.updated_at) || 0 }; });
-        latestCloudRecords = records; lastPullAt = Date.now();
-        if (globalThis.GuildSyncRecovery) void GuildSyncRecovery.saveDaily(records).then(function (saved) { recoveryNote = saved ? '本机恢复点已保存（最近3份）' : '云端尚无可保存的历史'; }).catch(function () { recoveryNote = '恢复点保存失败，请导出个人备份'; });
+        lastPullAt = Date.now();
+        if (!keys) latestCloudRecords = records;
+        if (!keys && globalThis.GuildSyncRecovery) void GuildSyncRecovery.saveDaily(records).then(function (saved) { recoveryNote = saved ? '本机恢复点已保存（最近3份）' : '云端尚无可保存的历史'; }).catch(function () { recoveryNote = '恢复点保存失败，请导出个人备份'; });
         return records;
       });
   }
@@ -559,9 +565,8 @@
       });
   }
   // 云端任一参与同步的 key 比本地新（或本地从未写过），就值得全量拉一次
-  function metaNeedsPull(remoteMeta) {
-    if (!remoteMeta) return false;
-    return Object.keys(remoteMeta).some(function (k) {
+  function keysNeedingPull(remoteMeta) {
+    return Object.keys(remoteMeta || {}).filter(function (k) {
       if (CONFIG.syncKeys.indexOf(k) === -1) return false;
       var lT = localTimeOf(k);
       var rT = Number(remoteMeta[k]) || 0;
@@ -578,8 +583,9 @@
   function pullLazyAttempt(retryCount) {
     retryCount = retryCount || 0;
     return supaMeta().then(function (meta) {
-      if (metaNeedsPull(meta)) {
-        return supaPull().then(function (list) {
+      var keys = keysNeedingPull(meta);
+      if (keys.length) {
+        return supaPull(keys).then(function (list) {
           applyRemote(list);
           return list;
         });
@@ -588,7 +594,7 @@
       setBadge('云端：已同步', true);
       return [];
     }).catch(function (error) {
-      if (retryCount < 1) {
+      if (retryCount < 1 && Date.now() >= quotaRetryAt) {
         // 首次失败：3 秒后重试一次，避免手机网络波动误判离线
         return new Promise(function (resolve) { setTimeout(resolve, 3000); })
           .then(function () { return pullLazyAttempt(1); });
@@ -1149,6 +1155,7 @@
     if (button) { button.disabled = true; button.textContent = '同步中…'; }
     clearTimeout(pushTimer);
     setBadge('本机已保存 · 正在主动同步', null);
+    quotaRetryAt = 0; // Explicit user retry can check whether service has resumed.
     manualSyncFlight = pull().then(function () {
       pending.forEach(function (key) { dirty.add(key); });
       return push();
@@ -1243,7 +1250,7 @@
     return {groups:p.entries.length,refreshed:refreshed};
   };
   // ---------- 全量推送（首次上云/启动兜底） ----------
-  function fullPush() {
+  function fullPush(initialRecords) {
     // 全量推送走 supaWriteQueue 串行化，避免与增量 supaPush 并发交错
     var run = function () {
     var entries = [];
@@ -1258,7 +1265,7 @@
       // 智能：先拉云端，只推送云端缺失或本地更新的 key，避免无谓抬时间戳。
       // 2026-09-30 修复：委托数据（tasks-v2）强制按"本地为准 + 合并云端"推送——
       // 旧代码时代本地时间戳停滞导致云端始终收不到本地完成记录，两端数据长期不一致。
-      return supaPull().then(function (remoteList) {
+      return (Array.isArray(initialRecords) ? Promise.resolve(initialRecords) : supaPull()).then(function (remoteList) {
         var remoteMap = {};
         var remoteTasks = null;
         (remoteList || []).forEach(function (r) {
@@ -1364,7 +1371,7 @@
       pull().then(fullPush).catch(function (e) { console.warn('[guild-cloud] startup sync failed', e); })
         .finally(function () { if (dirty.size) schedulePush(); });
     }, 300);
-    // 前台10秒轻量检查，仅页面可见时执行，且先走meta探测，
+    // 前台45秒检查元数据，仅在有变化时读取对应记录。
     // 云端确有更新才全量拉取；不可见时完全停止轮询。
     setInterval(function () {
       if (document.hidden || navigator.onLine === false) return;

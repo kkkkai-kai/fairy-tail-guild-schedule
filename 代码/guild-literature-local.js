@@ -55,10 +55,9 @@
   const box=document.createElement('section');box.className='guild-literature-offline';
   const heading=document.createElement('strong');heading.textContent='公会精读工作台';
   const desc=document.createElement('p');desc.textContent='手机可查看目录、记录笔记与确认研读；电脑可打开含原图的完整工作台。本地PDF不会上传。';
-  const links=document.createElement('p'),local=document.createElement('a'),demo=document.createElement('a');
+  const links=document.createElement('p'),local=document.createElement('a');
   local.textContent='打开本机研读角';local.href=base+'/?view='+encodeURIComponent(view)+'&paper='+encodeURIComponent(paperId)+'&query='+encodeURIComponent(query.slice(0,500));local.target='_blank';local.rel='noopener noreferrer';
-  demo.textContent='查看工作台示例（合成内容）';demo.href='工具/公会研读工作台示例.html';demo.target='_blank';demo.rel='noopener noreferrer';
-  links.style.cssText='display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 0';links.append(local,demo);box.append(heading,desc,links);return box;
+  links.style.cssText='display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 0';links.append(local);box.append(heading,desc,links);return box;
  }
  function renderStaticList(view,paperId,query=''){
   const list=document.createElement('div');list.className='guild-literature-static-list';if(!LOCAL_ONLY)list.append(readingWorkbenchLinks(view,paperId,query));
