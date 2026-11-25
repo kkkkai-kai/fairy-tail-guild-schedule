@@ -18,7 +18,6 @@
     // 参与云同步的数据 key（页面全部核心数据）
     syncKeys: [
       'fairytail-guild-memories-v1',
-      'fairytail-reading-library-v1',
       'fairytail-guild-daily-journal-v1',
       'fairytail-schedule-v1',
       'fairytail-wallet-v1',

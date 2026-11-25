@@ -2,7 +2,8 @@
 const fs=require('node:fs/promises'),path=require('node:path'),crypto=require('node:crypto');
 const Core=require('../代码/guild-reading-core.js');
 module.exports=function({read,edit,metricFor,ROOT,verifyPdf}){
- let active=null,quotaRetryAt=0,confirmed=null,last={state:'idle',message:'目录、笔记和成果可同步；PDF留在本机'};
+ const cloudEnabled=process.env.GUILD_READING_CLOUD==='on'&&!process.env.GUILD_LIT_ROOT&&!process.env.GUILD_LIT_PORT;
+ let active=null,quotaRetryAt=0,confirmed=null,last={state:cloudEnabled?'idle':'disabled',message:cloudEnabled?'目录、笔记和成果可同步；PDF留在本机':'文献库仅保存在本机'};
  const hash=x=>crypto.createHash('sha256').update(Core.stable(x)).digest('hex');
  function capture(d){
   const portable=Core.merge(d.readingCloud,Core.empty());
@@ -43,7 +44,7 @@ module.exports=function({read,edit,metricFor,ROOT,verifyPdf}){
   if(!url||!key||!table)throw Error('未找到现有公会同步配置');return{url:url+'/rest/v1/'+table,key};
  }
  async function sync(){
-  if(process.env.GUILD_LIT_ROOT||process.env.GUILD_LIT_PORT||process.env.GUILD_READING_CLOUD==='off')return{state:'disabled',message:'自定义/测试资料库不连接正式云端'};
+  if(!cloudEnabled)return last;
   if(active)return active;
   if(Date.now()<quotaRetryAt)return last;
   active=(async()=>{try{
@@ -83,5 +84,5 @@ module.exports=function({read,edit,metricFor,ROOT,verifyPdf}){
   });
  }
  async function resolve(body){await exportLocal();return edit(d=>{const row=d.readingCloud.changes[body.revisionId];if(!row||row.paperId!==body.id||!['notes','research','progress'].includes(row.kind))throw Error('修订不存在或类型无效');Core.change(d.readingCloud,body.id,row.kind,row.payload);return{message:'已采用所选修订，其他版本保留；同步后写回本地阅读页'};});}
- return{sync,exportLocal,applyRemote,claim,resolve,status:()=>last};
+ return{sync,exportLocal,applyRemote,claim,resolve,cloudEnabled,status:()=>last};
 };
